@@ -22,3 +22,6 @@ cual tiene cargadas ambas versiones separadas por un "========". Ahi lo combinan
 nuevamente y lo pushean.
 Cabe aclarar que esto no es muy habitual, dos personas deben haber modificado la misma parte del archivo. Si no es el caso, Git se
 encargara de mergear automaticamente, poniendo ambos cambios en el mismo archivo.
+
+A la hora de BORRAR un archivo, tienen que borrarlo manualmente de la lista en el repo y luego, desde el cmd en su carpeta local,
+tipear git rm [archivo], hacen commit y luego push. 
