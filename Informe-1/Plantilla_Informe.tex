@@ -127,7 +127,7 @@ Por otro lado, se planteó analizar la relación entre $I$ y $R$ fijando el volt
 
 \subsection{Equivalente de Thevenin y Ley de Joule}
 
-Terminado lo anterior, se propuso montar otro circuito con dos mallas con el primer objetivo de medir sus corrientes de rama y compararlas con el resultado teórico esperado. El circuito montado puede verse en la \textbf{Fig CIRCUITO DE DOS MALLAS}.
+Terminado lo anterior, se propuso montar otro circuito con dos mallas con el primer objetivo de medir sus corrientes de rama y compararlas con el resultado teórico esperado. Se utilizaron dos resistencias $R = (1000,0\pm0,5)\Omega$ y una resistencia $r = (100,00\pm0,05)\Omega$ que fueron generadas por dos \textbf{RESISTENCIA RARA} mientras que la fuente $\varepsilon = (5,00\pm0,05)V$ fue generada nuevamente por la Fuente de Alimentación Programable, unidos por cables como se ve en la \textbf{Fig CIRCUITO DE DOS MALLAS}.
 
 \textbf{CIRCUITO DE DOS MALLAS}
 %\begin{figure}[h]
@@ -135,12 +135,10 @@ Terminado lo anterior, se propuso montar otro circuito con dos mallas con el pri
   %\includegraphics[scale=0.15]{}
   %\\[1.0cm]
   %\label{circ_mallas}
-  %\caption{Circuito de dos mallas utilizado para la experiencia}
+  %\caption{Circuito de dos mallas utilizado para la experiencia, los $A_i$ representan los lugares donde se ubicó el multimetro}
 %\end{figure}
 
-\textbf{TEXTO DESCRIBIENDO EL SISTEMA Y LOS PARAMETROS EN BASE AL GRAFICO}
-
-Inicialmente, se utilizaron las leyes de Kirchoff y se resolvió el circuito mediante el método de ramas para obtener el valor de las corrientes $i_1$, $i_2$ e $i_3$ en base a los parámetros. Luego se ubicó el multimetro en las posiciones $A_1$, $A_2$ y $A_3$ (Ver \textbf{Fig CIRCUITO DE DOS MALLAS})  para medir las corrientes $i_1$, $i_2$ e $i_3$, respectivamente. En la \textbf{Tabla 1} puede verse que los valores obtenidos con ambos metodos coinciden dentro del error. 
+ Inicialmente, se utilizaron las leyes de Kirchoff y se resolvió el circuito mediante el método de ramas para obtener el valor de las corrientes $i_1$, $i_2$ e $i_3$ en base a los parámetros. Luego se ubicó el multimetro en las posiciones $A_1$, $A_2$ y $A_3$ (Ver \textbf{Fig CIRCUITO DE DOS MALLAS})  para medir las corrientes $i_1$, $i_2$ e $i_3$, respectivamente. En esta medicion se despreció la resistencia interna del multimetro. En la \textbf{Tabla 1} puede verse que los valores obtenidos con ambos metodos coinciden dentro del error. 
 
 \begin{center}
 \begin{tabular}{||c|c|c||}
@@ -155,15 +153,39 @@ $i_3$ & $4,17\pm0,05$ & $4,1\pm0,2$ \\ \hline
 \textbf{Tabla 1: Valores obtenidos de las corrientes mediante cálculo (teórico) y medición directa}
 \end{center}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Posteriormente, se buscó calcular el equivalente de Thevenin para obtener la resistencia y la fuente equivalente vista desde las terminales A y B, entre las cuales se conectará una resistencia de carga $R_q$ (ver \textbf{Fig CIRCUITO DE MALLAS CON CARGA}). 
+
+\textbf{CIRCUITO DE DOS MALLAS CON CARGA}
+%\begin{figure}[h]
+ % \centering
+  %\includegraphics[scale=0.15]{}
+  %\\[1.0cm]
+  %\label{circ_mallas_carga}
+  %\caption{Circuito de dos mallas con la resistencia de carga acoplada}
+%\end{figure}
+
+Primero, se calculó el equivalente de Thevenin a través de los parámetros $R$, $r$ del circuito y $\varepsilon$ y se obtuvieron los parametros equivalentes $\varepsilon_{th} = (0,83\pm0,08)V$ y $R_{th} = (83,3 \pm 0,7) \Omega$. Cabe aclarar que en este cálculo no intervinieron las corrientes previamente calculadas, si no que se utilizó directamente su dependencia con los parámetros del circuito. Alternativamente, se conectó el multimetro en paralelo en las terminales A y B (como la resistencia de carga $R_q$) y se midió la diferencia de potencial $\Delta\varepsilon = (0,84 \pm 0,06)V$ y la resistencia $R_{AB} = (83,4\pm0,6)\Omega$ entre ambas terminales. 
+
+Una vez sabido esto, fue posible conectar una resistencia de carga $R_q$ representada por una resistencia variable por decadas en serie con el multimetro en modo amperimetro. El objetivo fue medir la corriente $I$ para distintos valores de $R_q$ y en base a ambas magnitudes calcular la potencia $P$ disipada por $R_q$ a traves de (\textbf{JOULE}) buscando relevar la curva acampanada $P(R_q)$ cuyo máximo debería encontrarse en $R_{max} = R_{th} = (83,3\pm0,7)\Omega$ segun (\textbf{POT MAX}). Utilizamos el valor $R_{th}$ por convención dado que es fisicamente indistinguible (debido al error) de $R_{AB}$. Considerando que las resistencias de carga utilizadas rondaron $R_{max} = (83,3\pm0,7)\Omega$, la resistencia interna del multimetro en modo amperimetro $R_{A} = (11,8 \pm 0,4) \Omega$ no resulta despreciable, por lo que la resistencia de carga resulta $R_q = R_v + R_A$ donde $R_v$ es nuevamente la resistencia variable por decadas. De los datos obtenidos se obtiene el gráfico de la \textbf{Figura CAMPANA}
+
+\textbf{CAMPANA}
+%\begin{figure}[h]
+ % \centering
+  %\includegraphics[scale=0.15]{}
+  %\\[1.0cm]
+  %\label{campana}
+  %\caption{Relacion entre la potencia disipada y el valor de la resistencia de carga}
+%\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 4.DISCUSIÓN Y RESULTADOS: todo lo que se obtuvo y explicación. Graficos, tablas.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Resultados}
 \label{sec:discusion}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	CONCLUSIONES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
