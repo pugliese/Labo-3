@@ -173,16 +173,27 @@ Los resultados de la primer medición con la resistencia $R$ constante pueden ve
 
 \subsection{Equivalente de Thevenin y Ley de Joule}
 
-De los datos obtenidos se obtiene el gráfico de la \textbf{Figura CAMPANA}
+De los datos obtenidos se obtiene el gráfico de la \textbf{Figura \ref{fig:Pot_Res}} donde se puede observar que el comportamiento de la potencia entregada por el circuito esta dentro de los parametros esperados. Luego, realizando un ajuste, se obtiene una resistencia $R = (78.5 \pm 0.8)\Omega$ y un voltaje $\epsilon = (0,74\pm 0,01)V$ ambos muy cercanos a los valores de Thevenin calculados anteriormente.
 
-\textbf{CAMPANA}
-%\begin{figure}[h]
- % \centering
-  %\includegraphics[scale=0.15]{}
-  %\\[1.0cm]
-  %\label{fig:campana}
-  %\caption{Relacion entre la potencia disipada y el valor de la resistencia de carga}
-%\end{figure}
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.45]{Potencia_vs_Resistencia_2}
+  \\[1.0cm]
+  \label{fig:Pot_Res}
+  \caption{Relacion entre la potencia disipada y el valor de la resistencia de carga}
+\end{figure}
+
+Finalmente, se calculo la eficacia con la cual se traspasaba la potencia de nuestro circuito sobre la carga. En el grafico de la \textbf{Figura \ref{fig:Efi_Res}} se ve que hay una tendencia creciente pero que en los ultimos puntos se empieza a dispersar. Esto puede deberse a queal trabajar con resistencias tan altas, las corrientes medidas quedan muy cerca del umbral de resolucion del multimetro, por lo cual ya las fluctuaciones propias del instrumento provocan incertezas muy altas. 
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.45]{Eficiencia_vs_Resistencia}
+  \\[1.0cm]
+  \label{fig:Efi_Res}
+  \caption{Relacion entre la eficacia de la entrega de potencia y el valor de la resistencia de carga}
+\end{figure}
+
+Desestimando los puntos en cuyos calculos contenian corrientes con incertezas comparables con sus mediciones, el ajuste realizado arroja como uno de sus parametros, la resistencia equivalente del circuito $R = (77.8 \pm 0.8)\Omega$ que es consistente con los resultados y mediciones anteriores.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	CONCLUSIONES
