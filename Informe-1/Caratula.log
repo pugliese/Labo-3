@@ -1,0 +1,35 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.4)  5 FEB 2016 00:06
+entering extended mode
+**"C:/Labo 3/Labo-3/Informe-1/Caratula.tex"
+("C:/Labo 3/Labo-3/Informe-1/Caratula.tex"
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9n> and hyphenation patterns for 69 languages loaded.
+
+! LaTeX Error: Environment titlepage undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 \begin{titlepage}
+                      
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+l.39 \begin{titlepage}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+ 
+Here is how much of TeX's memory you used:
+ 9 strings out of 493634
+ 324 string characters out of 3142929
+ 52604 words of memory out of 3000000
+ 3492 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 5i,0n,4p,134b,16s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
