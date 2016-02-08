@@ -18,6 +18,7 @@
 %\usepackage{fourier}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,headheight=13.6pt]{geometry}
 \usepackage{fancyhdr}
+\usepackage{multirow}
 \pagestyle{fancy}
 
 
@@ -193,7 +194,7 @@ Una vez hecho esto, fue posible conectar una resistencia de carga $R_v$ represen
 
 \subsection{Ley de Ohm}
 
-Los resultados de la primer medición con la resistencia $R$ constante pueden verse en la \textbf{Figura \ref{fig:Ohm_lin}}, cuyo ajuste lineal arroja una pendiente $m_1 = (1,979.10^{-3} \pm 5.10^{-6})\Omega^{-1}$ y una ordenada $b_1 = (-0,23\pm 0,03)mA$ muy cercana a cero con un $R-square = 0,99995$, que asegura la bondad del ajuste. Siguiendo \eqref{Ohm}, se esperaría que la pendiente $m_1 = (1,979.10^{-3} \pm 5.10^{-6})\Omega^{-1}$ fuera igual a $\frac{1}{R}$ con $R = (512 \pm 5)\Omega$. Efectivamente, resulta $\frac{1}{m_1} = (505.3 \pm 1,3)\Omega$, el cual se acerca mucho a $R = (512 \pm 5)\Omega$.
+Los resultados de la primer medición con la resistencia $R = (512 \pm 5)\Omega$ constante pueden verse en la \textbf{Figura \ref{fig:Ohm_lin}}, cuyo ajuste lineal arroja una pendiente $m_1 = (1,979.10^{-3} \pm 5.10^{-6})\Omega^{-1}$ y una ordenada $b_1 = (-0,23\pm 0,03)mA$ muy cercana a cero con un $R-square = 0,99995$, que asegura la bondad del ajuste. Siguiendo \eqref{Ohm}, se esperaría que la pendiente $m_1 = (1,979.10^{-3} \pm 5.10^{-6})\Omega^{-1}$ fuera igual a $\frac{1}{R}$. Efectivamente, resulta $\frac{1}{m_1} = (505.3 \pm 1,3)\Omega$, el cual se acerca mucho a $R = (512 \pm 5)\Omega$.
 
 \begin{figure}[h]
   \centering
@@ -202,18 +203,18 @@ Los resultados de la primer medición con la resistencia $R$ constante pueden ve
   \label{fig:Ohm_lin}
 \end{figure}
 
-Luego, con las mediciones correspondientes a un voltaje constante, se decidio realizar un grafico que relacionara las corrientes medidas con el inverso de las resistencias seleccionadas, de esa forma, si se cumple la ley de Ohm, deberia haber una correspondencia lineal entre esos pares de valores. Como se puede ver en la \textbf{Figura \ref{fig:Ohm_hip}} se confirma lo esperado, ya que una vez realizado un ajuste lineal, nos arroja un $R-square = 0,99958$. Cabe destacar, que para resistencias suficientemente altas, las corrientes resultantes deberian estar por debajo del limite de resolucion de cualquier instrumento de medicion; por lo cual, es consistente que el ajuste nos arroje una interseccion con el eje de ordenadas muy cercano al 0. Efectivamente el valor obtenido es de $b = (-0.001 \pm 0.002)$
+Luego, con las mediciones correspondientes a un voltaje constante, se decidio realizar un grafico que relacionara las corrientes medidas con el inverso de las resistencias seleccionadas, de esa forma, si se cumple la ley de Ohm, deberia haber una correspondencia lineal entre esos pares de valores. Como se puede ver en la \textbf{Figura \ref{fig:Ohm_hip}} se confirma lo esperado, ya que una vez realizado un ajuste lineal, nos arroja un $R-square = 0,99958$.
 
-%\textbf{OHM HIP}
+
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.45]{Corriente_vs_InversoResistencia}
+  \includegraphics[scale=0.4]{Corriente_vs_InversoResistencia}
   \\[1.0cm]
-  \label{fig:Ohm_hip}
   \caption{Relacion entre el inverso de Resistencia (1/R) y Corriente (I)}
+  \label{fig:Ohm_hip}
 \end{figure}
 
-Adicionalmente, segun la ecuacion \eqref{Ohm} se esperaria que la pendiente de esta recta fuera el voltaje de entrada. En este caso resulta ser ligeramente supérior con un valor $m = (16.1\pm0.1) V$
+ Cabe destacar, que para resistencias suficientemente altas, las corrientes resultantes deberian estar por debajo del limite de resolucion de cualquier instrumento de medicion; por lo cual, es consistente que el ajuste arroje una interseccion con el eje de ordenadas muy cercano al 0. Efectivamente el valor obtenido es de $b = (-0.001 \pm 0.002)mA$. Adicionalmente, segun la ecuacion \eqref{Ohm} se esperaria que la pendiente de esta recta fuera el voltaje de entrada. En este caso resulta ser ligeramente superior con un valor $m_2 = (16.1\pm0.1)V$
 
 \subsection{Equivalente de Thevenin y Ley de Joule}
 
@@ -235,27 +236,38 @@ $i_3$ & $4,17\pm0,05$ & $4,1\pm0,2$ \\ \hline
 
 Luego, a través del cálculo del equivalente de Thevenin se obtuvieron los parametros equivalentes $\varepsilon_{th} = (0,83\pm0,08)V$ y $R_{th} = (83,3 \pm 0,7) \Omega$. Cabe aclarar que en este cálculo no intervinieron las corrientes previamente calculadas, si no que se utilizó directamente su dependencia con los parámetros del circuito. Alternativamente, mediante medición directa se obtuvo $\Delta\varepsilon_{AB} = (0,84 \pm 0,06)V$ y $R_{th} = (83,4 \pm 0,6)\Omega$, valores que resultan indistinguibles dentro del error de los anteriormente calculados. 
 
-De los datos obtenidos se obtiene el gráfico de \textbf{Figura \ref{fig:pot_res}} donde se puede observar que el comportamiento de la potencia entregada por el circuito esta dentro de los parametros esperados. Luego, realizando un ajuste, se obtiene una resistencia máxima $R_{max} = (78.5 \pm 0.8)\Omega$ y un voltaje $\varepsilon = (0,74\pm 0,01)V$ ambos muy cercanos a los valores de Thevenin calculados anteriormente.
+De los datos obtenidos se tiene el gráfico de la \textbf{Figura \ref{fig:pot_res}} donde se puede observar que el comportamiento de la potencia entregada por el circuito esta dentro de los parametros esperados. Luego, realizando un ajuste, se obtiene una resistencia máxima $R_{max} = (78.5 \pm 0.8)\Omega$ y un voltaje $\varepsilon = (0,74\pm 0,01)V$ ambos muy cercanos a los valores de Thevenin calculados anteriormente. Sin embargo, el coeficiente $\chi_{red}^{2} = 0.01362$ muestra una enorme sobreestimación de los errores, visible ya en la \textbf{Figura \ref{fig:pot_res}}.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.45]{Potencia_vs_Resistencia_2}
+  \includegraphics[scale=0.4]{Potencia_vs_Resistencia_2}
   \caption{Relacion entre la potencia disipada y el valor de la resistencia de carga}
   \label{fig:pot_res}
 \end{figure}
 
-Finalmente, se calculo la eficacia con la cual se traspasaba la potencia de nuestro circuito sobre la carga. En el grafico de la \textbf{Figura \ref{fig:efi_res}} se ve que hay una tendencia creciente pero que en los ultimos puntos se empieza a dispersar. Esto puede deberse a queal trabajar con resistencias tan altas, las corrientes medidas quedan muy cerca del umbral de resolucion del multimetro, por lo cual ya las fluctuaciones propias del instrumento provocan incertezas muy altas. 
+Finalmente, se calculo la eficacia con la cual se traspasaba la potencia de nuestro circuito sobre la carga. En el grafico de la \textbf{Figura \ref{fig:efi_res}} se ve que hay una tendencia creciente pero que en los ultimos puntos se empieza a dispersar. 
 
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.45]{Eficiencia_vs_Resistencia}
+  \includegraphics[scale=0.4]{Eficiencia_vs_Resistencia}
   \caption{Relación entre la eficacia de la entrega de potencia y el valor de la resistencia de carga}
   \label{fig:efi_res}
 \end{figure}
 
-Desestimando los puntos en cuyos calculos contenian corrientes con incertezas comparables con sus mediciones, el ajuste realizado utilizando \eqref{efi} arroja como uno de sus parametros, la resistencia equivalente del circuito $R_{max} = (77.8 \pm 0.8)\Omega$ que es consistente con los resultados y mediciones anteriores.
+Desestimando los puntos en cuyos calculos contenian corrientes con incertezas comparables con su valor, el ajuste realizado utilizando \eqref{efi} arroja un $\chi_{red}^{2} = 0.00361$ que indica la ya notoria exageración de los errores obtenidos debido a la propagación de errores.  
 
+En resumen, los distintos valores obtenidos de $R_{th}$ y $\varepsilon_{th}$ con los distintos métodos se pueden ver en la \textbf{Tabla 2}.
 
+\begin{center}
+\begin{tabular}{||c|c|c|c||}
+\hline
+\multirow{2}{*}{\textbf{Magnitud}} & \multicolumn{3}{c||}{\textbf{Valor}} \\ \cline{2-4}
+  & \textbf{Teórico} & \textbf{Medido} & \textbf{Ajustado} \\ \hline
+$R_th$ & $(83,3\pm0,7)\Omega$ & $(83,4\pm0,6)\Omega$ & $(78,5\pm0,8)\Omega$ \\ \hline
+$E_th$ & $(0,83\pm0,08)V$ & $(0,84\pm0,06)V$ & $(0,74\pm0,01)V$ \\ \hline
+\end{tabular}\\[0.5cm]
+\textit{Tabla 2: Valores obtenidos para el equivalente de Thevenin mediante cálculo (teórico),\\ medición directa y ajuste de curva de potencia}
+\end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	CONCLUSIONES
@@ -264,7 +276,13 @@ Desestimando los puntos en cuyos calculos contenian corrientes con incertezas co
 \section{Conclusiones}
 \label{sec:conclusiones}
 
+En conclusión, los resultados obtenidos en la sección referente a la Ley de Ohm resultan consistentes. Aunque la forma funcional de \eqref{Ohm} queda bien comprobada en los graficos de las \textbf{Figuras \ref{fig:Ohm_lin}} y \textbf{\ref{fig:Ohm_lin}}, los ajustes arrojan parámetros que no resultan equivalentes a los del sistema. El parámetro $\frac{1}{m_1} = (505.3 \pm 1,3)\Omega$ arrojado por la \textbf{Figura \ref{fig:Ohm_lin}} no resulta indistinguible a $R = (512 \pm 5)\Omega$, aunque la diferencia es muy pequeña y puede considerarse despreciable frente a las magnitudes manejadas. Sin embargo, el parámetro $m_2 = (16.1\pm0.1)V$ arrojado por la \textbf{Figura \ref{fig:Ohm_hip}} resulta muy distinto al parámetro del sistema $\varepsilon = (15,0 \pm 0,1)V$. \textbf{WHY??}
 
+Empezando con la sección de Thevenin, la \textbf{Tabla 1} permite ver que las corrientes $i_1$, $i_2$ e $i_3$ medidas y teóricas son indistinguibles dentro del error, por lo que puede asumirse que la relación dictada por las Leyes de Kirchoff y el método de ramas son validos. 
+
+Como puede verse en la \textbf{Tabla 2}, los valores de $E_th$ y $R_th$ para el caso de medicion directa y calculo teórico son indistinguibles dentro del error y, por ende, son iguales. Sin embargo, los valores obtenidos mediante el ajuste de la \textbf{Figura \ref{fig:pot_res}} difieren notoriamente de los anteriores. Observando los ordenes de magnitud manejados en la \textbf{Figura \ref{fig:pot_res}} puede notarse que los valores de potencia disipada son menores a $3mW$. Esta baja potencia deviene realmente de los bajos valores de corrientes medidas, que se ubicaron en el intervalo $[0,1mA;7,6mA]$ con un error minimo de $0,2mA$, por lo que gran parte de las corrientes medidas se encontraban muy cerca del límite de resolución del multímetro, por lo que las fluctuaciones y el ruido del instrumento generan incertezas muy altas no contempladas por el error asignado. Esto acarreado con el error al calcular la potencia genera una enorme brecha entre el valor esperado (y medido) y el valor obtenido. El coeficiente $\chi_{red}^{2} = 0.01362$ obtenido en el ajuste de la \textbf{Figura \ref{fig:pot_res}} es un claro reflejo de este problema, pues al ser tan pequeño frente a 1 indica una sobrestimación de errores. Por lo tanto, si nos concentramos en los dos primeros valores, que se obtienen en forma más directa, tenemos una comprobación empírica del teorema de Thevenin. 
+
+A la hora de analizar la eficiencia en la \textbf{Figura \ref{fig:efi_res}}, nuevamente el coeficiente $\chi_{red}^{2} = 0.00361$ previene sobre una enorme sobrestimación de errores, acarreado principalmente del cálculo de la potencia (como se ha visto en el párrafo anterior). Aún desestimando los puntos provenientes de las corrientes más bajas, el error propagado resulta tan grande que resulta dificil asegurar que el ajuste es el correcto. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
