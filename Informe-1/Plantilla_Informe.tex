@@ -70,8 +70,8 @@
 % 1. RESUMEN
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Resumen}
-\label{sec:resumen}
+%\section{Resumen}
+%\label{sec:resumen}
 
 
 
@@ -80,20 +80,25 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Introducción}\label{sec:intro}
+El siguiente informe detalla los experimentos llevados a cabo para una serie de herramientas fundamentales a la hora de resolver un circuito eléctrico. 
 
-El siguiente informe detalla los experimentos llevados a cabo para comprobar empíricamente dos de las herramientas fundamentales a la hora de resolver un circuito eléctrico: la ley de Ohm y el teorema de Thevenin. Ademas, comprobar empíricamente la ley de Joule, que determina la potencia disipada por una resistencia, y la eficacia de la misma.
-
-La ley de Ohm dice que si una fuente $\varepsilon$ y una resistencia $R$ están conectados en serie, la diferencia de potencial entre las terminales $A$ y $B$ (en los extremos de este circuito respectivamente) es $V_{AB} = \varepsilon –iR$, donde $i$ es la corriente eléctrica generada por la fuente que pasa por la resistencia. En particular, si el circuito es cerrado se tiene $V_{AB}=0$ obteniendo entonces:
+Para empezar, la ley de Ohm dice que si una fuente $\varepsilon$ y una resistencia $R$ están conectados en serie, la diferencia de potencial entre las terminales $A$ y $B$ (en los extremos de este circuito respectivamente) es $V_{AB} = \varepsilon –iR$, donde $i$ es la corriente eléctrica generada por la fuente que pasa por la resistencia. En particular, si el circuito es cerrado se tiene $V_{AB}=0$ obteniendo entonces:
 
 \begin{equation}\label{Ohm}
 \ i= \frac{\varepsilon}{R}
 \end{equation}
 
+Si definimos una rama como todo conjunto de elementos conectados en serie y nodo como la intersección de tres o mas ramas; según las leyes de Kirchoff para todo nodo vale:
+ 
+\begin{equation}\label{nodos}
+\ \sum_{e}i_{e}-\sum_{s}i_{s}=0
+\end{equation}
+
+Donde se ve que la suma de corrientes $i_{e}$ entrantes al nodo es igual a la suma de corrientes $i_{s}$ salientes del mismo.
+
 Por otro lado, el teorema de Thevenin enuncia que si se desea conocer el comportamiento de un circuito en una sola rama el resto del circuito puede reemplazarse por una rama que consiste de una resistencia equivalente $R_{th}$ y una fuente equivalente $\varepsilon_{th}$.
 
-La resistencia $R_{th}$ se calcula cortando el circuito y resolviendo el sistema de resistencias que se obtiene. Mientras que la fuente equivalente $\varepsilon_{th}$ se obtiene calculando la diferencia de potencial entre $A$ y $B$ a circuito abierto utilizando las corrientes previamente calculadas mediante, por ejemplo, el método de ramas.
-
-Para el sistema utilizado (detallado mas adelante) se tiene:
+La resistencia $R_{th}$ se calcula cortando el circuito y resolviendo el sistema de resistencias que se obtiene. Por otro lado, la fuente equivalente $\varepsilon_{th}$ se obtiene calculando la diferencia de potencial entre $A$ y $B$ a circuito abierto utilizando las corrientes previamente calculadas mediante, por ejemplo, el método de ramas. Para el caso particular de sistema utilizado (detallado mas adelante) se tiene:
 
 \begin{equation}\label{Rth}
 \ R_{th}= \frac{rR}{2r+R}
@@ -163,7 +168,7 @@ Terminado lo anterior, se propuso montar otro circuito con dos mallas con el pri
   \label{fig:circ_mallas}
 \end{figure}
 
-Inicialmente, se utilizaron las leyes de Kirchoff y se resolvió el circuito mediante el método de ramas para obtener el valor de las corrientes $i_1$, $i_2$ e $i_3$ en base a los parámetros. 
+Inicialmente, se utilizaron las ecuaciones \eqref{Ohm} y \eqref{nodos} para resolver el circuito mediante el método de ramas para obtener el valor de las corrientes $i_1$, $i_2$ e $i_3$ en base a los parámetros. 
  
 Luego se ubicó el multimetro en las posiciones $A_1$, $A_2$ y $A_3$ (Ver \textbf{Fig \ref{fig:circ_mallas}}) para medir las corrientes $i_1$, $i_2$ e $i_3$ respectivamente, considerando despreciable la resistencia interna del multímetro.
  
@@ -203,18 +208,17 @@ Los resultados de la primer medición con la resistencia $R = (512 \pm 5)\Omega$
   \label{fig:Ohm_lin}
 \end{figure}
 
-Luego, con las mediciones correspondientes a un voltaje constante, se decidio realizar un grafico que relacionara las corrientes medidas con el inverso de las resistencias seleccionadas, de esa forma, si se cumple la ley de Ohm, deberia haber una correspondencia lineal entre esos pares de valores. Como se puede ver en la \textbf{Figura \ref{fig:Ohm_hip}} se confirma lo esperado, ya que una vez realizado un ajuste lineal, nos arroja un $R-square = 0,99958$.
+Luego, con las mediciones correspondientes a un voltaje constante, se decidio realizar un grafico que relacionara las corrientes medidas con el inverso de las resistencias seleccionadas, de esa forma, si se cumple la ley de Ohm, deberia haber una correspondencia lineal entre esos pares de valores. Como se puede ver en la \textbf{Figura \ref{fig:Ohm_hip}} se confirma lo esperado, ya que una vez realizado un ajuste lineal, nos arroja un $R-square = 0,99998$.
 
 
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.4]{Corriente_vs_InversoResistencia}
-  \\[1.0cm]
+  \includegraphics[scale=0.15]{Corriente_vs_InversoResistencia}
   \caption{Relacion entre el inverso de Resistencia (1/R) y Corriente (I)}
   \label{fig:Ohm_hip}
 \end{figure}
 
- Cabe destacar, que para resistencias suficientemente altas, las corrientes resultantes deberian estar por debajo del limite de resolucion de cualquier instrumento de medicion; por lo cual, es consistente que el ajuste arroje una interseccion con el eje de ordenadas muy cercano al 0. Efectivamente el valor obtenido es de $b = (-1,1 \pm 0.2)mA$. Adicionalmente, segun la ecuacion \eqref{Ohm} se esperaria que la pendiente de esta recta fuera el voltaje de entrada. En este caso resulta ser ligeramente superior con un valor $m_2 = (16.1\pm0.1)V$
+ Cabe destacar, que para resistencias suficientemente altas, las corrientes resultantes deberian estar por debajo del limite de resolucion de cualquier instrumento de medicion; por lo cual, es consistente que el ajuste arroje una interseccion con el eje de ordenadas muy cercano al 0. Efectivamente el valor obtenido es de $b = (-0,23 \pm 0,03)mA$. Adicionalmente, segun la ecuacion \eqref{Ohm} se esperaria que la pendiente de esta recta fuera el voltaje de entrada. En este caso resulta ser ligeramente superior con un valor $m_2 = (15,4 \pm 0,2)V$
 
 \subsection{Equivalente de Thevenin y Ley de Joule}
 
@@ -229,7 +233,7 @@ De las mediciones y calculos hechos de las corrientes $A_1$, $A_2$ y $A_3$ puede
 $i_1$ & $8,33\pm0,09$ & $8,3\pm0,3$ \\ \hline 
 $i_2$ & $4,17\pm0,05$ & $4,2\pm0,2$ \\ \hline 
 $i_3$ & $4,17\pm0,05$ & $4,1\pm0,2$ \\ \hline 
-\end{tabular}\\
+\end{tabular}\\[0.3cm]
 
 \textit{Tabla 1: Valores obtenidos de las corrientes mediante cálculo (teórico) y medición directa}
 \end{center}
@@ -265,7 +269,7 @@ En resumen, los distintos valores obtenidos de $R_{th}$ y $\varepsilon_{th}$ con
   & \textbf{Teórico} & \textbf{Medido} & \textbf{Ajustado} \\ \hline
 $R_th$ & $(83,3\pm0,7)\Omega$ & $(83,4\pm0,6)\Omega$ & $(78,5\pm0,8)\Omega$ \\ \hline
 $E_th$ & $(0,83\pm0,08)V$ & $(0,84\pm0,06)V$ & $(0,74\pm0,01)V$ \\ \hline
-\end{tabular}\\[0.5cm]
+\end{tabular}\\[0.3cm]
 \textit{Tabla 2: Valores obtenidos para el equivalente de Thevenin mediante cálculo (teórico),\\ medición directa y ajuste de curva de potencia}
 \end{center}
 
@@ -276,9 +280,9 @@ $E_th$ & $(0,83\pm0,08)V$ & $(0,84\pm0,06)V$ & $(0,74\pm0,01)V$ \\ \hline
 \section{Conclusiones}
 \label{sec:conclusiones}
 
-En conclusión, los resultados obtenidos en la sección referente a la Ley de Ohm resultan consistentes. Aunque la forma funcional de \eqref{Ohm} queda bien comprobada en los graficos de las \textbf{Figuras \ref{fig:Ohm_lin}} y \textbf{\ref{fig:Ohm_hip}}, los ajustes arrojan parámetros que no resultan equivalentes a los del sistema. El parámetro $\frac{1}{m_1} = (505.3 \pm 1,3)\Omega$ arrojado por la \textbf{Figura \ref{fig:Ohm_lin}} no resulta indistinguible a $R = (512 \pm 5)\Omega$, aunque la diferencia es muy pequeña y puede considerarse despreciable frente a las magnitudes manejadas. Sin embargo, el parámetro $m_2 = (16.1\pm0.1)V$ arrojado por la \textbf{Figura \ref{fig:Ohm_hip}} resulta muy distinto al parámetro del sistema $\varepsilon = (15,0 \pm 0,1)V$. \textbf{WHY??}
+En conclusión, los resultados obtenidos en la sección referente a la Ley de Ohm resultan consistentes. Aunque la forma funcional de \eqref{Ohm} queda bien comprobada en los graficos de las \textbf{Figuras \ref{fig:Ohm_lin}} y \textbf{\ref{fig:Ohm_hip}}, los ajustes arrojan parámetros que no resultan equivalentes a los del sistema. El parámetro $\frac{1}{m_1} = (505.3 \pm 1,3)\Omega$ arrojado por la \textbf{Figura \ref{fig:Ohm_lin}} no resulta indistinguible a $R = (512 \pm 5)\Omega$, aunque la diferencia es muy pequeña y puede considerarse despreciable frente a las magnitudes manejadas. Para el caso del parámetro $m_2 = (15,4 \pm 0,2)V$ arrojado por la \textbf{Figura \ref{fig:Ohm_hip}} la situación resulta similar al caso anterior frente al parámetro del sistema $\varepsilon = (15,0 \pm 0,1)V$. En este caso, sin embargo, el error puede deberse a que algunas de las corrientes medidas eran menores a $15mA$, lo cual se acerca al límite de resolución del instrumento.
 
-Empezando con la sección de Thevenin, la \textbf{Tabla 1} permite ver que las corrientes $i_1$, $i_2$ e $i_3$ medidas y teóricas son indistinguibles dentro del error, por lo que puede asumirse que la relación dictada por las Leyes de Kirchoff y el método de ramas son validos. 
+Empezando con la sección de Thevenin, la \textbf{Tabla 1} permite ver que las corrientes $i_1$, $i_2$ e $i_3$ medidas y teóricas son indistinguibles dentro del error, por lo que puede asumirse que la relación dictada por las Leyes de Kirchoff de las ecuaciones \eqref{Ohm} y \eqref{nodos}. Por lo tanto, el método de ramas fue usado validamente. 
 
 Como puede verse en la \textbf{Tabla 2}, los valores de $E_{th}$ y $R_{th}$ para el caso de medicion directa y calculo teórico son indistinguibles dentro del error y, por ende, son iguales. Sin embargo, los valores obtenidos mediante el ajuste de la \textbf{Figura \ref{fig:pot_res}} difieren notoriamente de los anteriores. Observando los ordenes de magnitud manejados en la \textbf{Figura \ref{fig:pot_res}} puede notarse que los valores de potencia disipada son menores a $3mW$. Esta baja potencia deviene realmente de los bajos valores de corrientes medidas, que se ubicaron en el intervalo $[0,1mA;7,6mA]$ con un error minimo de $0,2mA$, por lo que gran parte de las corrientes medidas se encontraban muy cerca del límite de resolución del multímetro, por lo que las fluctuaciones y el ruido del instrumento generan incertezas muy altas no contempladas por el error asignado. Esto acarreado con el error al calcular la potencia genera una enorme brecha entre el valor esperado (y medido) y el valor obtenido. El coeficiente $\chi_{red}^{2} = 0.01362$ obtenido en el ajuste de la \textbf{Figura \ref{fig:pot_res}} es un claro reflejo de este problema, pues al ser tan pequeño frente a 1 indica una sobrestimación de errores. Por lo tanto, si nos concentramos en los dos primeros valores, que se obtienen en forma más directa, tenemos una comprobación empírica del teorema de Thevenin. 
 
@@ -296,9 +300,9 @@ A la hora de analizar la eficiencia en la \textbf{Figura \ref{fig:efi_res}}, nue
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %Ejemplo:
-\begin{thebibliography}{1}
- \bibitem{Berkeley} Frank S. Crawford, \textit{Berkeley physics course 3: Ondas}, 1994, Editorial Reverte S.A.
-\end{thebibliography}
+%\begin{thebibliography}{1}
+ %\bibitem{Berkeley} Frank S. Crawford, \textit{Berkeley physics course 3: Ondas}, 1994, Editorial Reverte S.A.
+%\end{thebibliography}
 %Para citar: blablabla \cite{Baird}
  
 \end{document}
