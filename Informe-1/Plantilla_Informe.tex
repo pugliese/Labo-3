@@ -82,13 +82,13 @@
 \section{Introducción}\label{sec:intro}
 El siguiente informe detalla los experimentos llevados a cabo para una serie de herramientas fundamentales a la hora de resolver un circuito eléctrico. 
 
-Para empezar, la ley de Ohm dice que si una fuente $\varepsilon$ y una resistencia $R$ están conectados en serie, la diferencia de potencial entre las terminales $A$ y $B$ (en los extremos de este circuito respectivamente) es $V_{AB} = \varepsilon –iR$, donde $i$ es la corriente eléctrica generada por la fuente que pasa por la resistencia. En particular, si el circuito es cerrado se tiene $V_{AB}=0$ obteniendo entonces:
+Para empezar, la ley de Ohm \cite{Trelles} dice que si una fuente $\varepsilon$ y una resistencia $R$ están conectados en serie, la diferencia de potencial entre las terminales $A$ y $B$ (en los extremos de este circuito respectivamente) es $V_{AB} = \varepsilon –iR$, donde $i$ es la corriente eléctrica generada por la fuente que pasa por la resistencia. En particular, si el circuito es cerrado se tiene $V_{AB}=0$ obteniendo entonces:
 
 \begin{equation}\label{Ohm}
 \ i= \frac{\varepsilon}{R}
 \end{equation}
 
-Si definimos una rama como todo conjunto de elementos conectados en serie y nodo como la intersección de tres o mas ramas; según las leyes de Kirchoff para todo nodo vale:
+Si definimos una rama como todo conjunto de elementos conectados en serie y nodo como la intersección de tres o mas ramas; según las leyes de Kirchoff \cite{Trelles} para todo nodo vale:
  
 \begin{equation}\label{nodos}
 \ \sum_{e}i_{e}-\sum_{s}i_{s}=0
@@ -96,7 +96,7 @@ Si definimos una rama como todo conjunto de elementos conectados en serie y nodo
 
 Donde se ve que la suma de corrientes $i_{e}$ entrantes al nodo es igual a la suma de corrientes $i_{s}$ salientes del mismo.
 
-Por otro lado, el teorema de Thevenin enuncia que si se desea conocer el comportamiento de un circuito en una sola rama el resto del circuito puede reemplazarse por una rama que consiste de una resistencia equivalente $R_{th}$ y una fuente equivalente $\varepsilon_{th}$.
+Por otro lado, el teorema de Thevenin \cite{Trelles} enuncia que si se desea conocer el comportamiento de un circuito en una sola rama el resto del circuito puede reemplazarse por una rama que consiste de una resistencia equivalente $R_{th}$ y una fuente equivalente $\varepsilon_{th}$.
 
 La resistencia $R_{th}$ se calcula cortando el circuito y resolviendo el sistema de resistencias que se obtiene. Por otro lado, la fuente equivalente $\varepsilon_{th}$ se obtiene calculando la diferencia de potencial entre $A$ y $B$ a circuito abierto utilizando las corrientes previamente calculadas mediante, por ejemplo, el método de ramas. Para el caso particular de sistema utilizado (detallado mas adelante) se tiene:
 
@@ -108,7 +108,7 @@ La resistencia $R_{th}$ se calcula cortando el circuito y resolviendo el sistema
 \ \varepsilon_{th}= \frac{2\varepsilon r}{2r+R}
 \end{equation}
 
-Por ultimo, para poder calcular la potencia disipada por una resistencia $R$, la ley de Joule determina la siguiente ecuación:
+Por ultimo, para poder calcular la potencia disipada por una resistencia $R$, la ley de Joule \cite{Trelles} determina la siguiente ecuación:
 
 \begin{equation}\label{Joule}
 \ P = i^2 R
@@ -300,9 +300,9 @@ A la hora de analizar la eficiencia en la \textbf{Figura \ref{fig:efi_res}}, nue
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %Ejemplo:
-%\begin{thebibliography}{1}
- %\bibitem{Berkeley} Frank S. Crawford, \textit{Berkeley physics course 3: Ondas}, 1994, Editorial Reverte S.A.
-%\end{thebibliography}
+\begin{thebibliography}{1}
+ \bibitem{Trelles} Felix Rodriguez Trelles, \textit{Temas de Electricidad y Magnetismo}, 1984, Editorial EUDEBA
+\end{thebibliography}
 %Para citar: blablabla \cite{Baird}
  
 \end{document}
