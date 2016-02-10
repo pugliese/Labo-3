@@ -98,7 +98,7 @@ Donde se ve que la suma de corrientes $i_{e}$ entrantes al nodo es igual a la su
 
 Por otro lado, el teorema de Thevenin \cite{Trelles} enuncia que si se desea conocer el comportamiento de un circuito en una sola rama el resto del circuito puede reemplazarse por una rama que consiste de una resistencia equivalente $R_{th}$ y una fuente equivalente $\varepsilon_{th}$.
 
-La resistencia $R_{th}$ se calcula cortando el circuito y resolviendo el sistema de resistencias que se obtiene. Por otro lado, la fuente equivalente $\varepsilon_{th}$ se obtiene calculando la diferencia de potencial entre $A$ y $B$ a circuito abierto utilizando las corrientes previamente calculadas mediante, por ejemplo, el método de ramas. Para el caso particular de sistema utilizado (detallado mas adelante) se tiene:
+La resistencia $R_{th}$ se calcula cortando el circuito y resolviendo el sistema de resistencias resultante. Por otro lado, la fuente equivalente $\varepsilon_{th}$ se obtiene calculando la diferencia de potencial entre $A$ y $B$ a circuito abierto utilizando las corrientes previamente calculadas mediante, por ejemplo, el método de ramas. Para el caso particular de sistema utilizado (detallado mas adelante) se tiene:
 
 \begin{equation}\label{Rth}
 \ R_{th}= \frac{rR}{2r+R}
@@ -154,21 +154,21 @@ Como se ha dicho, una de las leyes basicas de los circuitos en general es la Ley
   \label{fig:circ_simp}
 \end{figure}
 
-La resistencia del multimetro utilizado en su función de amperímetro era $R_{A} = (11,8 \pm 0,4) \Omega$, la cual debió sumarse a la resistencia variable $R_v$ (pues están en serie) a la hora de calcular la resistencia total del circuito. La resistencia interna de la Fuente se asumió despreciable. Para empezar, se fijó la resistencia variable $R_v = (500 \pm 5)\Omega$ y se fue variando el voltaje de entrada $\varepsilon$, registrándose la corriente $I$ resultante para cada valor de $\varepsilon$. Posteriormente, utilizando el mismo circuito se planteó analizar la relación entre $I$ y $R$ fijando el voltaje de la fuente a $\varepsilon = (15,0 \pm 0,1)V$ y variando la resistencia total $R = R_v + R_A$ a través de $R_v$. 
+La resistencia del multimetro utilizado en su función de amperímetro era $R_{A} = (11,8 \pm 0,4) \Omega$, la cual debió sumarse a la resistencia variable $R_v$ (pues estaban en serie) a la hora de calcular la resistencia total del circuito. La resistencia interna de la Fuente se asumió despreciable. Para empezar, se fijó la resistencia variable $R_v = (500 \pm 5)\Omega$ y se fue variando el voltaje de entrada $\varepsilon$, registrándose la corriente $I$ resultante para cada valor de $\varepsilon$. Posteriormente, utilizando el mismo circuito se planteó analizar la relación entre $I$ y $R$ fijando el voltaje de la fuente a $\varepsilon = (15,0 \pm 0,1)V$ y variando la resistencia total $R = R_v + R_A$ a través de $R_v$. 
 
 
 \subsection{Equivalente de Thevenin y Ley de Joule}
 
-Terminado lo anterior, se propuso montar otro circuito con dos mallas con el primer objetivo de medir sus corrientes de rama y compararlas con el resultado teórico esperado. Se utilizaron dos resistencias $R = (1000,0\pm0,5)\Omega$ y una resistencia $r = (100,00\pm0,05)\Omega$, mientras que la fuente de voltaje $\varepsilon = (5,00\pm0,05)V$ fue generada nuevamente por la Fuente de Alimentación Programable, unidos por cables como se ve en el circuito de la \textbf{Fig \ref{fig:circ_mallas}}.
+Terminado lo anterior, se propuso montar otro circuito con dos mallas con el primer objetivo de medir sus corrientes de rama y compararlas con el resultado teórico esperado. Se utilizaron dos resistencias $R = (1000,0\pm0,5)\Omega$ y una resistencia $r = (100,00\pm0,05)\Omega$, mientras que la fuente de voltaje $\varepsilon = (5,00\pm0,05)V$ fue generada nuevamente por la Fuente de Alimentación Programable, unidos por cables como se ve en el circuito de la \textbf{Figura \ref{fig:circ_mallas}}.
 
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.55]{Mallas_sin_carga}
-  \caption{Circuito de dos mallas utilizado para la experiencia, los $A_i$ representan los lugares donde se ubicó el multimetro}
+  \caption{Circuito de dos mallas utilizado para la experiencia, los $A_i$ \\ representan los lugares donde se ubicó el multimetro}
   \label{fig:circ_mallas}
 \end{figure}
 
-Inicialmente, se utilizaron las ecuaciones \eqref{Ohm} y \eqref{nodos} para resolver el circuito mediante el método de ramas para obtener el valor de las corrientes $i_1$, $i_2$ e $i_3$ en base a los parámetros. 
+Inicialmente, se utilizaron las ecuaciones \eqref{Ohm} y \eqref{nodos} para resolver el circuito mediante el método de ramas y así obtener el valor de las corrientes $i_1$, $i_2$ e $i_3$ en base a los parámetros. 
  
 Luego se ubicó el multimetro en las posiciones $A_1$, $A_2$ y $A_3$ (Ver \textbf{Fig \ref{fig:circ_mallas}}) para medir las corrientes $i_1$, $i_2$ e $i_3$ respectivamente, considerando despreciable la resistencia interna del multímetro.
  
@@ -185,8 +185,7 @@ Posteriormente, se buscó calcular el equivalente de Thevenin en forma teórica 
 
 Conectando el multimetro en paralelo en las terminales A y B se midió la diferencia de potencial $\Delta V_{AB}$ y la resistencia $R_{AB}$  entre ambas terminales.
 
-Una vez hecho esto, fue posible conectar una resistencia de carga $R_v$ representada por una resistencia variable por decadas en serie con el multimetro en modo amperimetro. El objetivo fue medir la corriente $I$ para distintos valores de $R_v$ y en base a ambas magnitudes calcular la potencia $P$ disipada por $R_q$ a través de \eqref{Joule} buscando relevar la curva acampanada $P(R_v)$.
-%cuyo máximo debería encontrarse en $R_{max} = R_{th}$ $= (83,3\pm0,7)\Omega$ segun (\textbf{POT MAX})
+Una vez hecho esto, fue posible conectar una resistencia de carga $R_q = R_v + R_A$ representada por una resistencia variable por decadas en serie con el multimetro en modo amperimetro. El objetivo fue medir la corriente $I$ para distintos valores de $R_v$ y en base a ambas magnitudes calcular la potencia $P$ disipada por $R_q$ a través de \eqref{Joule} buscando relevar la curva acampanada $P(R_q)$.
 
 
 
@@ -208,7 +207,7 @@ Los resultados de la primer medición con la resistencia $R = (512 \pm 5)\Omega$
   \label{fig:Ohm_lin}
 \end{figure}
 
-Luego, con las mediciones correspondientes a un voltaje constante, se decidio realizar un grafico que relacionara las corrientes medidas con el inverso de las resistencias seleccionadas, de esa forma, si se cumple la ley de Ohm, deberia haber una correspondencia lineal entre esos pares de valores. Como se puede ver en la \textbf{Figura \ref{fig:Ohm_hip}} se confirma lo esperado, ya que una vez realizado un ajuste lineal, nos arroja un $R-square = 0,99998$.
+Luego, con las mediciones correspondientes a un voltaje constante, se decidio realizar un grafico que relacionara las corrientes medidas con el inverso de las resistencias seleccionadas, de esa forma, si se cumple \eqref{Ohm}, deberia haber una correspondencia lineal entre esos pares de valores. La \textbf{Figura \ref{fig:Ohm_hip}} confirma lo esperado, ya que una vez realizado un ajuste lineal, arroja un $R-square = 0,99998$.
 
 
 \begin{figure}[h]
@@ -218,7 +217,7 @@ Luego, con las mediciones correspondientes a un voltaje constante, se decidio re
   \label{fig:Ohm_hip}
 \end{figure}
 
- Cabe destacar, que para resistencias suficientemente altas, las corrientes resultantes deberian estar por debajo del limite de resolucion de cualquier instrumento de medicion; por lo cual, es consistente que el ajuste arroje una interseccion con el eje de ordenadas muy cercano al 0. Efectivamente el valor obtenido es de $b = (-0,23 \pm 0,03)mA$. Adicionalmente, segun la ecuacion \eqref{Ohm} se esperaria que la pendiente de esta recta fuera el voltaje de entrada. En este caso resulta ser ligeramente superior con un valor $m_2 = (15,4 \pm 0,2)V$
+ Cabe destacar que para resistencias suficientemente altas las corrientes resultantes deberian estar por debajo del limite de resolucion de cualquier instrumento de medicion; por lo cual, es consistente que el ajuste arroje una interseccion con el eje de ordenadas muy cercano al 0. Efectivamente el valor obtenido es de $b = (-0,23 \pm 0,03)mA$. Adicionalmente, segun la ecuacion \eqref{Ohm} se esperaria que la pendiente de esta recta fuera el voltaje de entrada. En este caso resulta ser ligeramente superior con un valor $m_2 = (15,4 \pm 0,2)V$
 
 \subsection{Equivalente de Thevenin y Ley de Joule}
 
@@ -240,7 +239,7 @@ $i_3$ & $4,17\pm0,05$ & $4,1\pm0,2$ \\ \hline
 
 Luego, a través del cálculo del equivalente de Thevenin se obtuvieron los parametros equivalentes $\varepsilon_{th} = (0,83\pm0,08)V$ y $R_{th} = (83,3 \pm 0,7) \Omega$. Cabe aclarar que en este cálculo no intervinieron las corrientes previamente calculadas, si no que se utilizó directamente su dependencia con los parámetros del circuito. Alternativamente, mediante medición directa se obtuvo $\Delta\varepsilon_{AB} = (0,84 \pm 0,06)V$ y $R_{th} = (83,4 \pm 0,6)\Omega$, valores que resultan indistinguibles dentro del error de los anteriormente calculados. 
 
-De los datos obtenidos se tiene el gráfico de la \textbf{Figura \ref{fig:pot_res}} donde se puede observar que el comportamiento de la potencia entregada por el circuito esta dentro de los parametros esperados. Luego, realizando un ajuste, se obtiene una resistencia máxima $R_{max} = (78.5 \pm 0.8)\Omega$ y un voltaje $\varepsilon = (0,74\pm 0,01)V$ ambos muy cercanos a los valores de Thevenin calculados anteriormente. Sin embargo, el coeficiente $\chi_{red}^{2} = 0.01362$ muestra una enorme sobreestimación de los errores, visible ya en la \textbf{Figura \ref{fig:pot_res}}.
+De los datos obtenidos se tiene el gráfico de la \textbf{Figura \ref{fig:pot_res}} donde se puede observar que el comportamiento de la potencia entregada por el circuito esta dentro de los parametros esperados. Luego, ajustando los puntos por una curva de la forma de \eqref{Pot}, se obtiene una resistencia de máxima disipación $R_{max} = (78.5 \pm 0.8)\Omega$ y un voltaje $\varepsilon_{th} = (0,74\pm 0,01)V$. Recordando que según \eqref{Pot} resulta $R_{max} = R_{th}$, puede verse que ambos resultados son muy cercanos a los valores de Thevenin calculados anteriormente. Sin embargo, el coeficiente $\chi_{red}^{2} = 0.01362$ muestra una enorme sobreestimación de los errores, visible ya en la \textbf{Figura \ref{fig:pot_res}}.
 
 \begin{figure}[h]
   \centering
@@ -249,7 +248,7 @@ De los datos obtenidos se tiene el gráfico de la \textbf{Figura \ref{fig:pot_re
   \label{fig:pot_res}
 \end{figure}
 
-Finalmente, se calculo la eficacia con la cual se traspasaba la potencia de nuestro circuito sobre la carga. En el grafico de la \textbf{Figura \ref{fig:efi_res}} se ve que hay una tendencia creciente pero que en los ultimos puntos se empieza a dispersar. 
+Finalmente, se calculó la eficacia con la cual se traspasaba la potencia del circuito hacia la carga. En el grafico de la \textbf{Figura \ref{fig:efi_res}} se ve que hay una tendencia creciente pero que en los ultimos puntos empieza a dispersarse. 
 
 \begin{figure}[h]
   \centering
@@ -282,7 +281,7 @@ $E_th$ & $(0,83\pm0,08)V$ & $(0,84\pm0,06)V$ & $(0,74\pm0,01)V$ \\ \hline
 
 En conclusión, los resultados obtenidos en la sección referente a la Ley de Ohm resultan consistentes. Aunque la forma funcional de \eqref{Ohm} queda bien comprobada en los graficos de las \textbf{Figuras \ref{fig:Ohm_lin}} y \textbf{\ref{fig:Ohm_hip}}, los ajustes arrojan parámetros que no resultan equivalentes a los del sistema. El parámetro $\frac{1}{m_1} = (505.3 \pm 1,3)\Omega$ arrojado por la \textbf{Figura \ref{fig:Ohm_lin}} no resulta indistinguible a $R = (512 \pm 5)\Omega$, aunque la diferencia es muy pequeña y puede considerarse despreciable frente a las magnitudes manejadas. Para el caso del parámetro $m_2 = (15,4 \pm 0,2)V$ arrojado por la \textbf{Figura \ref{fig:Ohm_hip}} la situación resulta similar al caso anterior frente al parámetro del sistema $\varepsilon = (15,0 \pm 0,1)V$. En este caso, sin embargo, el error puede deberse a que algunas de las corrientes medidas eran menores a $15mA$, lo cual se acerca al límite de resolución del instrumento.
 
-Empezando con la sección de Thevenin, la \textbf{Tabla 1} permite ver que las corrientes $i_1$, $i_2$ e $i_3$ medidas y teóricas son indistinguibles dentro del error, por lo que puede asumirse que la relación dictada por las Leyes de Kirchoff de las ecuaciones \eqref{Ohm} y \eqref{nodos}. Por lo tanto, el método de ramas fue usado validamente. 
+Empezando con la sección de Thevenin, la \textbf{Tabla 1} permite ver que las corrientes $i_1$, $i_2$ e $i_3$ medidas y teóricas son indistinguibles dentro del error, por lo que puede asumirse que la relación dictada por las Leyes de Kirchoff de las ecuaciones \eqref{Ohm} y \eqref{nodos} es correcta. Por lo tanto, el método de ramas fue usado validamente. 
 
 Como puede verse en la \textbf{Tabla 2}, los valores de $E_{th}$ y $R_{th}$ para el caso de medicion directa y calculo teórico son indistinguibles dentro del error y, por ende, son iguales. Sin embargo, los valores obtenidos mediante el ajuste de la \textbf{Figura \ref{fig:pot_res}} difieren notoriamente de los anteriores. Observando los ordenes de magnitud manejados en la \textbf{Figura \ref{fig:pot_res}} puede notarse que los valores de potencia disipada son menores a $3mW$. Esta baja potencia deviene realmente de los bajos valores de corrientes medidas, que se ubicaron en el intervalo $[0,1mA;7,6mA]$ con un error minimo de $0,2mA$, por lo que gran parte de las corrientes medidas se encontraban muy cerca del límite de resolución del multímetro, por lo que las fluctuaciones y el ruido del instrumento generan incertezas muy altas no contempladas por el error asignado. Esto acarreado con el error al calcular la potencia genera una enorme brecha entre el valor esperado (y medido) y el valor obtenido. El coeficiente $\chi_{red}^{2} = 0.01362$ obtenido en el ajuste de la \textbf{Figura \ref{fig:pot_res}} es un claro reflejo de este problema, pues al ser tan pequeño frente a 1 indica una sobrestimación de errores. Por lo tanto, si nos concentramos en los dos primeros valores, que se obtienen en forma más directa, tenemos una comprobación empírica del teorema de Thevenin. 
 
