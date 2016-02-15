@@ -166,6 +166,40 @@ Por lo tanto se estudió el circuito para disintos valores de $R$,$C$ y $L$ con 
 %	APÉNDICE: esas cosas extras que simplemente no tuvieron lo suficiente como para ganarse una sección propia.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\section{Apéndice}
+\label{sec:apendice}
+
+A la hora de analizar largas tiras de datos, los Intervalos de Confianza son herramientas muy útiles. Matemáticamente, si $X_1,..X_n$ son variables aleatorias identicamente distribuidas tal que su esperanza $E(X_i) = \mu$ y varianza $V(X_i) = \sigma^2 > 0$ es posible construir un intervalo de confianza del promedio $\overline{X}_n = \Sigma_{i=1}^{n} \frac{X_i}{n}$. Fisicamente, asumiendo las $X_1,..X_n$ como distintas mediciones de una misma magnitud $X$, es posible considerar $\mu = X$ y construir un intervalo de confianza para este parámetro $\overline{X}_n$. Sin embargo, es necesario conocer la distribución $F(\theta_1,..\theta_m)$ tal que $X_i \sim F(\theta_1,..\theta_m)$. 
+
+Se define $(a;b)_{\theta}$ como un intervalo de confianza de nivel $1-\alpha$ para un parámetro $\theta$ según:
+
+\begin{equation}\label{inter}
+\ P(\theta\in(a;b)_{\theta})= 1-\alpha
+\end{equation}
+
+Según el Teorema Central del Límite, cuando $n\longrightarrow\infty$ resulta $\overline{X}_n \sim N(\mu, \frac{\sigma}{\sqrt{n}})$ donde $N$ representa la distribución normal cuya funcion de densidad se define como:
+
+\begin{equation}\label{normal}
+\ f_N(x) := \frac{e^{\frac{(x-\mu)^2}{2\sigma^2}}}{\sqrt{2\pi}\sigma}
+\end{equation}
+
+De esta forma, a la hora de estimar $\mu$ es posible, asumiendo $n$ suficientemente grande, utilizar un intervalo de confianza sobre la variable aleatoria $\overline{X}_n$. En particular, definiendo la variable aleatoria $Z \sim N(0,1)$, vale asintóticamente que $\overline{X}_n = \mu + \frac{\sigma}{\sqrt{n}}.Z = P(Z<x)$ de forma tal que $\Phi(x) = \int_{-\infty}^x \frac{e^{\frac{x}{2}}}{\sqrt{2\pi}} dx$. Por otro lado, definiendo $z_{p}$ tal que $\Phi(z_{p}) = 1-p$ y recordando que $\Phi(-x) = 1-\Phi(x)$ es posible, a través de \eqref{inter}, definir el intervalo de confianza:
+
+\begin{equation}\label{inter2}
+\ P(|Z|<z_{\frac{\alpha}{2}})= 1-\alpha
+\end{equation}
+
+De esta forma, asumiendo conocida la varianza $V(\overline{X}_n) = \sigma^2$ y utilizando que $Z = \frac{\overline{X}_n-\mu}{\sigma}.\sqrt{n}$ se obtiene utilizando \eqref{inter2} un intervalo de confianza de nivel $1-\alpha$ para $\mu$:
+
+\begin{equation}\label{casi}
+\ I_{\mu} = (\overline{x}_n)-z_{\alpha/2}.\frac{\sigma}{\sqrt{n}}; \overline{x}_n)-z_{\alpha/2}.\frac{\sigma}{\sqrt{n}})
+\end{equation}
+
+Donde $\overline{x}_n = \Sigma_{i=1}^{n} \frac{x_i}{n}$ con $x_i$ el valor obtenido en la i-esima medición. Dado que $\sigma$ no es un parámetro conocido, es posible simplemente aproximarla por el \textit{desvio estandar muestral} tal que $\sigma^2 \simeq \Sigma_{i=1}^{n}\frac{(x_i-\overline{x}_n)^2}{n-1}$. Definiendo $\sigma$ de esta forma, se puede calcular un intervalo de confianza de nivel $1-\alpha$ de la forma:
+
+\begin{equation}\label{inter_final}
+\ \mu_{\alpha} = \overline{x}_n \pm z_{\alpha/2}.\frac{\sigma}{\sqrt{n}} \simeq \overline{x}_n \pm \frac{z_{\alpha/2}}{n} \Sigma_{i=1}^{n}(x_i-\overline{x}_n)^2
+\end{equation}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
