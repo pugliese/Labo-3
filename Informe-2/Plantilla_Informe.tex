@@ -80,48 +80,96 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Introducción}\label{sec:intro}
-Para llevar a cabo el objetivo de caracterizar los circuitos RC, RL y RCL es necesario definir los siguientes conceptos.
+Para llevar a cabo el objetivo de caracterizar los circuitos RC, RL y RCL es necesario comprender como responden a distintos tipos de combinaciones y fuentes de voltaje. Primero, deben recordarse las leyes que dictan la caida de potencial en cada elemento; capacitor $C$, resistencia $R$ e inductancia $L$. Recordando que $\frac{dq(t)}{dt} = I(t)$
 
-Si consideramos un circuito cerrado de una unica malla compuesto por una fuente de alimentación constante $V_{0}$, una resistencia $R$ y un capacitor $C$, la ecuación que rige la evolución del sistema es $V_{0} = \frac{q(t)}{C}+\dfrac{dq(t)}{dt}R$ donde $q(t)$ es la carga eléctrica del sistema. Entonces, si tomamos como condición inicial $q(0)=0$ la solución de la ecuación es:
+\begin{equation}{\label{leyes}}
+\Delta V_C = \frac{q}{C}\\
+\Delta V_R = IR\\
+\Delta V_L = \frac{dI}{dt}
+\end{equation}
+
+Si consideramos un circuito cerrado de una unica malla compuesto por una fuente de voltaje constante $V_{0}$, una resistencia $R$ y un capacitor $C$, las leyes de Kirchoff dictan que la ecuación que rige la evolución del sistema es $V_{0} = \frac{q(t)}{C}+IR$ donde $q(t)$ es la carga eléctrica del capacitor. Entonces, si tomamos como condición inicial $q(0)=0$ la solución de la ecuación es:
    
-\begin{equation}{\label{RC carga}}
+\begin{equation}{\label{RC_carga}}
 q(t)=V_{0}C(1-e^\frac{-t}{RC})
 \end{equation}
 
-Y al ser $q(t)$ una exponencial creciente se denomina a este fenómeno como la carga del capacitor.
+Y al ser $q(t)$ una exponencial creciente se denomina a este fenómeno como la \textit{carga} del capacitor.
 
 Ahora si, utilizando una \textit{llave ideal}, se corta la fuente $V$ a tiempo $t_{0}$ la nueva solución del sistema es de la forma:
 
-\begin{equation}{\label{RC descarga}}
-q(t-t_{0})=V_{0}C(e^\frac{t_{0}}{RC}-1)e^\frac{-t}{RC}
+\begin{equation}{\label{RC_descarga}}
+q(t-t_{0})=V_{0}C(1-e^\frac{-t_{0}}{RC})e^\frac{-t}{RC}
 \end{equation}
 
-Entonces se define a $\tau_{RC}=RC$ \textit{tiempo característico} del circuito. Por lo tanto, si $\tau_{RC}<t_{0}$ se puede observar el efecto de descarga del capacitor pues $q(t-t_{0})$ es una exponencial decreciente. 
+Entonces se define a $\tau_{RC}=RC$ \textit{tiempo característico} del circuito. Por lo tanto, si $\tau_{RC}<t_{0}$ se puede observar el efecto de \textit{descarga} del capacitor pues $q(t-t_{0})$ es una exponencial decreciente. Para la corriente $I(t) = \frac{dq(t)}{dt}$, las ecuaciones que describen su comportamiento en cada caso son:
 
-\begin{equation}{\label{RL carga}}
+\begin{equation}{\label{RC_carga_I}}
+q(t)=\frac{V_{0}}{R}e^\frac{-t}{RC}
+\end{equation}
+
+\begin{equation}{\label{RC_descarga_I}}
+q(t-t_{0}) = \frac{V_{0}}{R}(e^\frac{t_{0}}{RC}-1)e^\frac{-t}{RC}
+\end{equation}
+
+Por otro lado, si en el circuito anterior se reemplaza al capacitor $C$ por una inductancia $L$, la noción de carga desaparece y queda la de corriente $I(t) = \frac{dq(t)}{dt}$ en una ecuación diferencial de la forma $V_{0} = L.\frac{dI(t)}{dt}+R.I(t)$. La solución para el caso de $V= V_0$ es muy similar a la anterior:
+
+\begin{equation}{\label{RL_carga_I}}
+I(t)=\frac{V_0}{R}(1-e^\frac{-Rt}{L})
+\end{equation}
+
+\begin{equation}{\label{RL_carga}}
 \dfrac{dI(t)}{dt}=\frac{V_{0}}{L}e^\frac{-Rt}{L}
 \end{equation}
 
-\begin{equation}{\label{RL descarga}}
+En este caso, el papel del \textit{tiempo característico} lo juega $\tau_{RL}=\frac{L}{R}$. En el caso anterior puede verse que la corriente $I$ \textit{aumenta} hasta alcanzar su valor ideal (en el caso en el que no existe $L$).
+
+Cuando se corta la fuente $V$ a tiempo $t_{0}$ tenemos el caso en que la corriente $I$ \textit{disminuye} hasta volverse nula debido a una especie de inercia generada por la inductancia $L$. En esta situación, la solución del sistema es: 
+
+\begin{equation}{\label{RL_descarga_I}}
+I(t-t_0)= \frac{V_{0}}{R}(1-e^\frac{-Rt_0}{L})e^\frac{-Rt}{L}
+\end{equation}
+
+\begin{equation}{\label{RL_descarga}}
 \dfrac{dI(t-t_{0})}{dt}=-\frac{V_{0}}{L}(e^\frac{Rt_{0}}{L}-1)e^\frac{-tR}{L}
 \end{equation}
 
-\begin{equation}
-q(t)= Ae^{-\alpha t + \beta t} + Be^{-\alpha t - \beta t}
+
+Un circuito más complicado puede generarse combinando los dos anteriores; una fuente de voltaje constante $V_0$, una resistencia $R$, un capacitor $C$ y una inductancia $L$. En este caso, la ecuación diferencial que rige la dependencia temporal de la carga $q(t)$ resulta:
+
+\begin{equation}{\label{ec_RCL}}
+\frac{d^2q(t)}{dt^2}L+\frac{dq(t)}{dt}R+\frac{q(t)}{C} = V_0
 \end{equation}
 
-$\alpha = \frac{R}{2L}$,  $\beta^2 = (\frac{R}{2L})^2-\frac{1}{LC}$
+Cuyo polinomio característico resulta $\lambda^2.L+\lambda.R+\frac{1}{C} = 0$ cuyas raíces son $\lambda_{1,2} = -\frac{R}{2L} \pm \sqrt{(\frac{R}{2L})^2-\frac{1}{LC}}$ donde $\omega_o^2 = \frac{1}{LC}>0$ de denomina \textit{frecuencia natural} del circuito. Esta frecuencia $\omega_o^2 = \frac{1}{LC}$ es la frecuencia de oscilinación del circuito de en el caso en que no existe componente disipativo ($R=0$). Dependiendo del valor del discriminante $\omega^2 = \beta^2-\omega_o^2$ donde $\beta = \frac{R}{2L}>0$ las soluciones del polinomio característico serán reales, real doble o complejas no reales y la función $q(t)$ tendrá un comportamiento sobreamortiguado, subamortiguado o amortiguado, respectivamente. 
 
-Si $\beta^2 < 0$
+Para el caso $\beta < \omega_o$ resulta $\omega^2 < 0$ y por lo tanto las raíces del polinomio característico son complejas. Esto conlleva a una solución de la forma:
 
-$q(t)= Ae^{-\alpha t} \sin(\sqrt{-\beta^2} + \phi_{0})$
+\begin{equation}{\label{amort}}
+q(t) = e^{-\beta t}[a.cos(|\omega| t)+b.sin(|\omega| t)] + V_0C
+\end{equation}
 
-Si $\beta^2 = 0$
+donde $a$ y $b$ se obtienen a través de las condiciones iniciales del sistema y $|\omega| = \sqrt(\omega_o^2-\beta^2)$. Este es el caso del \textit{oscilador amortiguado}.
 
-$q(t) = (A+Bt)e^{-\alpha t}$ 
+Para el caso $\beta = \omega_o$ resulta $\omega^2 = 0$ y por lo tanto la raíz del polinomio característica es doble y única. Esto conlleva a una solución de la forma:
 
-Si $\beta^2 > 0$
-$q(t)= Ae^{-\alpha t} \sinh(\beta t + \phi_{0})$
+\begin{equation}{\label{sub}}
+q(t) = e^{-\beta t}(A+B.t) + V_0C
+\end{equation}
+
+donde A y B nuevamente se obtienen a través de las condiciones iniciales del sistema. Este es el caso límite conocido como \textit{oscilador subamortiguado}.
+
+Finalmente, para el caso $\beta > \omega_o$ resulta $\omega^2>0$ y por lo tanto las raíces del polinomio característico son reales y distintas. Esto conlleva a una solución exponencial de la forma:
+
+\begin{equation}{\label{sobre}}
+q(t) = C.e^{-\beta t + \omega t} + D.e^{-\beta t - \omega t} + V_0C
+\end{equation}
+
+donde C y D se obtienen a través de las condiciones iniciales del sistema. Este caso corresponde al \textit{oscilador sobreamortiguado}, dado que al ser una combinación lineal de exponenciales decrecientes ($\beta > \omega > 0$) nunca puede completarse una oscilación. 
+
+Si, como en el caso de los circuitos RC y RL, se utiliza una señal cuadrada para simular una \textit{llave ideal}, dado que todos los comportamientos cumplen $q(t\rightarrow\infty) = 0$, los períodos donde $V = 0$ resultan en una solución $q(t) = 0$ pues tanto las condiciones iniciales como la inhomogeneidad de la ecuación diferencial son nulas. Cuando la señal vuelve a adquirir el valor $V = V_0$, se recuperan las soluciones anteriores. Sin embargo, para esto se requiere una frecuencia de la señal cuadrada $\frac{\tau_f}{2} > \beta$ para asegurarse de que la carga $q(t)$ decaiga lo suficiente. 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 3. DISPOSITIVO EXPERIMENTAL: armado del modelo, como se midio, consideraciones a la hora de medir.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -139,9 +187,9 @@ La primera parte del trabajo consistió en caracterizar un circuito RC. Para ell
   \label{fig:RC}
 \end{figure}
 
-El objetivo fue medir la carga y descarga del capacitor $C$, y la corriente sobre la resistencia $R$ para obtener el tiempo característico $\tau_{RC}$ del circuito determinado por (\textbf{ecucaciones de RC}).
+El objetivo fue medir la carga y descarga del capacitor $C$ y la corriente sobre la resistencia $R$ (que resultan proporcionales a la caida de potencial en cada elemento, respectivamente) para obtener el tiempo característico $\tau_{RC}$ del circuito determinado por (\textbf{ecucaciones de RC}).
  
-Con el fin de recrear el efecto de la $llave$ $ideal$ se programó la fuente para que emitiera una señal cuadrada con un voltaje máximo $\varepsilon = (2.00 \pm 0.02)V$ y un voltaje mínimo nulo cuya frecuencia era variable.
+Con el fin de recrear el efecto de la $llave$ $ideal$ se programó la fuente para que emitiera una señal cuadrada con un voltaje máximo $\varepsilon = (2.00 \pm 0.02)V$ y un voltaje mínimo nulo cuya frecuencia era variable. Sin embargo, esta frecuencias $f = \frac{\omega_f}{2\pi}$ debió elegirse de forma tal que la carga $q$ llegará a su máximo o mínimo (y por ende la corriente $I$ se anulase) en medio período de la señal $\frac{\tau_f}{2} = \frac{pi}{\omega_f} > \tau_{RC}$ para poder analizar todo el comportamiento.
 
 Para medir la diferencia de tension se conectó un osciloscopio en paralelo al elemento que se quería medir, como se puede ven en la \textbf{Figura \ref{fig:RC}} donde muestra el caso de la resistencia. A su vez, el generador de funciones estaba conectado al osciloscopio para poder visualizar la forma funcional de la fuente. Se lo utilizó además como \textit{trigger externo} para poder apreciar que tanto su señal como la caida de potencial en el elemento se encontraban en fase. Y utilizando un software de recopilación de datos se pudo importar a una computadora las mediciones registradas por el osciloscopio para ser analizadas posteriormente. Este proceso se realizó para disintos valores de $R$, considerandose despreciable la resistencia aportada por $C$.
 
@@ -156,7 +204,9 @@ De manera análoga, la siguiente parte del trabajo consistió en caracterizar un
   \label{fig:RL}
 \end{figure}
 
-El método utilizado para obtener el tiempo característico $\tau_{RL}$, determinado por (\textbf{Ecuaciones de RL}), fue el mismo que para el circuito RC exceptuando el voltaje entregado por la fuente cuyo valor fue $\varepsilon = (8.00 \pm 0.08)V$ y la resistencia de la inductancia $R_L = (294 \pm 3) \Omega$, que en este caso no pudo ser despreciada, debió sumarse a la resistencia $R$ pues estaba en serie.
+El método utilizado para obtener el tiempo característico $\tau_{RL}$, determinado por (\textbf{Ecuaciones de RL}), fue el mismo que para el circuito RC exceptuando el voltaje entregado por la fuente cuyo valor fue $\varepsilon = (8.00 \pm 0.08)V$ y la resistencia de la inductancia $R_L = (294 \pm 3) \Omega$, que en este caso no pudo ser despreciada, debió sumarse a la resistencia $R$ pues estaba en serie. Se midieron las caidas de potencial en la resistencia $R$ (proporcional a la corriente $I$) y en la inductancia $L$ (proporcional a $\frac{dI(t)}{dt}$).
+
+Nuevamente, se buscaron frecuencias $f = \frac{\omega_f}{2\pi}$ tal que la corriente se estabilizara (llegara a un máximo o mínimo) en medio período de la señal $\frac{\tau_f}{2} = \frac{pi}{\omega_f} > \tau_{RL}$ para poder analizar todo el comportamiento.
 
 \subsection{Circuito RCL}
 
@@ -171,9 +221,11 @@ Por ultimo, se buscó estudiar el comportamiento de un circuito RCL. Para ello s
 
 Para caracterizar el circuito, la ecuación (\textbf{ecuaciones de RCL}) determina distintos \textit{comportamientos} que dependen de los parámetros que se usen.
 
-Utilizando el método de adquisición de datos ya explicado, se midió la diferencia de potencial sobre la resistencia. Esta diferencia de potencial era generada por una señal cuadrada de $(3.08 \pm 0.04)V$.
+Utilizando el método de adquisición de datos ya explicado, se midió la diferencia de potencial sobre la resistencia (que resulta proporcional a la corriente $I$). Esta diferencia de potencial era generada por una señal cuadrada de $(3.08 \pm 0.04)V$.
 
 Por lo tanto se estudió el circuito para disintos valores de $R$,$C$ y $L$ con el fin de encontrar cada uno de estos \textit{comportamientos}. Para ello, se fijaban dos parametros y se buscaba que el tercero cumpliese las condiciones (\textbf{discriminante del polinomio que sale de la ecuacion diferencial}) que determinan cada \textit{comportamiento}.
+
+Para cada comportamiento, como se dijo en la \textbf{Introducción}, se buscó una frecuencia $f$ tal que la corriente $I$ se anulara y, por lo tanto, se descargara el capacitor $C$ ($q=0$) en un medio período de la señal $\frac{\tau_f}{2} = \frac{pi}{\omega_f} > \beta$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -218,25 +270,13 @@ Se define $(a;b)_{\theta}$ como un intervalo de confianza de nivel $1-\alpha$ pa
 \ P(\theta\in(a;b)_{\theta})= 1-\alpha
 \end{equation}
 
-Según el Teorema Central del Límite, cuando $n\longrightarrow\infty$ resulta $\overline{X}_n \sim N(\mu, \frac{\sigma}{\sqrt{n}})$ donde $N$ representa la distribución normal cuya funcion de densidad se define como:
-
-\begin{equation}\label{normal}
-\ f_N(x) := \frac{e^{\frac{(x-\mu)^2}{2\sigma^2}}}{\sqrt{2\pi}\sigma}
-\end{equation}
-
-De esta forma, a la hora de estimar $\mu$ es posible, asumiendo $n$ suficientemente grande, utilizar un intervalo de confianza sobre la variable aleatoria $\overline{X}_n$. En particular, definiendo la variable aleatoria $Z \sim N(0,1)$, vale asintóticamente que $\overline{X}_n = \mu + \frac{\sigma}{\sqrt{n}}Z$ de forma tal que $\Phi(x) = \int_{-\infty}^x \frac{e^{\frac{x^2}{2}}}{\sqrt{2\pi}} dx = P(Z<x)$. Por otro lado, definiendo $z_{p}$ tal que $\Phi(z_{p}) = 1-p$ y recordando que $\Phi(-x) = 1-\Phi(x)$ es posible, a través de \eqref{inter}, definir un intervalo de confianza ($-z_{\frac{\alpha}{2}}$; $z_{\frac{\alpha}{2}}$):
+Según el Teorema Central del Límite, cuando $n\rightarrow\infty$ resulta $\overline{X}_n \sim N(\mu, \frac{\sigma}{\sqrt{n}})$ donde $N$ representa la distribución normal. De esta forma, a la hora de estimar $\mu$ es posible, asumiendo $n$ suficientemente grande, utilizar un intervalo de confianza sobre la variable aleatoria $\overline{X}_n$. En particular, definiendo la variable aleatoria $Z \sim N(0,1)$, vale asintóticamente que $\overline{X}_n = \mu + \frac{\sigma}{\sqrt{n}}Z$ de forma tal que $\Phi(x) = \int_{-\infty}^x \frac{e^{\frac{x^2}{2}}}{\sqrt{2\pi}} dx = P(Z<x)$. Por otro lado, definiendo $z_{p}$ tal que $\Phi(z_{p}) = 1-p$ y recordando que $\Phi(-x) = 1-\Phi(x)$ es posible, a través de \eqref{inter}, definir un intervalo de confianza ($-z_{\frac{\alpha}{2}}$; $z_{\frac{\alpha}{2}}$):
 
 \begin{equation}\label{inter2}
 \ P(|Z|<z_{\frac{\alpha}{2}})= 1-\alpha
 \end{equation}
 
-De esta forma, asumiendo conocida la varianza $V(\overline{X}_n) = \sigma^2$ y utilizando que $Z = \frac{\overline{X}_n-\mu}{\sigma}.\sqrt{n}$ se obtiene utilizando \eqref{inter2} un intervalo de confianza de nivel $1-\alpha$ para $\mu$:
-
-\begin{equation}\label{casi}
-\ I_{\mu} = (\overline{x}_n-z_{\alpha/2}\frac{\sigma}{\sqrt{n}}; \overline{x}_n+z_{\alpha/2}\frac{\sigma}{\sqrt{n}})
-\end{equation}
-
-Donde $\overline{x}_n = \Sigma_{i=1}^{n} \frac{x_i}{n}$ con $x_i$ el valor obtenido en la i-esima medición. Dado que $\sigma$ no es un parámetro conocido, es posible simplemente aproximarla por el \textit{desvio estandar muestral} tal que $\sigma^2 \simeq \Sigma_{i=1}^{n}\frac{(x_i-\overline{x}_n)^2}{n-1}$. Definiendo $\sigma$ de esta forma, se puede calcular un intervalo de confianza de nivel $1-\alpha$ de la forma:
+De esta forma, asumiendo conocida la varianza $V(\overline{X}_n) = \sigma^2$ y utilizando que $Z = \frac{\overline{X}_n-\mu}{\sigma}.\sqrt{n}$ es posible utilizar \eqref{inter2} para obtener un intervalo de confianza de nivel $1-\alpha$ para $\mu$. Sin embargo, dado que $\sigma$ no es un parámetro conocido, es posible simplemente aproximarlo por el \textit{desvio estandar muestral} tal que $\sigma^2 \simeq \Sigma_{i=1}^{n}\frac{(x_i-\overline{x}_n)^2}{n-1}$. Definiendo $\sigma$ de esta forma y $\overline{x}_n = \Sigma_{i=1}^{n} \frac{x_i}{n}$ con $x_i$ el valor obtenido en la i-esima medición., se puede calcular un intervalo de confianza de nivel $1-\alpha$ de la forma:
 
 \begin{equation}\label{inter_final}
 \ \mu_{\alpha} = \overline{x}_n \pm z_{\alpha/2}.\frac{\sigma}{\sqrt{n}} \simeq \overline{x}_n \pm \frac{z_{\alpha/2}}{n} \sqrt{\Sigma_{i=1}^{n}(x_i-\overline{x}_n)^2}
