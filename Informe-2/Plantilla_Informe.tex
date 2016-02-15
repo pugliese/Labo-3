@@ -20,7 +20,7 @@
 \usepackage{fancyhdr}
 \usepackage{multirow}
 \pagestyle{fancy}
-
+\usepackage{mathrsfs}
 
 %Para los gráficos en general, con las tablas...¡Ja!, arreglate.
 %\begin{figure}[h!]
@@ -52,7 +52,7 @@
 \rfoot{\thepage}
 \renewcommand{\headrulewidth}{1pt}
 \renewcommand{\footrulewidth}{1pt}
-
+\newcommand\Sum{\displaystyle\sum}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Página en blanco. Cita, agradecimiento, dedicación, lo que sea pero que sea algo.
@@ -80,9 +80,48 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Introducción}\label{sec:intro}
+Para llevar a cabo el objetivo de caracterizar los circuitos RC, RL y RCL es necesario definir los siguientes conceptos.
 
+Si consideramos un circuito cerrado de una unica malla compuesto por una fuente de alimentación constante $V_{0}$, una resistencia $R$ y un capacitor $C$, la ecuación que rige la evolución del sistema es $V_{0} = \frac{q(t)}{C}+\dfrac{dq(t)}{dt}R$ donde $q(t)$ es la carga eléctrica del sistema. Entonces, si tomamos como condición inicial $q(0)=0$ la solución de la ecuación es:
+   
+\begin{equation}{\label{RC carga}}
+q(t)=V_{0}C(1-e^\frac{-t}{RC})
+\end{equation}
 
+Y al ser $q(t)$ una exponencial creciente se denomina a este fenómeno como la carga del capacitor.
 
+Ahora si, utilizando una \textit{llave ideal}, se corta la fuente $V$ a tiempo $t_{0}$ la nueva solución del sistema es de la forma:
+
+\begin{equation}{\label{RC descarga}}
+q(t-t_{0})=V_{0}C(e^\frac{t_{0}}{RC}-1)e^\frac{-t}{RC}
+\end{equation}
+
+Entonces se define a $\tau_{RC}=RC$ \textit{tiempo característico} del circuito. Por lo tanto, si $\tau_{RC}<t_{0}$ se puede observar el efecto de descarga del capacitor pues $q(t-t_{0})$ es una exponencial decreciente. 
+
+\begin{equation}{\label{RL carga}}
+\dfrac{dI(t)}{dt}=\frac{V_{0}}{L}e^\frac{-Rt}{L}
+\end{equation}
+
+\begin{equation}{\label{RL descarga}}
+\dfrac{dI(t-t_{0})}{dt}=-\frac{V_{0}}{L}(e^\frac{Rt_{0}}{L}-1)e^\frac{-tR}{L}
+\end{equation}
+
+\begin{equation}
+q(t)= Ae^{-\alpha t + \beta t} + Be^{-\alpha t - \beta t}
+\end{equation}
+
+$\alpha = \frac{R}{2L}$,  $\beta^2 = (\frac{R}{2L})^2-\frac{1}{LC}$
+
+Si $\beta^2 < 0$
+
+$q(t)= Ae^{-\alpha t} \sin(\sqrt{-\beta^2} + \phi_{0})$
+
+Si $\beta^2 = 0$
+
+$q(t) = (A+Bt)e^{-\alpha t}$ 
+
+Si $\beta^2 > 0$
+$q(t)= Ae^{-\alpha t} \sinh(\beta t + \phi_{0})$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 3. DISPOSITIVO EXPERIMENTAL: armado del modelo, como se midio, consideraciones a la hora de medir.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
