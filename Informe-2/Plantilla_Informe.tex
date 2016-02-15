@@ -102,7 +102,7 @@ La primera parte del trabajo consistió en caracterizar un circuito RC. Para ell
 
 El objetivo fue medir la carga y descarga del capacitor $C$, y la corriente sobre la resistencia $R$ para obtener el tiempo característico $\tau_{RC}$ del circuito determinado por (\textbf{ecucaciones de RC}).
  
-Con el fin de recrear el efecto de la $llave$ $ideal$ se programó la fuente para que emitiera una señal cuadrada con un voltaje $\varepsilon = (2.00 \pm 0.02)V$  cuya frecuencia era variable.
+Con el fin de recrear el efecto de la $llave$ $ideal$ se programó la fuente para que emitiera una señal cuadrada con un voltaje máximo $\varepsilon = (2.00 \pm 0.02)V$ y un voltaje mínimo nulo cuya frecuencia era variable.
 
 Para medir la diferencia de tension se conectó un osciloscopio en paralelo al elemento que se quería medir, como se puede ven en la \textbf{Figura \ref{fig:RC}} donde muestra el caso de la resistencia. A su vez, el generador de funciones estaba conectado al osciloscopio para poder visualizar la forma funcional de la fuente. Se lo utilizó además como \textit{trigger externo} para poder apreciar que tanto su señal como la caida de potencial en el elemento se encontraban en fase. Y utilizando un software de recopilación de datos se pudo importar a una computadora las mediciones registradas por el osciloscopio para ser analizadas posteriormente. Este proceso se realizó para disintos valores de $R$, considerandose despreciable la resistencia aportada por $C$.
 
@@ -117,7 +117,7 @@ De manera análoga, la siguiente parte del trabajo consistió en caracterizar un
   \label{fig:RL}
 \end{figure}
 
-El método utilizado para obtener el tiempo característico $\tau_{RL}$, determinado por (\textbf{Ecuaciones de RL}), fue el mismo que para el circuito RC exceptuando el voltaje entregado por la fuente cuyo valor fue $(8.00 \pm 0.08) V$ y  la resistencia de la inductancia $(294 \pm 3) \Omega$, que en este caso no pudo ser despreciada, debió sumarse a la resistencia $R$ pues estaba en serie.
+El método utilizado para obtener el tiempo característico $\tau_{RL}$, determinado por (\textbf{Ecuaciones de RL}), fue el mismo que para el circuito RC exceptuando el voltaje entregado por la fuente cuyo valor fue $\varepsilon = (8.00 \pm 0.08)V$ y la resistencia de la inductancia $R_L = (294 \pm 3) \Omega$, que en este caso no pudo ser despreciada, debió sumarse a la resistencia $R$ pues estaba en serie.
 
 \subsection{Circuito RCL}
 
@@ -130,11 +130,13 @@ Por ultimo, se buscó estudiar el comportamiento de un circuito RCL. Para ello s
   \label{fig:RCL}
 \end{figure}
 
-Para caracterizar el circuito, la ecuación (\textbf{ecuaciones de RCL}) determina distintos \textit{modos} de comportamiento que depende de los parámetros que se usen.
+Para caracterizar el circuito, la ecuación (\textbf{ecuaciones de RCL}) determina distintos \textit{comportamientos} que dependen de los parámetros que se usen.
 
 Utilizando el método de adquisición de datos ya explicado, se midió la diferencia de potencial sobre la resistencia. Esta diferencia de potencial era generada por una señal cuadrada de $(3.08 \pm 0.04)V$.
 
-Por lo tanto se estudió el circuito para disintos valores de $R$,$C$ y $L$ con el fin de encontrar cada uno de estos \textit{modos}. Para ello, se fijaban dos parametros y se buscaba que el tercero cumpliese las condiciones (\textbf{discriminante del polinomio que sale de la ecuacion diferencial}) que determinan cada \textit{modo}.
+Por lo tanto se estudió el circuito para disintos valores de $R$,$C$ y $L$ con el fin de encontrar cada uno de estos \textit{comportamientos}. Para ello, se fijaban dos parametros y se buscaba que el tercero cumpliese las condiciones (\textbf{discriminante del polinomio que sale de la ecuacion diferencial}) que determinan cada \textit{comportamiento}.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 4.DISCUSIÓN Y RESULTADOS: todo lo que se obtuvo y explicación. Graficos, tablas.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -183,7 +185,7 @@ Según el Teorema Central del Límite, cuando $n\longrightarrow\infty$ resulta $
 \ f_N(x) := \frac{e^{\frac{(x-\mu)^2}{2\sigma^2}}}{\sqrt{2\pi}\sigma}
 \end{equation}
 
-De esta forma, a la hora de estimar $\mu$ es posible, asumiendo $n$ suficientemente grande, utilizar un intervalo de confianza sobre la variable aleatoria $\overline{X}_n$. En particular, definiendo la variable aleatoria $Z \sim N(0,1)$, vale asintóticamente que $\overline{X}_n = \mu + \frac{\sigma}{\sqrt{n}}.Z = P(Z<x)$ de forma tal que $\Phi(x) = \int_{-\infty}^x \frac{e^{\frac{x}{2}}}{\sqrt{2\pi}} dx$. Por otro lado, definiendo $z_{p}$ tal que $\Phi(z_{p}) = 1-p$ y recordando que $\Phi(-x) = 1-\Phi(x)$ es posible, a través de \eqref{inter}, definir el intervalo de confianza:
+De esta forma, a la hora de estimar $\mu$ es posible, asumiendo $n$ suficientemente grande, utilizar un intervalo de confianza sobre la variable aleatoria $\overline{X}_n$. En particular, definiendo la variable aleatoria $Z \sim N(0,1)$, vale asintóticamente que $\overline{X}_n = \mu + \frac{\sigma}{\sqrt{n}}Z$ de forma tal que $\Phi(x) = \int_{-\infty}^x \frac{e^{\frac{x^2}{2}}}{\sqrt{2\pi}} dx = P(Z<x)$. Por otro lado, definiendo $z_{p}$ tal que $\Phi(z_{p}) = 1-p$ y recordando que $\Phi(-x) = 1-\Phi(x)$ es posible, a través de \eqref{inter}, definir un intervalo de confianza ($-z_{\frac{\alpha}{2}}$; $z_{\frac{\alpha}{2}}$):
 
 \begin{equation}\label{inter2}
 \ P(|Z|<z_{\frac{\alpha}{2}})= 1-\alpha
@@ -192,13 +194,13 @@ De esta forma, a la hora de estimar $\mu$ es posible, asumiendo $n$ suficienteme
 De esta forma, asumiendo conocida la varianza $V(\overline{X}_n) = \sigma^2$ y utilizando que $Z = \frac{\overline{X}_n-\mu}{\sigma}.\sqrt{n}$ se obtiene utilizando \eqref{inter2} un intervalo de confianza de nivel $1-\alpha$ para $\mu$:
 
 \begin{equation}\label{casi}
-\ I_{\mu} = (\overline{x}_n)-z_{\alpha/2}.\frac{\sigma}{\sqrt{n}}; \overline{x}_n)-z_{\alpha/2}.\frac{\sigma}{\sqrt{n}})
+\ I_{\mu} = (\overline{x}_n-z_{\alpha/2}\frac{\sigma}{\sqrt{n}}; \overline{x}_n+z_{\alpha/2}\frac{\sigma}{\sqrt{n}})
 \end{equation}
 
 Donde $\overline{x}_n = \Sigma_{i=1}^{n} \frac{x_i}{n}$ con $x_i$ el valor obtenido en la i-esima medición. Dado que $\sigma$ no es un parámetro conocido, es posible simplemente aproximarla por el \textit{desvio estandar muestral} tal que $\sigma^2 \simeq \Sigma_{i=1}^{n}\frac{(x_i-\overline{x}_n)^2}{n-1}$. Definiendo $\sigma$ de esta forma, se puede calcular un intervalo de confianza de nivel $1-\alpha$ de la forma:
 
 \begin{equation}\label{inter_final}
-\ \mu_{\alpha} = \overline{x}_n \pm z_{\alpha/2}.\frac{\sigma}{\sqrt{n}} \simeq \overline{x}_n \pm \frac{z_{\alpha/2}}{n} \Sigma_{i=1}^{n}(x_i-\overline{x}_n)^2
+\ \mu_{\alpha} = \overline{x}_n \pm z_{\alpha/2}.\frac{\sigma}{\sqrt{n}} \simeq \overline{x}_n \pm \frac{z_{\alpha/2}}{n} \sqrt{\Sigma_{i=1}^{n}(x_i-\overline{x}_n)^2}
 \end{equation}
 
 
