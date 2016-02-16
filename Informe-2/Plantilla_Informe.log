@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.4)  16 FEB 2016 19:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.4)  16 FEB 2016 19:59
 entering extended mode
 **"C:/Labo 3/Labo-3/Informe-2/Plantilla_Informe.tex"
 ("C:/Labo 3/Labo-3/Informe-2/Plantilla_Informe.tex"
@@ -1279,17 +1279,21 @@ File: RLC-Amortiguado(1H).jpg Graphic file (type jpg)
 Package pdftex.def Info: RLC-Amortiguado(1H).jpg used on input line 364.
 (pdftex.def)             Requested size: 357.7332pt x 276.43019pt.
  [8 <./TauRCvsR_Todo_en_Serie.jpg>]
-
-LaTeX Warning: Reference `Sobre' on page 9 undefined on input line 371.
-
 <RLC-SobreAmortiguado.jpg, id=51, 794.97pt x 614.295pt>
 File: RLC-SobreAmortiguado.jpg Graphic file (type jpg)
 
 <use RLC-SobreAmortiguado.jpg>
 Package pdftex.def Info: RLC-SobreAmortiguado.jpg used on input line 375.
 (pdftex.def)             Requested size: 357.7332pt x 276.43019pt.
- [9 <./RLC-Amortiguado(1H).jpg> <./RLC-SobreAmortiguado.jpg>] [10] (Plantilla_I
-nforme.aux
+ [9 <./RLC-Amortiguado(1H).jpg> <./RLC-SobreAmortiguado.jpg>]
+<RLC-Amortiguado_Critico(MasPiola).jpg, id=55, 794.97pt x 614.295pt>
+File: RLC-Amortiguado_Critico(MasPiola).jpg Graphic file (type jpg)
+
+<use RLC-Amortiguado_Critico(MasPiola).jpg>
+Package pdftex.def Info: RLC-Amortiguado_Critico(MasPiola).jpg used on input li
+ne 386.
+(pdftex.def)             Requested size: 357.7332pt x 276.43019pt.
+ [10 <./RLC-Amortiguado_Critico(MasPiola).jpg>] [11] (Plantilla_Informe.aux
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 )
@@ -1298,10 +1302,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 7233 strings out of 493634
- 101273 string characters out of 3142929
- 169708 words of memory out of 3000000
- 10417 multiletter control sequences out of 15000+200000
+ 7238 strings out of 493634
+ 101482 string characters out of 3142929
+ 169718 words of memory out of 3000000
+ 10421 multiletter control sequences out of 15000+200000
  42878 words of font info for 91 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  53i,11n,92p,889b,494s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1315,9 +1319,9 @@ pmit8a.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpmn8a.pf
 b><C:/Program Files (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Prog
 ram Files (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpmsc8a.pfb><C:/Program File
 s (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb>
-Output written on Plantilla_Informe.pdf (11 pages, 5302842 bytes).
+Output written on Plantilla_Informe.pdf (12 pages, 5850382 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
+ 93 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
