@@ -149,10 +149,10 @@ Cuyo polinomio característico resulta $\lambda^2.L+\lambda.R+\frac{1}{C} = 0$ c
 Para el caso $\beta < \omega_o$ resulta $\omega^2 < 0$ y por lo tanto las raíces del polinomio característico son complejas. Esto conlleva a una solución de la forma:
 
 \begin{equation}{\label{amort}}
-q(t) = e^{-\beta t}[a.cos(|\omega| t)+b.sin(|\omega| t)] + V_0C
+q(t) = a.e^{-\beta t}.cos(|\omega|(t+\phi)) + V_0C
 \end{equation}
 
-donde $a$ y $b$ se obtienen a través de las condiciones iniciales del sistema y $|\omega| = \sqrt(\omega_o^2-\beta^2)$. Este es el caso del \textit{oscilador amortiguado}.
+donde $a$ y $\phi$ se obtienen a través de las condiciones iniciales del sistema y $|\omega| = \sqrt(\omega_o^2-\beta^2)$. Este es el caso del \textit{oscilador amortiguado}.
 
 Para el caso $\beta = \omega_o$ resulta $\omega^2 = 0$ y por lo tanto la raíz del polinomio característica es doble y única. Esto conlleva a una solución de la forma:
 
@@ -165,7 +165,7 @@ donde A y B nuevamente se obtienen a través de las condiciones iniciales del si
 Finalmente, para el caso $\beta > \omega_o$ resulta $\omega^2>0$ y por lo tanto las raíces del polinomio característico son reales y distintas. Esto conlleva a una solución exponencial de la forma:
 
 \begin{equation}{\label{sobre}}
-q(t) = C.e^{-\beta t + \omega t} + D.e^{-\beta t - \omega t} + V_0C
+q(t) = e^{-\beta t}[C.cosh(\omega t)+D.sinh(\omega t)]
 \end{equation}
 
 donde C y D se obtienen a través de las condiciones iniciales del sistema. Este caso corresponde al \textit{oscilador sobreamortiguado}, dado que al ser una combinación lineal de exponenciales decrecientes ($\beta > \omega > 0$) nunca puede completarse una oscilación. 
