@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.4)  15 FEB 2016 19:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.4)  15 FEB 2016 23:59
 entering extended mode
 **"C:/Labo 3/Labo-3/Informe-2/Plantilla_Informe.tex"
 ("C:/Labo 3/Labo-3/Informe-2/Plantilla_Informe.tex"
@@ -1134,38 +1134,63 @@ File: Circuito-RL.jpg Graphic file (type jpg)
 Package pdftex.def Info: Circuito-RL.jpg used on input line 202.
 (pdftex.def)             Requested size: 150.71204pt x 139.11879pt.
 
+
+LaTeX Warning: Reference `fig:RCL' on page 3 undefined on input line 213.
+
 <Circuito-RCL.jpg, id=23, 215.30438pt x 198.7425pt>
 File: Circuito-RCL.jpg Graphic file (type jpg)
  <use Circuito-RCL.jpg>
 Package pdftex.def Info: Circuito-RCL.jpg used on input line 217.
 (pdftex.def)             Requested size: 150.71204pt x 139.11879pt.
 
-[3 <./Circuito-RC.jpg> <./Circuito-RL.jpg>] [4 <./Circuito-RCL.jpg>] [5]
-(Plantilla_Informe.aux
-LaTeX Info: Redefining \. on input line 6.
-LaTeX Info: Redefining \% on input line 6.
-) ) 
+[3 <./Circuito-RC.jpg> <./Circuito-RL.jpg>]
+
+LaTeX Warning: Reference `fig:RC-CR' on page 4 undefined on input line 239.
+
+<RC-Caida_en_Resistencia.jpg, id=27, 816.651pt x 573.1011pt>
+File: RC-Caida_en_Resistencia.jpg Graphic file (type jpg)
+
+<use RC-Caida_en_Resistencia.jpg>
+Package pdftex.def Info: RC-Caida_en_Resistencia.jpg used on input line 243.
+(pdftex.def)             Requested size: 367.48955pt x 257.89311pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `fig:RC-CC' on page 4 undefined on input line 250.
+
+<RC-Caida_en_Capacitor.jpg, id=28, 816.651pt x 573.1011pt>
+File: RC-Caida_en_Capacitor.jpg Graphic file (type jpg)
+
+<use RC-Caida_en_Capacitor.jpg>
+Package pdftex.def Info: RC-Caida_en_Capacitor.jpg used on input line 254.
+(pdftex.def)             Requested size: 367.48955pt x 257.89311pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.267 \textbf{Resistencia(k\Omega)}
+                                    & \textbf{\tau_{R} (ms)} & \textbf{\tau_...
+
+? 
+! Emergency stop.
+<inserted text> 
+                $
+l.267 \textbf{Resistencia(k\Omega)}
+                                    & \textbf{\tau_{R} (ms)} & \textbf{\tau_...
+End of file on the terminal!
+
+ 
 Here is how much of TeX's memory you used:
- 6378 strings out of 493634
- 87251 string characters out of 3142929
- 153507 words of memory out of 3000000
- 9610 multiletter control sequences out of 15000+200000
+ 6374 strings out of 493634
+ 87357 string characters out of 3142929
+ 153444 words of memory out of 3000000
+ 9606 multiletter control sequences out of 15000+200000
  42878 words of font info for 91 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 36i,10n,43p,883b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}{C
-:/Program Files (x86)/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files 
-(x86)/MiKTeX/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Program Files (x86)/MiK
-TeX/fonts/type1/public/kpfonts/jkpex.pfb><C:/Program Files (x86)/MiKTeX/fonts/t
-ype1/public/kpfonts/jkpmi.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public
-/kpfonts/jkpmia.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/kpfonts/j
-kpmit8a.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpmn8a.p
-fb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Pro
-gram Files (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpmsc8a.pfb><C:/Program Fil
-es (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb>
-Output written on Plantilla_Informe.pdf (6 pages, 193081 bytes).
-PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 36i,10n,43p,843b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

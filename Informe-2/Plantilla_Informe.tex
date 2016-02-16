@@ -236,8 +236,42 @@ Para cada comportamiento, como se dijo en la \textbf{Introducción}, se buscó u
 \label{sec:discusion}
 
 \subsection{Circuito RC}
+Para la primer configuracion del circuito RC, se dispuso una resistencia de $3k\Omega$, se midio la caida de potencial sobre la resistencia y mediante el analizador de datos se obtuvo un grafico que ilusta la \textbf{Figura \ref{fig:RC-CR}}
 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.45]{RC-Caida_en_Resistencia}
+  \caption{Variacion del Potencial en funcion del tiempo}
+  \label{fig:RC-CR}
+\end{figure}
 
+Sabiendo que la variacion en el voltaje medida sobre la resistencia es proporcional a la corriente, se utilizaron las ecuaciones \textbf{(\ref{RC_carga_I})} y \textbf{(\ref{RC_descarga_I})} para realizar ajustes sobre cada uno de los picos que aparecian en el grafico. Y luego se realizo un intervalo de confianza \textbf{(Ver apendice)} con toda la tira de datos, para obtener un valor representativo del tiempo caracteristico de este circuito. Obteniendose un valor de  $\tau_{RC}=(0,315 \pm 0,004) ms$
+
+Cuando la medicion se realizo sobre el Capacitor se obtuvo el grafico ilustrado por la \textbf{Figura \ref{fig:RC-CC}}, en el cual se utilizaron las ecuaciones \textbf{(\ref{RC_carga})} y \textbf{(\ref{RC_descarga})}; y realizandose un proceso estadistico analogo al realizado con los valores obtenidos anteriormente, se obtuvo un $\tau_{RC}=(0,316 \pm 0,005) ms$
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.45]{RC-Caida_en_Capacitor}
+  \caption{Variacion del Potencial en funcion del tiempo}
+  \label{fig:RC-CC}
+\end{figure}
+
+Se puede ver que los resultados de los obtenidos de las distintas mediciones son indistigibles, ya que sus intervalos de incerteza se solapan, lo cual tiene sentido ya que el tiempo caracteristico es algo que depende intrinsecamente de la configuracion del circuito y no del lugar de la medicion.
+
+Posteriormente se realizo el mismo analisis para resistencias de $5, 7, 9 y 11 k\Omega$
+
+\begin{center}
+\begin{tabular}{||c|c|c||}
+\hline
+& \multicolumn{2}{c||}{\textbf{Valor}} \\ \hline
+\textbf{Resistencia(k\Omega)} & \textbf{\tau_{R} (ms)} & \textbf{\tau_{C} (ms)} \\ \hline 
+$3$ & $0,315 \pm 0,004$ & $0,316 \pm 0,005$ \\ \hline 
+$5$ & $0,516\pm 0,004$ & $0,525 \pm 0,007$ \\ \hline 
+$7$ & $0,715\pm 0,007$ & $0,725\pm 0,006$ \\ \hline 
+$9$ & $0,916 \pm 0,006$ & $0,926 \pm 0,009$ \\ \hline 
+$1$ & $1,117\pm 0,007$ & $1,125\pm 0,005$ \\ \hline 
+\end{tabular}\\[0.3cm]
+ 
 \subsection{Circuito RL}
 
 
