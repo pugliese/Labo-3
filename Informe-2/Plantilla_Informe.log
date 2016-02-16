@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.4)  15 FEB 2016 23:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.4)  16 FEB 2016 03:45
 entering extended mode
 **"C:/Labo 3/Labo-3/Informe-2/Plantilla_Informe.tex"
 ("C:/Labo 3/Labo-3/Informe-2/Plantilla_Informe.tex"
@@ -258,108 +258,31 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files (x86)\MiKTeX\tex\generic\babel\babel.sty"
-Package: babel 2016/01/08 3.9n The Babel package
+("C:\Program Files (x86)\MiKTeX\tex\latex\adjustbox\adjustbox.sty"
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
 
-*************************************
-* Local config file bblopts.cfg used
-*
-("C:\Program Files (x86)\MiKTeX\tex\latex\00miktex\bblopts.cfg"
-File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
-)
-("C:\Program Files (x86)\MiKTeX\tex\latex\babel-spanish\spanish.ldf"
-Language: spanish.ldf 2016/01/15 v5.0o Spanish support from the babel system
+("C:\Program Files (x86)\MiKTeX\tex\latex\xkeyval\xkeyval.sty"
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
-("C:\Program Files (x86)\MiKTeX\tex\generic\babel\babel.def"
-File: babel.def 2016/01/08 3.9n Babel common definitions
-\babel@savecnt=\count87
-\U@D=\dimen103
-)
-\es@quottoks=\toks16
-\es@quotdepth=\count88
-Package babel Info: Making " an active character on input line 533.
-Package babel Info: Making . an active character on input line 634.
-Package babel Info: Making < an active character on input line 679.
-Package babel Info: Making > an active character on input line 679.
+("C:\Program Files (x86)\MiKTeX\tex\generic\xkeyval\xkeyval.tex"
+("C:\Program Files (x86)\MiKTeX\tex\generic\xkeyval\xkvutils.tex"
+\XKV@toks=\toks16
+\XKV@tempa@toks=\toks17
+
+("C:\Program Files (x86)\MiKTeX\tex\generic\xkeyval\keyval.tex"))
+\XKV@depth=\count87
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-("C:\Program Files (x86)\MiKTeX\tex\latex\amsmath\amsmath.sty"
-Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip43
+("C:\Program Files (x86)\MiKTeX\tex\latex\adjustbox\adjcalc.sty"
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+("C:\Program Files (x86)\MiKTeX\tex\latex\adjustbox\trimclip.sty"
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
 
-For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\MiKTeX\tex\latex\amsmath\amstext.sty"
-Package: amstext 2000/06/29 v2.01
-
-("C:\Program Files (x86)\MiKTeX\tex\latex\amsmath\amsgen.sty"
-File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks17
-\ex@=\dimen104
-))
-("C:\Program Files (x86)\MiKTeX\tex\latex\amsmath\amsbsy.sty"
-Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen105
-)
-("C:\Program Files (x86)\MiKTeX\tex\latex\amsmath\amsopn.sty"
-Package: amsopn 1999/12/14 v2.01 operator names
-)
-\inf@bad=\count89
-LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count90
-\leftroot@=\count91
-LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count92
-\DOTSCASE@=\count93
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
-\Mathstrutbox@=\box26
-\strutbox@=\box27
-\big@size=\dimen106
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count94
-\c@MaxMatrixCols=\count95
-\dotsspace@=\muskip10
-\c@parentequation=\count96
-\dspbrk@lvl=\count97
-\tag@help=\toks18
-\row@=\count98
-\column@=\count99
-\maxfields@=\count100
-\andhelp@=\toks19
-\eqnshift@=\dimen107
-\alignsep@=\dimen108
-\tagshift@=\dimen109
-\tagwidth@=\dimen110
-\totwidth@=\dimen111
-\lineht@=\dimen112
-\@envbody=\toks20
-\multlinegap=\skip44
-\multlinetaggap=\skip45
-\mathdisplay@stack=\toks21
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
-)
-("C:\Program Files (x86)\MiKTeX\tex\latex\amsfonts\amsfonts.sty"
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)
-("C:\Program Files (x86)\MiKTeX\tex\latex\amsfonts\amssymb.sty"
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
-)
-("C:\Program Files (x86)\MiKTeX\tex\latex\base\makeidx.sty"
-Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
-)
 ("C:\Program Files (x86)\MiKTeX\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX\tex\latex\graphics\keyval.sty"
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks22
-)
 ("C:\Program Files (x86)\MiKTeX\tex\latex\graphics\graphics.sty"
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
@@ -380,10 +303,142 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 ("C:\Program Files (x86)\MiKTeX\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count101
+\Gread@gobject=\count88
 ))
-\Gin@req@height=\dimen113
-\Gin@req@width=\dimen114
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+("C:\Program Files (x86)\MiKTeX\tex\latex\collectbox\collectbox.sty"
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box26
+)
+\tc@llx=\dimen105
+\tc@lly=\dimen106
+\tc@urx=\dimen107
+\tc@ury=\dimen108
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+("C:\Program Files (x86)\MiKTeX\tex\latex\adjustbox\tc-pdftex.def"
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen109
+\adjbox@Height=\dimen110
+\adjbox@Depth=\dimen111
+\adjbox@Totalheight=\dimen112
+
+("C:\Program Files (x86)\MiKTeX\tex\latex\ifoddpage\ifoddpage.sty"
+Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
+\c@checkoddpage=\count89
+)
+("C:\Program Files (x86)\MiKTeX\tex\latex\ltxmisc\varwidth.sty"
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box27
+\sift@deathcycles=\count90
+\@vwid@loff=\dimen113
+\@vwid@roff=\dimen114
+))
+("C:\Program Files (x86)\MiKTeX\tex\generic\babel\babel.sty"
+Package: babel 2016/01/08 3.9n The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files (x86)\MiKTeX\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files (x86)\MiKTeX\tex\latex\babel-spanish\spanish.ldf"
+Language: spanish.ldf 2016/01/15 v5.0o Spanish support from the babel system
+
+("C:\Program Files (x86)\MiKTeX\tex\generic\babel\babel.def"
+File: babel.def 2016/01/08 3.9n Babel common definitions
+\babel@savecnt=\count91
+\U@D=\dimen115
+)
+\es@quottoks=\toks18
+\es@quotdepth=\count92
+Package babel Info: Making " an active character on input line 533.
+Package babel Info: Making . an active character on input line 634.
+Package babel Info: Making < an active character on input line 679.
+Package babel Info: Making > an active character on input line 679.
+))
+("C:\Program Files (x86)\MiKTeX\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count93
+\float@exts=\toks19
+\float@box=\box28
+\@float@everytoks=\toks20
+\@floatcapt=\box29
+)
+("C:\Program Files (x86)\MiKTeX\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks21
+\ex@=\dimen116
+))
+("C:\Program Files (x86)\MiKTeX\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen117
+)
+("C:\Program Files (x86)\MiKTeX\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count94
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count95
+\leftroot@=\count96
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count97
+\DOTSCASE@=\count98
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box30
+\strutbox@=\box31
+\big@size=\dimen118
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count99
+\c@MaxMatrixCols=\count100
+\dotsspace@=\muskip10
+\c@parentequation=\count101
+\dspbrk@lvl=\count102
+\tag@help=\toks22
+\row@=\count103
+\column@=\count104
+\maxfields@=\count105
+\andhelp@=\toks23
+\eqnshift@=\dimen119
+\alignsep@=\dimen120
+\tagshift@=\dimen121
+\tagwidth@=\dimen122
+\totwidth@=\dimen123
+\lineht@=\dimen124
+\@envbody=\toks24
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Program Files (x86)\MiKTeX\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("C:\Program Files (x86)\MiKTeX\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+("C:\Program Files (x86)\MiKTeX\tex\latex\base\makeidx.sty"
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 )
 ("C:\Program Files (x86)\MiKTeX\tex\latex\lm\lmodern.sty"
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
@@ -580,10 +635,10 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 )
-\c@mv@rm=\count102
-\c@mv@boldrm=\count103
-\c@mv@sf=\count104
-\c@mv@boldsf=\count105
+\c@mv@rm=\count106
+\c@mv@boldrm=\count107
+\c@mv@sf=\count108
+\c@mv@boldsf=\count109
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 354.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> OT1/jkp/m/n on input line 354.
@@ -874,11 +929,11 @@ LaTeX Font Info:    Overwriting symbol font `largesymbolsA' in version `boldsf'
 LaTeX Info: Redefining \not on input line 1580.
 )
 ("C:\Program Files (x86)\MiKTeX\tex\latex\wrapfig\wrapfig.sty"
-\wrapoverhang=\dimen115
-\WF@size=\dimen116
-\c@WF@wrappedlines=\count106
-\WF@box=\box28
-\WF@everypar=\toks23
+\wrapoverhang=\dimen125
+\WF@size=\dimen126
+\c@WF@wrappedlines=\count110
+\WF@box=\box32
+\WF@everypar=\toks26
 Package: wrapfig 2003/01/31  v 3.6
 )
 ("C:\Program Files (x86)\MiKTeX\tex\latex\caption\caption.sty"
@@ -887,41 +942,42 @@ Package: caption 2015/09/17 v3.3-111 Customizing captions (AR)
 ("C:\Program Files (x86)\MiKTeX\tex\latex\caption\caption3.sty"
 Package: caption3 2015/09/20 v1.7-115 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen117
-\captionmargin@=\dimen118
-\captionwidth=\dimen119
-\caption@tempdima=\dimen120
-\caption@indent=\dimen121
-\caption@parindent=\dimen122
-\caption@hangindent=\dimen123
+\captionmargin=\dimen127
+\captionmargin@=\dimen128
+\captionwidth=\dimen129
+\caption@tempdima=\dimen130
+\caption@indent=\dimen131
+\caption@parindent=\dimen132
+\caption@hangindent=\dimen133
 )
-\c@ContinuedFloat=\count107
+\c@ContinuedFloat=\count111
+Package caption Info: float package is loaded.
 Package caption Info: wrapfig package is loaded.
 )
 ("C:\Program Files (x86)\MiKTeX\tex\latex\caption\subcaption.sty"
 Package: subcaption 2015/09/15 v1.1-100 Sub-captions (AR)
-\c@subfigure=\count108
-\c@subtable=\count109
+\c@subfigure=\count112
+\c@subtable=\count113
 )
 ("C:\Program Files (x86)\MiKTeX\tex\latex\booktabs\booktabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen124
-\lightrulewidth=\dimen125
-\cmidrulewidth=\dimen126
-\belowrulesep=\dimen127
-\belowbottomsep=\dimen128
-\aboverulesep=\dimen129
-\abovetopsep=\dimen130
-\cmidrulesep=\dimen131
-\cmidrulekern=\dimen132
-\defaultaddspace=\dimen133
-\@cmidla=\count110
-\@cmidlb=\count111
-\@aboverulesep=\dimen134
-\@belowrulesep=\dimen135
-\@thisruleclass=\count112
-\@lastruleclass=\count113
-\@thisrulewidth=\dimen136
+\heavyrulewidth=\dimen134
+\lightrulewidth=\dimen135
+\cmidrulewidth=\dimen136
+\belowrulesep=\dimen137
+\belowbottomsep=\dimen138
+\aboverulesep=\dimen139
+\abovetopsep=\dimen140
+\cmidrulesep=\dimen141
+\cmidrulekern=\dimen142
+\defaultaddspace=\dimen143
+\@cmidla=\count114
+\@cmidlb=\count115
+\@aboverulesep=\dimen144
+\@belowrulesep=\dimen145
+\@thisruleclass=\count116
+\@lastruleclass=\count117
+\@thisrulewidth=\dimen146
 )
 ("C:\Program Files (x86)\MiKTeX\tex\latex\tocbibind\tocbibind.sty"
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
@@ -944,18 +1000,18 @@ Package ifvtex Info: VTeX not detected.
 ("C:\Program Files (x86)\MiKTeX\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count114
-\Gm@cntv=\count115
-\c@Gm@tempcnt=\count116
-\Gm@bindingoffset=\dimen137
-\Gm@wd@mp=\dimen138
-\Gm@odd@mp=\dimen139
-\Gm@even@mp=\dimen140
-\Gm@layoutwidth=\dimen141
-\Gm@layoutheight=\dimen142
-\Gm@layouthoffset=\dimen143
-\Gm@layoutvoffset=\dimen144
-\Gm@dimlist=\toks24
+\Gm@cnth=\count118
+\Gm@cntv=\count119
+\c@Gm@tempcnt=\count120
+\Gm@bindingoffset=\dimen147
+\Gm@wd@mp=\dimen148
+\Gm@odd@mp=\dimen149
+\Gm@even@mp=\dimen150
+\Gm@layoutwidth=\dimen151
+\Gm@layoutheight=\dimen152
+\Gm@layouthoffset=\dimen153
+\Gm@layoutvoffset=\dimen154
+\Gm@dimlist=\toks27
 
 ("C:\Program Files (x86)\MiKTeX\tex\latex\geometry\geometry.cfg"))
 ("C:\Program Files (x86)\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty"
@@ -970,7 +1026,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \f@ncyO@orf=\skip54
 )
 ("C:\Program Files (x86)\MiKTeX\tex\latex\multirow\multirow.sty"
-\bigstrutjot=\dimen145
+\bigstrutjot=\dimen155
 )
 ("C:\Program Files (x86)\MiKTeX\tex\latex\jknappen\mathrsfs.sty"
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
@@ -978,73 +1034,72 @@ Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 LaTeX Font Info:    Redeclaring math alphabet \mathscr on input line 9.
 )
 (Plantilla_Informe.aux
-LaTeX Info: Redefining \. on input line 6.
-LaTeX Info: Redefining \% on input line 6.
+LaTeX Info: Redefining \. on input line 7.
+LaTeX Info: Redefining \% on input line 7.
 )
 \openout1 = `Plantilla_Informe.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 34.
-LaTeX Font Info:    Try loading font information for OML+jkp on input line 34.
+LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 37.
+LaTeX Font Info:    Try loading font information for OML+jkp on input line 37.
 
 ("C:\Program Files (x86)\MiKTeX\tex\latex\kpfonts\omljkp.fd"
 File: omljkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 34.
-LaTeX Font Info:    Try loading font information for OMS+jkp on input line 34.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 37.
+LaTeX Font Info:    Try loading font information for OMS+jkp on input line 37.
 
 ("C:\Program Files (x86)\MiKTeX\tex\latex\kpfonts\omsjkp.fd"
 File: omsjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 34.
-LaTeX Font Info:    Try loading font information for OMX+jkp on input line 34.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 37.
+LaTeX Font Info:    Try loading font information for OMX+jkp on input line 37.
 
 ("C:\Program Files (x86)\MiKTeX\tex\latex\kpfonts\omxjkp.fd"
 File: omxjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 34.
-LaTeX Font Info:    Try loading font information for U+jkpexa on input line 34.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 37.
+LaTeX Font Info:    Try loading font information for U+jkpexa on input line 37.
 
 
 ("C:\Program Files (x86)\MiKTeX\tex\latex\kpfonts\ujkpexa.fd"
 File: ujkpexa.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 34.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 37.
 
 ("C:\Program Files (x86)\MiKTeX\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Try loading font information for OT1+jkp on input line 34.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Try loading font information for OT1+jkp on input line 37.
 
 ("C:\Program Files (x86)\MiKTeX\tex\latex\kpfonts\ot1jkp.fd"
 File: ot1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for OT1/jkp.
 )
-LaTeX Info: Redefining \. on input line 34.
-LaTeX Info: Redefining \% on input line 34.
-
 ("C:\Program Files (x86)\MiKTeX\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count117
-\scratchdimen=\dimen146
-\scratchbox=\box29
-\nofMPsegments=\count118
-\nofMParguments=\count119
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count120
-\MPscratchDim=\dimen147
-\MPnumerator=\count121
-\makeMPintoPDFobject=\count122
-\everyMPtoPDFconversion=\toks26
+\scratchcounter=\count121
+\scratchdimen=\dimen156
+\scratchbox=\box33
+\nofMPsegments=\count122
+\nofMParguments=\count123
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count124
+\MPscratchDim=\dimen157
+\MPnumerator=\count125
+\makeMPintoPDFobject=\count126
+\everyMPtoPDFconversion=\toks29
 )
+LaTeX Info: Redefining \. on input line 37.
+LaTeX Info: Redefining \% on input line 37.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
@@ -1122,7 +1177,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 [1] <Circuito-RC.jpg, id=17, 215.30438pt x 198.7425pt>
 File: Circuito-RC.jpg Graphic file (type jpg)
  <use Circuito-RC.jpg>
-Package pdftex.def Info: Circuito-RC.jpg used on input line 185.
+Package pdftex.def Info: Circuito-RC.jpg used on input line 188.
 (pdftex.def)             Requested size: 150.71204pt x 139.11879pt.
 
 
@@ -1131,66 +1186,116 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [2] <Circuito-RL.jpg, id=22, 215.30438pt x 198.7425pt>
 File: Circuito-RL.jpg Graphic file (type jpg)
  <use Circuito-RL.jpg>
-Package pdftex.def Info: Circuito-RL.jpg used on input line 202.
+Package pdftex.def Info: Circuito-RL.jpg used on input line 205.
 (pdftex.def)             Requested size: 150.71204pt x 139.11879pt.
-
-
-LaTeX Warning: Reference `fig:RCL' on page 3 undefined on input line 213.
 
 <Circuito-RCL.jpg, id=23, 215.30438pt x 198.7425pt>
 File: Circuito-RCL.jpg Graphic file (type jpg)
  <use Circuito-RCL.jpg>
-Package pdftex.def Info: Circuito-RCL.jpg used on input line 217.
+Package pdftex.def Info: Circuito-RCL.jpg used on input line 220.
 (pdftex.def)             Requested size: 150.71204pt x 139.11879pt.
 
 [3 <./Circuito-RC.jpg> <./Circuito-RL.jpg>]
-
-LaTeX Warning: Reference `fig:RC-CR' on page 4 undefined on input line 239.
-
 <RC-Caida_en_Resistencia.jpg, id=27, 816.651pt x 573.1011pt>
 File: RC-Caida_en_Resistencia.jpg Graphic file (type jpg)
 
 <use RC-Caida_en_Resistencia.jpg>
-Package pdftex.def Info: RC-Caida_en_Resistencia.jpg used on input line 243.
+Package pdftex.def Info: RC-Caida_en_Resistencia.jpg used on input line 246.
 (pdftex.def)             Requested size: 367.48955pt x 257.89311pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `fig:RC-CC' on page 4 undefined on input line 250.
-
-<RC-Caida_en_Capacitor.jpg, id=28, 816.651pt x 573.1011pt>
+ [4 <./Circuito-RCL.jpg>]
+<RC-Caida_en_Capacitor.jpg, id=31, 816.651pt x 573.1011pt>
 File: RC-Caida_en_Capacitor.jpg Graphic file (type jpg)
 
 <use RC-Caida_en_Capacitor.jpg>
-Package pdftex.def Info: RC-Caida_en_Capacitor.jpg used on input line 254.
+Package pdftex.def Info: RC-Caida_en_Capacitor.jpg used on input line 257.
 (pdftex.def)             Requested size: 367.48955pt x 257.89311pt.
+ [5 <./RC-Caida_en_Resistencia.jpg> <./RC-Caida_en_Capacitor.jpg>]
+
+Package caption Warning: \label without proper \caption on input line 296.
+See the caption package documentation for explanation.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `fig:RCvsR' on page 6 undefined on input line 281.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.267 \textbf{Resistencia(k\Omega)}
-                                    & \textbf{\tau_{R} (ms)} & \textbf{\tau_...
+<Tau-RCvsR_Resistencia.jpg, id=35, 794.97pt x 614.295pt>
+File: Tau-RCvsR_Resistencia.jpg Graphic file (type jpg)
 
-? 
-! Emergency stop.
-<inserted text> 
-                $
-l.267 \textbf{Resistencia(k\Omega)}
-                                    & \textbf{\tau_{R} (ms)} & \textbf{\tau_...
-End of file on the terminal!
+<use Tau-RCvsR_Resistencia.jpg>
+Package pdftex.def Info: Tau-RCvsR_Resistencia.jpg used on input line 286.
+(pdftex.def)             Requested size: 238.49284pt x 184.28992pt.
 
- 
+<Tau-RCvsR_Capacitor.jpg, id=36, 794.97pt x 614.295pt>
+File: Tau-RCvsR_Capacitor.jpg Graphic file (type jpg)
+
+<use Tau-RCvsR_Capacitor.jpg>
+Package pdftex.def Info: Tau-RCvsR_Capacitor.jpg used on input line 291.
+(pdftex.def)             Requested size: 238.49284pt x 184.28992pt.
+
+Overfull \hbox (2.1243pt too wide) in paragraph at lines 285--295
+[]$[]$ $[]$ 
+ []
+
+
+Package caption Warning: \label without proper \caption on input line 319.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:RL_C' on page 6 undefined on input line 304.
+
+
+LaTeX Warning: Reference `fig:RL_CR' on page 6 undefined on input line 304.
+
+
+LaTeX Warning: Reference `fig:RL_CI' on page 6 undefined on input line 304.
+
+<RL-Caida_en_Inductancia.jpg, id=37, 794.97pt x 614.295pt>
+File: RL-Caida_en_Inductancia.jpg Graphic file (type jpg)
+
+<use RL-Caida_en_Inductancia.jpg>
+Package pdftex.def Info: RL-Caida_en_Inductancia.jpg used on input line 309.
+(pdftex.def)             Requested size: 238.49284pt x 184.28992pt.
+
+<RL-Caida_en_Resistencia.jpg, id=38, 794.97pt x 614.295pt>
+File: RL-Caida_en_Resistencia.jpg Graphic file (type jpg)
+
+<use RL-Caida_en_Resistencia.jpg>
+Package pdftex.def Info: RL-Caida_en_Resistencia.jpg used on input line 314.
+(pdftex.def)             Requested size: 238.49284pt x 184.28992pt.
+
+Overfull \hbox (2.1243pt too wide) in paragraph at lines 308--318
+[]$[]$ $[]$ 
+ []
+
+[6 <./Tau-RCvsR_Resistencia.jpg> <./Tau-RCvsR_Capacitor.jpg>] [7 <./RL-Caida_en
+_Inductancia.jpg> <./RL-Caida_en_Resistencia.jpg>] [8] (Plantilla_Informe.aux
+LaTeX Info: Redefining \. on input line 7.
+LaTeX Info: Redefining \% on input line 7.
+)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 6374 strings out of 493634
- 87357 string characters out of 3142929
- 153444 words of memory out of 3000000
- 9606 multiletter control sequences out of 15000+200000
+ 7216 strings out of 493634
+ 100833 string characters out of 3142929
+ 169678 words of memory out of 3000000
+ 10403 multiletter control sequences out of 15000+200000
  42878 words of font info for 91 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 36i,10n,43p,843b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 53i,11n,92p,883b,494s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}{C:
+/Program Files (x86)/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (
+x86)/MiKTeX/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Program Files (x86)/MiKT
+eX/fonts/type1/public/kpfonts/jkpex.pfb><C:/Program Files (x86)/MiKTeX/fonts/ty
+pe1/public/kpfonts/jkpmi.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/
+kpfonts/jkpmia.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/kpfonts/jk
+pmit8a.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpmn8a.pf
+b><C:/Program Files (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Prog
+ram Files (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpmsc8a.pfb><C:/Program File
+s (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb>
+Output written on Plantilla_Informe.pdf (9 pages, 3208699 bytes).
+PDF statistics:
+ 80 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+

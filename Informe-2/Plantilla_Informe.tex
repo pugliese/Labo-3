@@ -1,7 +1,9 @@
 \documentclass[11pt,a4paper]{article}
 
 \usepackage[utf8]{inputenc}
+\usepackage[export]{adjustbox}
 \usepackage[spanish]{babel}
+\usepackage{float}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -21,6 +23,7 @@
 \usepackage{multirow}
 \pagestyle{fancy}
 \usepackage{mathrsfs}
+\usepackage{graphicx}
 
 %Para los gráficos en general, con las tablas...¡Ja!, arreglate.
 %\begin{figure}[h!]
@@ -238,7 +241,7 @@ Para cada comportamiento, como se dijo en la \textbf{Introducción}, se buscó u
 \subsection{Circuito RC}
 Para la primer configuracion del circuito RC, se dispuso una resistencia de $3k\Omega$, se midio la caida de potencial sobre la resistencia y mediante el analizador de datos se obtuvo un grafico que ilusta la \textbf{Figura \ref{fig:RC-CR}}
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.45]{RC-Caida_en_Resistencia}
   \caption{Variacion del Potencial en funcion del tiempo}
@@ -249,7 +252,7 @@ Sabiendo que la variacion en el voltaje medida sobre la resistencia es proporcio
 
 Cuando la medicion se realizo sobre el Capacitor se obtuvo el grafico ilustrado por la \textbf{Figura \ref{fig:RC-CC}}, en el cual se utilizaron las ecuaciones \textbf{(\ref{RC_carga})} y \textbf{(\ref{RC_descarga})}; y realizandose un proceso estadistico analogo al realizado con los valores obtenidos anteriormente, se obtuvo un $\tau_{RC}=(0,316 \pm 0,005) ms$
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.45]{RC-Caida_en_Capacitor}
   \caption{Variacion del Potencial en funcion del tiempo}
@@ -258,21 +261,69 @@ Cuando la medicion se realizo sobre el Capacitor se obtuvo el grafico ilustrado 
 
 Se puede ver que los resultados de los obtenidos de las distintas mediciones son indistigibles, ya que sus intervalos de incerteza se solapan, lo cual tiene sentido ya que el tiempo caracteristico es algo que depende intrinsecamente de la configuracion del circuito y no del lugar de la medicion.
 
-Posteriormente se realizo el mismo analisis para resistencias de $5, 7, 9 y 11 k\Omega$
+Posteriormente se realizo el mismo analisis para configuraciones con resistencias de $5, 7, 9 y 11 k\Omega$, sin variar los demas parametros y se obtuvieron los valores presentados en la  \textbf{Tabla 1}, donde se puede observar lo resaltado anteriormente, para cada par de resultados correspondientes a una misma configuracion, estos son indistingibles.
 
 \begin{center}
 \begin{tabular}{||c|c|c||}
 \hline
 & \multicolumn{2}{c||}{\textbf{Valor}} \\ \hline
-\textbf{Resistencia(k\Omega)} & \textbf{\tau_{R} (ms)} & \textbf{\tau_{C} (ms)} \\ \hline 
+\textbf{Resistencia (k$\Omega$)} & \textbf{$\tau_{R}$ (ms)} & \textbf{$\tau_{C}$ (ms)} \\ \hline 
 $3$ & $0,315 \pm 0,004$ & $0,316 \pm 0,005$ \\ \hline 
 $5$ & $0,516\pm 0,004$ & $0,525 \pm 0,007$ \\ \hline 
 $7$ & $0,715\pm 0,007$ & $0,725\pm 0,006$ \\ \hline 
 $9$ & $0,916 \pm 0,006$ & $0,926 \pm 0,009$ \\ \hline 
-$1$ & $1,117\pm 0,007$ & $1,125\pm 0,005$ \\ \hline 
+$11$ & $1,117\pm 0,007$ & $1,125\pm 0,005$ \\ \hline 
 \end{tabular}\\[0.3cm]
  
+\textit{Tabla 1: Valores obtenidos de las tiempos caracteristicos}
+\end{center}
+
+Finalmente, teniendo en cuenta que segun el modelo propuesto, el tiempo caracteristico de un circuito tiene una correspondencia lineal con la resistencia se construyeron un par de gráficos que relaciona estos valores y se realizo un ajuste sobre los mismos como se puede ver en la \textbf{Figura \ref{fig:RCvsR}}.
+
+\begin{figure}[H]
+
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[scale=0.30]{Tau-RCvsR_Resistencia}
+  \caption{Medicion sobre la Resistencia}
+  \label{subfig:RCvsRR}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[scale=0.30]{Tau-RCvsR_Capacitor}
+  \caption{Medicion sobre el Capacitor}
+  \label{subfig:RCvsRC}
+\end{subfigure}
+
+  \label{fig:RCvsR}
+  \caption{Variacion del tiempo caracteristico en funcion de la resistencia}
+\end{figure}
+
+El resultado esperado seria que la pendiente de ambos graficos sea equivalente al valor de la capacitancia $C = (100 \pm 0,2)nF$. Efectivamente para la \textbf{Figura \ref{subfig:RCvsRR}} la pendiente arroja un valor $m_{R} = (100.18 \pm 0,09)nF$ y un $R-Cuadrado = 1$; y para la \textbf{Figura \ref{subfig:RCvsRC}}, un $m_{C} = (101 \pm 0,5)nF$, y un $R-Cuadrado = 0.99991$. 
+
 \subsection{Circuito RL}
+
+El procedimiento realizado con el circuito RL es absolutamente analogo al realizado con el RC. Se realizaron mediciones para distintas configuraciones que relevaban multiples curvas como muestra la \textbf{Figura \ref{fig:RL_C}}. En el caso de los graficos de tipo \textbf{\ref{fig:RL_CR}}, como corresponden a las mediciones sobre la resistencia, se utilizaron las ecuaciones \textbf{\ref{RL_carga_I}} y \textbf{\ref{RL_descarga_I}} para realizar los ajustes, ya que la caida de potencial medida en ese lugar es proporcional a la Corriente. En cambio, para los graficos de tipo \textbf{\ref{fig:RL_CI}}, correspondientes a las mediciones sobre la inductancia, se utilizaron las ecuaciones \textbf{\ref{RL_carga}} y \textbf{\ref{RL_descarga}}, ya que, en este caso, es proporcional a la derivada de la corriente.
+
+\begin{figure}[H]
+
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[scale=0.30]{RL-Caida_en_Inductancia}
+  \caption{Medicion sobre la Inductancia}
+  \label{subfig:RL_CI}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[scale=0.30]{RL-Caida_en_Resistencia}
+  \caption{Medicion sobre la Resistencia}
+  \label{subfig:RL_CR}
+\end{subfigure}
+
+ \label{fig:RL_C}
+  \caption{Caida del potencial en funcion del tiempo}
+\end{figure}
+
+Posteriormente, con los resultados provistos por los ajustes, se realizo el mismo trabajo estadistico,obteniendose los resultados 
+
+
+
 
 
 \subsection{Circuito RCL}
