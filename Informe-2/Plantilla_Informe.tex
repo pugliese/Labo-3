@@ -275,7 +275,7 @@ $9$ & $0,916 \pm 0,006$ & $0,926 \pm 0,009$ \\ \hline
 $11$ & $1,117\pm 0,007$ & $1,125\pm 0,005$ \\ \hline 
 \end{tabular}\\[0.3cm]
  
-\textit{Tabla 1: Valores obtenidos de las tiempos caracteristicos}
+\textit{Tabla 1: Valores obtenidos de las tiempos caracteristicos en el circuito RC}
 \end{center}
 
 Finalmente, teniendo en cuenta que segun el modelo propuesto, el tiempo caracteristico de un circuito tiene una correspondencia lineal con la resistencia se construyeron un par de gráficos que relaciona estos valores y se realizo un ajuste sobre los mismos como se puede ver en la \textbf{Figura \ref{fig:RCvsR}}.
@@ -299,9 +299,10 @@ Finalmente, teniendo en cuenta que segun el modelo propuesto, el tiempo caracter
 
 El resultado esperado seria que la pendiente de ambos graficos sea equivalente al valor de la capacitancia $C = (100 \pm 0,2)nF$. Efectivamente para la \textbf{Figura \ref{subfig:RCvsRR}} la pendiente arroja un valor $m_{R} = (100.18 \pm 0,09)nF$ y un $R-Cuadrado = 1$; y para la \textbf{Figura \ref{subfig:RCvsRC}}, un $m_{C} = (101 \pm 0,5)nF$, y un $R-Cuadrado = 0.99991$. 
 
+
 \subsection{Circuito RL}
 
-El procedimiento realizado con el circuito RL es absolutamente analogo al realizado con el RC. Se realizaron mediciones para distintas configuraciones que relevaban multiples curvas como muestra la \textbf{Figura \ref{fig:RL_C}}. En el caso de los graficos de tipo \textbf{\ref{fig:RL_CR}}, como corresponden a las mediciones sobre la resistencia, se utilizaron las ecuaciones \textbf{\ref{RL_carga_I}} y \textbf{\ref{RL_descarga_I}} para realizar los ajustes, ya que la caida de potencial medida en ese lugar es proporcional a la Corriente. En cambio, para los graficos de tipo \textbf{\ref{fig:RL_CI}}, correspondientes a las mediciones sobre la inductancia, se utilizaron las ecuaciones \textbf{\ref{RL_carga}} y \textbf{\ref{RL_descarga}}, ya que, en este caso, es proporcional a la derivada de la corriente.
+El procedimiento realizado con el circuito RL es absolutamente analogo al realizado con el RC. Se realizaron mediciones para distintas configuraciones que relevaban multiples curvas como muestra la \textbf{Figura \ref{fig:RL_C}}. En el caso de los graficos de tipo \textbf{\ref{subfig:RL_CR}}, como corresponden a las mediciones sobre la resistencia, se utilizaron las ecuaciones \textbf{\ref{RL_carga_I}} y \textbf{\ref{RL_descarga_I}} para realizar los ajustes, ya que la caida de potencial medida en ese lugar es proporcional a la Corriente. En cambio, para los graficos de tipo \textbf{\ref{subfig:RL_CI}}, correspondientes a las mediciones sobre la inductancia, se utilizaron las ecuaciones \textbf{\ref{RL_carga}} y \textbf{\ref{RL_descarga}}, ya que, en este caso, es proporcional a la derivada de la corriente.
 
 \begin{figure}[H]
 
@@ -320,13 +321,54 @@ El procedimiento realizado con el circuito RL es absolutamente analogo al realiz
   \caption{Caida del potencial en funcion del tiempo}
 \end{figure}
 
-Posteriormente, con los resultados provistos por los ajustes, se realizo el mismo trabajo estadistico,obteniendose los resultados 
+Posteriormente, con los resultados provistos por los ajustes, se realizo el mismo trabajo estadistico, obteniendose los resultados explayados en la \textbf{Tabla 2}
 
+\begin{center}
+\begin{tabular}{||c|c|c||}
+\hline
+\multicolumn{3}{||c||}{\textbf{Valor}} \\ \hline
+\textbf{Posicion osciloscopio} & \textbf{Resistencia (k$\Omega$)} & \textbf{$\tau_{RL}$ (ms)}\\ \hline 
+\multirow {5}{2cm}{Resistencia} & $0.6$ & $1.373 \pm 0.006$ \\ \cline {2-3}
+& $0.8$ & $1.04\pm 0.01$ \\ \cline {2-3} 
+& $1$ & $0.770 \pm 0.003$ \\ \cline {2-3}
+& $1.2$ & $0.656 \pm 0.004$ \\ \cline {2-3}
+& $1.4$ & $0.570 \pm 0.002$ \\ \hline
+\multirow {5}{2cm}{Inductancia} & $3$ & $0.27 \pm 0.03$ \\ \cline {2-3}
+& $5$ & $0.157 \pm 0.002$ \\ \cline {2-3}
+& $7$ & $0.114 \pm 0.002$ \\ \cline {2-3}
+& $9$ & $0.091 \pm 0.005$ \\ \cline {2-3} 
+& $11$ & $0.071 \pm 0.008$ \\ \hline
+\end{tabular}\\[0.3cm]
 
+ \textit{Tabla 2: Valores obtenidos de los tiempos caracteristicos en el circuito RL}
+\end{center}
 
+Luego se costruyo el \textbf{grafico \ref{fig:T-RL}} que relaciona las duplas, se realizo un ajuste esperando que se respete la relacion $\tau_{RL} = L/R$ y que, ademas, se consiga un valor de $L = (1.000 \pm 0.002) H$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.45]{TauRCvsR_Todo_en_Serie}
+  \caption{Variacion del tiempo caracteristico en funcion de la resistencia}
+  \label{fig:T-RL}
+\end{figure}
+
+Efectivamente, una vez realizado ese proceso, se obtiene un $R-cuadrado = 0.99819$ que ratifica la bondad del ajuste pero, el valor de la inductancia calculado por este metodo fue $L = (0.80 \pm 0.01) H$, que es ligeramente inferior. Se desconocen las causas de esa diferencia.
 
 
 \subsection{Circuito RCL}
+
+Para realizar la primer medición, se fijó una Resistencia $R= 400 \mp 4 \Omega$, una Inductancia $L = 1 \mp 0.001 H$ (la cual añadia una resistencia de $R_{L} = 296 \mp 3 \Omega$), y una capacitancia $C = 100 \mp 0.2 nF$. Bajo esos parametros se esperaba una respuesta regida por la ecuación \textbf{\ref{amort}} y, efectivamente, se puede ver en la \textbf{figura \ref{fig:RLC-A}} que el ajuste se adapta de muy buena manera y nos arroja un $R-Cuadrado = 0.99827$. Cabe destacar, que para este tipo de circuito, no hubo intencion de realizar un analisis estadistico analogo al utilizado en los dos casos anteriores,por lo que se se priorizo obtener la maxima resolucion posible con el osciloscopio.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.45]{RLC-Amortiguado(1H)}
+  \caption{Variacion del potencial en funcion del tiempo en un circuito RLC (Oscilador amortiguado)}
+  \label{fig:RLC-A}
+\end{figure}
+
+ Del ajuste se puede extraer el valor de la frecuencia de oscilacion $\f_{A} = 501.3 \mp 0.7 hz$ el cual es consistente con la calculada de manera teorica, $\f_{teo} = 500.2 \mp 0.6 hz$, ya que como sus intervalos de incerteza se solapan, son indistigibles.
+
+
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.4)  16 FEB 2016 03:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.4)  16 FEB 2016 16:45
 entering extended mode
 **"C:/Labo 3/Labo-3/Informe-2/Plantilla_Informe.tex"
 ("C:/Labo 3/Labo-3/Informe-2/Plantilla_Informe.tex"
@@ -1236,38 +1236,50 @@ Overfull \hbox (2.1243pt too wide) in paragraph at lines 285--295
  []
 
 
-Package caption Warning: \label without proper \caption on input line 319.
+Package caption Warning: \label without proper \caption on input line 320.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:RL_C' on page 6 undefined on input line 304.
-
-
-LaTeX Warning: Reference `fig:RL_CR' on page 6 undefined on input line 304.
-
-
-LaTeX Warning: Reference `fig:RL_CI' on page 6 undefined on input line 304.
+LaTeX Warning: Reference `fig:RL_C' on page 6 undefined on input line 305.
 
 <RL-Caida_en_Inductancia.jpg, id=37, 794.97pt x 614.295pt>
 File: RL-Caida_en_Inductancia.jpg Graphic file (type jpg)
 
 <use RL-Caida_en_Inductancia.jpg>
-Package pdftex.def Info: RL-Caida_en_Inductancia.jpg used on input line 309.
+Package pdftex.def Info: RL-Caida_en_Inductancia.jpg used on input line 310.
 (pdftex.def)             Requested size: 238.49284pt x 184.28992pt.
 
 <RL-Caida_en_Resistencia.jpg, id=38, 794.97pt x 614.295pt>
 File: RL-Caida_en_Resistencia.jpg Graphic file (type jpg)
 
 <use RL-Caida_en_Resistencia.jpg>
-Package pdftex.def Info: RL-Caida_en_Resistencia.jpg used on input line 314.
+Package pdftex.def Info: RL-Caida_en_Resistencia.jpg used on input line 315.
 (pdftex.def)             Requested size: 238.49284pt x 184.28992pt.
 
-Overfull \hbox (2.1243pt too wide) in paragraph at lines 308--318
+Overfull \hbox (2.1243pt too wide) in paragraph at lines 309--319
 []$[]$ $[]$ 
  []
 
-[6 <./Tau-RCvsR_Resistencia.jpg> <./Tau-RCvsR_Capacitor.jpg>] [7 <./RL-Caida_en
-_Inductancia.jpg> <./RL-Caida_en_Resistencia.jpg>] [8] (Plantilla_Informe.aux
+[6 <./Tau-RCvsR_Resistencia.jpg> <./Tau-RCvsR_Capacitor.jpg>]
+Overfull \hbox (0.78995pt too wide) in paragraph at lines 336--336
+[]|\OT1/jkp/m/n/10.95 Inductancia|  
+ []
+
+<TauRCvsR_Todo_en_Serie.jpg, id=43, 794.97pt x 614.295pt>
+File: TauRCvsR_Todo_en_Serie.jpg Graphic file (type jpg)
+
+<use TauRCvsR_Todo_en_Serie.jpg>
+Package pdftex.def Info: TauRCvsR_Todo_en_Serie.jpg used on input line 350.
+(pdftex.def)             Requested size: 357.7332pt x 276.43019pt.
+ [7 <./RL-Caida_en_Inductancia.jpg> <./RL-Caida_en_Resistencia.jpg>] <RLC-Amort
+iguado(1H).jpg, id=47, 794.97pt x 614.295pt>
+File: RLC-Amortiguado(1H).jpg Graphic file (type jpg)
+
+<use RLC-Amortiguado(1H).jpg>
+Package pdftex.def Info: RLC-Amortiguado(1H).jpg used on input line 364.
+(pdftex.def)             Requested size: 357.7332pt x 276.43019pt.
+ [8 <./TauRCvsR_Todo_en_Serie.jpg>] [9 <./RLC-Amortiguado(1H).jpg>] [10] (Plant
+illa_Informe.aux
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 )
@@ -1276,13 +1288,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 7216 strings out of 493634
- 100833 string characters out of 3142929
- 169678 words of memory out of 3000000
- 10403 multiletter control sequences out of 15000+200000
+ 7226 strings out of 493634
+ 101115 string characters out of 3142929
+ 169695 words of memory out of 3000000
+ 10411 multiletter control sequences out of 15000+200000
  42878 words of font info for 91 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 53i,11n,92p,883b,494s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 53i,11n,92p,889b,494s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}{C:
 /Program Files (x86)/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (
 x86)/MiKTeX/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Program Files (x86)/MiKT
@@ -1293,9 +1305,9 @@ pmit8a.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpmn8a.pf
 b><C:/Program Files (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Prog
 ram Files (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpmsc8a.pfb><C:/Program File
 s (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb>
-Output written on Plantilla_Informe.pdf (9 pages, 3208699 bytes).
+Output written on Plantilla_Informe.pdf (11 pages, 4813690 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
+ 88 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
