@@ -83,7 +83,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Introducción}\label{sec:intro}
-Para llevar a cabo el objetivo de caracterizar los circuitos RC, RL y RCL es necesario comprender como responden a distintos tipos de combinaciones y fuentes de voltaje. Primero, deben recordarse las leyes que dictan la caida de potencial en cada elemento; capacitor $C$, resistencia $R$ e inductancia $L$. Recordando que $\frac{dq(t)}{dt} = I(t)$
+Para llevar a cabo el objetivo de caracterizar los circuitos RC, RL y RCL es necesario comprender como responden a distintos tipos de combinaciones y fuentes de voltaje. Primero, deben recordarse las leyes que dictan la caida de potencial en cada elemento; capacitor $C$, resistencia $R$ e inductancia $L$. Recordando que $\frac{dq(t)}{dt} = I(t)$ donde $q(t)$ es la carga en el capacitor $C$, vale:
 
 \begin{equation}{\label{leyes}}
 \begin{split}
@@ -93,7 +93,7 @@ Para llevar a cabo el objetivo de caracterizar los circuitos RC, RL y RCL es nec
 \end{split}
 \end{equation}
 
-Si consideramos un circuito cerrado de una unica malla compuesto por una fuente de voltaje constante $V_{0}$, una resistencia $R$ y un capacitor $C$, las leyes de Kirchoff dictan que la ecuación que rige la evolución del sistema es $V_{0} = \frac{q(t)}{C}+IR$ donde $q(t)$ es la carga eléctrica del capacitor. Entonces, si tomamos como condición inicial $q(0)=0$ la solución de la ecuación es:
+Considerando un circuito cerrado de una unica malla compuesto por una fuente de voltaje constante $V_{0}$, una resistencia $R$ y un capacitor $C$, las leyes de Kirchoff dictan que la ecuación que rige la evolución del sistema es $V_{0} = \frac{q(t)}{C}+IR$. Entonces, tomando como condición inicial $q(0)=0$ la solución de la ecuación es:
    
 \begin{equation}{\label{RC_carga}}
 q(t)=V_{0}C(1-e^\frac{-t}{RC})
@@ -110,11 +110,11 @@ q(t-t_{0})=V_{0}C(1-e^\frac{-t_{0}}{RC})e^\frac{-t}{RC}
 Entonces se define a $\tau_{RC}=RC$ \textit{tiempo característico} del circuito. Por lo tanto, si $\tau_{RC}<t_{0}$ se puede observar el efecto de \textit{descarga} del capacitor pues $q(t-t_{0})$ es una exponencial decreciente. Para la corriente $I(t) = \frac{dq(t)}{dt}$, las ecuaciones que describen su comportamiento en cada caso son:
 
 \begin{equation}{\label{RC_carga_I}}
-q(t)=\frac{V_{0}}{R}e^\frac{-t}{RC}
+I(t)=\frac{V_{0}}{R}e^\frac{-t}{RC}
 \end{equation}
 
 \begin{equation}{\label{RC_descarga_I}}
-q(t-t_{0}) = \frac{V_{0}}{R}(e^\frac{t_{0}}{RC}-1)e^\frac{-t}{RC}
+I(t-t_{0}) = \frac{V_{0}}{R}(e^\frac{t_{0}}{RC}-1)e^\frac{-t}{RC}
 \end{equation}
 
 Por otro lado, si en el circuito anterior se reemplaza al capacitor $C$ por una inductancia $L$, la noción de carga desaparece y queda la de corriente $I(t) = \frac{dq(t)}{dt}$ en una ecuación diferencial de la forma $V_{0} = L.\frac{dI(t)}{dt}+R.I(t)$. La solución para el caso de $V= V_0$ es muy similar a la anterior:
@@ -129,14 +129,14 @@ I(t)=\frac{V_0}{R}(1-e^\frac{-Rt}{L})
 
 En este caso, el papel del \textit{tiempo característico} lo juega $\tau_{RL}=\frac{L}{R}$ y puede verse que la corriente $I$ \textit{aumenta} hasta alcanzar su valor ideal (el valor de la corriente en un circuito sin inductancia).
 
-Cuando se corta la fuente $V$ a tiempo $t_{0}$ tenemos el caso en que la corriente $I$ \textit{disminuye} hasta volverse nula. En esta situación, la solución del sistema es:
+Cuando se corta la fuente $V$ a tiempo $t_{0}$ se tiene el caso en que la corriente $I$ \textit{disminuye} hasta volverse nula. En esta situación, la solución del sistema es:
 
 \begin{equation}{\label{RL_descarga_I}}
 I(t-t_0)= \frac{V_{0}}{R}(1-e^\frac{-Rt_0}{L})e^\frac{-Rt}{L}
 \end{equation}
 
 \begin{equation}{\label{RL_descarga}}
-\dfrac{dI(t-t_{0})}{dt}=\frac{V_{0}}{L}(1-e^\frac{-Rt_{0}}{L})e^\frac{-Rt}{L}
+\dfrac{dI(t-t_{0})}{dt}=-\frac{V_{0}}{L}(1-e^\frac{-Rt_{0}}{L})e^\frac{-Rt}{L}
 \end{equation}
 
 
@@ -146,7 +146,7 @@ Un circuito más complicado puede generarse combinando los dos anteriores; una f
 \frac{d^2q(t)}{dt^2}L+\frac{dq(t)}{dt}R+\frac{q(t)}{C} = V_0
 \end{equation}
 
-Cuyo polinomio característico resulta $\lambda^2.L+\lambda.R+\frac{1}{C} = 0$ cuyas raíces son $\lambda_{1,2} = -\frac{R}{2L} \pm \sqrt{(\frac{R}{2L})^2-\frac{1}{LC}}$ donde $\omega_o^2 = \frac{1}{LC}>0$ de denomina \textit{frecuencia natural} del circuito. Esta frecuencia $\omega_o^2 = \frac{1}{LC}$ es la frecuencia de oscilinación del circuito de en el caso en que no existe componente disipativo ($R=0$). Dependiendo del valor del discriminante $\omega^2 = \beta^2-\omega_o^2$ donde $\beta = \frac{R}{2L}>0$ las soluciones del polinomio característico serán reales, real doble o complejas no reales y la función $q(t)$ tendrá un comportamiento sobreamortiguado, subamortiguado o amortiguado, respectivamente. 
+cuyo polinomio característico es $\lambda^2.L+\lambda.R+\frac{1}{C} = 0$ que tiene como raíces $\lambda_{1,2} = -\frac{R}{2L} \pm \sqrt{(\frac{R}{2L})^2-\frac{1}{LC}}$ donde $\omega_o^2 = \frac{1}{LC}>0$ se denomina \textit{frecuencia natural} del circuito. Esta frecuencia $\omega_o^2 = \frac{1}{LC}$ es la frecuencia de oscilinación del circuito en el caso en que no existe componente disipativo ($R=0$). Dependiendo del valor del discriminante $\omega^2 = \beta^2-\omega_o^2$ donde $\beta = \frac{R}{2L}>0$ las soluciones del polinomio característico serán reales, real doble o complejas no reales y la función $q(t)$ tendrá un comportamiento sobreamortiguado, subamortiguado o amortiguado, respectivamente. 
 
 Para el caso $\beta < \omega_o$ resulta $\omega^2 < 0$ y por lo tanto las raíces del polinomio característico son complejas y distintas. Esto conlleva a una solución de la forma:
 
@@ -192,11 +192,11 @@ La primera parte del trabajo consistió en caracterizar un circuito RC. Para ell
   \label{fig:RC}
 \end{figure}
 
-El objetivo fue medir la carga y descarga del capacitor $C$ y la corriente sobre la resistencia $R$ (que resultan proporcionales a la caida de potencial en cada elemento, respectivamente) para obtener el tiempo característico $\tau_{RC}$ del circuito determinado por (\textbf{ecucaciones de RC}).
+El objetivo fue medir la carga y descarga del capacitor $C$ y la corriente sobre la resistencia $R$ (que resultan proporcionales a la caida de potencial en cada elemento, respectivamente) para obtener el tiempo característico $\tau_{RC} = RC$del circuito presente en las ecuaciones \eqref{RC_carga}, \eqref{RC_descarga}, \eqref{RC_carga_I} y \eqref{RC_descarga_I}.
  
-Con el fin de recrear el efecto de la $llave$ $ideal$ se programó la fuente para que emitiera una señal cuadrada con un voltaje máximo $\varepsilon = (2.00 \pm 0.02)V$ y un voltaje mínimo nulo cuya frecuencia era variable. Sin embargo, esta frecuencias $f = \frac{\omega_f}{2\pi}$ debió elegirse de forma tal que la carga $q$ llegará a su máximo o mínimo (y por ende la corriente $I$ se anulase) en medio período de la señal $\frac{\tau_f}{2} = \frac{pi}{\omega_f} > \tau_{RC}$ para poder analizar todo el comportamiento.
+Con el fin de recrear el efecto de la $llave$ $ideal$ se programó la fuente para que emitiera una señal cuadrada con un voltaje máximo $\varepsilon = (2.00 \pm 0.02)V$ y un voltaje mínimo nulo cuya frecuencia era variable. Sin embargo, esta frecuencia $f = \frac{\omega_f}{2\pi}$ debió elegirse de forma tal que la carga $q$ llegará a su máximo o mínimo (y por ende la corriente $I$ se anulase) en medio período de la señal $\frac{\tau_f}{2} = \frac{pi}{\omega_f} > \tau_{RC}$ para poder analizar todo el comportamiento.
 
-Para medir la diferencia de tension se conectó un osciloscopio en paralelo al elemento que se quería medir, como se puede ven en la \textbf{Figura \ref{fig:RC}} donde muestra el caso de la resistencia. A su vez, el generador de funciones estaba conectado al osciloscopio para poder visualizar la forma funcional de la fuente. Se lo utilizó además como \textit{trigger externo} para poder apreciar que tanto su señal como la caida de potencial en el elemento se encontraban en fase. Y utilizando un software de recopilación de datos se pudo importar a una computadora las mediciones registradas por el osciloscopio para ser analizadas posteriormente. Este proceso se realizó para disintos valores de $R$, considerandose despreciable la resistencia aportada por $C$.
+Para medir la diferencia de tension se conectó un osciloscopio en paralelo al elemento que se quería medir, como se puede ver en la \textbf{Figura \ref{fig:RC}} donde muestra el caso de la resistencia. A su vez, el generador de funciones estaba conectado al osciloscopio para poder visualizar la forma funcional de la fuente. Se lo utilizó además como \textit{trigger externo} para poder apreciar que tanto su señal como la caida de potencial en el elemento se encontraban en fase. Y utilizando un software de recopilación de datos se pudo importar a una computadora las mediciones registradas por el osciloscopio para ser analizadas posteriormente. Este proceso se realizó para disintos valores de $R$, considerandose despreciable la resistencia aportada por $C$.
 
 \subsection{Circuito RL}
 
@@ -209,7 +209,7 @@ De manera análoga, la siguiente parte del trabajo consistió en caracterizar un
   \label{fig:RL}
 \end{figure}
 
-El método utilizado para obtener el tiempo característico $\tau_{RL}$, determinado por (\textbf{Ecuaciones de RL}), fue el mismo que para el circuito RC exceptuando el voltaje entregado por la fuente cuyo valor fue $\varepsilon = (8.00 \pm 0.08)V$ y la resistencia de la inductancia $R_L = (294 \pm 3) \Omega$, que en este caso no pudo ser despreciada, debió sumarse a la resistencia $R$ pues estaba en serie. Se midieron las caidas de potencial en la resistencia $R$ (proporcional a la corriente $I$) y en la inductancia $L$ (proporcional a $\frac{dI(t)}{dt}$).
+El método utilizado para obtener el tiempo característico $\tau_{RL} = \frac{L}{R}$, fue el mismo que para el circuito RC exceptuando el voltaje entregado por la fuente cuyo valor fue $\varepsilon = (8.00 \pm 0.08)V$ y la resistencia de la inductancia $R_L = (294 \pm 3) \Omega$, que en este caso no pudo ser despreciada, debió sumarse a la resistencia $R$ pues estaba en serie. Se midieron las caidas de potencial en la resistencia $R$ (proporcional a la corriente $I$) y en la inductancia $L$ (proporcional a $\frac{dI(t)}{dt}$).
 
 Nuevamente, se buscaron frecuencias $f = \frac{\omega_f}{2\pi}$ tal que la corriente se estabilizara (llegara a un máximo o mínimo) en medio período de la señal $\frac{\tau_f}{2} = \frac{pi}{\omega_f} > \tau_{RL}$ para poder analizar todo el comportamiento.
 
@@ -224,7 +224,7 @@ Por ultimo, se buscó estudiar el comportamiento de un circuito RCL. Para ello s
   \label{fig:RCL}
 \end{figure}
 
-Para caracterizar el circuito, la ecuación (\textbf{ecuaciones de RCL}) determina distintos \textit{comportamientos} que dependen de los parámetros que se usen.
+Para caracterizar el circuito, la ecuación diferencia \eqref{ec_RCL} determina distintos \textit{comportamientos} que dependen de los parámetros involucrados en el circuito.
 
 Utilizando el método de adquisición de datos ya explicado, se midió la diferencia de potencial sobre la resistencia (que resulta proporcional a la corriente $I$). Esta diferencia de potencial era generada por una señal cuadrada de $(3.08 \pm 0.04)V$.
 
@@ -245,36 +245,36 @@ Para la primer configuracion del circuito RC, se dispuso una resistencia de $R =
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.45]{RC-Caida_en_Resistencia}
+\includegraphics[scale=0.4]{RC-Caida_en_Resistencia}
   \caption{Variacion del Potencial en funcion del tiempo}
   \label{fig:RC-CR}
 \end{figure}
 
-Sabiendo que la variacion en el voltaje medida sobre la resistencia es proporcional a la corriente, se utilizaron las ecuaciones \eqref{RC_carga_I} y  \eqref{RC_descarga_I} para realizar ajustes sobre cada uno de los picos que aparecian en el grafico. Y luego se realizo un intervalo de confianza de nivel $0.95$ \textbf{(Ver apendice)} con toda la tira de datos, para obtener un valor representativo del tiempo caracteristico de este circuito, obteniendose un valor de  $\tau_{RC}=(0,315 \pm 0,004) ms$.
+Sabiendo que la variacion en el voltaje medida sobre la resistencia es proporcional a la corriente, se utilizaron las ecuaciones \eqref{RC_carga_I} y  \eqref{RC_descarga_I} para realizar ajustes sobre cada uno de los picos que aparecian en el grafico y así obtener un valor de $\tau_{RC}$ para cada uno. Y luego se realizo un intervalo de confianza de nivel $0.95$ \textbf{(Ver apendice)} con los todos los valores de $\tau_{RC}$, para obtener un valor representativo del tiempo caracteristico de este circuito, que resultó $\tau_{RC}=(0,315 \pm 0,004) ms$.
 
-Cuando la medicion se realizo sobre el Capacitor se obtuvo el grafico ilustrado por la \textbf{Figura \ref{fig:RC-CC}}, en el cual se utilizaron las ecuaciones \eqref{RC_carga} y \eqref{RC_descarga}; y realizandose un análisis idéntico al realizado con los valores obtenidos anteriormente, se obtuvo un $\tau_{RC}=(0,316 \pm 0,005) ms$.
+Cuando la medicion se realizo sobre el capacitor $C$ se obtuvo el grafico ilustrado por la \textbf{Figura \ref{fig:RC-CC}}, en el cual se utilizaron las ecuaciones \eqref{RC_carga} y \eqref{RC_descarga}; y realizandose un análisis idéntico al realizado con los valores de la \textbf{Figura \ref{fig:RC-CR}}, se obtuvo un $\tau_{RC}=(0,316 \pm 0,005) ms$.
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.45]{RC-Caida_en_Capacitor}
+\includegraphics[scale=0.5]{RC-Caida_en_Capacitor}
   \caption{Variacion del Potencial en funcion del tiempo}
   \label{fig:RC-CC}
 \end{figure}
 
 Se puede ver que los resultados de los obtenidos de las distintas mediciones son indistigibles, ya que sus intervalos de incerteza se solapan, lo cual resulta consistente ya que el tiempo caracteristico depende intrinsecamente de la configuracion del circuito y no del lugar de la medicion.
 
-Posteriormente se realizo el mismo analisis para configuraciones con resistencias de $(5,00\pm0,03)k\Omega$, $(7,00\pm0,04)k\Omega$, $(9,00\pm0,05)k\Omega$ y $(11,00\pm0,05)k\Omega$, sin variar los demas parametros y se obtuvieron los valores presentados en la \textbf{Tabla 1}, donde se puede observar lo resaltado anteriormente; para cada par de resultados correspondientes a una misma configuracion, estos son indistingibles.
+Posteriormente se realizo el mismo analisis para configuraciones con resistencias de $(5,00\pm0,03)k\Omega$, $(7,00\pm0,04)k\Omega$, $(9,00\pm0,05)k\Omega$ y $(11,00\pm0,05)k\Omega$, sin variar los demas parametros y se obtuvieron los valores presentados en la \textbf{Tabla 1}, donde se puede observar lo resaltado anteriormente; para cada par de resultados correspondientes a una misma configuracion, estos son indistingibles.\\ 
 
 \begin{center}
 \begin{tabular}{||c|c|c||}
 \hline
 & \multicolumn{2}{c||}{\textbf{Valor}} \\ \hline
 \textbf{Resistencia (k$\Omega$)} & \textbf{$\tau_{R}$ (ms)} & \textbf{$\tau_{C}$ (ms)} \\ \hline 
-$(3,00\pm0,02)$ & $0,315 \pm 0,004$ & $0,316 \pm 0,005$ \\ \hline 
-$(5,00\pm0,03)$ & $0,516\pm 0,004$ & $0,525 \pm 0,007$ \\ \hline 
-$(7,00\pm0,03)$ & $0,715\pm 0,007$ & $0,725\pm 0,006$ \\ \hline 
-$(9,00\pm0,03)$ & $0,916 \pm 0,006$ & $0,926 \pm 0,009$ \\ \hline 
-$(11,00\pm0,03)$ & $1,117\pm 0,007$ & $1,125\pm 0,005$ \\ \hline 
+$3,00\pm0,02$ & $0,315 \pm 0,004$ & $0,316 \pm 0,005$ \\ \hline 
+$5,00\pm0,03$ & $0,516\pm 0,004$ & $0,525 \pm 0,007$ \\ \hline 
+$7,00\pm0,03$ & $0,715\pm 0,007$ & $0,725\pm 0,006$ \\ \hline 
+$9,00\pm0,03$ & $0,916 \pm 0,006$ & $0,926 \pm 0,009$ \\ \hline 
+$11,00\pm0,03$ & $1,117\pm 0,007$ & $1,125\pm 0,005$ \\ \hline 
 \end{tabular}\\[0.3cm]
  
 \textit{Tabla 1: Valores obtenidos de las tiempos caracteristicos en el circuito RC}
@@ -285,12 +285,12 @@ Finalmente, teniendo en cuenta que segun el modelo propuesto, el tiempo caracter
 \begin{figure}[H]
 
 \begin{subfigure}{0.5\textwidth}
-\includegraphics[scale=0.30]{Tau-RCvsR_Resistencia}
+\includegraphics[scale=0.35]{Tau-RCvsR_Resistencia}
   \caption{Medicion sobre la Resistencia}
   \label{subfig:RCvsRR}
 \end{subfigure}
 \begin{subfigure}{0.5\textwidth}
-\includegraphics[scale=0.30]{Tau-RCvsR_Capacitor}
+\includegraphics[scale=0.35]{Tau-RCvsR_Capacitor}
   \caption{Medicion sobre el Capacitor}
   \label{subfig:RCvsRC}
 \end{subfigure}
@@ -303,17 +303,17 @@ El resultado esperado seria que la pendiente de ambos graficos sea equivalente a
 
 \subsection{Circuito RL}
 
-El procedimiento realizado con el circuito RL es absolutamente analogo al realizado con el RC. Se realizaron mediciones para distintas configuraciones que relevaban multiples curvas como muestra la \textbf{Figura \ref{fig:RL_C}}. En el caso de los graficos de tipo \textbf{\ref{subfig:RL_CR}}, como corresponden a las mediciones sobre la resistencia, se utilizaron las ecuaciones \eqref{RL_carga_I} y \eqref{RL_descarga_I} para realizar los ajustes, ya que la caida de potencial medida en ese lugar es proporcional a la Corriente. En cambio, para los graficos de tipo \textbf{\ref{subfig:RL_CI}}, correspondientes a las mediciones sobre la inductancia, se utilizaron las ecuaciones \textbf{\ref{RL_carga}} y \textbf{\ref{RL_descarga}}, ya que, en este caso, es proporcional a la derivada de la corriente.
+El procedimiento realizado con el circuito RL es absolutamente analogo al realizado con el RC. Se realizaron mediciones para distintas configuraciones que relevaban multiples curvas como muestra la \textbf{Figura \ref{fig:RL_C}}. En el caso de los graficos de tipo \textbf{\ref{subfig:RL_CR}}, como corresponden a las mediciones sobre la resistencia, se utilizaron las ecuaciones \eqref{RL_carga_I} y \eqref{RL_descarga_I} para realizar los ajustes, ya que la caida de potencial medida en ese lugar es proporcional a la corriente. En cambio, para los graficos de tipo \textbf{\ref{subfig:RL_CI}}, correspondientes a las mediciones sobre la inductancia, se utilizaron las ecuaciones \eqref{RL_carga} y \eqref{RL_descarga} ya que, en este caso, es proporcional a la derivada de la corriente.
 
 \begin{figure}[H]
 
 \begin{subfigure}{0.5\textwidth}
-\includegraphics[scale=0.30]{RL-Caida_en_Inductancia}
+\includegraphics[scale=0.35]{RL-Caida_en_Inductancia}
   \caption{Medicion sobre la Inductancia}
   \label{subfig:RL_CI}
 \end{subfigure}
 \begin{subfigure}{0.5\textwidth}
-\includegraphics[scale=0.30]{RL-Caida_en_Resistencia}
+\includegraphics[scale=0.35]{RL-Caida_en_Resistencia}
   \caption{Medicion sobre la Resistencia}
   \label{subfig:RL_CR}
 \end{subfigure}
@@ -328,16 +328,16 @@ Posteriormente, con los resultados provistos por los ajustes, se realizo el mism
 \hline
 \multicolumn{3}{||c||}{\textbf{Valor}} \\ \hline
 \textbf{Posicion osciloscopio} & \textbf{Resistencia (k$\Omega$)} & \textbf{$\tau_{RL}$ (ms)}\\ \hline 
-\multirow {5}{2cm}{Resistencia} & $(0.6\pm0.003)$ & $1.373 \pm 0.006$ \\ \cline {2-3}
-& $(0.800\pm0,004)$ & $1.04\pm 0.01$ \\ \cline {2-3} 
-& $(1.000\pm0,005$ & $0.770 \pm 0.003$ \\ \cline {2-3}
-& $(1.200\pm0,006)$ & $0.656 \pm 0.004$ \\ \cline {2-3}
-& $(1.400\pm0,007)$ & $0.570 \pm 0.002$ \\ \hline
-\multirow {5}{2cm}{Inductancia} & $3$ & $0.27 \pm 0.03$ \\ \cline {2-3}
-& $(5.00\pm0,03)$ & $0.157 \pm 0.002$ \\ \cline {2-3}
-& $(7.00\pm0,04)$ & $0.114 \pm 0.002$ \\ \cline {2-3}
-& $(9.00\pm0,05)$ & $0.091 \pm 0.005$ \\ \cline {2-3} 
-& $(11.00\pm0,05)$ & $0.071 \pm 0.008$ \\ \hline
+\multirow {5}{2cm}{Resistencia} & $0.600\pm0.003$ & $1.373 \pm 0.006$ \\ \cline {2-3}
+& $0.800\pm0,004$ & $1.04\pm 0.01$ \\ \cline {2-3} 
+& $1.000\pm0,005$ & $0.770 \pm 0.003$ \\ \cline {2-3}
+& $1.200\pm0,006$ & $0.656 \pm 0.004$ \\ \cline {2-3}
+& $1.400\pm0,007$ & $0.570 \pm 0.002$ \\ \hline
+\multirow {5}{2cm}{Inductancia} & $3,00\pm0,02$ & $0.27 \pm 0.03$ \\ \cline {2-3}
+& $5.00\pm0,03$ & $0.157 \pm 0.002$ \\ \cline {2-3}
+& $7.00\pm0,04$ & $0.114 \pm 0.002$ \\ \cline {2-3}
+& $9.00\pm0,05$ & $0.091 \pm 0.005$ \\ \cline {2-3} 
+& $11.00\pm0,05$ & $0.071 \pm 0.008$ \\ \hline
 \end{tabular}\\[0.3cm]
 
  \textit{Tabla 2: Valores obtenidos de los tiempos caracteristicos en el circuito RL}
@@ -352,12 +352,12 @@ Luego se costruyo el \textbf{grafico \ref{fig:T-RL}} que relaciona las duplas, s
   \label{fig:T-RL}
 \end{figure}
 
-Efectivamente, una vez realizado ese proceso, se obtiene un $R-Square = 0.99819$ que ratifica la bondad del ajuste pero, el valor de la inductancia calculado por este metodo fue $L = (0.80 \pm 0.01) H$, que es ligeramente inferior. Se desconocen las causas de esa diferencia.
+Efectivamente, una vez realizado ese proceso, se obtiene un $R-Square = 0.99819$ que ratifica la bondad del ajuste pero el valor de la inductancia calculado por este metodo fue $L = (0.80 \pm 0.01) H$, que es ligeramente inferior. Se desconocen las causas de esa diferencia.
 
 
 \subsection{Circuito RCL}
 
-Para realizar la primer medición, se fijó una Resistencia $R= (400 \pm 4) \Omega$, una Inductancia $L = (1,000 \pm 0.001) H$ (la cual añadia una resistencia de $R_{L} = (296 \pm 3) \Omega$, y una capacitancia $C = (100,0 \pm 0.2) nF$. Bajo esos parametros se esperaba una respuesta regida por la ecuación \eqref{amort} y, efectivamente, se puede ver en la \textbf{Figura \ref{fig:RLC-A}} que el ajuste propuesto es correcto, pues arroja un $R-Square = 0.99827$. Cabe destacar, que para este tipo de circuito, no se realizó el analisis utilizado en los dos casos anteriores,por lo que se se priorizo obtener la maxima resolucion posible con el osciloscopio.
+Para realizar la primer medición, se fijó una resistencia $R= (400 \pm 4) \Omega$, una inductancia $L = (1,000 \pm 0.001) H$ que añadia una resistencia de $R_{L} = (296 \pm 3) \Omega$, y una capacitancia $C = (100,0 \pm 0.2) nF$. Bajo esos parametros se esperaba una respuesta regida por la ecuación \eqref{amort} y, efectivamente, se puede ver en la \textbf{Figura \ref{fig:RLC-A}} que el ajuste propuesto es correcto, pues arroja un $R-Square = 0.99827$. Cabe destacar, que para este tipo de circuito, no se realizó el analisis utilizado en los dos casos anteriores, por lo que se se priorizó obtener la maxima resolucion posible de un único pico con el osciloscopio.
 
 \begin{figure}[H]
 \centering
@@ -366,9 +366,9 @@ Para realizar la primer medición, se fijó una Resistencia $R= (400 \pm 4) \Ome
   \label{fig:RLC-A}
 \end{figure}
 
-Del ajuste se puede extraer el valor de la frecuencia de oscilacion $f_{A} = (501.3 \pm 0.7) Hz$ el cual es consistente con la calculada de manera teorica, $f_{teo} = 500.2 \mp 0.6 hz$, ya que como sus intervalos de incerteza se solapan, son indistigibles.
+Del ajuste se puede extraer el valor de la frecuencia de oscilacion $f_{A} = (501.3 \pm 0.7) Hz$ el cual es consistente con la calculada de manera teorica, $f_{teo} = (500.2 \pm 0.6)Hz$, ya que como sus intervalos de incerteza se solapan, son indistigibles.
 
-Luego, se propusieron parametros para lograr una respuesta regida por la ecuación \eqref{sobre}. Se dispuso una Resistencia $R= (1110 \mp 11)\Omega$, una Inductancia $L = (30,00 \mp 0.03) mH$ , y una Capacitancia $C = (100,0 \mp 0.2) nF$. Y luego mediante el osciloscopio se obtuvo la \textbf{figura \ref{fig:RLC-SA}}).
+Luego, se propusieron parametros para lograr una respuesta regida por la ecuación \eqref{sobre}. Se dispuso una resistencia $R= (1110 \pm 11)\Omega$, una inductancia $L = (30,00 \pm 0.03) mH$ , y una capacitancia $C = (100,0 \pm 0.2) nF$. Y luego mediante el osciloscopio se obtuvo la \textbf{Figura \ref{fig:RLC-SA}}.
 
 \begin{figure}[H]
 \centering
@@ -377,9 +377,9 @@ Luego, se propusieron parametros para lograr una respuesta regida por la ecuaci�
   \label{fig:RLC-SA}
 \end{figure}
 
-El ajuste realizado sobre la misma nos arroja un $R-Square = 0.99829$, y nos aporta valores para la frecuencia /textbf{$f_{A} = (477 \mp 31) hz$} y para el tiempo caracteristico \textbf{$\tau_{A)} = (28.05 \mp 0.02) \mu s$}. Si se los compara con los resultados teoricos, \textbf{$f_{teo} = (475 \mp 9) hz$} y \textbf{$\tau_{teo} = (27,0 \mp 0.3) \mu s$}, puede verse que las frecuencias coinciden, y que, aunque la diferencia es pequeña frente a las magnitudes manejadas, los $\tau$ no.
+El ajuste realizado sobre la misma arroja un $R-Square = 0.99829$, y aporta valores para la frecuencia \textbf{$f_{A} = (477 \pm 31)Hz$} y para el tiempo caracteristico \textbf{$\tau_{A)} = (28.05 \pm 0.02) \mu s$}. Si se los compara con los resultados teoricos, \textbf{$f_{teo} = (475 \pm 9)Hz$} y \textbf{$\tau_{teo} = (27,0 \pm 0.3) \mu s$}, puede verse que las frecuencias coinciden, y que, aunque la diferencia es pequeña frente a las magnitudes manejadas, los $\tau$ no.
 
-Finalmente se intento construir un circuito para el caso critico, para el cual se fijo una Inductancia $L= (1 \mp 0.001) H$ y una Capacitancia de  $C = (100 \mp 0.2) nF$, y se se fijo una resistencia de $R = (6.30 \mp 0.03) k\Omega$ la cual contenia dentro de su margen de incerteza el resultado de calcular el valor para el cual el polinomio caracteristico de la ecuacion \eqref{ec_RCL} diera una raiz doble, y asi la evolucion del sistema estuviera regido por la ecuacion \eqref{sub}. Asi se obtuvo el grafico de la \textbf{figura \ref{fig:RLC-sA}}).
+Finalmente se intento construir un circuito para el caso critico, para el cual se fijo una inductancia $L= (1 \pm 0.001) H$ y una capacitancia de  $C = (100 \pm 0.2) nF$, y se se fijo una resistencia $R = (6.30 \pm 0.03) k\Omega$ la cual contenia dentro de su margen de incerteza el resultado de calcular el valor para el cual el polinomio caracteristico de la ecuacion \eqref{ec_RCL} diera una raiz doble, y asi la evolucion del sistema estuviera regido por la ecuacion \eqref{sub}. Asi se obtuvo el grafico de la \textbf{Figura \ref{fig:RLC-sA}}.
 
 \begin{figure}[H]
 \centering
@@ -399,7 +399,11 @@ Durante el analisis fue imposible realizar un ajuste a partir de la ecuacion \eq
 \section{Conclusiones}
 \label{sec:conclusiones}
 
+Para comenzar, los datos arrojados para el caso del circuito RC son más que consistentes. Los tiempos caracteristicos $\tau_R$ y $\tau_C$ mostrados en la \textbf{Tabla 1} resultan indistinguibles dentro del error, comprobando las relacion entre las ecuaciones \eqref{RC_carga}, \eqref{RC_descarga}, \eqref{RC_carga_I} y \eqref{RC_descarga_I}. Ante todo, los ajustes lineales de la \textbf{Figura \ref{fig:RCvsR}} permiten comprobar con enorme seguridad la dependencia del tiempo característico con los parámetros $C$ y $R$, dado que ambas pendientes $m_R = (100,18 \pm 0,09)nF$ y $m_C = (101,0 \pm 0,5)nF$ resultan indistinguibles.
 
+Sin embargo, para el caso del circuito RL, dado que la metodologia de medición y analisis utilizado fueron los mismos que para el circuito RC se obtuvo una inconsistencia en los resultado. Esto se debe a que de los valores registrados en la \textbf{Tabla 2} se obtiene un ajuste bondadoso de la relacion $\tau_{RL}$, el cual se ve en la \textbf{Figura 8}, pero que difiere del valor esperado. Y puesto que el marco teorico del trabajo es correcto, y tanto los metodos de medición como de analisis se consideraban confiables; se puede atribuir esta inconsistencia a algun defecto de los elementos no tenidos en cuenta o a un descuido experimental a la hora de las mediciones.
+
+Por ultimo; el estudio de los circuitos RCL se pudieron observar eficientemente los casos de \textit{oscilador amortiguado} y \textit{oscilador sobreamortiguado}, los cuales se muestra en las \textbf{Figura 9} y \textbf{10} respectivamente. Esto se puede concluir a partir de que los ajustes realizados en cada caso se hicieron utilizando las funciones esperadas, y los estimadores de bondad aseguraron dichos ajustes. Por otro lado; de las mediciones realizadas para el caso del \textit{oscilador subamortiguado}, en los cuales se dispusieron los valores de los elementos de manera que coincidiesen con las condiciones teóricas, no se pudo ajustar la curva esperada para este caso, sin embargo si se logró utilizando el ajuste del caso \textit{oscilador sobreamortiguado}, el cual debido a la bondad de su ajuste, se pudo garantizar que efectivamente corresponde a dicho caso. Es por ello que de los distintos parámetros utilizados, ninguna configuración correspondió al caso crítico. Esto es esperable considerando que este caso es muy fino y que la precisión de los parámetros debe ser mayor que fue utilizada en la experiencia.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -435,9 +439,9 @@ De esta forma, asumiendo conocida la varianza $V(\overline{X}_n) = \sigma^2$ y u
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %Ejemplo:
-\begin{thebibliography}{1}
- \bibitem{Berkeley} Frank S. Crawford, \textit{Berkeley physics course 3: Ondas}, 1994, Editorial Reverte S.A.
-\end{thebibliography}
+%\begin{thebibliography}{1}
+ %\bibitem{Berkeley} Frank S. Crawford, \textit{Berkeley physics course 3: Ondas}, 1994, Editorial Reverte S.A.
+%\end{thebibliography}
 %Para citar: blablabla \cite{Baird}
  
 \end{document}
