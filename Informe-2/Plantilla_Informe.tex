@@ -93,7 +93,7 @@ Para llevar a cabo el objetivo de caracterizar los circuitos RC, RL y RCL es nec
 \end{split}
 \end{equation}
 
-Considerando un circuito cerrado de una unica malla compuesto por una fuente de voltaje constante $V_{0}$, una resistencia $R$ y un capacitor $C$, las leyes de Kirchoff dictan que la ecuación que rige la evolución del sistema es $V_{0} = \frac{q(t)}{C}+IR$. Entonces, tomando como condición inicial $q(0)=0$ la solución de la ecuación es:
+Considerando un circuito cerrado de una unica malla compuesto por una fuente de voltaje constante $V_{0}$, una resistencia $R$ y un capacitor $C$, las leyes de Kirchoff dictan que la ecuación que rige la evolución del sistema es $V_{0} = \frac{q(t)}{C}+IR$ \cite{Trelles}. Entonces, tomando como condición inicial $q(0)=0$ la solución de la ecuación es:
    
 \begin{equation}{\label{RC_carga}}
 q(t)=V_{0}C(1-e^\frac{-t}{RC})
@@ -117,7 +117,7 @@ I(t)=\frac{V_{0}}{R}e^\frac{-t}{RC}
 I(t-t_{0}) = \frac{V_{0}}{R}(e^\frac{t_{0}}{RC}-1)e^\frac{-t}{RC}
 \end{equation}
 
-Por otro lado, si en el circuito anterior se reemplaza al capacitor $C$ por una inductancia $L$, la noción de carga desaparece y queda la de corriente $I(t) = \frac{dq(t)}{dt}$ en una ecuación diferencial de la forma $V_{0} = L.\frac{dI(t)}{dt}+R.I(t)$. La solución para el caso de $V= V_0$ es muy similar a la anterior:
+Por otro lado, si en el circuito anterior se reemplaza al capacitor $C$ por una inductancia $L$, la noción de carga desaparece y queda la de corriente $I(t) = \frac{dq(t)}{dt}$ en una ecuación diferencial de la forma $V_{0} = L.\frac{dI(t)}{dt}+R.I(t)$ \cite{Trelles}. La solución para el caso de $V= V_0$ es muy similar a la anterior:
 
 \begin{equation}{\label{RL_carga_I}}
 I(t)=\frac{V_0}{R}(1-e^\frac{-Rt}{L})
@@ -140,7 +140,7 @@ I(t-t_0)= \frac{V_{0}}{R}(1-e^\frac{-Rt_0}{L})e^\frac{-Rt}{L}
 \end{equation}
 
 
-Un circuito más complicado puede generarse combinando los dos anteriores; una fuente de voltaje constante $V_0$, una resistencia $R$, un capacitor $C$ y una inductancia $L$. En este caso, la ecuación diferencial que rige la dependencia temporal de la carga $q(t)$ resulta:
+Un circuito más complicado puede generarse combinando los dos anteriores; una fuente de voltaje constante $V_0$, una resistencia $R$, un capacitor $C$ y una inductancia $L$. En este caso, la ecuación diferencial que rige la dependencia temporal de la carga $q(t)$ resulta \cite{Trelles}:
 
 \begin{equation}{\label{ec_RCL}}
 \frac{d^2q(t)}{dt^2}L+\frac{dq(t)}{dt}R+\frac{q(t)}{C} = V_0
@@ -439,9 +439,9 @@ De esta forma, asumiendo conocida la varianza $V(\overline{X}_n) = \sigma^2$ y u
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %Ejemplo:
-%\begin{thebibliography}{1}
- %\bibitem{Berkeley} Frank S. Crawford, \textit{Berkeley physics course 3: Ondas}, 1994, Editorial Reverte S.A.
-%\end{thebibliography}
+\begin{thebibliography}{1}
+ \bibitem{Trelles} Felix Rodriguez Trelles, \textit{Temas de Electricidad y Magnetismo}, 1984, Editorial EUDEBA
+\end{thebibliography}
 %Para citar: blablabla \cite{Baird}
  
 \end{document}
