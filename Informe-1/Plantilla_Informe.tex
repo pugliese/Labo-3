@@ -80,7 +80,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Introducción}\label{sec:intro}
-Para empezar, segun el fenómeno denominado ley de Ohm \cite{Trelles}, si una fuente $\varepsilon$ y una resistencia $R$ forman un circuito cerrado, la corriente eléctrica $i$ que circula por la resistencia se obtiene con:
+Para empezar, segun el fenómeno denominado ley de Ohm \cite{Trelles}, si una fuente $\varepsilon$ y una resistencia $R$ forman un circuito cerrado, la corriente eléctrica $i$ que circula por la resistencia se obtiene según:
 
 \begin{equation}\label{Ohm}
 \ i= \frac{\varepsilon}{R}
@@ -149,7 +149,7 @@ Por lo tanto, si se quiere conocer la eficacia de una resistencia $R$ se puede c
 
 \section{Desarrollo experimental}
 
-Para tener una fuente constante $V_{0}$ se utilizó una fuente de alimentación programable capaz de emitir una señal constante con una precisión de $\pm (0.5\% + 0.02)$ en un rango de voltaje de salida de $0 \thicksim 32 V$.
+Para tener una fuente constante $V_{0}$ se utilizó una fuente de alimentación programable capaz de emitir una señal constante con una precisión de $\pm (0.5\% + 0.02)V$ en un rango de voltaje de salida de $0 \thicksim 32 V$.
 Ademas se utilizaron dos resistencias $R=(1000.0 \pm 0.5) \Omega$ idénticas, otra resistencia $r=(100.00 \pm 0.05)$ y una resistencia $R_{v}$ variable por décadas la cual en principio se desconocía su error. Para determinar dicho error se utilizó un multimetro digital midiéndose las resistencia con una precisión de $\pm (1\% + 2d)$ debido al rango de resistencias utilizadas (mayores a $100 \Omega$). Tambien se usó el multimetro para las correspondientes mediciones de corriente con una resolución de $1\mu A$ y una precisión de $\pm (0.8\% +1d)$ en el rango de $2 mA\thicksim 20 mA$, y una resolución de $1 mA$ y una precisión de $\pm (1.5\% + 1d)$ en el rango de $2 A\thicksim 10 A$ en su modo de amperímetro en cual imponia una resistencia adicional $R_{A} = (11,8 \pm 0,4) \Omega$.
 
 \subsection{Ley de Ohm}
@@ -160,7 +160,7 @@ La primer parte del trabajo se desarrolló en torno a la comprobación empírica
 \begin{figure}[h]
   \centering
   \includegraphics[scale= 0.6]{Circuito_simple}
-  \caption{Circuito de malla única utilizado para la experiencia. Tanto la fuente $\varepsilon$ como la resistencia $R_{v}$ eran variables, por lo que se utilizo el multimetro en su función de amperimetro $A$ para medir la corriente que circulaba en esa rama.} 
+  \caption{Circuito de malla única utilizado para la experiencia, cuya fuente $\varepsilon$ y resistencia $R_{v}$ se variaron a lo largo de la experiencia. Se midió la corriente que circulaba por ella con un amperimetro $A$.} 
   \label{fig:circ_simp}
 \end{figure}
 
@@ -174,7 +174,7 @@ Terminado lo anterior, se propuso montar otro circuito con dos mallas con el pri
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.55]{Mallas_sin_carga}
-  \caption{Circuito de dos mallas utilizado para la experiencia. La fuente constante $\varepsilon= (5.00 \pm 0.05)V$ generaba corrientes electricas que circulaban por las resistencias $R=(1000.0\pm0.05)\Omega$ y la resistencia $r=(100.00\pm0.05)\Omega$. Los $ A_i$ representan los lugares donde se ubicó el multimetro para medir las correspondientes corrientes.}
+  \caption{Circuito de dos mallas utilizado para la experiencia cuya fuente constante $\varepsilon$ generaba corrientes $i_1$ e $i_2$ que circulaban por las resistencias $R$ y la resistencia $r$. En las posiciones $ A_i$ representan donde se ubicó el multimetro para medir estas corrientes.}
   \label{fig:circ_mallas}
 \end{figure}
 
@@ -187,7 +187,7 @@ Posteriormente, se buscó calcular el equivalente de Thevenin en forma teórica 
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.55]{Mallas_con_carga}
-  \caption{Circuito compuesto del circuito utilizado en la \textit{Figura \ref{fig:circ_mallas}} al cual se le conectó en paralelo una resistencia $R_{v}$ variable por décadas. Utilizando el multimetro en su función de amperimetro se midieron las corrientes que circulaban por esta nueva rama para los distintos voltajes de salida de $\varepsilon$}
+  \caption{Circuito compuesto por el utilizado en la \textit{Figura \ref{fig:circ_mallas}} con una resistencia variable por décadas $R_{v}$ conectada en paralelo. Utilizando el multimetro e se midieron las corrientes que circulaban por esta nueva rama para distintos voltajes $\varepsilon$}
   \label{fig:circ_mallas_carga}
 \end{figure}
 
@@ -214,7 +214,7 @@ Los resultados de la primer medición con la resistencia $R = (512 \pm 5)\Omega$
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.4]{Corriente_vs_Voltaje}
-  \caption{Relacion entre Voltaje ($\varepsilon$) y Corriente (I)}
+  \caption{Relacion lineal entre Voltaje ($\varepsilon$) y Corriente (I) de una bondad asegurada por un $R-Square = 0,99995$}
   \label{fig:Ohm_lin}
 \end{figure}
 
@@ -224,7 +224,7 @@ Luego, con las mediciones correspondientes a un voltaje constante, se decidio re
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.15]{Corriente_vs_InversoResistencia}
-  \caption{Relacion entre el inverso de Resistencia (1/R) y Corriente (I)}
+  \caption{Relacion lineal entre el inverso de Resistencia (1/R) y Corriente (I) de una bondad asegurada por un $R-Square = 0,99998$}
   \label{fig:Ohm_hip}
 \end{figure}
 
@@ -245,7 +245,7 @@ $i_2$ & $4,17\pm0,05$ & $4,2\pm0,2$ \\ \hline
 $i_3$ & $4,17\pm0,05$ & $4,1\pm0,2$ \\ \hline 
 \end{tabular}\\[0.3cm]
 
-\textit{Tabla 1: Valores obtenidos de las corrientes mediante cálculo (teórico) y medición directa}
+\textit{Tabla 1: Valores obtenidos de las corrientes mediante cálculo (teórico) y medición directa donde puede verse que ambos métodos arrojan resultados indistinguibles}
 \end{center}
 
 Luego, a través del cálculo del equivalente de Thevenin se obtuvieron los parametros equivalentes $\varepsilon_{th} = (0,83\pm0,08)V$ y $R_{th} = (83,3 \pm 0,7) \Omega$. Cabe aclarar que en este cálculo no intervinieron las corrientes previamente calculadas, si no que se utilizó directamente su dependencia con los parámetros del circuito. Alternativamente, mediante medición directa se obtuvo $\Delta\varepsilon_{AB} = (0,84 \pm 0,06)V$ y $R_{th} = (83,4 \pm 0,6)\Omega$, valores que resultan indistinguibles dentro del error de los anteriormente calculados. 
@@ -255,7 +255,7 @@ De los datos obtenidos se tiene el gráfico de la \textbf{Figura \ref{fig:pot_re
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.4]{Potencia_vs_Resistencia_2}
-  \caption{Relacion entre la potencia disipada y el valor de la resistencia de carga}
+  \caption{Relacion entre la potencia disipada y el valor de la resistencia de carga ajustada con una campana de la forma de \eqref{Pot}}
   \label{fig:pot_res}
 \end{figure}
 
@@ -264,7 +264,7 @@ Finalmente, se calculo la eficacia con la cual se traspasaba la potencia de nues
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.4]{Eficiencia_vs_Resistencia}
-  \caption{Relación entre la eficacia de la entrega de potencia y el valor de la resistencia de carga}
+  \caption{Relación entre la eficacia de la entrega de potencia y el valor de la resistencia de carga ajustada a traves de \eqref{efi}. Los elevados errores de los ultimos puntos pueden deberse a las bajas corrientes involucradas en su medición.}
   \label{fig:efi_res}
 \end{figure}
 
@@ -280,7 +280,7 @@ En resumen, los distintos valores obtenidos de $R_{th}$ y $\varepsilon_{th}$ con
 $R_th$ & $(83,3\pm0,7)\Omega$ & $(83,4\pm0,6)\Omega$ & $(78,5\pm0,8)\Omega$ \\ \hline
 $E_th$ & $(0,83\pm0,08)V$ & $(0,84\pm0,06)V$ & $(0,74\pm0,01)V$ \\ \hline
 \end{tabular}\\[0.3cm]
-\textit{Tabla 2: Valores obtenidos para el equivalente de Thevenin mediante cálculo (teórico),\\ medición directa y ajuste de curva de potencia}
+\textit{Tabla 2: Valores obtenidos para el equivalente de Thevenin mediante cálculo (teórico), medición directa y ajuste de curva de potencia}
 \end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
