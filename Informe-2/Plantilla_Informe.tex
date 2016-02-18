@@ -83,7 +83,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Introducción}\label{sec:intro}
-Para llevar a cabo el objetivo de caracterizar los circuitos RC, RL y RCL es necesario comprender como responden a distintos tipos de combinaciones(capacitor $C$, resistencia $R$ e inductancia $L$) y fuentes de voltaje. Recordando que $\frac{dq(t)}{dt} = I(t)$ donde $q(t)$ es la carga en el capacitor $C$, las leyes que dictan la caida de potencial en cada elemento son:
+Para llevar a cabo el objetivo de caracterizar los circuitos RC, RL y RCL es necesario comprender como responden a distintos tipos de combinaciones(capacitor $C$, resistencia $R$ e inductancia $L$) y fuentes de voltaje. Recordando que $\frac{dq(t)}{dt} = I(t)$ donde $q(t)$ es la carga en el capacitor $C$, la caida de potencial en cada elemento se obtiene a partir de:
 
 \begin{equation}{\label{leyes}}
 \begin{split}
@@ -93,7 +93,7 @@ Para llevar a cabo el objetivo de caracterizar los circuitos RC, RL y RCL es nec
 \end{split}
 \end{equation}
 
-Considerando un circuito cerrado de una unica malla compuesto por una fuente de voltaje constante $V_{0}$, una resistencia $R$ y un capacitor $C$, las leyes de Kirchoff dictan que la ecuación que rige la evolución del sistema es $V_{0} = \frac{q(t)}{C}+IR$ \cite{Trelles}. Entonces, tomando como condición inicial $q(0)=0$ la solución de la ecuación es:
+Considerando un circuito cerrado de una unica malla compuesto por una fuente de voltaje constante $V_{0}$, una resistencia $R$ y un capacitor $C$, las ecuaciones anteriores dictan que la ecuación que rige la evolución del sistema es $V_{0} = \frac{q(t)}{C}+IR$ \cite{Trelles}. Entonces, tomando como condición inicial $q(0)=0$ la solución de la ecuación es:
    
 \begin{equation}{\label{RC_carga}}
 q(t)=V_{0}C(1-e^\frac{-t}{RC})
@@ -181,7 +181,7 @@ Si, como en el caso de los circuitos RC y RL, se utiliza una señal cuadrada par
 
 \section{Desarrollo experimental}
 
-Dado que toda la teoría previa se apoya sobre el concepto de \texit{llave ideal}, un generador de funciones capaces de generar ondas cuadradas debió ser utilizado para emular esta característica (variación instantánea de voltaje). Este generador es capaz de emitir frecuencias con un error relativo del $0,01\%$ en un rango entre $1\mu Hz$ y $5MHz$ cuyo voltaje pico-pico tiene un error relativo del $1\%$ para el rango de voltaje utilizado. Además, se utilizó una capacitancia fija $C = (100,0 \pm 0,2)nF$ y una resistencia variable por décadas cuyo error fue a priori desconocido. Usando un multimetro digital se midieron las resistencias utilizadas junto con su error, que era de la forma $\pm(1\%+2d)$ para el rango de resistencias utilizadas (mayores a $100\Omega$). La resistencia del capacitor resultó despreciable. También, se utilizó una inductancia fija $L = (1.000 \pm 0.002) H$ que poseía una resistencia interna (medida por el multímetro) $R_L = (294 \pm 3) \Omega$.
+Dado que toda la teoría previa se apoya sobre el concepto de \textit{llave ideal}, un generador de funciones capaces de generar ondas cuadradas debió ser utilizado para emular esta característica (variación instantánea de voltaje). Este generador es capaz de emitir frecuencias con un error relativo del $0,01\%$ en un rango entre $1\mu Hz$ y $5MHz$ cuyo voltaje pico-pico tiene un error relativo del $1\%$ para el rango de voltaje utilizado. Además, se utilizó una capacitancia fija $C = (100,0 \pm 0,2)nF$ y una resistencia variable por décadas cuyo error fue a priori desconocido. Usando un multimetro digital se midieron las resistencias utilizadas junto con su error, que era de la forma $\pm(1\%+2d)$ para el rango de resistencias utilizadas (mayores a $100\Omega$). La resistencia del capacitor resultó despreciable. También, se utilizó una inductancia fija $L = (1.000 \pm 0.002) H$ que poseía una resistencia interna (medida por el multímetro) $R_L = (294 \pm 3) \Omega$.
 
 Finalmente, se utilizó un osciloscopio digital capaz de medir diferencias de potencial entre las dos terminales que dispone en un rango de 2mV a 5V con un error relativo del $3\%$. A la hora de medir voltaje, fue necesario asegurarse que el cable a tierra del osciloscopio estuvera conectado al cable a tierra el generador de funciones. 
 
@@ -232,7 +232,7 @@ Para caracterizar el circuito, la ecuación diferencia \eqref{ec_RCL} determina 
 
 Utilizando el método de adquisición de datos ya explicado, se midió la diferencia de potencial sobre la resistencia (que resulta proporcional a la corriente $I$). Esta diferencia de potencial era generada por una señal cuadrada de $(3.08 \pm 0.04)V$.
 
-Por lo tanto se estudió el circuito para disintos valores de $R$,$C$ y $L$ con el fin de encontrar cada uno de estos \textit{comportamientos}. Para ello, se fijaban dos parametros y se buscaba que el tercero cumpliese las condiciones  que determinan cada \textit{comportamiento} \eqref{amort}, \eqref{sub} y \eqref{sobre}.
+Por lo tanto se estudió el circuito para disintos valores de $R$,$C$ y $L$ con el fin de encontrar cada uno de estos \textit{comportamientos}. Para ello, se fijaban dos parametros y se buscaba que el tercero cumpliese las condiciones que determinan cada \textit{comportamiento} \eqref{amort}, \eqref{sub} y \eqref{sobre} individualmente.
 
 Para cada comportamiento, como se dijo en la \textbf{Introducción}, se buscó una frecuencia $f$ tal que la corriente $I$ se anulara y, por lo tanto, se descargara el capacitor $C$ ($q=0$) en un medio período de la señal $\frac{\tau_f}{2} = \frac{pi}{\omega_f} > \beta$.
 
@@ -282,7 +282,7 @@ $9,00\pm0,03$ & $0,916 \pm 0,006$ & $0,926 \pm 0,009$ \\ \hline
 $11,00\pm0,03$ & $1,117\pm 0,007$ & $1,125\pm 0,005$ \\ \hline 
 \end{tabular}\\[0.3cm]
  
-\textit{Tabla 1: Valores obtenidos de las tiempos caracteristicos en el circuito RC}
+\textit{Tabla 1: Valores obtenidos de los tiempos caracteristicos en el circuito RC}
 \end{center}
 
 Finalmente, teniendo en cuenta que segun el modelo propuesto, el tiempo caracteristico de un circuito tiene una correspondencia lineal con la resistencia se construyeron dos de gráficos que relacionan estos valores y se realizo un ajuste sobre los mismos como se puede ver en la \textbf{Figura \ref{fig:RCvsR}}.
@@ -357,7 +357,7 @@ Luego se costruyo el \textbf{grafico \ref{fig:T-RL}} que relaciona las duplas, s
   \label{fig:T-RL}
 \end{figure}
 
-Efectivamente, una vez realizado ese proceso, se obtiene un $R-Square = 0.99819$ que ratifica la bondad del ajuste pero el valor de la inductancia calculado por este metodo fue $L = (0.80 \pm 0.01) H$, que es ligeramente inferior. Se desconocen las causas de esa diferencia.
+Efectivamente, una vez realizado ese proceso, se obtiene un $R-Square = 0.99819$ que ratifica la bondad del ajuste pero el valor de la inductancia calculado por este metodo fue $L = (0.80 \pm 0.01) H$, que es ligeramente inferior. 
 
 
 \subsection{Circuito RCL}
@@ -406,7 +406,7 @@ Durante el analisis fue imposible realizar un ajuste a partir de la ecuacion \eq
 
 Para comenzar, los datos arrojados para el caso del circuito RC son más que consistentes. Los tiempos caracteristicos $\tau_R$ y $\tau_C$ mostrados en la \textbf{Tabla 1} resultan indistinguibles dentro del error, comprobando las relacion entre las ecuaciones \eqref{RC_carga}, \eqref{RC_descarga}, \eqref{RC_carga_I} y \eqref{RC_descarga_I}. Ante todo, los ajustes lineales de la \textbf{Figura \ref{fig:RCvsR}} permiten comprobar con enorme seguridad la dependencia del tiempo característico con los parámetros $C$ y $R$, dado que ambas pendientes $m_R = (100,18 \pm 0,09)nF$ y $m_C = (101,0 \pm 0,5)nF$ resultan indistinguibles.
 
-Sin embargo, para el caso del circuito RL, dado que la metodologia de medición y analisis utilizado fueron los mismos que para el circuito RC se obtuvo una inconsistencia en los resultado. Esto se debe a que de los valores registrados en la \textbf{Tabla 2} se obtiene un ajuste bondadoso de la relacion $\tau_{RL}$, el cual se ve en la \textbf{Figura 8}, pero que difiere del valor esperado. Y puesto que el marco teorico del trabajo se comprobó correcto en la sección del RC al igual que tanto los metodos de medición como de analisis; se puede atribuir esta inconsistencia a alguna caracteristica de los elementos no tenidos en cuenta o a un descuido experimental a la hora de las mediciones.
+Sin embargo, para el caso del circuito RL, dado que la metodologia de medición y analisis utilizado fueron los mismos que para el circuito RC se obtuvo una inconsistencia en los resultado. Esto se debe a que de los valores registrados en la \textbf{Tabla 2} se obtiene un ajuste bondadoso de la relacion $\tau_{RL}$, el cual se ve en la \textbf{Figura 8}, pero que difiere del valor esperado. Y puesto que el marco teorico del trabajo se comprobó correcto en la sección del RC al igual que los metodos de medición y analisis; se puede atribuir esta inconsistencia a alguna caracteristica de los elementos no tenidos en cuenta o a un descuido experimental a la hora de las mediciones.
 
 Por ultimo; el estudio de los circuitos RCL se pudieron observar eficientemente los casos de \textit{oscilador amortiguado} y \textit{oscilador sobreamortiguado}, los cuales se muestra en las \textbf{Figura 9} y \textbf{10} respectivamente. Esto se puede concluir a partir de que los ajustes realizados en cada caso se hicieron utilizando las funciones esperadas, y los estimadores de bondad aseguraron dichos ajustes. Por otro lado; de las mediciones realizadas para el caso del \textit{oscilador subamortiguado}, en los cuales se dispusieron los valores de los elementos de manera que coincidiesen con las condiciones teóricas, no se pudo ajustar la curva esperada para este caso, sin embargo si se logró utilizando el ajuste del caso \textit{oscilador sobreamortiguado}, el cual debido a la bondad de su ajuste, se pudo garantizar que efectivamente corresponde a dicho caso. Es por ello que de los distintos parámetros utilizados, ninguna configuración correspondió al caso crítico. Esto es esperable considerando que este caso es muy fino y que la precisión de los parámetros debe ser mayor que fue utilizada en la experiencia.
 
