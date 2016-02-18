@@ -1,9 +1,7 @@
 \documentclass[11pt,a4paper]{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage[export]{adjustbox}
 \usepackage[spanish]{babel}
-\usepackage{float}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -22,8 +20,7 @@
 \usepackage{fancyhdr}
 \usepackage{multirow}
 \pagestyle{fancy}
-\usepackage{mathrsfs}
-\usepackage{graphicx}
+
 
 %Para los gráficos en general, con las tablas...¡Ja!, arreglate.
 %\begin{figure}[h!]
@@ -55,7 +52,7 @@
 \rfoot{\thepage}
 \renewcommand{\headrulewidth}{1pt}
 \renewcommand{\footrulewidth}{1pt}
-\newcommand\Sum{\displaystyle\sum}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Página en blanco. Cita, agradecimiento, dedicación, lo que sea pero que sea algo.
@@ -83,97 +80,68 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Introducción}\label{sec:intro}
-Para llevar a cabo el objetivo de caracterizar los circuitos RC, RL y RCL es necesario comprender como responden a distintos tipos de combinaciones(capacitor $C$, resistencia $R$ e inductancia $L$) y fuentes de voltaje. Recordando que $\frac{dq(t)}{dt} = I(t)$ donde $q(t)$ es la carga en el capacitor $C$, las leyes que dictan la caida de potencial en cada elemento son:
+Para empezar, segun el fenómeno denominado ley de Ohm \cite{Trelles}, si una fuente $\varepsilon$ y una resistencia $R$ forman un circuito cerrado, la corriente eléctrica $i$ que circula por la resistencia se obtiene con:
 
-\begin{equation}{\label{leyes}}
-\begin{split}
-\Delta V_C &= \frac{q}{C}\\
-\Delta V_R &= IR\\
-\Delta V_L &= \frac{dI}{dt}
-\end{split}
+\begin{equation}\label{Ohm}
+\ i= \frac{\varepsilon}{R}
 \end{equation}
 
-Considerando un circuito cerrado de una unica malla compuesto por una fuente de voltaje constante $V_{0}$, una resistencia $R$ y un capacitor $C$, las leyes de Kirchoff dictan que la ecuación que rige la evolución del sistema es $V_{0} = \frac{q(t)}{C}+IR$ \cite{Trelles}. Entonces, tomando como condición inicial $q(0)=0$ la solución de la ecuación es:
-   
-\begin{equation}{\label{RC_carga}}
-q(t)=V_{0}C(1-e^\frac{-t}{RC})
+Si se define una rama como todo conjunto de elementos conectados en serie y un nodo como la intersección de tres o mas rama; para todo nodo vale:
+ 
+\begin{equation}\label{nodos}
+\ \sum_{e}i_{e}-\sum_{s}i_{s}=0
 \end{equation}
 
-Y al ser $q(t)$ una exponencial creciente se conoce a este fenómeno como la \textit{carga} del capacitor.
+Donde se ve que la suma de corrientes $i_{e}$ entrantes al nodo es igual a la suma de corrientes $i_{s}$ salientes del mismo. A este fenomeno se lo cononce como la ley de Kirchoff de los nodos \cite{Trelles}.
 
-Ahora si, utilizando una \textit{llave ideal}, se corta la fuente $V$ a tiempo $t_{0}$ la nueva solución del sistema es de la forma:
+Por otro lado; el teorema de Thevenin \cite{Trelles} enuncia que si se desea conocer el comportamiento de un circuito entre dos terminales $A$ y $B$, el resto del circuito puede reemplazarse por una rama que consiste de una resistencia equivalente $R_{th}$ y una fuente equivalente $\varepsilon_{th}$.
 
-\begin{equation}{\label{RC_descarga}}
-q(t-t_{0})=V_{0}C(1-e^\frac{-t_{0}}{RC})e^\frac{-t}{RC}
+La resistencia $R_{th}$ se calcula desconectando las fuentes y resolviendo el sistema de resistencias que se obtiene entre las terminales. Por otro lado, la fuente equivalente $\varepsilon_{th}$ se obtiene calculando la diferencia de potencial entre $A$ y $B$. Un caso particular de esto es el que muestra la \textbf{Figura \ref{fig:circ_intro}}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.55]{Circuito-Intro}
+  \caption{Caso particular de un circuito utilizado para calcular su equivalente de Thevenin}
+  \label{fig:circ_intro}
+\end{figure}
+
+Donde $R_{th}$ y $\varepsilon_{th}$ de este circuito son:
+
+\begin{equation}\label{Rth}
+\ R_{th}= \frac{rR}{2r+R}
 \end{equation}
 
-Entonces se define a $\tau_{RC}=RC$ \textit{tiempo característico} del circuito, dado que para $t>\tau_{RC}=RC$ resulta $e^\frac{-t}{RC}<e^{-1}<0,40$ por lo que el termino exponencial se vuelve pequeño y virtualmente despreciable. Por lo tanto, si $\tau_{RC}<t_{0}$ se puede observar el efecto de \textit{descarga} del capacitor pues $q(t-t_{0})$ es una exponencial decreciente. Para la corriente $I(t) = \frac{dq(t)}{dt}$, las ecuaciones que describen su comportamiento en cada caso son:
-
-\begin{equation}{\label{RC_carga_I}}
-I(t)=\frac{V_{0}}{R}e^\frac{-t}{RC}
+\begin{equation}\label{Eth}
+\ \varepsilon_{th}= \frac{2\varepsilon r}{2r+R}
 \end{equation}
 
-\begin{equation}{\label{RC_descarga_I}}
-I(t-t_{0}) = \frac{V_{0}}{R}(e^\frac{t_{0}}{RC}-1)e^\frac{-t}{RC}
+Por ultimo, para poder calcular la potencia disipada por una resistencia $R$, la ley de Joule \cite{Trelles} determina la siguiente ecuación:
+
+\begin{equation}\label{Joule}
+\ P = i^2 R
 \end{equation}
 
-Por otro lado, si en el circuito anterior se reemplaza al capacitor $C$ por una inductancia $L$, la noción de carga desaparece y queda la de corriente $I(t) = \frac{dq(t)}{dt}$ en una ecuación diferencial de la forma $V_{0} = L.\frac{dI(t)}{dt}+R.I(t)$ \cite{Trelles}. La solución para el caso de $V= V_0$ es muy similar a la anterior:
+Donde la $i$ es la corriente que pasa por la resistencia. 
 
-\begin{equation}{\label{RL_carga_I}}
-I(t)=\frac{V_0}{R}(1-e^\frac{-Rt}{L})
+De esta forma, si se coloca una resistencia de carga $R_{v}$ en paralelo con una resistencia de un circuito, y calculando su respectivo equivalente de Thevenin, se puede obtener la potencia disipada por $R_{v}$ como:
+
+\begin{equation}\label{Pot}
+\ P_{R_{v}}=\frac{\varepsilon_{th}^2 R_{v}}{(R_{v}+R_{th})^2}
 \end{equation}
 
-\begin{equation}{\label{RL_carga}}
-\dfrac{dI(t)}{dt}=\frac{V_{0}}{L}e^\frac{-Rt}{L}
+Una curva acampanada cuyo máximo se encuentra en $R_{max} = R_{th}$.
+
+Sin embargo, maxima disipación no implica máxima eficiencia. Por lo tanto, se define la eficacia como el cociente entre la potencia disipada por una resistencia $R$ y la potencia entregada por una fuente $\varepsilon$:
+
+\begin{equation}\label{eficacia}
+\ E=\frac{P_{R}}{P_{\varepsilon}}
 \end{equation}
 
-En este caso, el  \textit{tiempo característico} del circuito es $\tau_{RL}=\frac{L}{R}$ (y cumple las mismas propiedades que para el caso del RC) y puede verse que la corriente $I$ \textit{aumenta} hasta alcanzar su valor ideal (el valor de la corriente en un circuito sin inductancia).
+Por lo tanto, si se quiere conocer la eficacia de una resistencia $R$ se puede calcular su equivalente de Thevenin para obtener la relación:
 
-Cuando se corta la fuente $V$ a tiempo $t_{0}$ se tiene el caso en que la corriente $I$ \textit{disminuye} hasta volverse nula. En esta situación, la solución del sistema es:
-
-\begin{equation}{\label{RL_descarga_I}}
-I(t-t_0)= \frac{V_{0}}{R}(1-e^\frac{-Rt_0}{L})e^\frac{-Rt}{L}
+\begin{equation}\label{efi}
+\ E= \frac{\varepsilon_{th}}{\varepsilon}\frac{1}{1+\frac{R_{th}}{R}}
 \end{equation}
-
-\begin{equation}{\label{RL_descarga}}
-\dfrac{dI(t-t_{0})}{dt}=-\frac{V_{0}}{L}(1-e^\frac{-Rt_{0}}{L})e^\frac{-Rt}{L}
-\end{equation}
-
-
-Un circuito más complicado puede generarse combinando los dos anteriores; una fuente de voltaje constante $V_0$, una resistencia $R$, un capacitor $C$ y una inductancia $L$. En este caso, la ecuación diferencial que rige la dependencia temporal de la carga $q(t)$ resulta \cite{Trelles}:
-
-\begin{equation}{\label{ec_RCL}}
-\frac{d^2q(t)}{dt^2}L+\frac{dq(t)}{dt}R+\frac{q(t)}{C} = V_0
-\end{equation}
-
-cuyo polinomio característico es $\lambda^2.L+\lambda.R+\frac{1}{C} = 0$ que tiene como raíces $\lambda_{1,2} = -\frac{R}{2L} \pm \sqrt{(\frac{R}{2L})^2-\frac{1}{LC}}$ donde $\omega_o^2 = \frac{1}{LC}>0$ se denomina \textit{frecuencia natural} del circuito. Esta frecuencia $\omega_o^2 = \frac{1}{LC}$ es la frecuencia de oscilinación del circuito en el caso en que no existe componente disipativo ($R=0$). Dependiendo del valor del discriminante $\omega^2 = \beta^2-\omega_o^2$ donde $\beta = \frac{R}{2L}>0$ las soluciones del polinomio característico serán reales, real doble o complejas no reales y la función $q(t)$ tendrá un comportamiento sobreamortiguado, subamortiguado o amortiguado, respectivamente. 
-
-Para el caso $\beta < \omega_o$ resulta $\omega^2 < 0$ y por lo tanto las raíces del polinomio característico son complejas y distintas. Esto conlleva a una solución de la forma:
-
-\begin{equation}{\label{amort}}
-q(t) = a.e^{-\beta t}.cos(|\omega|(t+\phi)) + V_0C
-\end{equation}
-
-donde $a$ y $\phi$ se obtienen a través de las condiciones iniciales del sistema y $|\omega| = \sqrt{\omega_o^2-\beta^2}$. Este es el caso del \textit{oscilador amortiguado}.
-
-Para el caso $\beta = \omega_o$ se tiene $\omega^2 = 0$ y la raíz del polinomio característica resulta doble y única. Esto conlleva a una solución de la forma:
-
-\begin{equation}{\label{sub}}
-q(t) = e^{-\beta t}(A+B.t) + V_0C
-\end{equation}
-
-donde A y B nuevamente se obtienen a través de las condiciones iniciales del sistema. Este es el caso límite conocido como \textit{oscilador subamortiguado}.
-
-Finalmente, para el caso $\beta > \omega_o$ es $\omega^2>0$ y las raíces del polinomio característico son reales y distintas. Esto conlleva a una solución exponencial de la forma:
-
-\begin{equation}{\label{sobre}}
-q(t) = e^{-\beta t}[C.cosh(\omega t)+D.sinh(\omega t)]
-\end{equation}
-
-donde C y D se obtienen a través de las condiciones iniciales del sistema. Este caso corresponde al \textit{oscilador sobreamortiguado}, dado que al ser una combinación lineal de exponenciales decrecientes ($\beta > \omega > 0$) nunca puede completarse una oscilación. 
-
-Si, como en el caso de los circuitos RC y RL, se utiliza una señal cuadrada para simular una \textit{llave ideal}, dado que todos los comportamientos cumplen $q(t\rightarrow\infty) = 0$, los períodos donde $V = 0$ resultan en una solución $q(t) = 0$ pues tanto las condiciones iniciales como la inhomogeneidad de la ecuación diferencial son nulas. Cuando la señal vuelve a adquirir el valor $V = V_0$, se recuperan las soluciones anteriores. Sin embargo, para esto se requiere una frecuencia de la señal cuadrada $\frac{\tau_f}{2} > \beta$ para asegurarse de que la carga $q(t)$ decaiga lo suficiente. 
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 3. DISPOSITIVO EXPERIMENTAL: armado del modelo, como se midio, consideraciones a la hora de medir.
@@ -181,62 +149,56 @@ Si, como en el caso de los circuitos RC y RL, se utiliza una señal cuadrada par
 
 \section{Desarrollo experimental}
 
-Dado que toda la teoría previa se apoya sobre el concepto de \textit{llave ideal}, un generador de funciones capaces de generar ondas cuadradas debió ser utilizado para emular esta característica (variación instantánea de voltaje). Este generador es capaz de emitir frecuencias con un error relativo del $0,01\%$ en un rango entre $1\mu Hz$ y $5MHz$ cuyo voltaje pico-pico tiene un error relativo del $1\%$ para el rango de voltaje utilizado. Además, se utilizó una capacitancia fija $C = (100,0 \pm 0,2)nF$ y una resistencia variable por décadas cuyo error fue a priori desconocido. Usando un multimetro digital se midieron las resistencias utilizadas junto con su error, que era de la forma $\pm(1\%+2d)$ para el rango de resistencias utilizadas (mayores a $100\Omega$). La resistencia del capacitor resultó despreciable. También, se utilizó una inductancia fija $L = (1.000 \pm 0.002) H$ que poseía una resistencia interna (medida por el multímetro) $R_L = (294 \pm 3) \Omega$.
+Para tener una fuente constante $V_{0}$ se utilizó una fuente de alimentación programable capaz de emitir una señal constante con una precisión de $\pm (0.5\% + 0.02)$ en un rango de voltaje de salida de $0 \thicksim 32 V$.
+Ademas se utilizaron dos resistencias $R=(1000.0 \pm 0.5) \Omega$ idénticas, otra resistencia $r=(100.00 \pm 0.05)$ y una resistencia $R_{v}$ variable por décadas la cual en principio se desconocía su error. Para determinar dicho error se utilizó un multimetro digital y se midieron las resistencia con una precisión de $\pm (1\% + 2d)$ debido al rango de resistencias utilizadas (mayores a $100 \Omega$). Tambien se uso el multimetro para las correspondientes mediciones de corriente,  con una resolución de $1\mu A$ y una precisión de $\pm (0.8\% +1)$ en el rango de $2 mA\thicksim 20 mA$, por otro lado una resolución de $1m A$ y una precisión de $\pm (1.5\% +1)$ en el rango de $2 A\thicksim 10 A$ y por ultimo una resolución de $10mA$ y una precisión de $\pm (2\% +4)$ en el rango de $10 A\thicksim 20 mA$ en su modo de amperímetro en cual imponia una resistencia adicional $R_{A} = (11,8 \pm 0,4) \Omega$.
 
-Finalmente, se utilizó un osciloscopio digital capaz de medir diferencias de potencial entre las dos terminales que dispone en un rango de 2mV a 5V con un error relativo del $3\%$. A la hora de medir voltaje, fue necesario asegurarse que el cable a tierra del osciloscopio estuvera conectado al cable a tierra el generador de funciones. 
+\subsection{Ley de Ohm}
 
-\subsection{Circuito RC}
+Como se ha dicho, una de las leyes basicas de los circuitos en general es la Ley de Ohm \textbf{\eqref{Ohm}}. Es por esto que la primer parte del trabajo se desarrolló en torno a su comprobación empírica para circuitos de corriente continua. El montaje del sistema consistió en la fuente de alimentación programable, que actuó como una fuente de voltaje constante, conectada en serie con la resistencia variable y el multímetro el cual fue utilizado como instrumento de medición. Esto permitió generar un circuito de una única malla que consiste en una resistencia y una fuente de voltaje constante (Ver \textbf{Figura \ref{fig:circ_simp}}).
 
-La primera parte del trabajo consistió en caracterizar un circuito RC. Para ello se montó un circuito utilizando el generador de funciones $\varepsilon$, la resistencia variable por décadas $R$ y el capacitor $C = (100,0 \pm 0,2)nF$, conectándose en serie para formar un circuito cerrado de una única malla como se ve en la \textbf{Figura \ref{fig:RC}}. 
 
 \begin{figure}[h]
-\centering
-  \includegraphics[scale=0.7]{Circuito-RC}
-  \caption{Circuito RC con una fuente de onda cuadrada}
-  \label{fig:RC}
+  \centering
+  \includegraphics[scale= 0.6]{Circuito_simple}
+  \caption{Circuito de malla única utilizado para la experiencia}
+  \label{fig:circ_simp}
 \end{figure}
 
-El objetivo fue medir la carga y descarga del capacitor $C$ y la corriente sobre la resistencia $R$ (que resultan proporcionales a la caida de potencial en cada elemento, respectivamente) para obtener el tiempo característico $\tau_{RC} = RC$del circuito presente en las ecuaciones \eqref{RC_carga}, \eqref{RC_descarga}, \eqref{RC_carga_I} y \eqref{RC_descarga_I}.
+La resistencia del multimetro utilizado en su función de amperímetro era $R_{A} = (11,8 \pm 0,4) \Omega$, la cual debió sumarse a la resistencia variable $R_v$ (pues están en serie) a la hora de calcular la resistencia total del circuito. La resistencia interna de la Fuente se asumió despreciable. Para empezar, se fijó la resistencia variable $R_v = (500 \pm 5)\Omega$ y se fue variando el voltaje de entrada $\varepsilon$, registrándose la corriente $I$ resultante para cada valor de $\varepsilon$. Posteriormente, utilizando el mismo circuito se planteó analizar la relación entre $I$ y $R$ fijando el voltaje de la fuente a $\varepsilon = (15,0 \pm 0,1)V$ y variando la resistencia total $R = R_v + R_A$ a través de $R_v$. 
+
+
+\subsection{Equivalente de Thevenin y Ley de Joule}
+
+Terminado lo anterior, se propuso montar otro circuito con dos mallas con el primer objetivo de medir sus corrientes de rama y compararlas con el resultado teórico esperado. Se utilizaron las dos resistencias $R = (1000,0\pm0,5)\Omega$ y la resistencia $r = (100,00\pm0,05)\Omega$, mientras que la fuente de voltaje $\varepsilon = (5,00\pm0,05)V$ fue generada nuevamente por la fuente de alimentación programable, unidos por cables como se ve en el circuito de la \textbf{Figura \ref{fig:circ_mallas}}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.55]{Mallas_sin_carga}
+  \caption{Circuito de dos mallas utilizado para la experiencia, los $A_i$ representan los lugares donde se ubicó el multimetro para medir las correspondientes corrientes}
+  \label{fig:circ_mallas}
+\end{figure}
+
+Inicialmente, se utilizaron las ecuaciones \eqref{Ohm} y \eqref{nodos} para resolver el circuito mediante el método de ramas para obtener el valor de las corrientes $i_1$, $i_2$ e $i_3$ en base a los parámetros. 
  
-Se programó la fuente para que emitiera una señal cuadrada con un voltaje máximo $\varepsilon = (2.00 \pm 0.02)V$ y un voltaje mínimo nulo cuya frecuencia era variable. Sin embargo, esta frecuencia $f = \frac{\omega_f}{2\pi}$ debió elegirse de forma tal que la carga $q$ llegará a su máximo o mínimo (y por ende la corriente $I$ se anulase) en medio período de la señal $\frac{\tau_f}{2} = \frac{pi}{\omega_f} > \tau_{RC}$ para poder analizar todo el comportamiento.
-
-Para medir la diferencia de tension se conectó un osciloscopio en paralelo al elemento que se quería medir, como se puede ver en la \textbf{Figura \ref{fig:RC}} donde muestra el caso de la resistencia. A su vez, el generador de funciones estaba conectado al osciloscopio para poder visualizar la forma funcional de la fuente. Se lo utilizó además como \textit{trigger externo} para poder apreciar que tanto su señal como la caida de potencial en el elemento se encontraban en fase. Y utilizando un software de recopilación de datos se pudo importar a una computadora las mediciones registradas por el osciloscopio para ser analizadas posteriormente. Este proceso se realizó para disintos valores de $R$, considerandose despreciable la resistencia aportada por $C$.
-
-\subsection{Circuito RL}
-
-De manera análoga, la siguiente parte del trabajo consistió en caracterizar un circuito RL. En este caso se reemplazo el capacitor $C$ por la inductancia $L = (1.000 \pm 0.002) H$. La forma del circuito se puede ver en la \textbf{Figura \ref{fig:RL}}.
+Luego se ubicó el multimetro en las posiciones $A_1$, $A_2$ y $A_3$ (Ver \textbf{Figura \ref{fig:circ_mallas}}) para medir las corrientes $i_1$, $i_2$ e $i_3$ respectivamente, considerando despreciable la resistencia interna del multímetro.
+ 
+Posteriormente, se buscó calcular el equivalente de Thevenin en forma teórica a través de los parámetros $R$, $r$ del circuito y $\varepsilon$ usando \eqref{Rth} y \eqref{Eth} para obtener la resistencia y la fuente equivalente vista desde las terminales A y B, entre las cuales se conectó una resistencia de carga $R_q = R_v + R_A$ (ver \textbf{Fig \ref{fig:circ_mallas_carga}}), donde $R_v$ es la resistencia variable por décadas y $R_A$ es la resistencia propia del amperímetro. 
 
 \begin{figure}[h]
-\centering
-\includegraphics[scale=0.7]{Circuito-RL}
-  \caption{Circuito RL con una fuente de onda cuadrada}
-  \label{fig:RL}
+  \centering
+  \includegraphics[scale=0.55]{Mallas_con_carga}
+  \caption{Circuito de dos mallas con la resistencia de carga acoplada}
+  \label{fig:circ_mallas_carga}
 \end{figure}
 
-El método utilizado para obtener el tiempo característico $\tau_{RL} = \frac{L}{R}$, fue el mismo que para el circuito RC exceptuando el voltaje entregado por la fuente cuyo valor fue $\varepsilon = (8.00 \pm 0.08)V$ y la resistencia de la inductancia $R_L = (294 \pm 3) \Omega$, que en este caso no pudo ser despreciada, debió sumarse a la resistencia $R$ pues estaba en serie. Se midieron las caidas de potencial en la resistencia $R$ (proporcional a la corriente $I$) y en la inductancia $L$ (proporcional a $\frac{dI(t)}{dt}$).
 
-Nuevamente, se buscaron frecuencias $f = \frac{\omega_f}{2\pi}$ tal que la corriente se estabilizara (llegara a un máximo o mínimo) en medio período de la señal $\frac{\tau_f}{2} = \frac{pi}{\omega_f} > \tau_{RL}$ para poder analizar todo el comportamiento.
 
-\subsection{Circuito RCL}
+Conectando el multimetro en paralelo en las terminales A y B se midió la diferencia de potencial $\Delta V_{AB}$ y la resistencia $R_{AB}$  entre ambas terminales.
 
-Por ultimo, se buscó estudiar el comportamiento de un circuito RCL. Para ello se montó un circuito cerrado que tenia en serie la fuente programable $\varepsilon$, la resistencia variable por decadas $R$, una inductancia variable $L$ y un capacitor $C$ como muestra la \textbf{Figura \ref{fig:RCL}}.  
+Una vez hecho esto, fue posible conectar una resistencia de carga $R_v$ representada por una resistencia variable por decadas en serie con el multimetro en modo amperimetro. El objetivo fue medir la corriente $I$ para distintos valores de $R_v$ y en base a ambas magnitudes calcular la potencia $P$ disipada por $R_q$ a través de \eqref{Joule} buscando relevar la curva acampanada $P(R_v)$.
+%cuyo máximo debería encontrarse en $R_{max} = R_{th}$ $= (83,3\pm0,7)\Omega$ segun (\textbf{POT MAX})
 
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.7]{Circuito-RCL}
-  \caption{Circuito RCL con una fuente de onda cuadrada}
-  \label{fig:RCL}
-\end{figure}
 
-Para caracterizar el circuito, la ecuación diferencia \eqref{ec_RCL} determina distintos \textit{comportamientos} que dependen de los parámetros involucrados en el circuito.
-
-Utilizando el método de adquisición de datos ya explicado, se midió la diferencia de potencial sobre la resistencia (que resulta proporcional a la corriente $I$). Esta diferencia de potencial era generada por una señal cuadrada de $(3.08 \pm 0.04)V$.
-
-Por lo tanto se estudió el circuito para disintos valores de $R$,$C$ y $L$ con el fin de encontrar cada uno de estos \textit{comportamientos}. Para ello, se fijaban dos parametros y se buscaba que el tercero cumpliese las condiciones  que determinan cada \textit{comportamiento} \eqref{amort}, \eqref{sub} y \eqref{sobre}.
-
-Para cada comportamiento, como se dijo en la \textbf{Introducción}, se buscó una frecuencia $f$ tal que la corriente $I$ se anulara y, por lo tanto, se descargara el capacitor $C$ ($q=0$) en un medio período de la señal $\frac{\tau_f}{2} = \frac{pi}{\omega_f} > \beta$.
-
-\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 4.DISCUSIÓN Y RESULTADOS: todo lo que se obtuvo y explicación. Graficos, tablas.
@@ -245,157 +207,81 @@ Para cada comportamiento, como se dijo en la \textbf{Introducción}, se buscó u
 \section{Resultados}
 \label{sec:discusion}
 
-\subsection{Circuito RC}
-Para la primer configuracion del circuito RC, se dispuso una resistencia de $R = (3,00\pm0,02)k\Omega$, se midio la caida de potencial sobre la resistencia y mediante el analizador de datos se obtuvo un grafico que ilusta la \textbf{Figura \ref{fig:RC-CR}}.
+\subsection{Ley de Ohm}
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.45]{RC-Caida_en_Resistencia}
-  \caption{Caida de potencial sobre la resistencia en función del tiempoen un circuito RC}
-  \label{fig:RC-CR}
+Los resultados de la primer medición con la resistencia $R = (512 \pm 5)\Omega$ constante pueden verse en la \textbf{Figura \ref{fig:Ohm_lin}}, cuyo ajuste lineal arroja una pendiente $m_1 = (1,979.10^{-3} \pm 5.10^{-6})\Omega^{-1}$ y una ordenada $b_1 = (-0,23\pm 0,03)mA$ muy cercana a cero con un $R-square = 0,99995$, que asegura la bondad del ajuste. Siguiendo \eqref{Ohm}, se esperaría que la pendiente $m_1 = (1,979.10^{-3} \pm 5.10^{-6})\Omega^{-1}$ fuera igual a $\frac{1}{R}$. Efectivamente, resulta $\frac{1}{m_1} = (505.3 \pm 1,3)\Omega$, el cual se acerca mucho a $R = (512 \pm 5)\Omega$.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.4]{Corriente_vs_Voltaje}
+  \caption{Relacion entre Voltaje ($\varepsilon$) y Corriente (I)}
+  \label{fig:Ohm_lin}
 \end{figure}
 
-Sabiendo que la variacion en el voltaje medida sobre la resistencia es proporcional a la corriente, se utilizaron las ecuaciones \eqref{RC_carga_I} y  \eqref{RC_descarga_I} para realizar ajustes sobre cada uno de los picos que aparecian en el grafico y así obtener un valor de $\tau_{RC}$ para cada uno. Y luego se realizo un intervalo de confianza de nivel $0.95$ \textbf{(Ver apendice)} con los todos los valores de $\tau_{RC}$, para obtener un valor representativo del tiempo caracteristico de este circuito, que resultó $\tau_{RC}=(0,315 \pm 0,004) ms$.
+Luego, con las mediciones correspondientes a un voltaje constante, se decidio realizar un grafico que relacionara las corrientes medidas con el inverso de las resistencias seleccionadas, de esa forma, si se cumple la ley de Ohm, deberia haber una correspondencia lineal entre esos pares de valores. Como se puede ver en la \textbf{Figura \ref{fig:Ohm_hip}} se confirma lo esperado, ya que una vez realizado un ajuste lineal, nos arroja un $R-square = 0,99998$.
 
-Cuando la medicion se realizo sobre el capacitor $C$ se obtuvo el grafico ilustrado por la \textbf{Figura \ref{fig:RC-CC}}, en el cual se utilizaron las ecuaciones \eqref{RC_carga} y \eqref{RC_descarga}; y realizandose un análisis idéntico al realizado con los valores de la \textbf{Figura \ref{fig:RC-CR}}, se obtuvo un $\tau_{RC}=(0,316 \pm 0,005) ms$.
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.45]{RC-Caida_en_Capacitor}
-  \caption{Caida de potencial sobre el capacitor en función del tiempoen un circuito RC}
-  \label{fig:RC-CC}
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.15]{Corriente_vs_InversoResistencia}
+  \caption{Relacion entre el inverso de Resistencia (1/R) y Corriente (I)}
+  \label{fig:Ohm_hip}
 \end{figure}
 
-Se puede ver que los resultados de los obtenidos de las distintas mediciones son indistigibles, ya que sus intervalos de incerteza se solapan, lo cual resulta consistente ya que el tiempo caracteristico depende intrinsecamente de la configuracion del circuito y no del lugar de la medicion.
+ Cabe destacar, que para resistencias suficientemente altas, las corrientes resultantes deberian estar por debajo del limite de resolucion de cualquier instrumento de medicion; por lo cual, es consistente que el ajuste arroje una interseccion con el eje de ordenadas muy cercano al 0. Efectivamente el valor obtenido es de $b = (-0,23 \pm 0,03)mA$. Adicionalmente, segun la ecuacion \eqref{Ohm} se esperaria que la pendiente de esta recta fuera el voltaje de entrada. En este caso resulta ser ligeramente superior con un valor $m_2 = (15,4 \pm 0,2)V$
 
-Posteriormente se realizo el mismo analisis para configuraciones con resistencias de $(5,00\pm0,03)k\Omega$, $(7,00\pm0,04)k\Omega$, $(9,00\pm0,05)k\Omega$ y $(11,00\pm0,05)k\Omega$, sin variar los demas parametros y se obtuvieron los valores presentados en la \textbf{Tabla 1}, donde se puede observar lo resaltado anteriormente; para cada par de resultados correspondientes a una misma configuracion, estos son indistingibles.\\ 
+\subsection{Equivalente de Thevenin y Ley de Joule}
+
+ 
+De las mediciones y calculos hechos de las corrientes $A_1$, $A_2$ y $A_3$ puede verse, en la \textbf{Tabla 1}, que los valores obtenidos con ambos metodos coinciden dentro del error. 
 
 \begin{center}
 \begin{tabular}{||c|c|c||}
 \hline
 & \multicolumn{2}{c||}{\textbf{Valor}} \\ \hline
-\textbf{Resistencia (k$\Omega$)} & \textbf{$\tau_{R}$ (ms)} & \textbf{$\tau_{C}$ (ms)} \\ \hline 
-$3,00\pm0,02$ & $0,315 \pm 0,004$ & $0,316 \pm 0,005$ \\ \hline 
-$5,00\pm0,03$ & $0,516\pm 0,004$ & $0,525 \pm 0,007$ \\ \hline 
-$7,00\pm0,03$ & $0,715\pm 0,007$ & $0,725\pm 0,006$ \\ \hline 
-$9,00\pm0,03$ & $0,916 \pm 0,006$ & $0,926 \pm 0,009$ \\ \hline 
-$11,00\pm0,03$ & $1,117\pm 0,007$ & $1,125\pm 0,005$ \\ \hline 
+\textbf{Corriente} & \textbf{Teórico (mA)} & \textbf{Medido (mA)} \\ \hline 
+$i_1$ & $8,33\pm0,09$ & $8,3\pm0,3$ \\ \hline 
+$i_2$ & $4,17\pm0,05$ & $4,2\pm0,2$ \\ \hline 
+$i_3$ & $4,17\pm0,05$ & $4,1\pm0,2$ \\ \hline 
 \end{tabular}\\[0.3cm]
- 
-\textit{Tabla 1: Valores obtenidos de las tiempos caracteristicos en el circuito RC}
+
+\textit{Tabla 1: Valores obtenidos de las corrientes mediante cálculo (teórico) y medición directa}
 \end{center}
 
-Finalmente, teniendo en cuenta que segun el modelo propuesto, el tiempo caracteristico de un circuito tiene una correspondencia lineal con la resistencia se construyeron dos de gráficos que relacionan estos valores y se realizo un ajuste sobre los mismos como se puede ver en la \textbf{Figura \ref{fig:RCvsR}}.
+Luego, a través del cálculo del equivalente de Thevenin se obtuvieron los parametros equivalentes $\varepsilon_{th} = (0,83\pm0,08)V$ y $R_{th} = (83,3 \pm 0,7) \Omega$. Cabe aclarar que en este cálculo no intervinieron las corrientes previamente calculadas, si no que se utilizó directamente su dependencia con los parámetros del circuito. Alternativamente, mediante medición directa se obtuvo $\Delta\varepsilon_{AB} = (0,84 \pm 0,06)V$ y $R_{th} = (83,4 \pm 0,6)\Omega$, valores que resultan indistinguibles dentro del error de los anteriormente calculados. 
 
-\begin{figure}[H]
+De los datos obtenidos se tiene el gráfico de la \textbf{Figura \ref{fig:pot_res}} donde se puede observar que el comportamiento de la potencia entregada por el circuito esta dentro de los parametros esperados. Luego, realizando un ajuste, se obtiene una resistencia máxima $R_{max} = (78.5 \pm 0.8)\Omega$ y un voltaje $\varepsilon = (0,74\pm 0,01)V$ ambos muy cercanos a los valores de Thevenin calculados anteriormente. Sin embargo, el coeficiente $\chi_{red}^{2} = 0.01362$ muestra una enorme sobreestimación de los errores, visible ya en la \textbf{Figura \ref{fig:pot_res}}.
 
-\begin{subfigure}{0.5\textwidth}
-\includegraphics[scale=0.35]{Tau-RCvsR_Resistencia}
-  \caption{Medicion sobre la resistencia}
-  \label{subfig:RCvsRR}
-\end{subfigure}
-\begin{subfigure}{0.5\textwidth}
-\includegraphics[scale=0.35]{Tau-RCvsR_Capacitor}
-  \caption{Medicion sobre el capacitor}
-  \label{subfig:RCvsRC}
-\end{subfigure}
-  \caption{Variacion del tiempo caracteristico en funcion de la resistencia}
-  \label{fig:RCvsR}
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.4]{Potencia_vs_Resistencia_2}
+  \caption{Relacion entre la potencia disipada y el valor de la resistencia de carga}
+  \label{fig:pot_res}
 \end{figure}
 
-El resultado esperado seria que la pendiente de ambos graficos sea equivalente al valor de la capacitancia $C = (100 \pm 0,2)nF$. Efectivamente para la \textbf{Figura \ref{subfig:RCvsRR}} la pendiente arroja un valor $m_{R} = (100.18 \pm 0,09)nF$ una ordenada $b_R = (14,6 \pm 0,7)\mu s$ con un coeficiente $R-Square = 1$ mientras que para la \textbf{Figura \ref{subfig:RCvsRC}} la pendiente es $m_{C} = (101,0 \pm 0,5)nF$ y a ordenada $b_C = (15,6 \pm 0,4)ms$ con un coeficiente $R-Square = 0.99991$. Los $R-square$ aseguran la bondad del ajuste y las ordenadas $b_C$, $B_R$ resultan despreciables frente a los valores $\tau_{RC}$ manejados. 
+Finalmente, se calculo la eficacia con la cual se traspasaba la potencia de nuestro circuito sobre la carga. En el grafico de la \textbf{Figura \ref{fig:efi_res}} se ve que hay una tendencia creciente pero que en los ultimos puntos se empieza a dispersar. 
 
-
-\subsection{Circuito RL}
-
-El procedimiento realizado con el circuito RL es absolutamente analogo al realizado con el RC. Se realizaron mediciones para distintas configuraciones que relevaban multiples curvas como muestra la \textbf{Figura \ref{fig:RL_C}}. En el caso de los graficos de tipo \textbf{\ref{subfig:RL_CR}}, como corresponden a las mediciones sobre la resistencia, se utilizaron las ecuaciones \eqref{RL_carga_I} y \eqref{RL_descarga_I} para realizar los ajustes, ya que la caida de potencial medida en ese lugar es proporcional a la corriente. En cambio, para los graficos de tipo \textbf{\ref{subfig:RL_CI}}, correspondientes a las mediciones sobre la inductancia, se utilizaron las ecuaciones \eqref{RL_carga} y \eqref{RL_descarga} ya que, en este caso, es proporcional a la derivada de la corriente.
-
-\begin{figure}[H]
-
-\begin{subfigure}{0.5\textwidth}
-\includegraphics[scale=0.3]{RL-Caida_en_Inductancia}
-  \caption{Sobre la Inductancia}
-  \label{subfig:RL_CI}
-\end{subfigure}
-\begin{subfigure}{0.5\textwidth}
-\includegraphics[scale=0.3]{RL-Caida_en_Resistencia}
-  \caption{Sobre la Resistencia}
-  \label{subfig:RL_CR}
-\end{subfigure}
-  \caption{Caida de potencial en funcion del tiempo en un circuito RL}
-  \label{fig:RL_C}
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.4]{Eficiencia_vs_Resistencia}
+  \caption{Relación entre la eficacia de la entrega de potencia y el valor de la resistencia de carga}
+  \label{fig:efi_res}
 \end{figure}
 
-Posteriormente, con los resultados provistos por los ajustes, se realizo el mismo análisis, obteniendose los resultados explayados en la \textbf{Tabla 2}.
+Desestimando los puntos en cuyos calculos contenian corrientes con incertezas comparables con su valor, el ajuste realizado utilizando \eqref{efi} arroja un $\chi_{red}^{2} = 0.00155$ que indica la ya notoria exageración de los errores obtenidos debido a la propagación de errores.  
+
+En resumen, los distintos valores obtenidos de $R_{th}$ y $\varepsilon_{th}$ con los distintos métodos se pueden ver en la \textbf{Tabla 2}.
 
 \begin{center}
-\begin{tabular}{||c|c|c||}
+\begin{tabular}{||c|c|c|c||}
 \hline
-\multicolumn{3}{||c||}{\textbf{Valor}} \\ \hline
-\textbf{Posicion osciloscopio} & \textbf{Resistencia (k$\Omega$)} & \textbf{$\tau_{RL}$ (ms)}\\ \hline 
-\multirow {5}{2cm}{Resistencia} & $0.600\pm0.003$ & $1.373 \pm 0.006$ \\ \cline {2-3}
-& $0.800\pm0,004$ & $1.04\pm 0.01$ \\ \cline {2-3} 
-& $1.000\pm0,005$ & $0.770 \pm 0.003$ \\ \cline {2-3}
-& $1.200\pm0,006$ & $0.656 \pm 0.004$ \\ \cline {2-3}
-& $1.400\pm0,007$ & $0.570 \pm 0.002$ \\ \hline
-\multirow {5}{2cm}{Inductancia} & $3,00\pm0,02$ & $0.27 \pm 0.03$ \\ \cline {2-3}
-& $5.00\pm0,03$ & $0.157 \pm 0.002$ \\ \cline {2-3}
-& $7.00\pm0,04$ & $0.114 \pm 0.002$ \\ \cline {2-3}
-& $9.00\pm0,05$ & $0.091 \pm 0.005$ \\ \cline {2-3} 
-& $11.00\pm0,05$ & $0.071 \pm 0.008$ \\ \hline
+\multirow{2}{*}{\textbf{Magnitud}} & \multicolumn{3}{c||}{\textbf{Valor}} \\ \cline{2-4}
+  & \textbf{Teórico} & \textbf{Medido} & \textbf{Ajustado} \\ \hline
+$R_th$ & $(83,3\pm0,7)\Omega$ & $(83,4\pm0,6)\Omega$ & $(78,5\pm0,8)\Omega$ \\ \hline
+$E_th$ & $(0,83\pm0,08)V$ & $(0,84\pm0,06)V$ & $(0,74\pm0,01)V$ \\ \hline
 \end{tabular}\\[0.3cm]
-
- \textit{Tabla 2: Valores obtenidos de los tiempos caracteristicos en el circuito RL}
+\textit{Tabla 2: Valores obtenidos para el equivalente de Thevenin mediante cálculo (teórico),\\ medición directa y ajuste de curva de potencia}
 \end{center}
-
-Luego se costruyo el \textbf{grafico \ref{fig:T-RL}} que relaciona las duplas, se realizo un ajuste esperando que se respete la relacion $\tau_{RL} = L/R$ y que, ademas, se consiga un valor de $L = (1.000 \pm 0.002) H$.
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.4]{TauRCvsR_Todo_en_Serie}
-  \caption{Variacion del tiempo caracteristico en funcion de la resistencia}
-  \label{fig:T-RL}
-\end{figure}
-
-Efectivamente, una vez realizado ese proceso, se obtiene un $R-Square = 0.99819$ que ratifica la bondad del ajuste pero el valor de la inductancia calculado por este metodo fue $L = (0.80 \pm 0.01) H$, que es ligeramente inferior. Se desconocen las causas de esa diferencia.
-
-
-\subsection{Circuito RCL}
-
-Para realizar la primer medición, se fijó una resistencia $R= (400 \pm 4) \Omega$, una inductancia $L = (1,000 \pm 0.001) H$ que añadia una resistencia de $R_{L} = (296 \pm 3) \Omega$, y una capacitancia $C = (100,0 \pm 0.2) nF$. Bajo esos parametros se esperaba una respuesta regida por la ecuación \eqref{amort} y, efectivamente, se puede ver en la \textbf{Figura \ref{fig:RLC-A}} que el ajuste propuesto es correcto, pues arroja un $R-Square = 0.99827$. Cabe destacar, que para este tipo de circuito, no se realizó el analisis utilizado en los dos casos anteriores, por lo que se se priorizó obtener la maxima resolucion posible de un único pico con el osciloscopio.
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.4]{RLC-Amortiguado(1H)}
-  \caption{Variacion del potencial en funcion del tiempo en un circuito RLC (Oscilador amortiguado)}
-  \label{fig:RLC-A}
-\end{figure}
-
-Del ajuste se puede extraer el valor de la frecuencia de oscilacion $f_{A} = (501.3 \pm 0.7) Hz$ el cual es consistente con la calculada de manera teorica, $f_{teo} = (500.2 \pm 0.6)Hz$, ya que como sus intervalos de incerteza se solapan, son indistigibles.
-
-Luego, se propusieron parametros para lograr una respuesta regida por la ecuación \eqref{sobre}. Se dispuso una resistencia $R= (1110 \pm 11)\Omega$, una inductancia $L = (30,00 \pm 0.03) mH$ , y una capacitancia $C = (100,0 \pm 0.2) nF$. Y luego mediante el osciloscopio se obtuvo la \textbf{Figura \ref{fig:RLC-SA}}.
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.45]{RLC-SobreAmortiguado}
-  \caption{Variacion del potencial en funcion del tiempo en un circuito RLC (Oscilador Sobreamortiguado)}
-  \label{fig:RLC-SA}
-\end{figure}
-
-El ajuste realizado sobre la misma arroja un $R-Square = 0.99829$, y aporta valores para la frecuencia \textbf{$f_{A} = (477 \pm 31)Hz$} y para el tiempo caracteristico \textbf{$\tau_{A)} = (28.05 \pm 0.02) \mu s$}. Si se los compara con los resultados teoricos, \textbf{$f_{teo} = (475 \pm 9)Hz$} y \textbf{$\tau_{teo} = (27,0 \pm 0.3) \mu s$}, puede verse que las frecuencias coinciden, y que, aunque la diferencia es pequeña frente a las magnitudes manejadas, los $\tau$ no.
-
-Finalmente se intento construir un circuito para el caso critico, para el cual se fijo una inductancia $L= (1 \pm 0.001) H$ y una capacitancia de  $C = (100 \pm 0.2) nF$, y se se fijo una resistencia $R = (6.30 \pm 0.03) k\Omega$ la cual contenia dentro de su margen de incerteza el resultado de calcular el valor para el cual el polinomio caracteristico de la ecuacion \eqref{ec_RCL} diera una raiz doble, y asi la evolucion del sistema estuviera regido por la ecuacion \eqref{sub}. Asi se obtuvo el grafico de la \textbf{Figura \ref{fig:RLC-sA}}.
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.45]{RLC-Amortiguado_Critico(MasPiola)}
-  \caption{Variacion del potencial en funcion del tiempo en un circuito RLC (Oscilador Subamortiguado) ajustado como un oscilador sobreamortiguado}
-  \label{fig:RLC-sA}
-\end{figure}
-
-Durante el analisis fue imposible realizar un ajuste a partir de la ecuacion \eqref{sub} y solo se pudo obtener un ajuste viable cuando se utilizo la ecuacion del oscilador sobreamortiguado \eqref{sobre}. El $R-Square = 0.99948$ confirma la bondad del ajuste, por lo cual es posible afirmar que la \textbf{Figura \ref{fig:RLC-sA}} no corresponde al caso critico.
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	CONCLUSIONES
@@ -404,39 +290,19 @@ Durante el analisis fue imposible realizar un ajuste a partir de la ecuacion \eq
 \section{Conclusiones}
 \label{sec:conclusiones}
 
-Para comenzar, los datos arrojados para el caso del circuito RC son más que consistentes. Los tiempos caracteristicos $\tau_R$ y $\tau_C$ mostrados en la \textbf{Tabla 1} resultan indistinguibles dentro del error, comprobando las relacion entre las ecuaciones \eqref{RC_carga}, \eqref{RC_descarga}, \eqref{RC_carga_I} y \eqref{RC_descarga_I}. Ante todo, los ajustes lineales de la \textbf{Figura \ref{fig:RCvsR}} permiten comprobar con enorme seguridad la dependencia del tiempo característico con los parámetros $C$ y $R$, dado que ambas pendientes $m_R = (100,18 \pm 0,09)nF$ y $m_C = (101,0 \pm 0,5)nF$ resultan indistinguibles.
+En conclusión, los resultados obtenidos en la sección referente a la Ley de Ohm resultan consistentes. Aunque la forma funcional de \eqref{Ohm} queda bien comprobada en los graficos de las \textbf{Figuras \ref{fig:Ohm_lin}} y \textbf{\ref{fig:Ohm_hip}}, los ajustes arrojan parámetros que no resultan equivalentes a los del sistema. El parámetro $\frac{1}{m_1} = (505.3 \pm 1,3)\Omega$ arrojado por la \textbf{Figura \ref{fig:Ohm_lin}} no resulta indistinguible a $R = (512 \pm 5)\Omega$, aunque la diferencia es muy pequeña y puede considerarse despreciable frente a las magnitudes manejadas. Para el caso del parámetro $m_2 = (15,4 \pm 0,2)V$ arrojado por la \textbf{Figura \ref{fig:Ohm_hip}} la situación resulta similar al caso anterior frente al parámetro del sistema $\varepsilon = (15,0 \pm 0,1)V$. En este caso, sin embargo, el error puede deberse a que algunas de las corrientes medidas eran menores a $15mA$, lo cual se acerca al límite de resolución del instrumento.
 
-Sin embargo, para el caso del circuito RL, dado que la metodologia de medición y analisis utilizado fueron los mismos que para el circuito RC se obtuvo una inconsistencia en los resultado. Esto se debe a que de los valores registrados en la \textbf{Tabla 2} se obtiene un ajuste bondadoso de la relacion $\tau_{RL}$, el cual se ve en la \textbf{Figura 8}, pero que difiere del valor esperado. Y puesto que el marco teorico del trabajo se comprobó correcto en la sección del RC al igual que tanto los metodos de medición como de analisis; se puede atribuir esta inconsistencia a alguna caracteristica de los elementos no tenidos en cuenta o a un descuido experimental a la hora de las mediciones.
+Empezando con la sección de Thevenin, la \textbf{Tabla 1} permite ver que las corrientes $i_1$, $i_2$ e $i_3$ medidas y teóricas son indistinguibles dentro del error, por lo que puede asumirse que la relación dictada por las Leyes de Kirchoff de las ecuaciones \eqref{Ohm} y \eqref{nodos}. Por lo tanto, el método de ramas fue usado validamente. 
 
-Por ultimo; el estudio de los circuitos RCL se pudieron observar eficientemente los casos de \textit{oscilador amortiguado} y \textit{oscilador sobreamortiguado}, los cuales se muestra en las \textbf{Figura 9} y \textbf{10} respectivamente. Esto se puede concluir a partir de que los ajustes realizados en cada caso se hicieron utilizando las funciones esperadas, y los estimadores de bondad aseguraron dichos ajustes. Por otro lado; de las mediciones realizadas para el caso del \textit{oscilador subamortiguado}, en los cuales se dispusieron los valores de los elementos de manera que coincidiesen con las condiciones teóricas, no se pudo ajustar la curva esperada para este caso, sin embargo si se logró utilizando el ajuste del caso \textit{oscilador sobreamortiguado}, el cual debido a la bondad de su ajuste, se pudo garantizar que efectivamente corresponde a dicho caso. Es por ello que de los distintos parámetros utilizados, ninguna configuración correspondió al caso crítico. Esto es esperable considerando que este caso es muy fino y que la precisión de los parámetros debe ser mayor que fue utilizada en la experiencia.
+Como puede verse en la \textbf{Tabla 2}, los valores de $E_{th}$ y $R_{th}$ para el caso de medicion directa y calculo teórico son indistinguibles dentro del error y, por ende, son iguales. Sin embargo, los valores obtenidos mediante el ajuste de la \textbf{Figura \ref{fig:pot_res}} difieren notoriamente de los anteriores. Observando los ordenes de magnitud manejados en la \textbf{Figura \ref{fig:pot_res}} puede notarse que los valores de potencia disipada son menores a $3mW$. Esta baja potencia deviene realmente de los bajos valores de corrientes medidas, que se ubicaron en el intervalo $[0,1mA;7,6mA]$ con un error minimo de $0,2mA$, por lo que gran parte de las corrientes medidas se encontraban muy cerca del límite de resolución del multímetro, por lo que las fluctuaciones y el ruido del instrumento generan incertezas muy altas no contempladas por el error asignado. Esto acarreado con el error al calcular la potencia genera una enorme brecha entre el valor esperado (y medido) y el valor obtenido. El coeficiente $\chi_{red}^{2} = 0.01362$ obtenido en el ajuste de la \textbf{Figura \ref{fig:pot_res}} es un claro reflejo de este problema, pues al ser tan pequeño frente a 1 indica una sobrestimación de errores. Por lo tanto, si nos concentramos en los dos primeros valores, que se obtienen en forma más directa, tenemos una comprobación empírica del teorema de Thevenin. 
+
+A la hora de analizar la eficiencia en la \textbf{Figura \ref{fig:efi_res}}, nuevamente el coeficiente $\chi_{red}^{2} = 0.00155$ previene sobre una enorme sobrestimación de errores, acarreado principalmente del cálculo de la potencia (como se ha visto en el párrafo anterior). Aún desestimando los puntos provenientes de las corrientes más bajas, el error propagado resulta tan grande que resulta dificil asegurar que el ajuste es el correcto. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	APÉNDICE: esas cosas extras que simplemente no tuvieron lo suficiente como para ganarse una sección propia.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Apéndice}
-\label{sec:apendice}
-
-A la hora de analizar largas tiras de datos, los Intervalos de Confianza son herramientas muy útiles. Matemáticamente, si $X_1,..X_n$ son variables aleatorias identicamente distribuidas tal que su esperanza $E(X_i) = \mu$ y varianza $V(X_i) = \sigma^2 > 0$ es posible construir un intervalo de confianza del promedio $\overline{X}_n = \Sigma_{i=1}^{n} \frac{X_i}{n}$. Fisicamente, asumiendo las $X_1,..X_n$ como distintas mediciones de una misma magnitud $X$, es posible considerar $\mu = X$ y construir un intervalo de confianza para este parámetro $\overline{X}_n$. Sin embargo, es necesario conocer la distribución $F(\theta_1,..,\theta_m)$ tal que $X_i \sim F(\theta_1,..\theta_m)$. 
-
-Se define $(a;b)_{\theta}$ como un intervalo de confianza de nivel $1-\alpha$ para un parámetro $\theta$ según:
-
-\begin{equation}\label{inter}
-\ P(\theta\in(a;b)_{\theta})= 1-\alpha
-\end{equation}
-
-Según el Teorema Central del Límite, cuando $n\rightarrow\infty$ resulta $\overline{X}_n \sim N(\mu, \frac{\sigma}{\sqrt{n}})$ donde $N$ representa la distribución normal. De esta forma, a la hora de estimar $\mu$ es posible, asumiendo $n$ suficientemente grande, utilizar un intervalo de confianza sobre la variable aleatoria $\overline{X}_n$. En particular, definiendo la variable aleatoria $Z \sim N(0,1)$, vale asintóticamente que $\overline{X}_n = \mu + \frac{\sigma}{\sqrt{n}}Z$ de forma tal que $\Phi(x) = \int_{-\infty}^x \frac{e^{\frac{x^2}{2}}}{\sqrt{2\pi}} dx = P(Z<x)$. Por otro lado, definiendo $z_{p}$ tal que $\Phi(z_{p}) = 1-p$ y recordando que $\Phi(-x) = 1-\Phi(x)$ es posible, a través de \eqref{inter}, definir un intervalo de confianza ($-z_{\frac{\alpha}{2}}$; $z_{\frac{\alpha}{2}}$):
-
-\begin{equation}\label{inter2}
-\ P(|Z|<z_{\frac{\alpha}{2}})= 1-\alpha
-\end{equation}
-
-De esta forma, asumiendo conocida la varianza $V(\overline{X}_n) = \sigma^2$ y utilizando que $Z = \frac{\overline{X}_n-\mu}{\sigma}.\sqrt{n}$ es posible utilizar \eqref{inter2} para obtener un intervalo de confianza de nivel $1-\alpha$ para $\mu$. Sin embargo, dado que $\sigma$ no es un parámetro conocido, es posible simplemente aproximarlo por el \textit{desvio estandar muestral} tal que $\sigma^2 \simeq \Sigma_{i=1}^{n}\frac{(x_i-\overline{x}_n)^2}{n-1}$. Definiendo $\sigma$ de esta forma y $\overline{x}_n = \Sigma_{i=1}^{n} \frac{x_i}{n}$ con $x_i$ el valor obtenido en la i-esima medición., se puede calcular un intervalo de confianza de nivel $1-\alpha$ de la forma:
-
-\begin{equation}\label{inter_final}
-\ \mu_{\alpha} = \overline{x}_n \pm z_{\alpha/2}.\frac{\sigma}{\sqrt{n}} \simeq \overline{x}_n \pm \frac{z_{\alpha/2}}{n} \sqrt{\Sigma_{i=1}^{n}(x_i-\overline{x}_n)^2}
-\end{equation}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
