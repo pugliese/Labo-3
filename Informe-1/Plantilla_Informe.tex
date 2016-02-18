@@ -150,17 +150,17 @@ Por lo tanto, si se quiere conocer la eficacia de una resistencia $R$ se puede c
 \section{Desarrollo experimental}
 
 Para tener una fuente constante $V_{0}$ se utilizó una fuente de alimentación programable capaz de emitir una señal constante con una precisión de $\pm (0.5\% + 0.02)$ en un rango de voltaje de salida de $0 \thicksim 32 V$.
-Ademas se utilizaron dos resistencias $R=(1000.0 \pm 0.5) \Omega$ idénticas, otra resistencia $r=(100.00 \pm 0.05)$ y una resistencia $R_{v}$ variable por décadas la cual en principio se desconocía su error. Para determinar dicho error se utilizó un multimetro digital y se midieron las resistencia con una precisión de $\pm (1\% + 2d)$ debido al rango de resistencias utilizadas (mayores a $100 \Omega$). Tambien se uso el multimetro para las correspondientes mediciones de corriente,  con una resolución de $1\mu A$ y una precisión de $\pm (0.8\% +1)$ en el rango de $2 mA\thicksim 20 mA$, por otro lado una resolución de $1m A$ y una precisión de $\pm (1.5\% +1)$ en el rango de $2 A\thicksim 10 A$ y por ultimo una resolución de $10mA$ y una precisión de $\pm (2\% +4)$ en el rango de $10 A\thicksim 20 mA$ en su modo de amperímetro en cual imponia una resistencia adicional $R_{A} = (11,8 \pm 0,4) \Omega$.
+Ademas se utilizaron dos resistencias $R=(1000.0 \pm 0.5) \Omega$ idénticas, otra resistencia $r=(100.00 \pm 0.05)$ y una resistencia $R_{v}$ variable por décadas la cual en principio se desconocía su error. Para determinar dicho error se utilizó un multimetro digital midiéndose las resistencia con una precisión de $\pm (1\% + 2d)$ debido al rango de resistencias utilizadas (mayores a $100 \Omega$). Tambien se usó el multimetro para las correspondientes mediciones de corriente con una resolución de $1\mu A$ y una precisión de $\pm (0.8\% +1d)$ en el rango de $2 mA\thicksim 20 mA$, y una resolución de $1 mA$ y una precisión de $\pm (1.5\% + 1d)$ en el rango de $2 A\thicksim 10 A$ en su modo de amperímetro en cual imponia una resistencia adicional $R_{A} = (11,8 \pm 0,4) \Omega$.
 
 \subsection{Ley de Ohm}
 
-Como se ha dicho, una de las leyes basicas de los circuitos en general es la Ley de Ohm \textbf{\eqref{Ohm}}. Es por esto que la primer parte del trabajo se desarrolló en torno a su comprobación empírica para circuitos de corriente continua. El montaje del sistema consistió en la fuente de alimentación programable, que actuó como una fuente de voltaje constante, conectada en serie con la resistencia variable y el multímetro el cual fue utilizado como instrumento de medición. Esto permitió generar un circuito de una única malla que consiste en una resistencia y una fuente de voltaje constante (Ver \textbf{Figura \ref{fig:circ_simp}}).
+La primer parte del trabajo se desarrolló en torno a la comprobación empírica de la Ley de Ohm \eqref{Ohm} para circuitos de corriente continua. El montaje del sistema consistió en la fuente de alimentación programable, que actuó como una fuente de voltaje constante, conectada en serie con la resistencia variable y el multímetro el cual fue utilizado como instrumento de medición. Esto permitió generar un circuito de una única malla que consiste en una resistencia y una fuente de voltaje constante (Ver \textbf{Figura \ref{fig:circ_simp}}).
 
 
 \begin{figure}[h]
   \centering
   \includegraphics[scale= 0.6]{Circuito_simple}
-  \caption{Circuito de malla única utilizado para la experiencia}
+  \caption{Circuito de malla única utilizado para la experiencia. Tanto la fuente $\varepsilon$ como la resistencia $R_{v}$ eran variables, por lo que se utilizo el multimetro en su función de amperimetro $A$ para medir la corriente que circulaba en esa rama.} 
   \label{fig:circ_simp}
 \end{figure}
 
@@ -174,7 +174,7 @@ Terminado lo anterior, se propuso montar otro circuito con dos mallas con el pri
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.55]{Mallas_sin_carga}
-  \caption{Circuito de dos mallas utilizado para la experiencia, los $A_i$ representan los lugares donde se ubicó el multimetro para medir las correspondientes corrientes}
+  \caption{Circuito de dos mallas utilizado para la experiencia. La fuente constante $\varepsilon= (5.00 \pm 0.05)V$ generaba corrientes electricas que circulaban por las resistencias $R=(1000.0\pm0.05)\Omega$ y la resistencia $r=(100.00\pm0.05)\Omega$. Los $ A_i$ representan los lugares donde se ubicó el multimetro para medir las correspondientes corrientes.}
   \label{fig:circ_mallas}
 \end{figure}
 
@@ -187,7 +187,7 @@ Posteriormente, se buscó calcular el equivalente de Thevenin en forma teórica 
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.55]{Mallas_con_carga}
-  \caption{Circuito de dos mallas con la resistencia de carga acoplada}
+  \caption{Circuito compuesto del circuito utilizado en la \textit{Figura \ref{fig:circ_mallas}} al cual se le conectó en paralelo una resistencia $R_{v}$ variable por décadas. Utilizando el multimetro en su función de amperimetro se midieron las corrientes que circulaban por esta nueva rama para los distintos voltajes de salida de $\varepsilon$}
   \label{fig:circ_mallas_carga}
 \end{figure}
 
