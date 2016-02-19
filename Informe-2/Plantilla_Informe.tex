@@ -181,9 +181,9 @@ Si, como en el caso de los circuitos RC y RL, se cambia el voltaje con una \text
 
 \section{Desarrollo experimental}
 
-Dado que toda la teoría previa se apoya sobre el concepto de \textit{llave ideal}, un generador de funciones capaces de generar ondas cuadradas debió ser utilizado para emular esta característica (variación instantánea de voltaje). Este generador es capaz de emitir frecuencias con un error relativo del $0,01\%$ en un rango entre $1\mu Hz$ y $5MHz$ cuyo voltaje pico-pico tiene un error relativo del $1\%$ para el rango de voltaje utilizado ($2V-20V$). Además, se utilizó una capacitancia fija $C = (100,0 \pm 0,2)nF$ y una resistencia variable por décadas cuyo error fue a priori desconocido. Usando un multimetro digital se midieron las resistencias utilizadas junto con su error, que era de la forma $\pm(1\%+2d)$ para el rango de resistencias utilizadas (mayores a $100\Omega$). La resistencia del capacitor resultó despreciable. También, se utilizó una inductancia fija $L = (1.000 \pm 0.002) H$ que poseía una resistencia interna (medida por el multímetro) $R_L = (294 \pm 3) \Omega$.
+Dado que toda la teoría previa se apoya sobre el concepto de \textit{llave ideal}, un generador de funciones capaces de generar ondas cuadradas debió ser utilizado para emular esta característica (variación instantánea de voltaje). Este generador es capaz de emitir frecuencias con una precisión de $\pm (0,01\%)V$ en un rango entre $1\mu Hz$ y $5MHz$ cuyo voltaje pico-pico tiene una precisión del $\pm (1\%)V$ para el rango de voltaje utilizado ($2V-20V$). Además, se utilizó una capacitancia fija $C = (100,0 \pm 0,2)nF$ y una resistencia variable por décadas cuya precisión fue a priori desconocido. Usando un multimetro digital se midieron las resistencias utilizadas junto con su precisión, que era de la forma $\pm(1\%+2d)$ para el rango de resistencias utilizadas (mayores a $100\Omega$). La resistencia del capacitor resultó despreciable. También, se utilizó una inductancia fija $L = (1.000 \pm 0.002) H$ que poseía una resistencia interna (medida por el multímetro) $R_L = (294 \pm 3) \Omega$.
 
-Finalmente, se utilizó un osciloscopio digital capaz de medir diferencias de potencial entre las dos terminales que dispone en un rango de 2mV a 5V con un error relativo del $3\%$. A la hora de medir voltaje, fue necesario asegurarse que el cable a tierra del osciloscopio estuvera conectado al cable a tierra el generador de funciones. 
+Finalmente, se utilizó un osciloscopio digital capaz de medir diferencias de potencial entre las dos terminales que dispone en un rango de 2mV a 5V con una precisión del $3\%$. A la hora de medir voltaje, fue necesario asegurarse que el cable a tierra del osciloscopio estuvera conectado al cable a tierra el generador de funciones. 
 
 \subsection{Circuito RC}
 
@@ -366,7 +366,7 @@ Para realizar la primer medición, se fijó una resistencia $R= (400 \pm 4) \Ome
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.4]{RLC-Amortiguado(1H)}
+\includegraphics[scale=0.5]{RLC-Amortiguado(1H)}
   \caption{Variacion del potencial en funcion del tiempo en un circuito RLC (Oscilador amortiguado)}
   \label{fig:RLC-A}
 \end{figure}
@@ -377,7 +377,7 @@ Luego, se propusieron parametros para lograr una respuesta regida por la ecuaci�
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.45]{RLC-SobreAmortiguado}
+\includegraphics[scale=0.49]{RLC-SobreAmortiguado}
   \caption{Variacion del potencial en funcion del tiempo en un circuito RLC (Oscilador Sobreamortiguado)}
   \label{fig:RLC-SA}
 \end{figure}
@@ -388,7 +388,7 @@ Finalmente se intento construir un circuito para el caso critico, para el cual s
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.45]{RLC-Amortiguado_Critico(MasPiola)}
+\includegraphics[scale=0.49]{RLC-Amortiguado_Critico(MasPiola)}
   \caption{Variacion del potencial en funcion del tiempo en un circuito RLC (Oscilador Subamortiguado) ajustado como un oscilador sobreamortiguado}
   \label{fig:RLC-sA}
 \end{figure}
