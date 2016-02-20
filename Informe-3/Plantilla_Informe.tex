@@ -1,0 +1,161 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{kpfonts}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage[nottoc,numbib]{tocbibind} %agrega la bibliografia al índice.
+\usepackage[font={small,it}]{caption}
+%\usepackage{fourier}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,headheight=13.6pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+\pagestyle{fancy}
+
+
+%Para los gráficos en general, con las tablas...¡Ja!, arreglate.
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[width=0.7\textwidth]{} %nombre de la imagen, incluirla en el mismo directorio que este archivo.
+%\caption*{} %rótulo, el asterico elimina la numeración automática. 
+%\label{fig:} % para luego referirse con \ref{fig:}
+%\end{figure}
+
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 	TÍTULO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{./Caratula.tex} %incluir en el mismo directorio que este archivo. Equivalente a un copiar-pegar, nada de andar diciendo \begin{document} en la portada. Dejar el nombre de Caratula a la caratula.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 	ENCABEZADO Y PIE DE PÁGINA.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\lhead{}
+\chead{}
+\rhead{Laboratorio 3}
+\lfoot{}
+\cfoot{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Página en blanco. Cita, agradecimiento, dedicación, lo que sea pero que sea algo.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 	ÍNDICE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\tableofcontents %compilar dos o tres veces para verlo bien. ¡Todo un índice en unas cuantas letras!
+%\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 1. RESUMEN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Resumen}
+%\label{sec:resumen}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 2. INTRODUCCIÓN: ecuaciones aquí, luego se las cita.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introducción}\label{sec:intro}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 3. DISPOSITIVO EXPERIMENTAL: armado del modelo, como se midio, consideraciones a la hora de medir.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Desarrollo experimental}
+
+Durante esta experiencia se utilizó ,como fuente alterna, un generador de funciones el cual se programo para que generara un diferencia de potencial que variara en el tiempo con la forma $\epsilon = E_{0}cos(\omega t)$, donde $E_{0}$ es la amplitud maxima y en el informe se referira a ella como Amplitud. Este generador es capaz de emitir frecuencias con un error relativo del $0,01\%$ en un rango entre $1\mu Hz$ y $5MHz$ cuyo voltaje pico-pico tiene un error relativo del $1\%$ para el rango de voltaje utilizado ($2V-20V$). Además, se utilizó una capacitancia fija $C = (100,0 \pm 0,2)nF$ y una resistencia variable por décadas cuyo error fue a priori desconocido. Usando un multimetro digital se midieron las resistencias utilizadas junto con su error, que era de la forma $\pm(1\%+2d)$ para el rango de resistencias utilizadas (mayores a $100\Omega$). La resistencia del capacitor resultó despreciable. También, se utilizó una inductancia fija $L = (1.000 \pm 0.002) H$ que poseía una resistencia interna (medida por el multímetro) $R_L = (294 \pm 3) \Omega$.
+Finalmente, se utilizó un osciloscopio digital que en sus dos canales de entrada era capaz de medir diferencias de potencial entre las dos terminales que dispone en un rango de 2mV a 5V con un error relativo del $3\%$. A la hora de medir voltaje, fue necesario asegurarse que el cable a tierra del osciloscopio estuvera conectado al cable a tierra el generador de funciones. 
+
+
+
+\subsection{Resonancia y Anti-Resonancia}
+Durante la experiencia estudió el comportamiento de circuitos RCL sometidos a corrientes con distintas frecuencias. En primer lugar se quiso estudiar el efecto de resonacia, por lo cual se construyó un circuito cerrado que constaba de la fuente $\varepsilon$, la resistencia variable por decadas fijada en un valor $R = (5 \pm 0,05)K\Omega$, una inductancia con un valor $L = (1 \pm 0.002)H$ con una Resistencia $R_{L}= (296\pm 3)\Omega$ que fue despreciada frente al valor de la mencionada anteriormente, y una capacitacia $C = (9.95 \pm 0.07)nF$, conectados en serie como muestra la \textbf{Figura \ref{fig:RCL-Res}}. Cabe destacar que, previamente a la construccion el dispositivo,  se utilizó el multimetro para asegurar la continuidad de todos los cables utilizados, y que esta misma no se viera comprometida por movimientos aleatorios, a fin de poder reducir una fuente de posibles incertezas.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.7]{Circuito-RCL-Resonante}
+  \caption{Circuito RCL Resonante}
+  \label{fig:RCL-Res}
+\end{figure}
+
+Para medir la diferencia de tension se conectó, en paralelo, un canal del osciloscopio a la resistencia. A su vez, se utilizo una llave T para conectar en paralelo a la fuente el segundo canal del osciloscopio, logrando de esta manera, que se desplegaran en la pantalla las dos señales al mismo tiempo y nos diera la posibilidad de medir la diferencia de fase entre las señales. Además, tambien se utilizó la frecuencia de esa segunda señal como \textit(trigger externo) para asegurar una imagen estatica en la pantalla del osciloscopio. Finalmente se fijo una Amplitud $E_{0} = (8,00 \pm 0,08)V $, y se fueron tomando nota de los desfasajes y amplitudes del voltaje de salida medidos con el osciloscopio para cada frecuencia. Una vez terminada la adquisicion de datos, se repitio el proceso en un cicuito con los mismos parametros con una excepcion en la Resistencia a la cual se le cambio el valor a $R = (500 \pm 5)$.
+
+Luego, se estudió el caso de la anti-resonancia, y para esto se diseño un circuito RCL similar al anterior, pero en este caso el capacitor se encontraba conectado en paralelo a la inductancia como ilustra la \textbf{Figura \ref{fig:RCL_ARes}}. De la misma forma que en el caso de resonancia, se utilizo una inductancia con un valor $L = (1 \pm0.002)H$ y una capacitacia $C = (9.95 \pm 0.07)nF$, la fuente se fijo en una Amplitud $E_{0} = (8,00 \pm 0,08)V$ y la resistencia en $R = (5 \pm 0,05)K\Omega$ durante la primer medición, y en $R = (1 \pm 0,01)K\Omega$ para la segunda.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.7]{Circuito-RCL-AntiResonante}
+  \caption{Circuito RCL con una fuente de onda cuadrada}
+  \label{fig:RCL-ARes}
+\end{figure}
+
+De manera analoga al metodo utilizaco con el circuito resonante, el osciloscopio se conecto de forma paralela a la resistencia y a la fuente, y se tomaron nota de los desfasajes y amplitudes de la corriente de salida.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 4.DISCUSIÓN Y RESULTADOS: todo lo que se obtuvo y explicación. Graficos, tablas.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Resultados}
+\label{sec:discusion}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	CONCLUSIONES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Conclusiones}
+\label{sec:conclusiones}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	APÉNDICE: esas cosas extras que simplemente no tuvieron lo suficiente como para ganarse una sección propia.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	REFERENCIAS: libros, libros, libros.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Ejemplo:
+\begin{thebibliography}{1}
+ \bibitem{Berkeley} Frank S. Crawford, \textit{Berkeley physics course 3: Ondas}, 1994, Editorial Reverte S.A.
+\end{thebibliography}
+%Para citar: blablabla \cite{Baird}
+ 
+\end{document}
+
+
+
+
+
