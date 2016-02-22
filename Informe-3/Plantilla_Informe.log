@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.4)  20 FEB 2016 17:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.4)  22 FEB 2016 00:04
 entering extended mode
 **"C:/Labo 3/Labo-3/Informe-3/Plantilla_Informe.tex"
 ("C:/Labo 3/Labo-3/Informe-3/Plantilla_Informe.tex"
@@ -1115,11 +1115,7 @@ File: Circuito-RCL-Resonante.jpg Graphic file (type jpg)
 <use Circuito-RCL-Resonante.jpg>
 Package pdftex.def Info: Circuito-RCL-Resonante.jpg used on input line 102.
 (pdftex.def)             Requested size: 133.32216pt x 119.0941pt.
-
-
-LaTeX Warning: Reference `fig:RCL_ARes' on page 1 undefined on input line 109.
-
-[1 <./Circuito-RCL-Resonante.jpg>]
+ [1 <./Circuito-RCL-Resonante.jpg>]
 <Circuito-RCL-AntiResonante.jpg, id=17, 201.75375pt x 190.46156pt>
 File: Circuito-RCL-AntiResonante.jpg Graphic file (type jpg)
 
@@ -1127,33 +1123,51 @@ File: Circuito-RCL-AntiResonante.jpg Graphic file (type jpg)
 Package pdftex.def Info: Circuito-RCL-AntiResonante.jpg used on input line 113.
 
 (pdftex.def)             Requested size: 141.22665pt x 133.32216pt.
- [2 <./Circuito-RCL-AntiResonante.jpg>]
-(Plantilla_Informe.aux
+
+<Circuito-RC-Pasa-Bajos.jpg, id=18, 158.84344pt x 153.57375pt>
+File: Circuito-RC-Pasa-Bajos.jpg Graphic file (type jpg)
+
+<use Circuito-RC-Pasa-Bajos.jpg>
+Package pdftex.def Info: Circuito-RC-Pasa-Bajos.jpg used on input line 127.
+(pdftex.def)             Requested size: 142.95776pt x 138.21509pt.
+
+<Circuito-RC-Pasa-Altos.jpg, id=19, 187.45032pt x 168.63pt>
+File: Circuito-RC-Pasa-Altos.jpg Graphic file (type jpg)
+
+<use Circuito-RC-Pasa-Altos.jpg>
+Package pdftex.def Info: Circuito-RC-Pasa-Altos.jpg used on input line 138.
+(pdftex.def)             Requested size: 168.7037pt x 151.76558pt.
+ [2 <./Circuito-RCL-AntiResonante.jpg> <./Circuito-RC-Pasa-Bajos.jpg>]
+<Circuito-RC-Pasa-Banda.jpg, id=23, 246.1697pt x 155.07938pt>
+File: Circuito-RC-Pasa-Banda.jpg Graphic file (type jpg)
+
+<use Circuito-RC-Pasa-Banda.jpg>
+Package pdftex.def Info: Circuito-RC-Pasa-Banda.jpg used on input line 149.
+(pdftex.def)             Requested size: 196.936pt x 124.06364pt.
+ [3 <./Circuito-RC-Pasa-Altos.jpg> <./Circuito-RC-Pasa-Banda.jpg>] (Plantilla_I
+nforme.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
-)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+) ) 
 Here is how much of TeX's memory you used:
- 6319 strings out of 493634
- 86383 string characters out of 3142929
- 149329 words of memory out of 3000000
- 9563 multiletter control sequences out of 15000+200000
- 41613 words of font info for 86 fonts, out of 3000000 for 9000
+ 6355 strings out of 493634
+ 87124 string characters out of 3142929
+ 150353 words of memory out of 3000000
+ 9594 multiletter control sequences out of 15000+200000
+ 48547 words of font info for 105 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 36i,10n,43p,1148b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/Program Fi
-les (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Program Files (x86)
-/MiKTeX/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Program Files (x86)/MiKTeX/fon
-ts/type1/public/kpfonts/jkpmia.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/p
-ublic/kpfonts/jkpmit8a.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/kp
-fonts/jkpmn8a.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/kpfonts/jkp
-msc8a.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb>
-Output written on Plantilla_Informe.pdf (3 pages, 160653 bytes).
+ 36i,10n,43p,1249b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/Program F
+iles (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Program Files (x86
+)/MiKTeX/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Program Files (x86)/MiKTeX/fo
+nts/type1/public/kpfonts/jkpmia.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/
+public/kpfonts/jkpmit8a.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/k
+pfonts/jkpmn8a.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/kpfonts/jk
+pmsc8a.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb>
+
+Output written on Plantilla_Informe.pdf (4 pages, 212195 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
+ 50 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
