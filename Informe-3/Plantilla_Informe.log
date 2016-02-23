@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.3)  22 FEB 2016 21:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.3)  23 FEB 2016 17:08
 entering extended mode
-**plantilla_informe
+**plantilla_informe.tex
 (plantilla_informe.tex
 LaTeX2e <2014/05/01>
 Babel <3.9l> and hyphenation patterns for 68 languages loaded.
@@ -1086,64 +1086,178 @@ File: ujkpsyc.fd 2006/08/15 v1.0
 
 {C:/Users/Kufa/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Logo_DF.jp
 g>])
-<Circuito-RCL-Resonante.jpg, id=10, 190.46156pt x 170.13562pt>
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
+
+ []
+
+[1]
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
+
+ []
+
+<Figura_Intro.jpg, id=18, 225.84375pt x 108.405pt>
+File: Figura_Intro.jpg Graphic file (type jpg)
+ <use Figura_Intro.jpg>
+Package pdftex.def Info: Figura_Intro.jpg used on input line 180.
+(pdftex.def)             Requested size: 169.38239pt x 81.30354pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2] <Circuito-RCL-Resonante.jpg, id=23, 190.46156pt x 170.13562pt>
 File: Circuito-RCL-Resonante.jpg Graphic file (type jpg)
 
 <use Circuito-RCL-Resonante.jpg>
-Package pdftex.def Info: Circuito-RCL-Resonante.jpg used on input line 102.
+Package pdftex.def Info: Circuito-RCL-Resonante.jpg used on input line 222.
 (pdftex.def)             Requested size: 133.32216pt x 119.0941pt.
- [1 <./Circuito-RCL-Resonante.jpg>]
-<Circuito-RCL-AntiResonante.jpg, id=17, 201.75375pt x 190.46156pt>
+ [3 <./Figura_Intro.jpg>]
+<Circuito-RCL-AntiResonante.jpg, id=27, 201.75375pt x 190.46156pt>
 File: Circuito-RCL-AntiResonante.jpg Graphic file (type jpg)
 
 <use Circuito-RCL-AntiResonante.jpg>
-Package pdftex.def Info: Circuito-RCL-AntiResonante.jpg used on input line 113.
+Package pdftex.def Info: Circuito-RCL-AntiResonante.jpg used on input line 233.
 
 (pdftex.def)             Requested size: 141.22665pt x 133.32216pt.
-
-<Circuito-RC-Pasa-Bajos.jpg, id=18, 158.84344pt x 153.57375pt>
+ [4 <./Circuito-RCL-Resonante.jpg> <./Circuito-RCL-AntiResonante.jpg>]
+<Circuito-RC-Pasa-Bajos.jpg, id=31, 158.84344pt x 153.57375pt>
 File: Circuito-RC-Pasa-Bajos.jpg Graphic file (type jpg)
 
 <use Circuito-RC-Pasa-Bajos.jpg>
-Package pdftex.def Info: Circuito-RC-Pasa-Bajos.jpg used on input line 127.
+Package pdftex.def Info: Circuito-RC-Pasa-Bajos.jpg used on input line 247.
 (pdftex.def)             Requested size: 142.95776pt x 138.21509pt.
- [2 <./Circuito-RCL-AntiResonante.jpg> <./Circuito-RC-Pasa-Bajos.jpg>]
-<Circuito-RC-Pasa-Altos.jpg, id=22, 187.45032pt x 168.63pt>
+
+<Circuito-RC-Pasa-Altos.jpg, id=32, 187.45032pt x 168.63pt>
 File: Circuito-RC-Pasa-Altos.jpg Graphic file (type jpg)
 
 <use Circuito-RC-Pasa-Altos.jpg>
-Package pdftex.def Info: Circuito-RC-Pasa-Altos.jpg used on input line 138.
+Package pdftex.def Info: Circuito-RC-Pasa-Altos.jpg used on input line 258.
 (pdftex.def)             Requested size: 168.7037pt x 151.76558pt.
 
-<Circuito-RC-Pasa-Banda.jpg, id=23, 246.1697pt x 155.07938pt>
+<Circuito-RC-Pasa-Banda.jpg, id=33, 246.1697pt x 155.07938pt>
 File: Circuito-RC-Pasa-Banda.jpg Graphic file (type jpg)
 
 <use Circuito-RC-Pasa-Banda.jpg>
-Package pdftex.def Info: Circuito-RC-Pasa-Banda.jpg used on input line 149.
+Package pdftex.def Info: Circuito-RC-Pasa-Banda.jpg used on input line 269.
 (pdftex.def)             Requested size: 196.936pt x 124.06364pt.
- [3 <./Circuito-RC-Pasa-Altos.jpg> <./Circuito-RC-Pasa-Banda.jpg>] (plantilla_i
-nforme.aux
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5 <./Circuito-RC-Pasa-Bajos.jpg> <./Circuito-RC-Pasa-Altos.jpg>]
+<RLC_RES_5000_VvsF.jpg, id=37, 728.4816pt x 568.524pt>
+File: RLC_RES_5000_VvsF.jpg Graphic file (type jpg)
+
+<use RLC_RES_5000_VvsF.jpg>
+Package pdftex.def Info: RLC_RES_5000_VvsF.jpg used on input line 297.
+(pdftex.def)             Requested size: 218.54616pt x 170.55852pt.
+
+<RLC_RES_500_VvsF.jpg, id=38, 697.6464pt x 516.4896pt>
+File: RLC_RES_500_VvsF.jpg Graphic file (type jpg)
+
+<use RLC_RES_500_VvsF.jpg>
+Package pdftex.def Info: RLC_RES_500_VvsF.jpg used on input line 302.
+(pdftex.def)             Requested size: 223.2514pt x 165.28004pt.
+
+Overfull \hbox (2.1243pt too wide) in paragraph at lines 296--306
+[]$[]$ $[]$ 
+ []
+
+[6 <./Circuito-RC-Pasa-Banda.jpg> <./RLC_RES_5000_VvsF.jpg> <./RLC_RES_500_VvsF
+.jpg>] <RLC_RES_5000_Tan(fase)vsF.jpg, id=43, 711.1368pt x 539.616pt>
+File: RLC_RES_5000_Tan(fase)vsF.jpg Graphic file (type jpg)
+
+<use RLC_RES_5000_Tan(fase)vsF.jpg>
+Package pdftex.def Info: RLC_RES_5000_Tan(fase)vsF.jpg used on input line 319.
+(pdftex.def)             Requested size: 241.78331pt x 183.46701pt.
+
+<RLC_RES_500_Tan(fase)vsF.jpg, id=44, 676.4472pt x 539.616pt>
+File: RLC_RES_500_Tan(fase)vsF.jpg Graphic file (type jpg)
+
+<use RLC_RES_500_Tan(fase)vsF.jpg>
+Package pdftex.def Info: RLC_RES_500_Tan(fase)vsF.jpg used on input line 324.
+(pdftex.def)             Requested size: 229.989pt x 183.46701pt.
+
+Overfull \hbox (2.1243pt too wide) in paragraph at lines 318--328
+[]$[]$ $[]$ 
+ []
+
+<RLC_ARES_5000_VvsF.jpg, id=45, 745.8264pt x 501.072pt>
+File: RLC_ARES_5000_VvsF.jpg Graphic file (type jpg)
+
+<use RLC_ARES_5000_VvsF.jpg>
+Package pdftex.def Info: RLC_ARES_5000_VvsF.jpg used on input line 345.
+(pdftex.def)             Requested size: 231.2038pt x 155.33072pt.
+
+<RLC_ARES_1000_VvsF.jpg, id=46, 750.6444pt x 498.1812pt>
+File: RLC_ARES_1000_VvsF.jpg Graphic file (type jpg)
+
+<use RLC_ARES_1000_VvsF.jpg>
+Package pdftex.def Info: RLC_ARES_1000_VvsF.jpg used on input line 350.
+(pdftex.def)             Requested size: 225.19505pt x 149.4555pt.
+
+Overfull \hbox (2.1243pt too wide) in paragraph at lines 344--354
+[]$[]$ $[]$ 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<RLC_ARES_5000_Tan(fase)vsF.jpg, id=47, 639.8304pt x 528.0528pt>
+File: RLC_ARES_5000_Tan(fase)vsF.jpg Graphic file (type jpg)
+
+<use RLC_ARES_5000_Tan(fase)vsF.jpg>
+Package pdftex.def Info: RLC_ARES_5000_Tan(fase)vsF.jpg used on input line 364.
+
+(pdftex.def)             Requested size: 217.53944pt x 179.53557pt.
+
+<RLC_ARES_1000_Tan(fase)vsF.jpg, id=48, 641.7576pt x 535.7616pt>
+File: RLC_ARES_1000_Tan(fase)vsF.jpg Graphic file (type jpg)
+
+<use RLC_ARES_1000_Tan(fase)vsF.jpg>
+Package pdftex.def Info: RLC_ARES_1000_Tan(fase)vsF.jpg used on input line 369.
+
+(pdftex.def)             Requested size: 218.19469pt x 182.15652pt.
+
+Overfull \hbox (2.1243pt too wide) in paragraph at lines 363--373
+[]$[]$ $[]$ 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7 <./RLC_RES_5000_Tan(fase)vsF.jpg> <./RLC_RES_500_Tan(fase)vsF.jpg>] [8 <./RL
+C_ARES_5000_VvsF.jpg> <./RLC_ARES_1000_VvsF.jpg> <./RLC_ARES_5000_Tan(fase)vsF.
+jpg> <./RLC_ARES_1000_Tan(fase)vsF.jpg>] (plantilla_informe.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 6321 strings out of 493698
- 86325 string characters out of 3144416
- 148365 words of memory out of 3000000
- 9502 multiletter control sequences out of 15000+200000
- 48547 words of font info for 105 fonts, out of 3000000 for 9000
+ 6413 strings out of 493698
+ 88276 string characters out of 3144416
+ 151672 words of memory out of 3000000
+ 9583 multiletter control sequences out of 15000+200000
+ 49318 words of font info for 107 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 36i,10n,43p,1126b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MikTex 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Fil
-es/MikTex 2.9/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Program Files/MikTex 2
-.9/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Program Files/MikTex 2.9/fonts/type
-1/public/kpfonts/jkpmia.pfb><C:/Program Files/MikTex 2.9/fonts/type1/public/kpf
-onts/jkpmit8a.pfb><C:/Program Files/MikTex 2.9/fonts/type1/public/kpfonts/jkpmn
-8a.pfb><C:/Program Files/MikTex 2.9/fonts/type1/public/kpfonts/jkpmsc8a.pfb><C:
-/Program Files/MikTex 2.9/fonts/type1/public/kpfonts/jkpsy.pfb>
-Output written on plantilla_informe.pdf (4 pages, 212765 bytes).
+ 36i,11n,43p,1130b,432s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MikTex 2.9/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}{C:/
+Program Files/MikTex 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MikT
+ex 2.9/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Program Files/MikTex 2.9/font
+s/type1/public/kpfonts/jkpex.pfb><C:/Program Files/MikTex 2.9/fonts/type1/publi
+c/kpfonts/jkpmi.pfb><C:/Program Files/MikTex 2.9/fonts/type1/public/kpfonts/jkp
+mia.pfb><C:/Program Files/MikTex 2.9/fonts/type1/public/kpfonts/jkpmit8a.pfb><C
+:/Program Files/MikTex 2.9/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Program F
+iles/MikTex 2.9/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Program Files/MikTex 
+2.9/fonts/type1/public/kpfonts/jkpmsc8a.pfb><C:/Program Files/MikTex 2.9/fonts/
+type1/public/kpfonts/jkpsy.pfb><C:/Program Files/MikTex 2.9/fonts/type1/public/
+kpfonts/jkpsyb.pfb>
+Output written on plantilla_informe.pdf (9 pages, 3669522 bytes).
 PDF statistics:
- 50 PDF objects out of 1000 (max. 8388607)
+ 89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

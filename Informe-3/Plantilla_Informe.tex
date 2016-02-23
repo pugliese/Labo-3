@@ -81,48 +81,127 @@
 
 \section{Introducción}\label{sec:intro}
 
-Para un circuito RLC con una fuente de corriente alterna de la forma $\varepsilon = E_{0}cos(\omega t)$ con una resistencia $R$, una inductancia $L$ y una capacitancia $C$ en serie la ecuacion diferencial que rige la evolución del sistema está dada por $\frac{d^2q}{dt^2}L+\frac{dq}{dt}R+\frac{q}{C} = \varepsilon = E_{0}cos(\omega t)$ donde $q = q(t)$ representa la carga del capacitor $C$. En particular, es posible buscar la solución compleja de la ecuación $\frac{d^2Q}{dt^2}L+\frac{dQ}{dt}R+\frac{Q}{C} = \varepsilon = E_{0}e^{i\omega t}$ donde Q es tal que tal que $Re(Q) = q$. Para este sistema, recordando que $\mathbb{I}(t) = \frac{dQ}{dt}$, la solución resulta $\mathbb{I}(t) = \frac{E_0e^{i\omega t}}{Z}$ donde $Z = R +i(\omega L-\frac{1}{\omega C})$
+Para un circuito RLC con una fuente de corriente alterna de la forma $\varepsilon(t) = E_{0}cos(\omega t)$ con una resistencia $R$, una inductancia $L$ y una capacitancia $C$ en serie la ecuacion diferencial que rige la evolución del sistema está dada por $\frac{d^2q}{dt^2}L+\frac{dq}{dt}R+\frac{q}{C} = \varepsilon = E_{0}cos(\omega t)$ donde $q = q(t)$ representa la carga del capacitor $C$. En particular, es posible buscar la solución compleja de la ecuación $\frac{d^2Q}{dt^2}L+\frac{dQ}{dt}R+\frac{Q}{C} = \varepsilon = E_{0}e^{i\omega t}$ donde Q es tal que tal que $Re(Q) = q$. Para este sistema, recordando que $\mathbb{I}(t) = \frac{dQ}{dt}$, la solución resulta $\mathbb{I}(t) = \frac{E_0e^{i\omega t}}{Z}$ donde $Z = R +i(\omega L-\frac{1}{\omega C})$ es la \textit{impedancia} total del circuito. Para esta corriente $\mathbb{I}(t)$, la caida de potencial sobre la resistencia $R$ resulta, según la Ley de Ohm: 
 
 \begin{equation}
-V_{ef} = \frac{I_{ef}}{\sqrt{R^2 + (\omega.L - \frac{1}{\omega.C})^2}}
+\mathbb{V}_R(t) = R\mathbb{I}(t) = \frac{RE_0e^{i\omega t}}{R +i(\omega L-\frac{1}{\omega C})}
+\label{eq:ohm}
+\end{equation}
+
+Definiendo la \textit{amplitud de la corriente} a $I_0 = \frac{E_0}{|Z|}$ y la \textit{amplitud de la caida} $V_R = R.I_0$ resulta una campana de la forma
+
+\begin{equation}
+V_R(\omega) = \frac{E_{0}R}{\sqrt{R^2 + (\omega L - \frac{1}{\omega C})^2}}
 \label{eq:1}
 \end{equation}
+
+Por otro lado, dado que la impedancia $Z$ es compleja, es posible escribirla como $Z = |Z|e^{i\phi}$ de forma tal que resulta $\mathbb{I}(t) = \frac{E_0e^{i\omega t-\phi}}{|Z|}$ donde $\phi$ representa el desfasaje de la corriente respecto a la fuente y tiene la forma
 
 \begin{equation}
 tan(\phi) = \frac{L\omega}{R} - \frac{1}{RC\omega} 
 \label{eq:2}
 \end{equation}
 
+Volviendo a \eqref{eq:1}, dado que $E_0$ y $R$ son constantes, el valor de $\omega$ que maximiza la caida de potencial $V_R$ es el que minimiza el denominador, anulando la parte reactiva $(\omega L - \frac{1}{\omega C})$. Este $\omega_0$ que maximiza $V_R$ es llamado \textit{frecuencia de resonancia} y coincide con la \textit{frecuencia natural} de un circuito LC no resistivo (donde $R=0$). En particular, es de la forma 
+
 \begin{equation}
-\omega_{0}= \frac{1}{LC}
+\omega_{0}^2= \frac{1}{LC}
 \label{eq:F_res}
 \end{equation}
+
+Para este valor, resulta $V_R(\omega_0) = E_{0}$. Definiendo una \textit{banda de resonancia} $[\omega_1;\omega_2]$ tal que $\frac{E_0}{\sqrt{2}} \leq V_R(\omega) \leq E_{0}$ $\forall$ $\omega \in [\omega_1;\omega_2]$ y el \textit{ancho de banda} $\Delta\omega = \omega_2 - \omega_1$ resulta
 
 \begin{equation}
 \Delta\omega = \frac{R}{L}
 \label{deltaomega}
-\end{equation}
+\end{equation}\\
 
-Antiresonancia
+Ahora, si se colocan el capacitor $C$ en paralelo a la inductancia $L$ y estas en serie a una fuente de corriente alterna y a la resistencia $R$ la impedancia tiene un nuevo valor $Z = R+ i(\frac{1}{\omega C - \frac{1}{\omega L}})$. Usando el razonamiento y las definiciones anteriores, si se mide la caida de potencial sobre la resistencia, la amplitud de la misma (proporcional a la amplitud de la corriente) es de la forma
 
 \begin{equation}
-V_{ef} = \frac{I_{ef}}{\sqrt{R^2 + \frac{1}{(\omega.C - \frac{1}{\omega.L})^2}}}
+V_{R} (\omega) = \frac{E_0R}{\sqrt{R^2 + \frac{1}{(\omega C - \frac{1}{\omega L})^2}}}
 \label{eq:3}
 \end{equation}
+
+Nuevamente, es posible definir $Z = |Z|e^{i\phi}$ tal que $\mathbb{I}(t) = \frac{E_0e^{i\omega t-\phi}}{|Z|}$ donde $\phi$ tendrá esta vez la forma
 
 \begin{equation}
 tan(\phi) = \frac{L}{R}\frac{\omega}{(1- LC\omega^2)} 
 \label{eq:4}
 \end{equation}
 
+En este caso, $V_{R} (\omega)$ no tiene máximo dado que la parte reactiva $\frac{1}{\omega C - \frac{1}{\omega L}}$ se anula asintóticamente para $\omega \longrightarrow 0$ o $\omega \longrightarrow \infty$  tal que $V_R(\omega \rightarrow 0) = E_0 = V_R(\omega \rightarrow \infty)$. No obstante, $V_{R} (\omega)$ tiene un mínimo en $\omega_0^2 = \frac{1}{LC}$ donde la parte reactiva diverge y resulta $V_{R} (\omega_0)=0$. Es por esto que $\omega_0$ es la \textit{frecuencia de antiresonancia} del circuito, dado que cualquier señal de frecuencia $\omega_0$ será completamente absorvida por el circuito. Definiendo nuevamente una \textit{banda de antiresonancia} $[\omega_1;\omega_2]$ tal que $\frac{E_0}{\sqrt{2}} \leq V_R(\omega) \leq E_{0}$ $\forall$ $\omega \in [\omega_1;\omega_2]$ y el ancho de banda $\Delta\omega$ resulta
+
 \begin{equation}
 \Delta\omega = \frac{1}{RC}
 \label{deltaomega2}
+\end{equation}\\ \\
+
+Como puede verse, los circuitos con inductancias $L$ y capacitancias $C$ tienen tal interacción con las frecuencias de una fuente de corriente alterna que es posible combinarlos para que atenuen determinadas frecuencias dejando pasar otras. Esto es lo que se denomina como \textit{filtro}. Los filtros más básicos que existen son el Pasa-Altos y el Pasa-Bajos, que no son más que circuitos RC serie identicos. Lo que varía es la ubicación de las terminales con las que se conectan al resto del circuito. 
+
+Usando una fuente de corriente alterna $\varepsilon(t) = E_{0}e^{i\omega t}$, para un circuito RC de resistencia $R$ y capacitancia $C$ la impendancia es de la forma $Z = R-\frac{i}{\omega C}$. Por lo tanto, la corriente resulta $I(t) = \frac{\varepsilon(t)}{Z}$. A la constante $E_0$ se la llama \textit{voltaje de entrada}. Nuevamente, la solución compleja es de la forma $\mathbb{I}(t) = I_0e^{i\omega t-\phi}$ donde $I_0 = \frac{E_0}{|Z|}$. A la amplitud de la caida de potencial sobre el elemento en cuestión (resistencia $R$ o capacitor $C$) se le llama \textit{voltaje de salida} $V_e$. Para normalizar la relación entre $V_e$ y $V_s$ se define la \textit{transmisión} como $T=\frac{|V_s|}{|V_e|}=\frac{|V_s|}{E_0}$. Además, se define la \textit{frecuencia de corte} de una transmisión como el $\omega_c$ tal que $T(\omega_c) = \frac{\sqrt{2}}{2}$.
+
+Si se mide la caida de potencial sobre la resistencia $R$, la ley de ohm dicta que $\mathbb{V}_R = R.\mathbb{I} = RI_0e^{i\omega t -\phi}$ donde se define nuevamente $I_0 = \frac{E_0}{|Z|}$ de forma tal que resulta $V_s(\omega) = \frac{RE_0}{\sqrt{R^2+(\omega C)^2}}$. Por lo tanto, la transmisión tiene la forma
+
+\begin{equation}
+T_R(\omega) = \frac{R}{\sqrt{R^2+\frac{1}{(\omega C)^2}}}
+\label{trans_PBaj}
 \end{equation}
 
-Como puede verse, los circuitos con inductancias $L$ y capacitancias $C$ tienen tal interacción con las frecuencias de una fuente de corriente alterna que es posible combinarlos para que atenuen determinadas frecuencias dejando pasar otras. Esto es lo que se denomina como \texit{filtro}. Los filtros más básicos que existen son el Pasa-Altos y el Pasa-Bajos, que no son más que circuitos RC identicos. Lo que varía es la ubicación de las terminales con las que se conectan al resto del circuito. 
+donde puede verse que $T_R$ crece en función de $\omega$ tal que $T_R(\omega \rightarrow \infty) = 1$ y $T_R(\omega \rightarrow 0) = 0$, por lo que se le llama a este sistema filtro Pasa-Altos. Para esta transmisión, la frecuencia de corte resulta $\omega_c = \frac{1}{RC}$.
 
-Usando una fuente de corriente alterna $\varepsilon(t) = E_{0}e^{i\omega t}$, para un circuito RC de resistencia $R$ y capacitancia $C$ la impendancia es de la forma $Z = R+i\omega.C$. Por lo tanto, la corriente resulta $I(t) = \frac{\varepsilon(t)}{Z}$. A la constante $E_0$ se la llama \textit{voltaje de entrada} mientras que
+Por otro lado, el desfasaje $\phi$ de $\mathbb{V}_R = R.\mathbb{I} = \frac{RE_0e^{i\omega t - \phi}}{\sqrt{R^2+(\omega C)^2}}$ resulta de la forma
+
+\begin{equation}
+tan(\phi_R) = \frac{1}{\omega R C}
+\label{des_PBaj}
+\end{equation}
+
+tal que $\phi(\omega \rightarrow 0) = \frac{\pi}{2}$ y $\phi(\omega \rightarrow \infty) = 0$.
+
+Alternativamente, si se mide la caida de potencial sobre el capacitor, usando las leyes de Kirchoff resulta $\mathbb{V}_C = E_0e^{i\omega t} - R.\mathbb{I}$ tal que $\mathbb{V}_C = -\frac{iE_0}{\omega C|Z|} = \frac{E_0e^{i\omega t -(\phi+\frac{pi}{2})}}{\sqrt{1+(\omega RC)^2}}$. Por lo tanto, la transmisión resulta
+
+\begin{equation}
+T_C(\omega) = \frac{1}{\sqrt{1+(\omega RC)^2}}
+\label{trans_PA}
+\end{equation}
+
+donde $T_C$ es una función decreciente de $\omega$ tal que $T_R(\omega \rightarrow \infty) = 0$ y $T_R(\omega \rightarrow 0) = 1$, por lo que se le llama filtro Pasa-Bajos. Como antes, la frecuencia de corte resulta $\omega_c = \frac{1}{RC}$. Sin embargo, el desfasaje $\phi_C$ de este sistema resulta de la forma 
+
+\begin{equation}
+\phi_C = \frac{\pi}{2}+\phi_R = \frac{\pi}{2} - tan^{-1}(\frac{1}{\omega R C})
+\label{des_PA}
+\end{equation}
+
+Finalmente, si se une un filtro Pasa-Altos con un Pasa-Bajos, se obtiene un filtro Pasa-Banda. Este circuito consiste en un circuito RC de resistencia $R_1$ y capacitancia $C_1$ con terminales alrededor este último que se unen a las terminales de otro circuito RC sin fuente y de resistencia $R_2$ y capacitancia $C_2$ como muestra la \textbf{Figura \ref{fig:intro}}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.75]{Figura_Intro}
+  \caption{Filtro Pasa-Banda compuesto por un filtro Pasa-Bajos (izquierda) unido a un filtro Pasa-Altos (derecha)}
+  \label{fig:intro}
+\end{figure}
+
+donde el voltaje de salida $V_s$ es la caída de potencial sobre la resistencia $R$. Resolviendo el circuito, la transmición $T(\omega)$ resulta una campana de la forma
+
+\begin{equation}
+T(\omega) = [(R_1+R_2)^2(1+\frac{C_1}{C_2})^2+(R_1R_2C_1\omega-\frac{1}{\omega C_2})^2]^{-1/2}
+\label{trans_PBanda}
+\end{equation}
+
+cuyo máximo se encuentra en $\omega_m^2 = \frac{1}{R_1R_2C_1C_2} = \omega_{PB}.\omega_{PA}$ donde $\omega_{PB}$ y $\omega_{PA}$ son las frecuencias de corte del Pasa-Bajos y Pasa-Altos, respectivamente. La máxima transmisión para esa frecuencia resulta $T(\omega_m) = [(1+\frac{R_1}{R_2})(1+\frac{C_1}{C_2})]^{-1} = T_{max}$. Definiendo las \textit{frecuencias de corte} $\omega_1$ y $\omega_2$ tales que $T(\omega_1) = \frac{T_{max}}{\sqrt{2}} = T(\omega_2)$, resultan
+
+\begin{equation}
+\omega_{1,2} = \sqrt{[\frac{1}{2}(1+\frac{R_1}{R_2})(1+\frac{C_1}{C_2})]^2+\frac{1}{R_1R_2C_1C_2}} \pm \frac{1}{2}(1+\frac{R_1}{R_2})(1+\frac{C_1}{C_2})
+\label{corte_PBanda}
+\end{equation}
+
+Por otro lado, el desfasaje $\phi$ entre $V_s$ y $V_e$ tiene la forma
+
+\begin{equation}
+tan(\phi) = \frac{(\frac{\omega}{\omega_m})^2-1}{\omega (R_1+R_2)(C_1+C_2)}
+\label{des_PBanda}
+\end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 3. DISPOSITIVO EXPERIMENTAL: armado del modelo, como se midio, consideraciones a la hora de medir.
