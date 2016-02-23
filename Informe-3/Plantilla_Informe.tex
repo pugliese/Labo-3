@@ -81,7 +81,48 @@
 
 \section{Introducción}\label{sec:intro}
 
+Para un circuito RLC con una fuente de corriente alterna de la forma $\varepsilon = E_{0}cos(\omega t)$ con una resistencia $R$, una inductancia $L$ y una capacitancia $C$ en serie la ecuacion diferencial que rige la evolución del sistema está dada por $\frac{d^2q}{dt^2}L+\frac{dq}{dt}R+\frac{q}{C} = \varepsilon = E_{0}cos(\omega t)$ donde $q = q(t)$ representa la carga del capacitor $C$. En particular, es posible buscar la solución compleja de la ecuación $\frac{d^2Q}{dt^2}L+\frac{dQ}{dt}R+\frac{Q}{C} = \varepsilon = E_{0}e^{i\omega t}$ donde Q es tal que tal que $Re(Q) = q$. Para este sistema, recordando que $\mathbb{I}(t) = \frac{dQ}{dt}$, la solución resulta $\mathbb{I}(t) = \frac{E_0e^{i\omega t}}{Z}$ donde $Z = R +i(\omega L-\frac{1}{\omega C})$
 
+\begin{equation}
+V_{ef} = \frac{I_{ef}}{\sqrt{R^2 + (\omega.L - \frac{1}{\omega.C})^2}}
+\label{eq:1}
+\end{equation}
+
+\begin{equation}
+tan(\phi) = \frac{L\omega}{R} - \frac{1}{RC\omega} 
+\label{eq:2}
+\end{equation}
+
+\begin{equation}
+\omega_{0}= \frac{1}{LC}
+\label{eq:F_res}
+\end{equation}
+
+\begin{equation}
+\Delta\omega = \frac{R}{L}
+\label{deltaomega}
+\end{equation}
+
+Antiresonancia
+
+\begin{equation}
+V_{ef} = \frac{I_{ef}}{\sqrt{R^2 + \frac{1}{(\omega.C - \frac{1}{\omega.L})^2}}}
+\label{eq:3}
+\end{equation}
+
+\begin{equation}
+tan(\phi) = \frac{L}{R}\frac{\omega}{(1- LC\omega^2)} 
+\label{eq:4}
+\end{equation}
+
+\begin{equation}
+\Delta\omega = \frac{1}{RC}
+\label{deltaomega2}
+\end{equation}
+
+Como puede verse, los circuitos con inductancias $L$ y capacitancias $C$ tienen tal interacción con las frecuencias de una fuente de corriente alterna que es posible combinarlos para que atenuen determinadas frecuencias dejando pasar otras. Esto es lo que se denomina como \texit{filtro}. Los filtros más básicos que existen son el Pasa-Altos y el Pasa-Bajos, que no son más que circuitos RC identicos. Lo que varía es la ubicación de las terminales con las que se conectan al resto del circuito. 
+
+Usando una fuente de corriente alterna $\varepsilon(t) = E_{0}e^{i\omega t}$, para un circuito RC de resistencia $R$ y capacitancia $C$ la impendancia es de la forma $Z = R+i\omega.C$. Por lo tanto, la corriente resulta $I(t) = \frac{\varepsilon(t)}{Z}$. A la constante $E_0$ se la llama \textit{voltaje de entrada} mientras que
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 3. DISPOSITIVO EXPERIMENTAL: armado del modelo, como se midio, consideraciones a la hora de medir.
@@ -159,48 +200,6 @@ Una vez finalizada la construccion del dispositivo, se procedio a medir de la ma
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Resultados}
-Ecuaciones que necesito:
-
-Resonancia
-
-\begin{equation}
-V_{ef} = \frac{I_{ef}}{\sqrt{R^2 + (\omega.L - \frac{1}{\omega.C})}}
-\label{eq:1}
-\end{equation}
-
-\begin{equation}
-tan(\phi) = \frac{L\omega}{R} - \frac{1}{RC\omega} 
-\label{eq:2}
-\end{equation}
-
-\begin{equation}
-\omega_{0}= \frac{1}{L.C}
-\label{eq:F_res}
-\end{equation}
-
-\begin{equation}
-\Delta\omega = \frac{R}{L}
-\label{deltaomega}
-\end{equation}
-
-Antiresonancia
-
-\begin{equation}
-V_{ef} = \frac{I_{ef}}{\sqrt{R^2 + \frac{1}{(\omega.C - \frac{1}{\omega.L})^2}}}
-\label{eq:3}
-\end{equation}
-
-\begin{equation}
-tan(\phi) = \frac{L}{R}\frac{\omega}{(1- LC\omega^2)} 
-\label{eq:4}
-\end{equation}
-
-\begin{equation}
-\Delta\omega = \frac{1}{RC}
-\label{deltaomega2}
-\end{equation}
-
-
 
 
 \subsection{Resonancia y Anti-resonancia}
