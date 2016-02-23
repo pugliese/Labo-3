@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.4)  22 FEB 2016 19:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.4)  23 FEB 2016 13:58
 entering extended mode
-**"C:/Users/Gonzalo/Desktop/Informe 4/Plantilla_Informe.tex"
-("C:/Users/Gonzalo/Desktop/Informe 4/Plantilla_Informe.tex"
+**"C:/Labo 3/Labo-3/Informe-4/Plantilla_Informe.tex"
+("C:/Labo 3/Labo-3/Informe-4/Plantilla_Informe.tex"
 LaTeX2e <2015/10/01> patch level 2
 Babel <3.9n> and hyphenation patterns for 69 languages loaded.
 ("C:\Program Files (x86)\MiKTeX\tex\latex\base\article.cls"
@@ -340,6 +340,14 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
+("C:\Program Files (x86)\MiKTeX\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count101
+\float@exts=\toks22
+\float@box=\box28
+\@float@everytoks=\toks23
+\@floatcapt=\box29
+)
 ("C:\Program Files (x86)\MiKTeX\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
@@ -358,7 +366,7 @@ Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files (x86)\MiKTeX\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks22
+\KV@toks@=\toks24
 )
 ("C:\Program Files (x86)\MiKTeX\tex\latex\graphics\graphics.sty"
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
@@ -380,7 +388,7 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 ("C:\Program Files (x86)\MiKTeX\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count101
+\Gread@gobject=\count102
 ))
 \Gin@req@height=\dimen113
 \Gin@req@width=\dimen114
@@ -580,10 +588,10 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 )
-\c@mv@rm=\count102
-\c@mv@boldrm=\count103
-\c@mv@sf=\count104
-\c@mv@boldsf=\count105
+\c@mv@rm=\count103
+\c@mv@boldrm=\count104
+\c@mv@sf=\count105
+\c@mv@boldsf=\count106
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 354.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> OT1/jkp/m/n on input line 354.
@@ -876,9 +884,9 @@ LaTeX Info: Redefining \not on input line 1580.
 ("C:\Program Files (x86)\MiKTeX\tex\latex\wrapfig\wrapfig.sty"
 \wrapoverhang=\dimen115
 \WF@size=\dimen116
-\c@WF@wrappedlines=\count106
-\WF@box=\box28
-\WF@everypar=\toks23
+\c@WF@wrappedlines=\count107
+\WF@box=\box30
+\WF@everypar=\toks25
 Package: wrapfig 2003/01/31  v 3.6
 )
 ("C:\Program Files (x86)\MiKTeX\tex\latex\caption\caption.sty"
@@ -895,13 +903,14 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 \caption@parindent=\dimen122
 \caption@hangindent=\dimen123
 )
-\c@ContinuedFloat=\count107
+\c@ContinuedFloat=\count108
+Package caption Info: float package is loaded.
 Package caption Info: wrapfig package is loaded.
 )
 ("C:\Program Files (x86)\MiKTeX\tex\latex\caption\subcaption.sty"
 Package: subcaption 2015/09/15 v1.1-100 Sub-captions (AR)
-\c@subfigure=\count108
-\c@subtable=\count109
+\c@subfigure=\count109
+\c@subtable=\count110
 )
 ("C:\Program Files (x86)\MiKTeX\tex\latex\booktabs\booktabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
@@ -915,12 +924,12 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \cmidrulesep=\dimen131
 \cmidrulekern=\dimen132
 \defaultaddspace=\dimen133
-\@cmidla=\count110
-\@cmidlb=\count111
+\@cmidla=\count111
+\@cmidlb=\count112
 \@aboverulesep=\dimen134
 \@belowrulesep=\dimen135
-\@thisruleclass=\count112
-\@lastruleclass=\count113
+\@thisruleclass=\count113
+\@lastruleclass=\count114
 \@thisrulewidth=\dimen136
 )
 ("C:\Program Files (x86)\MiKTeX\tex\latex\tocbibind\tocbibind.sty"
@@ -944,9 +953,9 @@ Package ifvtex Info: VTeX not detected.
 ("C:\Program Files (x86)\MiKTeX\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count114
-\Gm@cntv=\count115
-\c@Gm@tempcnt=\count116
+\Gm@cnth=\count115
+\Gm@cntv=\count116
+\c@Gm@tempcnt=\count117
 \Gm@bindingoffset=\dimen137
 \Gm@wd@mp=\dimen138
 \Gm@odd@mp=\dimen139
@@ -955,7 +964,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutheight=\dimen142
 \Gm@layouthoffset=\dimen143
 \Gm@layoutvoffset=\dimen144
-\Gm@dimlist=\toks24
+\Gm@dimlist=\toks26
 
 ("C:\Program Files (x86)\MiKTeX\tex\latex\geometry\geometry.cfg"))
 ("C:\Program Files (x86)\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty"
@@ -978,67 +987,67 @@ LaTeX Info: Redefining \% on input line 6.
 )
 \openout1 = `Plantilla_Informe.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 34.
-LaTeX Font Info:    Try loading font information for OML+jkp on input line 34.
+LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 35.
+LaTeX Font Info:    Try loading font information for OML+jkp on input line 35.
 
 ("C:\Program Files (x86)\MiKTeX\tex\latex\kpfonts\omljkp.fd"
 File: omljkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 34.
-LaTeX Font Info:    Try loading font information for OMS+jkp on input line 34.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 35.
+LaTeX Font Info:    Try loading font information for OMS+jkp on input line 35.
 
 ("C:\Program Files (x86)\MiKTeX\tex\latex\kpfonts\omsjkp.fd"
 File: omsjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 34.
-LaTeX Font Info:    Try loading font information for OMX+jkp on input line 34.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 35.
+LaTeX Font Info:    Try loading font information for OMX+jkp on input line 35.
 
 ("C:\Program Files (x86)\MiKTeX\tex\latex\kpfonts\omxjkp.fd"
 File: omxjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 34.
-LaTeX Font Info:    Try loading font information for U+jkpexa on input line 34.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 35.
+LaTeX Font Info:    Try loading font information for U+jkpexa on input line 35.
 
 
 ("C:\Program Files (x86)\MiKTeX\tex\latex\kpfonts\ujkpexa.fd"
 File: ujkpexa.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 34.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 35.
 
 ("C:\Program Files (x86)\MiKTeX\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Try loading font information for OT1+jkp on input line 34.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Try loading font information for OT1+jkp on input line 35.
 
 ("C:\Program Files (x86)\MiKTeX\tex\latex\kpfonts\ot1jkp.fd"
 File: ot1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for OT1/jkp.
 )
-LaTeX Info: Redefining \. on input line 34.
-LaTeX Info: Redefining \% on input line 34.
+LaTeX Info: Redefining \. on input line 35.
+LaTeX Info: Redefining \% on input line 35.
 
 ("C:\Program Files (x86)\MiKTeX\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count117
+\scratchcounter=\count118
 \scratchdimen=\dimen146
-\scratchbox=\box29
-\nofMPsegments=\count118
-\nofMParguments=\count119
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count120
+\scratchbox=\box31
+\nofMPsegments=\count119
+\nofMParguments=\count120
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count121
 \MPscratchDim=\dimen147
-\MPnumerator=\count121
-\makeMPintoPDFobject=\count122
-\everyMPtoPDFconversion=\toks26
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
+\everyMPtoPDFconversion=\toks28
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
@@ -1113,21 +1122,36 @@ File: ujkpsyc.fd 2006/08/15 v1.0
 File: Caracterizar-Diodo.jpg Graphic file (type jpg)
 
 <use Caracterizar-Diodo.jpg>
-Package pdftex.def Info: Caracterizar-Diodo.jpg used on input line 102.
+Package pdftex.def Info: Caracterizar-Diodo.jpg used on input line 103.
 (pdftex.def)             Requested size: 128.27942pt x 123.4614pt.
- [1 <./Caracterizar-Diodo.jpg>] [2]
-(Plantilla_Informe.aux
+ [1 <./Caracterizar-Diodo.jpg>]
+<Rectificador-Media-Onda.jpg, id=17, 210.7875pt x 162.6075pt>
+File: Rectificador-Media-Onda.jpg Graphic file (type jpg)
+
+<use Rectificador-Media-Onda.jpg>
+Package pdftex.def Info: Rectificador-Media-Onda.jpg used on input line 118.
+(pdftex.def)             Requested size: 168.63022pt x 130.08617pt.
+
+<Rectificador-Onda-Completa.jpg, id=18, 244.66406pt x 170.13562pt>
+File: Rectificador-Onda-Completa.jpg Graphic file (type jpg)
+
+<use Rectificador-Onda-Completa.jpg>
+Package pdftex.def Info: Rectificador-Onda-Completa.jpg used on input line 130.
+
+(pdftex.def)             Requested size: 195.7315pt x 136.10867pt.
+ [2 <./Rectificador-Media-Onda.jpg>]
+[3 <./Rectificador-Onda-Completa.jpg>] (Plantilla_Informe.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 6312 strings out of 493634
- 86190 string characters out of 3142929
- 149321 words of memory out of 3000000
- 9557 multiletter control sequences out of 15000+200000
+ 6371 strings out of 493634
+ 87146 string characters out of 3142929
+ 149645 words of memory out of 3000000
+ 9610 multiletter control sequences out of 15000+200000
  41613 words of font info for 86 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 36i,10n,43p,1119b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,10n,43p,1223b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/Program F
 iles (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Program Files (x86
 )/MiKTeX/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Program Files (x86)/MiKTeX/fo
@@ -1136,9 +1160,9 @@ public/kpfonts/jkpmit8a.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/k
 pfonts/jkpmn8a.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/kpfonts/jk
 pmsc8a.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb>
 
-Output written on Plantilla_Informe.pdf (3 pages, 141343 bytes).
+Output written on Plantilla_Informe.pdf (4 pages, 185222 bytes).
 PDF statistics:
- 43 PDF objects out of 1000 (max. 8388607)
+ 48 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
