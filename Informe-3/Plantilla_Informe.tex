@@ -159,6 +159,144 @@ Una vez finalizada la construccion del dispositivo, se procedio a medir de la ma
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Resultados}
+Ecuaciones que necesito:
+
+Resonancia
+
+\begin{equation}
+V_{ef} = \frac{I_{ef}}{\sqrt{R^2 + (\omega.L - \frac{1}{\omega.C})}}
+\label{eq:1}
+\end{equation}
+
+\begin{equation}
+tan(\phi) = \frac{L\omega}{R} - \frac{1}{RC\omega} 
+\label{eq:2}
+\end{equation}
+
+\begin{equation}
+\omega_{0}= \frac{1}{L.C}
+\label{eq:F_res}
+\end{equation}
+
+\begin{equation}
+\Delta\omega = \frac{R}{L}
+\label{deltaomega}
+\end{equation}
+
+Antiresonancia
+
+\begin{equation}
+V_{ef} = \frac{I_{ef}}{\sqrt{R^2 + \frac{1}{(\omega.C - \frac{1}{\omega.L})^2}}}
+\label{eq:3}
+\end{equation}
+
+\begin{equation}
+tan(\phi) = \frac{L}{R}\frac{\omega}{(1- LC\omega^2)} 
+\label{eq:4}
+\end{equation}
+
+\begin{equation}
+\Delta\omega = \frac{1}{RC}
+\label{deltaomega2}
+\end{equation}
+
+
+
+
+\subsection{Resonancia y Anti-resonancia}
+
+Sabiendo que, sobre la resistencia, la diferencia de potencial efectiva es proporcional a la corriente efectiva; se midieron estas difencia de potencial sobre la resistencia $R$ de cada circuito para poder ajustarlo con la ecuación \textbf{\eqref{eq:1}} en los circuitos resonantes y \textbf{\eqref{eq:3}} en los circuitos anti-resonantes.  
+
+Puesto que para el estudio de los circuitos resonante y anti-resonantes se utilizaron una capacitancia $C= (9.95 \pm 0.07)nF$ y una inductancia $L= (0.999 \pm 0.008) H$, la valor teórica de la frecuencia angular de resonancia dado por \textbf{\eqref{eq:F_res}} es $\omega_{0}=(10030 \pm 150) Hz$ para todos los circuitos.
+
+En primer lugar se hizo el análisis de resonancia. Para ello se utilizo el sistema que tiene en serie la inductancia $L$, la capacitancia $C$ y la resistencia $R$; por lo que, al conciderarse despreciable la resistencia de $C$, la resistencia total del circuito era $R_{total} = R+R_{L}$ donde $R_{L} = (296 \pm 3)$ es la resistencia que impone la inductancia.
+
+De las mediciones obtenidas para los circuitos con resistencia $R=(5.00 \pm 0.05)K\Omega$ y $R=(500.0 \pm 0.2)\Omega$ se pudieron esbozar los gráficos que muestran las \textbf{Figuras \ref{subfig:RES_I.a}} y \textbf{\ref{subfig:RES_I.b}} respectivamente.
+
+\begin{figure}[h!]
+
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[scale=0.3]{RLC_RES_5000_VvsF}
+  \caption{Resonancia 5000 $\Omega$}
+  \label{subfig:RES_I.a}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[scale=0.32]{RLC_RES_500_VvsF}
+  \caption{Resonancia 500 $\Omega$}
+  \label{subfig:RES_I.b}
+\end{subfigure}
+  \caption{Circuitos RLC resonancia: $I_{ef}$}
+  \label{fig:RES_I}
+\end{figure}
+
+Para el primer caso, para $R=(5.00 \pm 0.05)K\Omega$, se realizó un ajuste según \eqref{eq:1}. De manera que el coeficiente $R-Square = 0.99985$ garantizó la bondad de dicho ajuste, y utilizando los parámetros obtenidos se calcularon el máximo de potencial $V_{max}=(4.6 \pm 0.8)$ para una frecuencia $\omega_{res} = (10425 \pm 2500)Hz$, resultando entonces una frecuencia idéntica al valor teórico $\omega_0 = (10030 \pm 150)Hz$. A su vez se obtuvo un ancho de banda $\Delta\omega = (5590 \pm 1200) Hz$, y usando \textbf{\eqref{deltaomega}} se obtiene un valor teórico $\Delta\omega_{teo} = (5300 \pm 90)Hz$ teniendo entonces dos resultados indistinguibles al coincidir en un intervalo. 
+
+
+Luego, para $R=(500 \pm 2)\Omega$, el coeficiente $R-Square = 0.99981$ garantizó la bondad del ajuste dado por \textbf{\eqref{eq:1}}. Por lo que se pudo calcular la frecuencia de resonancia $\omega_{res}= (10753 \pm 1000) Hz$ con un máximo de amplitud $V_{max}=(2.4 \pm 0.4) V$. Se puede ver entonces que la frecuencia de resonancia obtenida coincide con el resultado teórico $\omega_0 = (10030 \pm 150) Hz$. Ademas se calculó un ancho de banda $\Delta\omega = (697 \pm 200)Hz$, y utilizando \textbf{\eqref{deltaomega}} se obtuvo su valor teórico $\Delta\omega_{teo} = (729 \pm 6) Hz$ por lo cual, al coincidir en un intervalor, se concideran indistinguibles.
+
+Por otro lado también se registraron los valores de la diferencia de fase entre la señal de entrada y la señal de salida, para obtener los gráficos que muestran las \textbf{Figuras \ref{subfig:RES_D.a}}, para $R=(5.00 \pm 0.05) K\Omega$, y \textbf{\ref{subfig:RES_D.b}} para $R=(500 \pm 2)\Omega$.
+
+\begin{figure}[h!]
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[scale=0.34]{RLC_RES_5000_Tan(fase)vsF}
+  \caption{Resonancia 5000 $\Omega$}
+  \label{subfig:RES_D.a}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[scale=0.34]{RLC_RES_500_Tan(fase)vsF}
+  \caption{Resonancia 500 $\Omega$}
+  \label{subfig:RES_D.b}
+\end{subfigure}
+  \caption{Circuitos RLC resonancia: \textit{Desfasaje}}
+  \label{fig:RES_D}
+\end{figure}
+
+Por lo que, al obtener un $R-Square = 0.99885$ se garantizó la bondad del ajuste de la \textbf{Figura \ref{subfig:RES_D.a}} dado por \textbf{\eqref{eq:2}}. Entonces, despejando de los parametros, se encontró que las dos señales están en fase cuando $\omega = ( 9978 \pm 90) Hz$ coincidiendo con la frecuencia de resonancia $\omega_{res} = (10030 \pm 150) Hz$.
+
+De la misma manera, el ajuste de \textbf{\ref{subfig:RES_D.b}} por la ecuación \eqref{eq:2} dio un $R-Square = 0.99091$, nuevamente garantizando la bondad del ajuste. Y se obtuvo entonces que las dos señales estaban en fase cuando $\omega = (10036 \omega 220) Hz$ siendo indistinguible de la frecuencia de resonancia $\omega_{res} = (10030 \pm 150) Hz$.
+
+\bigskip
+
+De manera análoga se hizo el análisis de anti-resonancia. En este caso se consideraron despreciables las resistencia impuestas por $C$ como por $L$.
+
+A partir de las mediciones obtenidas para los circuitos con resistencia $R=(5.00 \pm 0.05) K\Omega$ y $R=(1.00 \pm 0.01)K\Omega$ se realizaron los gráficos que muestran las \textbf{Figuras \ref{subfig:ARES_I.a}} y \textbf{\ref{subfig:ARES_I.b}} respectivamente.
+
+\begin{figure}[h!]
+
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[scale=0.31]{RLC_ARES_5000_VvsF}
+  \caption{Anti-resonancia 5000 $\Omega$}
+  \label{subfig:ARES_I.a}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[scale=0.3]{RLC_ARES_1000_VvsF}
+  \caption{Anti-resonancia 1000 $\Omega$}
+  \label{subfig:ARES_I.b}
+\end{subfigure}
+  \caption{Circuitos RLC anti-resonancia: $I_{ef}$}
+  \label{fig:ARES_I}
+\end{figure}
+
+
+También se registraron la diferencia de fase entre las señales de entrada y salida y se obtuvieron los graficos que muestras las \textbf{Figuras \ref{subfig:ARES_D.a}}, para $R=(5.00 \pm 0.05)K\Omega$, y \textbf{\ref{subfig:ARES_D.b}} para $R=(1.00 \pm 0.01)K\Omega$.
+
+\begin{figure}[h!]
+
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[scale=0.34]{RLC_ARES_5000_Tan(fase)vsF}
+  \caption{Anti-resonancia 5000 $\Omega$}
+  \label{subfig:ARES_D.a}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[scale=0.34]{RLC_ARES_1000_Tan(fase)vsF}
+  \caption{Anti-resonancia 1000 $\Omega$}
+  \label{subfig:ARES_D.b}
+\end{subfigure}
+  \caption{Circuitos RLC anti-resonancia: \textit{Desfasaje}}
+  \label{fig:ARES_D}
+\end{figure}
+
+
 \label{sec:discusion}
 
 
