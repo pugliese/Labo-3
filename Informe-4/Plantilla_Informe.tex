@@ -91,12 +91,14 @@
 \section{Desarrollo experimental}
 
 Durante esta experiencia se utilizó un generador de funciones de emitir frecuencias con un error relativo del $0,01\%$ en un rango entre $1\mu Hz$ y $5MHz$ cuyo voltaje pico-pico tiene un error relativo del $1\%$ para el rango de voltaje utilizado ($2V-20V$). Además, se utilizó una capacitancia y una resistencia, ambas variables por décadas cuyo error fue a priori desconocido. Usando un multimetro digital se midieron los valores configurados en cada instrumento junto con su error que, para las resistencias, era de la forma $\pm(1\%+2d)$ en el rango utilizado (mayor a $100\Omega$), y para las  capacitancias, $\pm(4\%+3d)$. La resistencia del capacitor resultó despreciable. También, se utilizó una inductancia fija $L = (1.000 \pm 0.002) H$ que poseía una resistencia interna (medida por el multímetro) $R_L = (294 \pm 3) \Omega$.
+
 Se utilizó un osciloscopio digital que en sus dos canales de entrada era capaz de medir diferencias de potencial entre las dos terminales que dispone en un rango de 2mV a 5V con un error relativo del $3\%$. A la hora de medir voltaje, fue necesario asegurarse que el cable a tierra del osciloscopio estuvera conectado al cable a tierra el generador de funciones. 
-Tambien se utilizo una fuente sin descarga a tierra que producia una señal sinusoidal de la forma $\epsilon = E_{0}cos(2\pi Ft)$, y que tenia una frecuencia fija que fue medida con el osciloscopio y resulto tener un valor $F = (50 \pm 0.003)hz$
+
+Tambien se utilizo una fuente flotante sin descarga a tierra que producia una señal sinusoidal de la forma $\epsilon = E_{0}cos(2\pi Ft)$, y que tenia una frecuencia fija que fue medida con el osciloscopio y resulto tener un valor $F = (50 \pm 0.003)hz$
 
 
 \subsection{Caracterización de Instrumentos}
-Para construir rectificadores de señal, era necesario caracterizar los diodos que se iban a utilizar. Para esto se diseñó un circuito que constaba de una resistencia \textbf{$R = (600 \pm 6)\Omega$}, un generador de funciones y de un diodo conectados en serie, y que fue utilizado para estudiar la respuesta del diodo frente a distintos voltajes. Cabe destacar, que en un primer caso se utilizo un diodo simple, y posteriormente se reemplazo por un zenek y despues por un led. Ademas, previo a la construccion del circuito, se utilizo el multimetro para asegurar la continuidad de los cables a utilizar.
+Para construir rectificadores de señal, fue necesario caracterizar los diodos a utilizar. Para esto se diseñó un circuito que constaba de una resistencia \textbf{$R = (600 \pm 6)\Omega$}, un generador de funciones y de un diodo conectados en serie, y que fue utilizado para estudiar la respuesta del diodo frente a distintos voltajes. Cabe destacar, que en un primer caso se utilizo un diodo simple, y posteriormente se reemplazó por un Zenek y despues por un LED. Ademas, previo a la construccion del circuito, se utilizó el multimetro para asegurar la continuidad de los cables a utilizar.
 
 \begin{figure}[H]
 \centering
@@ -105,13 +107,13 @@ Para construir rectificadores de señal, era necesario caracterizar los diodos q
    \label{fig:Car-Dio}
 \end{figure}
 
-Para realizar las mediciones correspondientes, se conecto el osciloscopio en paralelo con la resistencia para medir la corriente circulante y mediante a una \textbf{llave T} se conecto a la fuente para medir el voltaje de entrada, para utlizar la frecuencia de esa señal como\textbf{trigger externo} y, ademas, para medir la caida de potencial en el diodo a partir de la diferencia entre la tension entregada por el generador y la medida sobre la resistencia. Se configuro el generador de funciones para que generara una onda triangular con una frecuencia  $F = (50 \pm 0.005)hz$ y con una aplitud pico-pico de $(16 \pm 0.2)V$, que se dispuso de esa forma para que, en el caso del zenek, se pudiera apreciar el efecto avalancha, y se seteo el osciloscopio para que midiera sobre medio periodo de la oscilacion. De esta forma, el osciloscopio obtenia datos correspondientes a 2500 valores distintos de voltaje distribuidos uniformemente en el intervalo $[-8,8]V$ que, posteriormente, eran importados a la computadora para su analisis  mediante un programa de adquisicion de datos. Este proceso fue el mismo para todos los tipos de diodos utilizados.
+Para realizar las mediciones correspondientes, se conectó el osciloscopio en paralelo con la resistencia para medir la corriente circulante y mediante a una \textit{llave T} se conecto a la fuente para medir el voltaje de entrada, para utlizar la frecuencia de esa señal como \textit{trigger externo} y, ademas, para medir la caida de potencial en el diodo a partir de la diferencia entre la tension entregada por el generador y la medida sobre la resistencia. Se configuro el generador de funciones para que generara una onda triangular con una frecuencia  $F = (50 \pm 0.005)hz$ y con una aplitud pico-pico de $(16 \pm 0.2)V$, que se dispuso de esa forma para que, en el caso del Zenek, se pudiera apreciar el efecto avalancha, y se configuró el osciloscopio para que midiera sobre medio periodo de la oscilacion. De esta forma, el osciloscopio obtenia datos correspondientes a 2500 valores distintos de voltaje distribuidos uniformemente en el intervalo $[-8V;8V]$ que, posteriormente, eran importados a la computadora para su analisis  mediante un programa de adquisicion de datos. Este proceso fue el mismo para los tres diodos utilizados.
 
 \subsection{Rectificadores de Corriente}
-Una vez terminada la carecterizacion de los diodos, procedimos a construir rectificadores de corriente. Para cada uno de estos, se exploraron los parametros para ver en que punto se podia obtener una coriente continua.
+Una vez terminada la carecterizacion de los diodos, se procedió a construir rectificadores de corriente. Para cada uno de estos, se exploraron los parametros para ver en que punto se podía obtener una coriente continua.
 
 \subsubsection{Rectificador de media onda}
-En primer lugar, se construyo un rectificador de media onda utilizando un generador de funciones como fuente sinusoidal, un diodo simple, una resistencia $R = (5 \pm 0.05)\Omega$ y un capacitor $C = (9.81 \pm 0.07)\mu F$ conectado en paralelo a la resistencia como se ilustra en la \textbf{tigura \ref{fig:Re-M-O}}. De manera analoga al metodo utilizado para caracterizar lo diodos, se conecto un canal del osciloscopio en paralelo a la resistecia, para medir la corriente circulante; y el otro en paralelo a la fuente. Y, ademas, se aseguro la continuidad de los cables y que esta no se viera comprometida con movimientos aleatorios utilizando el multimetro.
+En primer lugar, se construyó un rectificador de media onda utilizando un generador de funciones como fuente sinusoidal, un diodo simple, una resistencia $R = (5 \pm 0.05)\Omega$ y un capacitor $C = (9.81 \pm 0.07)\mu F$ conectado en paralelo a la resistencia como se ilustra en la \textbf{Figura \ref{fig:Re-M-O}}. De manera analoga al metodo utilizado para caracterizar lo diodos, se conectó un canal del osciloscopio en paralelo a la resistecia, para medir la corriente circulante; y el otro en paralelo a la fuente. Y, ademas, se aseguró la continuidad de los cables y que esta no se viera comprometida con movimientos aleatorios utilizando el multimetro.
 
 \begin{figure}[H]
 \centering
@@ -120,10 +122,10 @@ En primer lugar, se construyo un rectificador de media onda utilizando un genera
    \label{fig:Re-M-O}
 \end{figure}
 
-Para medir el riple de la corriente de salida, se configuro el osciloscopio para que eliminara la componente continua de la señal y midiera la amplitud pico-pico. Fijada una frecuencia en el generador de funciones, se anotaba la amplitud marcada por el osciloscopio y se considero un error para cada medicion lo suficientemente grande como para que contuviera las fluctuaciones de ese valor en pantalla. El proceso se itero con distintas frecuencias.  Ademas, como metodo alternativo de medicion, se importaron los datos del osciloscopio a la computadora por medio de un programa de adquisicion de datos para un posterior analisis estadistico.
+Para medir el ripple de la corriente de salida, se configuró el osciloscopio para que eliminara la componente continua de la señal y midiera la amplitud pico-pico. Fijada una frecuencia en el generador de funciones, se anotaba la amplitud marcada por el osciloscopio y se consideró un error para cada medicion lo suficientemente grande como para que contuviera las fluctuaciones de ese valor en pantalla además del error instrumental descripto más arriba. El proceso se iteró con distintas frecuencias.  Ademas, como metodo alternativo de medicion, se importaron los datos del osciloscopio a la computadora por medio de un programa de adquisicion de datos para un posterior analisis estadistico.
 
 \subsubsection{Rectificador de onda completa}
-En este caso se intento diseñar un rectificador de onda completa, para esto se construyo un circuito que constaba de cuatro diodos identicos, una resistencia resistencia variable por decadas y una fuente de voltaje sinusoidal dispuestos como se muestra en la \textbf{figura \ref{fig:Rect-O}}. Previo a la construcion se observo que los cables no tubieran discontinuidades. Cabe aclarar que qurante esta experiencia no se utlizo el generador de funciones como fuente ya que, como los canales de salida del mismo tenian descarga a tierra, al igual que los del osciloscopio, seria necesario conectarlos en un mismo lugar, pero como se puede veren la \textbf{figura \ref{fig:Rect-O}} eso no era posible, por lo cual se utilizo una fuente flotante. 
+En este caso se intentó diseñar un rectificador de onda completa, para esto se construyó un circuito que constaba de cuatro diodos idénticos, una resistencia variable por decadas y una fuente de voltaje sinusoidal dispuestos como se muestra en la \textbf{Figura \ref{fig:Rect-O}}. Previo a la construcción se observó que los cables no tuvieran discontinuidades. Cabe aclarar que durante esta experiencia no se utlizó el generador de funciones como fuente ya que, como los canales de salida del mismo tenian descarga a tierra, al igual que los del osciloscopio, seria necesario conectarlos en un mismo lugar, pero como se puede veren la \textbf{Figura \ref{fig:Rect-O}} eso no era posible, por lo cual se utilizó una fuente flotante. 
 
 \begin{figure}[H]
 \centering
@@ -132,7 +134,7 @@ En este caso se intento diseñar un rectificador de onda completa, para esto se 
    \label{fig:Rect-O}
 \end{figure}
 
-Para medir el riple de la corrriente de salida se realizo el mismo proceso q para el rectificador de media noda, pero no se utilizo el metodo alternativo. Cabe destacar, que durante las mediciones se pudo observar que los movimientos del aire producidos por el ventilador de la sala e incluso por nuestras voces provocaba provocaba un efecto microfonico que interferia con las mediciones, por lo cual se intento mantener silencio en ese momento y se evito medir en los momentos con viento.
+Para medir el ripple de la corrriente de salida se realizó el mismo proceso que para el rectificador de media noda, pero no se utilizó el metodo alternativo. Cabe destacar, que durante las mediciones se pudo observar que los movimientos del aire producidos por el ventilador de la sala e incluso por nuestras voces provocaban un efecto microfonico que interferia con las mediciones, por lo cual se intento mantener silencio en ese momento y se evitó medir en los momentos con viento.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -141,6 +143,22 @@ Para medir el riple de la corrriente de salida se realizo el mismo proceso q par
 
 \section{Resultados}
 \label{sec:discusion}
+
+\subsection{Caracterización de Instrumentos}
+
+
+
+
+\subsection{Rectificadores de Corriente}
+
+
+
+
+\subsubsection{Rectificador de media onda}
+
+
+\subsubsection{Rectificador de onda completa}
+
 
 
 
