@@ -89,66 +89,65 @@
 
 \section{Desarrollo experimental}
 
-Durante esta experiencia se utilizó ,como fuente alterna, un generador de funciones el cual se programo para que generara un diferencia de potencial que variara en el tiempo con la forma $\epsilon = E_{0}cos(\omega t)$, donde $E_{0}$ es la amplitud maxima y en el informe se referira a ella como Amplitud. Este generador es capaz de emitir frecuencias con un error relativo del $0,01\%$ en un rango entre $1\mu Hz$ y $5MHz$ cuyo voltaje pico-pico tiene un error relativo del $1\%$ para el rango de voltaje utilizado ($2V-20V$). Además, se utilizó una capacitancia fija $C = (100,0 \pm 0,2)nF$ y una resistencia variable por décadas cuyo error fue a priori desconocido. Usando un multimetro digital se midieron las resistencias utilizadas junto con su error, que era de la forma $\pm(1\%+2d)$ para el rango de resistencias utilizadas (mayores a $100\Omega$). La resistencia del capacitor resultó despreciable. También, se utilizó una inductancia fija $L = (1.000 \pm 0.002) H$ que poseía una resistencia interna (medida por el multímetro) $R_L = (294 \pm 3) \Omega$.
+Durante esta experiencia se utilizó como fuente un generador de funciones que se programó para que generara un diferencia de potencial que variara en el tiempo con la forma $\varepsilon = E_{0}cos(\omega t)$, donde $E_{0}$ es la amplitud maxima y en el informe se referira a ella simplemente como \textit{amplitud}. Este generador es capaz de emitir frecuencias con un error relativo del $0,01\%$ en un rango entre $1\mu Hz$ y $5MHz$ cuyo voltaje pico-pico tiene un error relativo del $1\%$ para el rango de voltaje utilizado ($2V-20V$). Además, se utilizó una capacitancia fija $C = (100,0 \pm 0,2)nF$ y una resistencia variable por décadas cuyo error fue a priori desconocido. Usando un multimetro digital se midieron las resistencias utilizadas junto con su error, que era de la forma $\pm(1\%+2d)$ para el rango de resistencias utilizadas (mayores a $100\Omega$). La resistencia del capacitor resultó despreciable. También, se utilizó una inductancia fija $L = (1.000 \pm 0.002) H$ que poseía una resistencia interna (medida por el multímetro) $R_L = (294 \pm 3) \Omega$.
 Finalmente, se utilizó un osciloscopio digital que en sus dos canales de entrada era capaz de medir diferencias de potencial entre las dos terminales que dispone en un rango de 2mV a 5V con un error relativo del $3\%$. A la hora de medir voltaje, fue necesario asegurarse que el cable a tierra del osciloscopio estuvera conectado al cable a tierra el generador de funciones. 
 
 
 
 \subsection{Resonancia y Anti-Resonancia}
-Durante la experiencia estudió el comportamiento de circuitos RCL sometidos a corrientes con distintas frecuencias. En primer lugar se quiso estudiar el efecto de resonacia, por lo cual se construyó un circuito cerrado que constaba de la fuente $\varepsilon$, la resistencia variable por decadas fijada en un valor $R = (5 \pm 0,05)K\Omega$, una inductancia con un valor $L = (1 \pm 0.002)H$ con una Resistencia $R_{L}= (296\pm 3)\Omega$ que fue despreciada frente al valor de la mencionada anteriormente, y una capacitacia $C = (9.95 \pm 0.07)nF$, conectados en serie como muestra la \textbf{Figura \ref{fig:RCL-Res}}. Cabe destacar que, previamente a la construccion el dispositivo,  se utilizó el multimetro para asegurar la continuidad de todos los cables utilizados, y que esta misma no se viera comprometida por movimientos aleatorios, a fin de poder reducir una fuente de posibles incertezas.
+Durante la experiencia se estudió el comportamiento de circuitos RCL sometidos a corrientes con distintas frecuencias. En primer lugar se quiso estudiar el efecto de resonacia, por lo cual se construyó un circuito cerrado que constaba de la fuente $\varepsilon$, la resistencia variable por decadas fijada en un valor $R = (5 \pm 0,05)K\Omega$, la inductancia $L = (1 \pm 0.002)H$ con una resistencia $R_{L}= (296\pm 3)\Omega$ que fue despreciada frente al valor de la mencionada anteriormente, y una capacitacia $C = (9.95 \pm 0.07)nF$, conectados en serie como muestra la \textbf{Figura \ref{fig:RCL-Res}}. Cabe destacar que, previamente a la construccion el dispositivo,  se utilizó el multimetro para asegurar la continuidad de todos los cables utilizados, y que esta misma no se viera comprometida por movimientos aleatorios, a fin de poder reducir una fuente de posibles incertezas.
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.7]{Circuito-RCL-Resonante}
-  \caption{Circuito RCL con una fuente sinusoidal capaz de entrar en un estado de resonancia}
+  \caption{Circuito RCL resonante con una fuente sinusoidal de amplitud (voltaje de entrada), capacitancia e inductancia fijas. Se obtuvo desfasaje y voltaje de salida en función de la frecuencia para dos resistencias distintas.}
   \label{fig:RCL-Res}
 \end{figure}
 
-Para medir la diferencia de tension se conectó, en paralelo, un canal del osciloscopio a la resistencia. Se utilizo una llave T para conectar en paralelo a la fuente el segundo canal del osciloscopio, logrando de esta manera, que se desplegaran en la pantalla las dos señales al mismo tiempo y nos diera la posibilidad de medir la diferencia de fase entre las señales. Además, tambien se utilizó la frecuencia de esa segunda señal como \textit(trigger externo) para asegurar una imagen estatica en la pantalla del osciloscopio. Se fijo una Amplitud $E_{0} = (8,00 \pm 0,08)V$, y se fijo una frecuencia. Se tomó nota del desfasaje y de la amplitud calculados por el osciloscopio para la señal de salida y, una ves hecho esto, se varió la frecuencia. Este proceso se itero hasta tener suficientes mediciones como para realizar un grafico. Una vez terminada la adquisicion de datos, se repitio el proceso con un cicuito con los mismos parametros, a excepcion de la Resistencia, a la cual se le cambio el valor a $R = (500 \pm 5)$. Vale la pena aclarar que para este segundo circuito, la resistencia producida por la inductancia no era despreciable y fue tenida en cuenta.
+Para medir la diferencia de tension se conectó, en paralelo, un canal del osciloscopio a la resistencia. Se utilizo una llave T para conectar en paralelo a la fuente el segundo canal del osciloscopio, logrando de esta manera, que se desplegaran en la pantalla las dos señales al mismo tiempo y fuera posibile medir la diferencia de fase entre las señales. Además, tambien se utilizó la frecuencia de esa segunda señal como \textit{trigger externo} para asegurar una imagen estatica en la pantalla del osciloscopio. Se fijo una amplitud $E_{0} = (8,00 \pm 0,08)V$ y se fue variando la frecuencia. Para cada frecuencia se tomó nota del desfasaje y de la amplitud calculados por el osciloscopio para la señal de salida. Una vez terminada la adquisicion de datos, se repitio el proceso con un cicuito con los mismos parametros, a excepcion de la resistencia, a la cual se le cambio el valor a $R = (500 \pm 5)$. Vale la pena aclarar que para este segundo circuito, la resistencia producida por la inductancia no era despreciable y fue tenida en cuenta.
 
-Luego, se estudió el caso de la anti-resonancia, y para esto se diseño un circuito RCL similar al anterior, con la salvedad que en este caso el capacitor se encontraba conectado en paralelo a la inductancia como ilustra la \textbf{Figura \ref{fig:RCL-ARes}}. De la misma forma que en el caso de resonancia, se realizaron dos juegos de ediciones y para ambas se utilizo una inductancia con un valor $L = (1 \pm0.002)H$ y una capacitacia $C = (9.95 \pm 0.07)nF$, la fuente se fijo en una Amplitud $E_{0} = (8,00 \pm 0,08)V$, Y la resistencia tuvo un valor $R = (5 \pm 0,05)K\Omega$ durante la primer medición, y en $R = (1 \pm 0,01)K\Omega$ durante la segunda.
+Luego, se estudió el caso de la anti-resonancia, y para esto se diseñó un circuito RCL similar al anterior, con la salvedad que en este caso el capacitor se encontraba conectado en paralelo a la inductancia como ilustra la \textbf{Figura \ref{fig:RCL-ARes}}. De la misma forma que en el caso de resonancia, se realizaron dos juegos de mediciones y para ambas se utilizó una inductancia con un valor $L = (1 \pm0.002)H$ y una capacitacia $C = (9.95 \pm 0.07)nF$ mientras que la fuente se fijó en una amplitud $E_{0} = (8,00 \pm 0,08)V$ y la resistencia tuvo un valor $R = (5 \pm 0,05)K\Omega$ durante la primer medición, y en $R = (1 \pm 0,01)K\Omega$ durante la segunda.
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.7]{Circuito-RCL-AntiResonante}
-  \caption{Circuito RCL con una fuente sinusoidal incapaz de entrar en un estado de resonancia (Anti-Resonante)}
+  \caption{Circuito RCL antiresonante con una fuente sinusoidal de amplitud (voltaje de entrada), capacitancia e inductancia fijas. Se obtuvo desfasaje y voltaje de salida en función de la frecuencia para dos resistencias distintas.}
   \label{fig:RCL-ARes}
 \end{figure}
 
-De manera analoga al metodo utilizado con el circuito resonante, el osciloscopio se conecto de forma paralela a la resistencia y a la fuente, y se tomaron nota de los desfasajes y amplitudes de la corriente de salida.
+De manera analoga al metodo utilizado con el circuito resonante, el osciloscopio se conectó de forma paralela a la resistencia y a la fuente, y se tomaron nota de los desfasajes y amplitudes de la corriente de salida.
 
 
 \subsection{Filtros}
 
-El objetivo de esta parte fue experimentar con distintos tipos de filtros, para esto se contruyó un cirtuito que costaba de una resistencia $R = (5 \pm 0.05)k\Omega$, una capacitancia $C = (10.00 \pm 0.03)nF$ colocadas y un generador de funciones con una Amplitud $E_{0} = (9.4 \pm 0.2)V$, colocados en serie. Para un primer analisis, se utilizaron como terminales de salida los extremos del Capacitor obteniendo así, un filtro pasa-bajos, como se muestra en la \textbf{figura \ref{fig:RC-PB}}. Cabe destacar, que de la misma manera que se hizo durante los experimentos de resonancia, se aseguro la continuidad de todos los cables a utilizar.
+El objetivo de esta parte fue experimentar con distintos tipos de filtros, para esto se contruyó un cirtuito que constaba de una resistencia $R = (5 \pm 0.05)k\Omega$, una capacitancia $C = (10.00 \pm 0.03)nF$ y un generador de funciones con una amplitud $E_{0} = (9.4 \pm 0.2)V$, colocados en serie. Para un primer analisis, se utilizaron como terminales de salida los extremos del capacitor obteniendo así, un filtro Pasa-Bajos, como se muestra en la \textbf{Figura \ref{fig:RC-PB}}. Cabe destacar, que de la misma manera que se hizo durante los experimentos de resonancia, se aseguro la continuidad de todos los cables a utilizar.
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.9]{Circuito-RC-Pasa-Bajos}
-  \caption{Circuito RC capaz de filtrar corrientes con frecuencias altas, con un osciloscopio conectado en paralelo a la fuente y al capacitor}
+  \caption{Circuito RC con un osciloscopio conectado en paralelo a la fuente y al capacitor para medir desfasaje y tensión sobre este último para distintas frecuencias. Tanto la resistencia como la capacitancia son fijos}
   \label{fig:RC-PB}
 \end{figure}
 
-Antes de realizar las mediciones se calculo la frecuencia de corte del filtro para asegurar que se relevaran datos que correspondieran tanto a las señales que eran atenuadas como a las que no. Una vez realizada esa salvedad, se utilizo el mismo procedimiento de medicion que se utilizo con el circuito resonante. 
+Antes de realizar las mediciones se calculó la frecuencia de corte del filtro para asegurar que se relevaran datos que correspondieran tanto a las señales que eran atenuadas como a las que no. Una vez tomado esto en consideración, se utilizó el mismo procedimiento de medicion que se utilizo con el circuito resonante. 
 
-Una vez finalizadas las mediciones sobre el dispositivo, se procedio a ver el caso del filtro Pasa-Altos; para lo cual se cambiaron las terminales de salida, colocandose en los extremos de la resistencia como ilustra la \textbf{figura \ref{fig:RC-PA}}. No se realizaron variaciones en ninguno de los parametros, pero si se cambió la posicion de la descarga a tierra del generador de funciones para que coincidiera con la del osciloscopio.
+Una vez finalizadas las mediciones sobre el dispositivo, se procedio a ver el caso del filtro Pasa-Altos; para lo cual se cambiaron las terminales de salida, colocandose en los extremos de la resistencia como ilustra la \textbf{Figura \ref{fig:RC-PA}}. No se realizaron variaciones en ninguno de los parametros, pero si se cambió la posicion de la descarga a tierra del generador de funciones para que coincidiera con la del osciloscopio.
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.9]{Circuito-RC-Pasa-Altos}
-  \caption{Circuito RC capaz de filtrar corrientes con frecuencias bajas, con un osciloscopio conectado en paralelo a la fuente y al capacitor}
+  \caption{Circuito RC con un osciloscopio conectado en paralelo a la fuente y a la resistencia para medir desfasaje y tensión sobre esta última para distintas frecuencias. Tanto la resistencia como la capacitancia son fijos}
   \label{fig:RC-PA}
 \end{figure}
 
-El Procedimiento de medicion para este circuito, fue completamente analogo al realizado anteriormente con el circuito Pasa-Bajos. 
+El Procedimiento de medicion para este circuito, fue completamente análogo al realizado anteriormente con el circuito Pasa-Bajos. 
 
-Finalmente se procedio a combinar ambos filtros para, de esta menera, formar un pasa-banda como se puede ver en la \textbf{figura \ref{fig:RC-PBD}}. En este caso si se cambiaron los parametros. Se fijarom ambas resistencias en un valor $R = (1 \pm 0.009)k\Omega$ y una capacitancia $C_{1} = (10.02 \pm 0.02)nF$ y una $C_{2} = (100.0 \pm 0.3)nF$. Cabe destacar que estos valores se eligieron de forma tal que la frecuencia de corte del pasabajos sea un orden de magnitud mayor que la del pasa altos y asi poder apreciar la campana de transferencia. 
+Finalmente se procedió a combinar ambos filtros para formar un Pasa-Banda como se puede ver en la \textbf{Figura \ref{fig:RC-PBD}}. En este caso si se cambiaron los parametros. Se fijarom ambas resistencias en un valor $R = (1 \pm 0.009)k\Omega$ y una capacitancia $C_{1} = (10.02 \pm 0.02)nF$ y una $C_{2} = (100.0 \pm 0.3)nF$. Cabe destacar que estos valores se eligieron de forma tal que la frecuencia de corte del pasabajos sea un orden de magnitud mayor que la del pasa altos y asi poder apreciar la campana de transferencia. 
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.8]{Circuito-RC-Pasa-Banda}
-  \caption{Circuito RC capaz de filtrar las corrrientes cuya frecuencia este por fuera del ancho de banda estipulado por los parametros del mismo. Ambas resistencia 
-tienen el mismo valor y la capacitancia $c_{1}$ es menor que $c_{2}$}
+  \caption{Circuito Pasa-Banda de amplitud fija cuyas resistencias tienen el mismo valor y la capacitancia $c_{1}$ es 10 veces menor que $c_{2}$. Para distintas frecuencias se midió el desfasaje y la tensión de salida con el osciloscopio.}
   \label{fig:RC-PBD}
 \end{figure}
 
