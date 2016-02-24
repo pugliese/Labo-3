@@ -123,8 +123,6 @@ El bloque PN  en principio no permite el establecimiento de una corriente eléct
 
  Por el contrario, al aplicar una tensión positiva a la zona N y negativa a la zona P, se retiran portadores mayoritarios próximos a la unión. Estos portadores son atraídos hacia los contactos aumentando la anchura de la zona de agotamiento, lo cual hace que la corriente debido a los portadores mayoritarios sea nula. Ahora bien, en ambas zonas hay portadores minoritarios que son atraídos hacia la unión creando una corriente inversa, aunque muy inferior que la obtenida en polarización directa. Al aumentar la tensión inversa, llega un momento en que se produce la ruptura de la zona de deplección, al igual que sucede en un material aislante: el campo eléctrico puede ser tan elevado que arranque electrones que forman los enlaces covalentes, originando un proceso de rotura por avalancha y generando una corriente que respeta la ecuacion \eqref{Aprox} pero con una resistencia mayor.
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 3. DISPOSITIVO EXPERIMENTAL: armado del modelo, como se midio, consideraciones a la hora de medir.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -154,7 +152,7 @@ Para realizar las mediciones correspondientes, se conectó el osciloscopio en pa
 Una vez terminada la carecterizacion de los diodos, se procedió a construir rectificadores de corriente. Para cada uno de estos, se exploraron los parametros para ver en que punto se podía obtener una coriente continua.
 
 \subsubsection{Rectificador de media onda}
-En primer lugar, se construyó un rectificador de media onda utilizando un generador de funciones como fuente sinusoidal, un diodo simple, una resistencia $R = (5 \pm 0.05)\Omega$ y un capacitor $C = (9.81 \pm 0.07)\mu F$ conectado en paralelo a la resistencia como se ilustra en la \textbf{Figura \ref{fig:Re-M-O}}. De manera analoga al metodo utilizado para caracterizar lo diodos, se conectó un canal del osciloscopio en paralelo a la resistecia, para medir la corriente circulante; y el otro en paralelo a la fuente. Y, ademas, se aseguró la continuidad de los cables y que esta no se viera comprometida con movimientos aleatorios utilizando el multimetro.
+En primer lugar, se construyó un rectificador de media onda utilizando un generador de funciones como fuente sinusoidal, un diodo simple, una resistencia $R = (5 \pm 0.05)k\Omega$ y un capacitor $C = (9.81 \pm 0.07)\mu F$ conectado en paralelo a la resistencia como se ilustra en la \textbf{Figura \ref{fig:Re-M-O}}. De manera analoga al metodo utilizado para caracterizar lo diodos, se conectó un canal del osciloscopio en paralelo a la resistecia, para medir la corriente circulante; y el otro en paralelo a la fuente. Y, ademas, se aseguró la continuidad de los cables y que esta no se viera comprometida con movimientos aleatorios utilizando el multimetro.
 
 \begin{figure}[H]
 \centering
@@ -163,7 +161,7 @@ En primer lugar, se construyó un rectificador de media onda utilizando un gener
    \label{fig:Re-M-O}
 \end{figure}
 
-Para medir el ripple de la corriente de salida, se configuró el osciloscopio para que eliminara la componente continua de la señal y midiera la amplitud pico-pico. Fijada una frecuencia en el generador de funciones, se anotaba la amplitud marcada por el osciloscopio y se consideró un error para cada medicion lo suficientemente grande como para que contuviera las fluctuaciones de ese valor en pantalla además del error instrumental descripto más arriba. El proceso se iteró con distintas frecuencias.  Ademas, como metodo alternativo de medicion, se importaron los datos del osciloscopio a la computadora por medio de un programa de adquisicion de datos para un posterior analisis estadistico.
+Para medir el ripple de la corriente de salida, se configuró el osciloscopio para que eliminara la componente continua de la señal y midiera la amplitud pico-pico. Fijada una frecuencia en el generador de funciones, se anotaba la amplitud marcada por el osciloscopio y se consideró un error para cada medicion lo suficientemente grande como para que contuviera las fluctuaciones de ese valor en pantalla además del error instrumental descripto más arriba. El proceso se iteró con distintas frecuencias.  Ademas, como metodo alternativo de medicion, se importaron los datos del osciloscopio a la computadora con y sin la componente continua de la señal por medio de un programa de adquisicion de datos para un posterior analisis estadistico.
 
 \subsubsection{Rectificador de onda completa}
 En este caso se intentó diseñar un rectificador de onda completa, para esto se construyó un circuito que constaba de cuatro diodos idénticos, una resistencia variable por decadas y una fuente de voltaje sinusoidal dispuestos como se muestra en la \textbf{Figura \ref{fig:Rect-O}}. Previo a la construcción se observó que los cables no tuvieran discontinuidades. Cabe aclarar que durante esta experiencia no se utlizó el generador de funciones como fuente ya que, como los canales de salida del mismo tenian descarga a tierra, al igual que los del osciloscopio, seria necesario conectarlos en un mismo lugar, pero como se puede veren la \textbf{Figura \ref{fig:Rect-O}} eso no era posible, por lo cual se utilizó una fuente flotante. 
@@ -174,6 +172,8 @@ En este caso se intentó diseñar un rectificador de onda completa, para esto se
    \caption{Circuito que consta de una fuente de voltaje que varia en el tiempo de forma lineal, una resistencia R y un diodo D. Conectado a la resistencia y a la fuente se encuentra un osciloscopio}
    \label{fig:Rect-O}
 \end{figure}
+
+Al no disponer de una fuente de frecuencia variable, debió variarse la resistencia, la cual es proporcional al tiempo de carga del capacitor. Esto permite reducir la carga que un capacitor adquiere en un período de la señal y, por lo tanto, es equivalente a aumentar la frecuencia. 
 
 Para medir el ripple de la corrriente de salida se realizó el mismo proceso que para el rectificador de media noda, pero no se utilizó el metodo alternativo. Cabe destacar, que durante las mediciones se pudo observar que los movimientos del aire producidos por el ventilador de la sala e incluso por nuestras voces provocaban un efecto microfonico que interferia con las mediciones, por lo cual se intento mantener silencio en ese momento y se evitó medir en los momentos con viento.
 
@@ -187,6 +187,43 @@ Para medir el ripple de la corrriente de salida se realizó el mismo proceso que
 
 \subsection{Caracterización de Instrumentos}
 
+A la hora de caracterizar los instrumentos, como se dijo, se relevaron las curvas $V_f(t)$ y $V_R(t)$. Usando las leyes de Kirchoff, se obtuvo la caida de potencial en el diodo $V_D(t) = V_e(t)-V_R(t)$ y la corriente $I(t) = \frac{V_R(t)}{R}$ con $R = (600 \pm 6)\Omega$. Para el diodo simple, la relación entre $V_D$ e $I$ puede verse en la \textbf{Figura \ref{fig:simple_feo}}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{simple_feo}
+   \caption{Grafico inicial con la relacion entre $V_D$ e $I$ para un diodo simple obtenida indirectamente donde puede verse la gran dispersión de la curva}
+   \label{fig:simple_feo}
+\end{figure}
+
+Claramente, la curva de la \textbf{Figura \ref{fig:simple_feo}} posee una enorme cantidad de puntos muy cercanos al punto de resultar indistinguibles. Debido a esto, se buscó suavizar la señal con menos puntos con un método simple. Primero, se configuró un parametro de tolerancia $CT$ como error y se promediaron los valores de todas las corrientes $I(V_D)$ cuyos $V_D$ fueran indistinguibles dentro de este error $CT$. Estos $CT$ se tomaron de forma tal que la cantidad de puntos fuera menor que el que permitiría el error relativo del 3\% que dispone el instrumento aplicado sobre el valor máximo voltaje (en módulo) en cada tira de valores $V_D$. De esta forma, multiples puntos con $V_D$ cercanos fueron condensados en un único punto, permitiendo que la curva sea más clara como puede verse en la \textbf{Figura \ref{fig:simple_mejor}}. Un ajuste lineal de $R-Square = 0.97052$ asegura la bondad del ajuste con una pendiente $m_s = (0.02557 \pm 0,0018)\Omega^{-1}$ tal que $\frac{1}{m_s} = (39 \pm 3)\Omega= R_s$ resulta la resistencia del diodo simple.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{simple_mejor}
+   \caption{Grafico con la relacion entre $V_D$ e $I$ tras aplicar un análisis más fino para un diodo simple. El ajuste lineal en los últimos puntos asegura la linealidad del diodo para altos voltajes.}
+   \label{fig:simple_mejor}
+\end{figure}
+
+El proceso anterior debió aplicarse también a los resultados obtenidos para el diodo Zenek y el diodo LED. En el caso particular del Zenek, la tolerancia se tomó como $CT = 3.2E-6$ y en base al resultado fue posible apreciar el \textit{efecto avalancha} como puede verse en la \textbf{Figura \ref{fig:zenek}}. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{zenek}
+   \caption{Grafico con la relacion entre $V_D$ e $I$ para un diodo Zenek tras aplicar un análisis más fino. Los ajustes lineales en los últimos puntos y en los primeros puntos aseguran la linealidad del diodo a partir de determinados voltajes.}
+   \label{fig:zenek}
+\end{figure}
+
+El ajuste de los primeros puntos referentes al \textit{efecto avalancha} arroja un $R-Square = 0.96697$ que asegura la bondad del ajuste con una pendiente $m_I^{(z)} = (0.0080 \pm 0.0008)\Omega^{-1}$ tal que la resistencia del diodo a resulta $R_I^{(z)} = (125 \pm 13)\Omega$. Para los puntos finales, el ajuste arroja un $R-Square = 0.96297$ con una pendiente $m_D^{(z)} = (0.0142 \pm 0.0016)\Omega^{-1}$ tal que la resistencia para corriente en directa resulta $R_D^{(z)} = (70 \pm 8)\Omega$.
+
+Finalmente, para el caso del diodo LED la tolerancia se tomó como $CT = 6.4E-7$, arrojando el gráfico de la \textbf{Figura \ref{fig:LED}}. El ajuste lineal de los ultimos puntos arroja un $R_Square = 0.93178$ con una pendiente $m_L = (0.023 \pm 0.003)$ que resulta en una resistencia para corriente directa $R_L = (43 \pm 6)$
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{LED}
+   \caption{Grafico con la relacion entre $V_D$ e $I$ para un diodo LED tras aplicar un análisis más fino. El ajuste lineal en los últimos puntos permite asumir un comportamiento lineal para altos voltajes.}
+   \label{fig:LED}
+\end{figure}
 
 
 
@@ -194,14 +231,78 @@ Para medir el ripple de la corrriente de salida se realizó el mismo proceso que
 
 
 
-
 \subsubsection{Rectificador de media onda}
+
+Para cada frecuencia utilizada, se importaron ambas curvas como se dijo previamente. Algunos de los graficos obtenidos sin despreciar la componente continua pueden verse en la \textbf{Figura \ref{fig:rectificaciones}}, donde pueden verse los dos casos extremos de rectificación y un caso intermedio. Como puede verse, a medida que las frecuencias crecían, el ripple disminuía pero la componente continua se mantenía constante, por lo que las mediciones de los picos en este tipo de graficos acarrearían un enorme error. 
+
+\begin{figure}
+\begin{subfigure}{0.33\textwidth}
+\includegraphics[scale=0.25]{Rectificacion_10hz}
+  \caption{Frecuencia de $(10.000\pm0.001)Hz$}
+  \label{subfig:rec_10}
+\end{subfigure}
+\begin{subfigure}{0.33\textwidth}
+\includegraphics[scale=0.25]{Rectificacion_100hz}
+  \caption{Frecuencia de $(100.00\pm0.01)Hz$}
+  \label{subfig:rec_100}
+\end{subfigure}
+\begin{subfigure}{0.33\textwidth}
+\includegraphics[scale=0.25]{Rectificacion_1000hz}
+  \caption{Frecuencia de $(1000.0\pm0.1)Hz$}
+  \label{subfig:rec_1000}
+\end{subfigure}
+  \caption{Voltaje de entrada y de salida para tres frecuencias características que representan los casos extremos e intermedio de la rectificación de señales. }
+  \label{fig:rectificaciones}
+\end{figure}
+
+Por eso, se decidió utilizar los datos cuya componente continua había sido eliminada para hacer un análisis de los picos y así obtener un promedio de máximos y otro de mínimos que, restándose, permitían obtener el ripple para esa frecuencia. Estos valores junto con los proporcionados directamente por el osciloscopio pueden verse en la \textbf{Figura \ref{ripples_media}}, donde claramente puede verse que la mayor parte de los puntos resultan indistinguibles, pues coinciden dentro del error. Esto es realmente así para todos los valores con excepción de los ripples para $F = (50,000 \pm 0,005)Hz$, donde el ripple obtenido a través del osciloscopio es el doble que el obtenido restando los picos. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{ripples_media}
+   \caption{Relación de los ripples medidos directamente del osciloscopio y los calculados restando picos. Puede verse una superposición dentro del error de la mayor parte de los puntos}
+   \label{fig:ripples_media}
+\end{figure}
+
+Sin embargo, como se dijo, lo que importa es la relación entre el período $T = F^{-1}$ de la señal y el período $\Tau = RC = (49.1 \pm 0.8)ms$, por lo que si graficamos las relaciones anteriores en función de $\frac{T}{\Tau}$ en lugar de $F$, obtenemos los graficos de la \textbf{Figura \ref{fig:ripples_Tau}}.
+
+\begin{figure}
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[scale=0.35]{Ripple_Picos}
+  \caption{Relación entre $\frac{T}{\Tau}$ y las mediciones de ripple obtenidas promediando picos.}
+  \label{subfig:picos}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[scale=0.35]{Ripple_Osc}
+  \caption{Relación entre $\frac{T}{\Tau}$ y las mediciones de ripple obtenidas a través del osciloscopio}
+  \label{subfig:osc}
+\end{subfigure}
+  \caption{Ripples en función de  $\frac{T}{\Tau}$. El ajuste lineal es confiable para los primeros 4 puntos solamente en ambos casos}
+  \label{fig:ripples_Tau}
+\end{figure}
+
+El ajuste lineal de \textbf{Figura \ref{subfig:picos}} arroja un $R_Square = 0.99781$ con una pendiente $m_p = (2.93 \pm 0.07)V$ y ordenada $b_p = (0.02 \pmg 0.02)V$ mientras que el de la \textbf{Figura \ref{subfig:osc}} arroja un $R_Square = 0.99925$ con una pendiente $m_o = (2.90 \pm 0.04)V$ y ordenada $b_o = (0.042 \pmg 0.009)V$. Tanto las pendientes como las ordenadas resultan indistinguibles dentro del error. 
 
 
 \subsubsection{Rectificador de onda completa}
 
+Para esta sección, el análisis fue mucho más veloz tras haber concluído que los valores arrojados por el osciloscopio resultaban indistinguibles de los arrojados por el análisis, por lo que no era necesario el esfuerzo adicional. Los ripples obtenidos a través del osciloscopio para las distintas resistencias pueden verse en la \textbf{Figura \ref{ripples_completa}}.
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{ripples_completa}
+   \caption{Relación de los ripples medidos directamente del osciloscopio y la resistencia utilizada.}
+   \label{fig:ripples_completa}
+\end{figure}
 
+Nuevamente, se graficaron los riples en función de $\frac{T}{\Tau}$ donde $T = (20.000 \pm 0.002)ms$ y nuevamente $\Tau = RC$, obteniendo el gráfico de la \textbf{Figura \ref{fig:completa_lineal}}. El ajuste lineal arroja un $R-Square = 0.98897$ que asegura la bondad del ajuste junto con una pendiente $m = (0.41 \pm 0.02)V$ y una ordenada $b = (0.04 \pm 0.02)V$. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{completa_lineal}
+   \caption{Relación de los ripples medidos y $\frac{T}{\Tau}$. El ajuste lineal es preciso para todo el rango de valores manejado}
+   \label{fig:completa_lineal}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	CONCLUSIONES
