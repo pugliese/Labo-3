@@ -81,7 +81,7 @@
 
 \section{Introducción}\label{sec:intro}
 
-Para un circuito RLC con una fuente de corriente alterna de la forma $\varepsilon(t) = E_{0}cos(\omega t)$ con una resistencia $R$, una inductancia $L$ y una capacitancia $C$ en serie la ecuacion diferencial que rige la evolución del sistema está dada por $\frac{d^2q}{dt^2}L+\frac{dq}{dt}R+\frac{q}{C} = \varepsilon = E_{0}cos(\omega t)$ donde $q = q(t)$ representa la carga del capacitor $C$. En particular, es posible buscar la solución compleja de la ecuación $\frac{d^2Q}{dt^2}L+\frac{dQ}{dt}R+\frac{Q}{C} = \varepsilon = E_{0}e^{i\omega t}$ donde Q es tal que $Re(Q) = q$. Para este sistema, recordando que $\mathbb{I}(t) = \frac{dQ}{dt}$, la solución resulta $\mathbb{I}(t) = \frac{E_0e^{i\omega t}}{Z}$ donde $Z = R +i(\omega L-\frac{1}{\omega C})$ es la \textit{impedancia} total del circuito. Para esta corriente $\mathbb{I}(t)$, la caida de potencial sobre la resistencia $R$ resulta, según la Ley de Ohm: 
+Para un circuito RLC con una fuente de corriente alterna de la forma $\varepsilon(t) = E_{0}cos(\omega t)$ con una resistencia $R$, una inductancia $L$ y una capacitancia $C$ en serie la ecuacion diferencial que rige la evolución del sistema está dada por $\frac{d^2q}{dt^2}L+\frac{dq}{dt}R+\frac{q}{C} = \varepsilon = E_{0}cos(\omega t)$\cite{Trelles} donde $q = q(t)$ representa la carga del capacitor $C$. En particular, es posible buscar la solución compleja de la ecuación $\frac{d^2Q}{dt^2}L+\frac{dQ}{dt}R+\frac{Q}{C} = \varepsilon = E_{0}e^{i\omega t}$ donde Q es tal que $Re(Q) = q$. Para este sistema, recordando que $\mathbb{I}(t) = \frac{dQ}{dt}$, la solución resulta $\mathbb{I}(t) = \frac{E_0e^{i\omega t}}{Z}$ donde $Z = R +i(\omega L-\frac{1}{\omega C})$ es la \textit{impedancia} total del circuito. Para esta corriente $\mathbb{I}(t)$, la caida de potencial sobre la resistencia $R$ resulta, según la Ley de Ohm\cite{Trelles}: 
 
 \begin{equation}
 \mathbb{V}_R(t) = R\mathbb{I}(t) = \frac{RE_0e^{i\omega t}}{R +i(\omega L-\frac{1}{\omega C})}
@@ -102,7 +102,7 @@ tan(\phi) = \frac{L\omega}{R} - \frac{1}{RC\omega}
 \label{eq:2}
 \end{equation}
 
-Volviendo a \eqref{eq:1}, dado que $E_0$ y $R$ son constantes, el valor de $\omega$ que maximiza la caida de potencial $V_R$ es el que minimiza el denominador, anulando la parte reactiva $(\omega L - \frac{1}{\omega C})$. Este $\omega_0$ que maximiza $V_R$ es llamado \textit{frecuencia de resonancia} y coincide con la \textit{frecuencia natural} de un circuito LC no resistivo (donde $R=0$). En particular, es de la forma 
+Volviendo a \eqref{eq:1}, dado que $E_0$ y $R$ son constantes, el valor de $\omega$ que maximiza la caida de potencial $V_R$ es el que minimiza el denominador, anulando la parte reactiva $(\omega L - \frac{1}{\omega C})$. Este $\omega_0$ que maximiza $V_R$ es llamado \textit{frecuencia de resonancia} y coincide con la \textit{frecuencia natural} de un circuito LC no resistivo\cite{Trelles} (donde $R=0$). En particular, es de la forma 
 
 \begin{equation}
 \omega_{0}^2= \frac{1}{LC}
@@ -139,7 +139,7 @@ En este caso, $V_{R} (\omega)$ no tiene máximo dado que la parte reactiva $\fra
 
 Como puede verse, los circuitos con inductancias $L$ y capacitancias $C$ tienen tal interacción con las frecuencias de una fuente de corriente alterna que es posible combinarlos para que atenuen determinadas frecuencias dejando pasar otras. Esto es lo que se denomina como \textit{filtro}. Los filtros más básicos que existen son el Pasa-Altos y el Pasa-Bajos, que no son más que circuitos RC serie identicos. Lo que varía es la ubicación de las terminales con las que se conectan al resto del circuito. 
 
-Usando una fuente de corriente alterna $\varepsilon(t) = E_{0}e^{i\omega t}$, para un circuito RC de resistencia $R$ y capacitancia $C$ la impendancia es de la forma $Z = R-\frac{i}{\omega C}$. Por lo tanto, la corriente resulta $I(t) = \frac{\varepsilon(t)}{Z}$. A la constante $E_0$ se la llama \textit{voltaje de entrada}. Nuevamente, la solución compleja es de la forma $\mathbb{I}(t) = I_0e^{i\omega t-\phi}$ donde $I_0 = \frac{E_0}{|Z|}$. A la amplitud de la caida de potencial sobre el elemento en cuestión (resistencia $R$ o capacitor $C$) se le llama \textit{voltaje de salida} $V_e$. Para normalizar la relación entre $V_e$ y $V_s$ se define la \textit{transmisión} como $T=\frac{|V_s|}{|V_e|}=\frac{|V_s|}{E_0}$. Además, se define la \textit{frecuencia de corte} de una transmisión como el $\omega_c$ tal que $T(\omega_c) = \frac{\sqrt{2}}{2}$.
+Usando una fuente de corriente alterna $\varepsilon(t) = E_{0}e^{i\omega t}$, para un circuito RC de resistencia $R$ y capacitancia $C$ la impendancia es de la forma $Z = R-\frac{i}{\omega C}$. Por lo tanto, la corriente resulta $I(t) = \frac{\varepsilon(t)}{Z}$. A la constante $E_0$ se la llama \textit{voltaje de entrada}. Nuevamente, la solución compleja es de la forma $\mathbb{I}(t) = I_0e^{i\omega t-\phi}$ donde $I_0 = \frac{E_0}{|Z|}$. A la amplitud de la caida de potencial sobre el elemento en cuestión (resistencia $R$ o capacitor $C$) se le llama \textit{voltaje de salida} $V_e$. Para normalizar la relación entre $V_e$ y $V_s$ se define la \textit{transmisión} como $T=\frac{|V_s|}{|V_e|}=\frac{|V_s|}{E_0}$. Además, se define la \textit{frecuencia de corte}\cite{Trelles} de una transmisión como el $\omega_c$ tal que $T(\omega_c) = \frac{\sqrt{2}}{2}$.
 
 Si se mide la caida de potencial sobre la resistencia $R$, la ley de ohm dicta que $\mathbb{V}_R = R.\mathbb{I} = RI_0e^{i\omega t -\phi}$ donde se define nuevamente $I_0 = \frac{E_0}{|Z|}$ de forma tal que resulta $V_s(\omega) = \frac{RE_0}{\sqrt{R^2+(\omega C)^2}}$. Por lo tanto, la transmisión tiene la forma
 
@@ -189,7 +189,7 @@ T(\omega) = [(R_1+R_2)^2(1+\frac{C_1}{C_2})^2+(R_1R_2C_1\omega-\frac{1}{\omega C
 \label{trans_PBanda}
 \end{equation}
 
-cuyo máximo se encuentra en $\omega_m^2 = \frac{1}{R_1R_2C_1C_2} = \omega_{PB}.\omega_{PA}$ donde $\omega_{PB}$ y $\omega_{PA}$ son las frecuencias de corte del Pasa-Bajos y Pasa-Altos, respectivamente. La máxima transmisión para esa frecuencia resulta $T(\omega_m) = [(1+\frac{R_1}{R_2})(1+\frac{C_1}{C_2})]^{-1} = T_{max}$. Definiendo las \textit{frecuencias de corte} $\omega_1$ y $\omega_2$ tales que $T(\omega_1) = \frac{T_{max}}{\sqrt{2}} = T(\omega_2)$, resultan
+cuyo máximo se encuentra en $\omega_m^2 = \frac{1}{R_1R_2C_1C_2} = \omega_{PB}.\omega_{PA}$ donde $\omega_{PB}$ y $\omega_{PA}$ son las frecuencias de corte del Pasa-Bajos y Pasa-Altos, respectivamente. La máxima transmisión para esa frecuencia resulta $T(\omega_m) = [(1+\frac{R_1}{R_2})(1+\frac{C_1}{C_2})]^{-1} = T_{max}$. Definiendo las \textit{frecuencias de corte}\cite{Trelles} $\omega_1$ y $\omega_2$ tales que $T(\omega_1) = \frac{T_{max}}{\sqrt{2}} = T(\omega_2)$, resultan
 
 \begin{equation}
 \omega_{1,2} = \sqrt{[\frac{1}{2}(\frac{1}{R_1}+\frac{1}{R_2})(\frac{1}{C_1}+\frac{1}{C_2})]^2+\frac{1}{R_1R_2C_1C_2}} \pm \frac{1}{2}(\frac{1}{R_1}+\frac{1}{R_2})(\frac{1}{C_1}+\frac{1}{C_2})
@@ -283,15 +283,15 @@ Una vez finalizada la construccion del dispositivo, se procedio a medir de la ma
 
 \subsection{Resonancia y Anti-resonancia}
 
-Sabiendo que, sobre la resistencia, la diferencia de potencial $V_R$ es proporcional a la amplitud corriente $I_0$; se midieron estas difencia de potencial sobre la resistencia $R$ de cada circuito para poder ajustarlo con la ecuación \textbf{\eqref{eq:1}} en los circuitos resonantes y \textbf{\eqref{eq:3}} en los circuitos anti-resonantes.  
+Sabiendo que, sobre la resistencia, la diferencia de potencial efectiva es proporcional a la corriente efectiva; se midieron estas difencia de potencial sobre la resistencia $R$ de cada circuito para poder ajustarlo con la ecuación \textbf{\eqref{eq:1}} en los circuitos resonantes y \textbf{\eqref{eq:3}} en los circuitos anti-resonantes.  
 
-Puesto que para el estudio de los circuitos resonante y anti-resonantes se utilizaron una capacitancia $C= (9.95 \pm 0.07)nF$ y una inductancia $L= (1.000 \pm 0.002) H$, la valor teórica de la frecuencia angular de resonancia dado por \textbf{\eqref{eq:F_res}} es $\omega_{0}=(10030 \pm 150) Hz$ para todos los circuitos.
+Puesto que para el estudio de los circuitos resonante y anti-resonantes se utilizaron una capacitancia $C= (9.95 \pm 0.07)nF$ y una inductancia $L= (0.999 \pm 0.008) H$, el valor teórico de la frecuencia angular de resonancia dado por \textbf{\eqref{eq:F_res}} es $\omega_{0}=(10.03 \pm 0.15) kHz$ para todos los circuitos.
 
 En primer lugar se hizo el análisis de resonancia. Para ello se utilizo el sistema que tiene en serie la inductancia $L$, la capacitancia $C$ y la resistencia $R$; por lo que, al conciderarse despreciable la resistencia de $C$, la resistencia total del circuito era $R_{total} = R+R_{L}$ donde $R_{L} = (296 \pm 3)$ es la resistencia que impone la inductancia.
 
 De las mediciones obtenidas para los circuitos con resistencia $R=(5.00 \pm 0.05)K\Omega$ y $R=(500.0 \pm 0.2)\Omega$ se pudieron esbozar los gráficos que muestran las \textbf{Figuras \ref{subfig:RES_I.a}} y \textbf{\ref{subfig:RES_I.b}} respectivamente.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 
 \begin{subfigure}{0.5\textwidth}
 \includegraphics[scale=0.3]{RLC_RES_5000_VvsF}
@@ -303,18 +303,18 @@ De las mediciones obtenidas para los circuitos con resistencia $R=(5.00 \pm 0.05
   \caption{Resonancia 500 $\Omega$}
   \label{subfig:RES_I.b}
 \end{subfigure}
-  \caption{Circuitos RLC resonancia: $I_{ef}$}
+  \caption{Relación entre caida de potencial sobre la resistencia $R$ y frecuencia para distintas resistencias en un circuito resonante}
   \label{fig:RES_I}
 \end{figure}
 
-Para el primer caso, para $R=(5.00 \pm 0.05)K\Omega$, se realizó un ajuste según \eqref{eq:1}. De manera que el coeficiente $R-Square = 0.99985$ garantizó la bondad de dicho ajuste, y utilizando los parámetros obtenidos se calcularon el máximo de potencial $V_{max}=(4.6 \pm 0.8)$ para una frecuencia $\omega_{res} = (10425 \pm 2500)Hz$, resultando entonces una frecuencia idéntica al valor teórico $\omega_0 = (10030 \pm 150)Hz$. A su vez se obtuvo un ancho de banda $\Delta\omega = (5590 \pm 1200) Hz$, y usando \textbf{\eqref{deltaomega}} se obtiene un valor teórico $\Delta\omega_{teo} = (5300 \pm 90)Hz$ teniendo entonces dos resultados indistinguibles al coincidir en un intervalo. 
+Para el primer caso, para $R=(5.00 \pm 0.05)K\Omega$, se realizó un ajuste según \eqref{eq:1}. De manera que el coeficiente $R-Square = 0.99985$ garantizó la bondad de dicho ajuste, y utilizando los parámetros obtenidos se calcularon el máximo de potencial $V_{max}=(4.6 \pm 0.8)$ para una frecuencia $\omega_{res} = (10.4 \pm 2.5)kHz$, resultando entonces una frecuencia idéntica al valor teórico $\omega_0 = (10.03 \pm 0.150)Hz$. A su vez se obtuvo un ancho de banda $\Delta\omega = (5.6 \pm 1.200) kHz$, y usando \textbf{\eqref{deltaomega}} se obtiene un valor teórico $\Delta\omega_{teo} = (5.30 \pm 0.09)kHz$ teniendo entonces dos resultados indistinguibles al coincidir en un intervalo. 
 
 
-Luego, para $R=(500 \pm 2)\Omega$, el coeficiente $R-Square = 0.99981$ garantizó la bondad del ajuste dado por \textbf{\eqref{eq:1}}. Por lo que se pudo calcular la frecuencia de resonancia $\omega_{res}= (10753 \pm 1000) Hz$ con un máximo de amplitud $V_{max}=(2.4 \pm 0.4) V$. Se puede ver entonces que la frecuencia de resonancia obtenida coincide con el resultado teórico $\omega_0 = (10030 \pm 150) Hz$. Ademas se calculó un ancho de banda $\Delta\omega = (697 \pm 200)Hz$, y utilizando \textbf{\eqref{deltaomega}} se obtuvo su valor teórico $\Delta\omega_{teo} = (729 \pm 6) Hz$ por lo cual, al coincidir en un intervalor, se concideran indistinguibles.
+Luego, para $R=(500 \pm 2)\Omega$, el coeficiente $R-Square = 0.99981$ garantizó la bondad del ajuste dado por \textbf{\eqref{eq:1}}. Por lo que se pudo calcular la frecuencia de resonancia $\omega_{res}= (10 \pm 1) kHz$ con un máximo de amplitud $V_{max}=(2.4 \pm 0.4) V$. Se puede ver entonces que la frecuencia de resonancia obtenida coincide con el resultado teórico $\omega_0 = (10.03 \pm 0.15) kHz$. Ademas se calculó un ancho de banda $\Delta\omega = (697 \pm 200)Hz$, y utilizando \textbf{\eqref{deltaomega}} se obtuvo su valor teórico $\Delta\omega_{teo} = (729 \pm 6) Hz$ por lo cual, al coincidir en un intervalo, se concideran indistinguibles.
 
 Por otro lado también se registraron los valores de la diferencia de fase entre la señal de entrada y la señal de salida, para obtener los gráficos que muestran las \textbf{Figuras \ref{subfig:RES_D.a}}, para $R=(5.00 \pm 0.05) K\Omega$, y \textbf{\ref{subfig:RES_D.b}} para $R=(500 \pm 2)\Omega$.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \begin{subfigure}{0.5\textwidth}
 \includegraphics[scale=0.34]{RLC_RES_5000_Tan(fase)vsF}
   \caption{Resonancia 5000 $\Omega$}
@@ -325,13 +325,13 @@ Por otro lado también se registraron los valores de la diferencia de fase entre
   \caption{Resonancia 500 $\Omega$}
   \label{subfig:RES_D.b}
 \end{subfigure}
-  \caption{Circuitos RLC resonancia: \textit{Desfasaje}}
+  \caption{Relación entre el desfasaje y frecuencia para distintas resistencias en un circuito resonante}
   \label{fig:RES_D}
 \end{figure}
 
-Por lo que, al obtener un $R-Square = 0.99885$ se garantizó la bondad del ajuste de la \textbf{Figura \ref{subfig:RES_D.a}} dado por \textbf{\eqref{eq:2}}. Entonces, despejando de los parametros, se encontró que las dos señales están en fase cuando $\omega = ( 9978 \pm 90) Hz$ coincidiendo con la frecuencia de resonancia $\omega_{0} = (10030 \pm 150) Hz$.
+Por lo que, al obtener un $R-Square = 0.99885$ se garantizó la bondad del ajuste de la \textbf{Figura \ref{subfig:RES_D.a}} dado por \textbf{\eqref{eq:2}}. Entonces, despejando de los parametros, se encontró que las dos señales están en fase cuando $\omega = ( 9.99 \pm 0.09) kHz$ coincidiendo con la frecuencia de resonancia $\omega_{res} = (10.03 \pm 15) kHz$.
 
-De la misma manera, el ajuste de \textbf{\ref{subfig:RES_D.b}} por la ecuación \eqref{eq:2} dio un $R-Square = 0.99091$, nuevamente garantizando la bondad del ajuste. Y se obtuvo entonces que las dos señales estaban en fase cuando $\omega = (10036 \pm 220) Hz$ siendo indistinguible de la frecuencia de resonancia $\omega_{0} = (10030 \pm 150) Hz$.
+De la misma manera, el ajuste de \textbf{\ref{subfig:RES_D.b}} por la ecuación \eqref{eq:2} dio un $R-Square = 0.99091$, nuevamente garantizando la bondad del ajuste. Y se obtuvo entonces que las dos señales estaban en fase cuando $\omega = (10.0 \omega 0.2) kHz$ siendo indistinguible de la frecuencia de resonancia $\omega_{res} = (10.03 \pm 15) kHz$.
 
 \bigskip
 
@@ -355,10 +355,10 @@ A partir de las mediciones obtenidas para los circuitos con resistencia $R=(5.00
   \label{fig:ARES_I}
 \end{figure}
 
-Para el circuito con $R=(5.00 \pm 0.05)K\Omega$ del ajuste la \textbf{Figura \ref{subfig:ARES_I.a}} según \eqref{eq:3} se obtuvo un coeficiente $R-Square = 0.99903$ garantizando que el ajuste es el correcto. Por lo cual se pudo obtener un mínimo de potencial $V_{min} = (0.0 \pm 0.1)V$ en la frecuencia $\omega_{anti-res} = (9991 \pm 300) Hz$, teniendo entonces que la frecuencia de anti-resonancia es idéntica 
-a su valor teórico $\omega_0 = (10030 \pm 150) Hz$. Tambien se calculó un ancho de banda $\Delta\omega = (20708 \pm 2500) Hz$ el cual coincide con el valor teorico, obtenido a partir de \textbf{\eqref{deltaomega2}}, $\Delta\omega_{teo}=(20100 \pm 350)$.
+Para el circuito con $R=(5.00 \pm 0.05)K\Omega$ del ajuste la \textbf{Figura \ref{subfig:ARES_I.a}} según \eqref{eq:3} se obtuvo un coeficiente $R-Square = 0.99903$ garantizando que el ajuste es el correcto. Por lo cual se pudo obtener un mínimo de potencial $V_{min} = (0.0 \pm 0.1)V$ en la frecuencia $\omega_{anti-res} = (10.0 \pm 0.3) kHz$, teniendo entonces que la frecuencia de anti-resonancia es idéntica 
+a su valor teórico $\omega_0 = (10.03 \pm 0.15) kHz$. Tambien se calculó un ancho de banda $\Delta\omega = (20.7 \pm 2.5) kHz$ el cual coincide con el valor teorico, obtenido a partir de \textbf{\eqref{deltaomega2}}, $\Delta\omega_{teo}=(20.1 \pm 0.4)$.
 
-De igual manera, para $R=(1.00 \pm 0.01)K\Omega$, se ajustó la \textbf{Figura \ref{subfig:ARES_I.b}} por \textbf{\eqref{eq:3}}, confirmando la bondad de este ajuste con un coeficiente $R-Square = 0.99978$. En este caso para una frecuencia $\omega_{anti-res} =(10065 \pm 80)Hz$ se obtuvo un mimimo de potencia $V_{min} = (0.0 \pm 0.2)V$, la cual coincide con el valor teórico $\omega_0 = (10030 \pm 150) Hz$. Y el ancho de banda obtenido es $\Delta\omega = (101285 \pm 3000)Hz$, mientras que el valor teórico dado por \textbf{\eqref{deltaomega2}} es $\Delta\omega = (10052 \pm 1500)Hz$, y puesto que coinciden en un intervalos se los considera indistinguibles.
+De igual manera, para $R=(1.00 \pm 0.01)K\Omega$, se ajustó la \textbf{Figura \ref{subfig:ARES_I.b}} por \textbf{\eqref{eq:3}}, confirmando la bondad de este ajuste con un coeficiente $R-Square = 0.99978$. En este caso para una frecuencia $\omega_{anti-res} =(10.07 \pm 0.08)kHz$ se obtuvo un mimimo de potencia $V_{min} = (0.0 \pm 0.2)V$, la cual coincide con el valor teórico $\omega_0 = (10.03 \pm 0.15) kHz$. Y el ancho de banda obtenido es $\Delta\omega = (10 \pm 3)kHz$, mientras que el valor teórico dado por \textbf{\eqref{deltaomega2}} es $\Delta\omega = (10.1 \pm 1.5)kHz$, y puesto que coinciden en un intervalos se los considera indistinguibles.
 
 \bigskip
 
@@ -380,7 +380,7 @@ Del registro de la diferencia de fase entre las señales de entrada y salida se 
   \label{fig:ARES_D}
 \end{figure}
 
-Como se puede ver en ambas figuras, para frecuencia mayores a la frecuencia de resonancia el ajuste propuesto por \eqref{eq:4} fue efectivamente la correcta al obtener un coeficiente $R-Square=0.99072$ para $R=(5.00 \pm 0.05)K\Omega$ y $R-Square=0.99743$ para $R=(1.00 \pm 0.01)K\Omega$. Sin embargo para frecuencias menores no se pudo realizar un ajuste correcto, pues para $R=(1.00 \pm 0.01)K\Omega$ no se obtuvieron suficientes mediciones y para $R=(5.00 \pm 0.05)K\Omega$ se obtuvo un coeficiente $R=(0.79899)$ el cual se consideró insuficiente para garantizar la bondad del ajuste.
+Como se puede ver en ambas figuras, para frecuencia mayores a la frecuencia de resonancia el ajuste propuesto por \eqref{eq:4} fue efectivamente la correcta al obtener un coeficiente $R-Square=0.99072$ para $R=(5.00 \pm 0.05)K\Omega$ y $R-Square=0.99743$ para $R=(1.00 \pm 0.01)K\Omega$. Sin embargo para frecuencias menores no se pudo realizar un ajuste correcto, pues para $R=(1.00 \pm 0.01)K\Omega$ no se obtuvieron suficientes mediciones y para $R=(5.00 \pm 0.05)K\Omega$ se obtuvo un coeficiente $R=0.79899$ el cual se consideró insuficiente para garantizar la bondad del ajuste.
 
 \newpage
 
@@ -404,12 +404,12 @@ De las mediciones realizadas para el estudio del filtro Pasa-Bajo se obtuvieron 
 \end{figure}
 
 
-De ambos gráficos se obtuvo un ajuste satisfactorio. En primer lugar, del ajuste de la \textbf{Figura \ref{subfig:PB.a}} dado por \eqref{trans_PA} se obtuve un $R-Square = 0.99944$ el cual garantizaba la bondad del ajuste. A partir del cual se obtuvo una frecuencia de corte $\omega_C = (20151 \pm 140) hz$, mientras que el valor teórico es $\omega_c = (20000 \pm 250)$, por lo que al coincidir en un intervalo se los considera indistinguibles. Luego, del ajuste de \textbf{Figura \ref{subfig:PB.b}} se obtuvo un $R-Square=0.99708$, asegurando entonces que el ajuste dado por \eqref{des_PBaj} es el correcto, garantizando la relación entre fase y frecuencia para este circuito pasa-bajos.
+De ambos gráficos se obtuvo un ajuste satisfactorio. En primer lugar, del ajuste de la \textbf{Figura \ref{subfig:PB.a}} dado por \eqref{trans_PA} se obtuvo un $R-Square = 0.99944$ el cual garantizaba la bondad del ajuste. A partir es este se obtuvo una frecuencia de corte $\omega_C = (20.15 \pm 0.14) Khz$, mientras que el valor teórico es $\omega_c = (20.0 \pm 0.3)kHz$, por lo que al coincidir en un intervalo se los considera indistinguibles. Luego, del ajuste de \textbf{Figura \ref{subfig:PB.b}} se obtuvo un $R-Square=0.99708$, asegurando entonces que el ajuste dado por \eqref{des_PBaj} es el correcto, garantizando la relación entre fase y frecuencia para este circuito pasa-bajos.
 
 
 \bigskip
 
-Por otro lado, a partir de las mediciones hechas para el filtro Pasa-Altso se pudieron obtener los gráficos que muestran la \textbf{Figura \ref{subfig:PA.a}} y \textbf{\ref{subfig:PA.b}}, transferencia y desfasaje respectivamente.
+Por otro lado, a partir de las mediciones hechas para el filtro Pasa-Altos se pudieron obtener los gráficos que muestran la \textbf{Figura \ref{subfig:PA.a}} y \textbf{\ref{subfig:PA.b}}, transferencia y desfasaje respectivamente.
 
 \begin{figure}[h]
 \begin{subfigure}{0.5\textwidth}
@@ -426,7 +426,7 @@ Por otro lado, a partir de las mediciones hechas para el filtro Pasa-Altso se pu
   \label{fig:PA}
 \end{figure}
 
-Nuevamente, los ajustes resultaron satisfactorios. Del gráfico de la transferencia en la \textbf{Figura (\ref{subfig:PA.a})} se realizó un ajuste según \eqref{trans_PA}, obteniendo un $R-Square = 0.99953$. Con lo cual se pudó obtener una frecuencia de corte $\omega_C = (20344 \pm 125)Hz$, que al igual que el caso anterior se lo resulta idéntico al valor teórico $\omega_c = (20000 \pm 250)Hz$. Y por otro lado, del gráfico del desfasaje \textbf{Figura (\ref{subfig:PA.b})} se ajustó correctamente utilizando la ecuación \eqref{des_PBaj} al obtener un $R-Square = 0.99832$, garantizando la relación entre la fase y la frecuencia para este circuito pasa-altos.
+Nuevamente, los ajustes resultaron satisfactorios. Del gráfico de la transferencia en la \textbf{Figura (\ref{subfig:PA.a})} se realizó un ajuste según \eqref{trans_PA}, obteniendo un $R-Square = 0.99953$, con lo cual se pudó obtener una frecuencia de corte $\omega_C = (20.34 \pm 0.13)kHz$, que al igual que el caso anterior resulta idéntico al valor teórico $\omega_c = (20.0 \pm 0.3)kHz$. Por otro lado, del gráfico del desfasaje \textbf{Figura (\ref{subfig:PA.b})} se ajustó correctamente utilizando la ecuación \eqref{des_PBaj} al obtener un $R-Square = 0.99832$, garantizando la relación entre la fase y la frecuencia para este circuito pasa-altos.
 
 \bigskip
 
@@ -447,7 +447,7 @@ Por ultimo, de las mediciones obtenidas del circuito Pasa-Bandas se realizaron l
   \label{fig:PBANDA}
 \end{figure}
 
-Entonces, el gráfico de la \textbf{Figura \ref{subfig:PBAN.a}} se lo ajustó usando la ecuación \eqref{trans_PBanda}. Al obtener un $R-Square= 0.99988$ se garantizó dicho ajuste, y utilizando los parámetros obtenidos se despejaron unas frecuencias de corte $\omega_1 = (4491 \pm 1200)Hz$ y $\omega_2 = (216970 \pm 1200)Hz$, mientras que al utilizar \eqref{corte_PBanda} se obtienen los valor teóricos $\omega_1 = (4455 \pm 250) Hz$ y $\omega_2 = (224455 \pm 250) Hz$. Teniendo entonces que las frecuencias $\omega_1$ son identicas al coincidir en un intervalo; sin embargo esto no sucede para las $\omega_2$.
+Entonces, al gráfico de la \textbf{Figura \ref{subfig:PBAN.a}} se lo ajustó usando la ecuación \eqref{trans_PBanda}. Al obtener un $R-Square= 0.99988$ se garantizó dicho ajuste, y utilizando los parámetros obtenidos se despejaron unas frecuencias de corte $\omega_1 = (4.5 \pm 1.2)KHz$ y $\omega_2 = (216.9 \pm 1.2)kHz$, mientras que al utilizar \eqref{corte_PBanda} se obtienen los valor teóricos $\omega_1 = (4.5 \pm 0.3) kHz$ y $\omega_2 = (224.5 \pm 0.3) kHz$. Se tiene entonces que las frecuencias $\omega_1$ son identicas al coincidir en un intervalo; sin embargo esto no sucede para las $\omega_2$.
 Por otro lado, se ajustó el gráfico de la \textbf{Figura \ref{subfig:PBAN.b}} usando \eqref{des_PBanda}. Al obtener un $R-Square = 0.9996$ se considero correcto el ajuste, por lo cual se pudo garantizar la relación entre fase y frecuencia para el circuito pasa-banda.
 
 \label{sec:discusion}
@@ -460,11 +460,11 @@ Por otro lado, se ajustó el gráfico de la \textbf{Figura \ref{subfig:PBAN.b}} 
 
 \section{Conclusiones}
 
-En primer lugar, los resultados obtenidos del estudio las frecuencias de resonancia en el circuito resonante y anti-resonante fueron satisfactorios. A partir de los ajustes realizados en los correspondientes circuitos, se pudieron calcular las frecuencias de resonancia las cuales coincidían con el valor esperado $\omega_0 = (10030 \pm 150)hz$. Se puede ver esto en el caso de resonancia donde para $R=(5.00 \pm 0.05)K\Omega$ se obtuvo $\omega_res = (10425 \pm 2500)Hz$, para $R= (500 \pm 2)$  se obtuvo $\omega_res = (10753 \pm 1000)Hz$; mientras que en el caso de anti-resonancia para $R=(5.00 \pm 0.05)K\Omega$ se obtuvo $\omega_{anti-res} = (9991 \pm 300)Hz$ y para $R=(1.00 \pm 0.01)K\Omega$ se obtuvo $\omega_{anti-res} = (10065 \pm 80)Hz$. Teniendo entonces que los valores obtenidos coinciden en un intervalo, por lo tanto se consideran identicos al valor teorico. 
+En primer lugar, los resultados obtenidos del estudio las frecuencias de resonancia en el circuito resonante y anti-resonante fueron satisfactorios. A partir de los ajustes realizados en los correspondientes circuitos, se pudieron calcular las frecuencias de resonancia las cuales coincidían con el valor esperado $\omega_0 = (10.03 \pm 0.15)kHz$. Se puede ver esto en el caso de resonancia donde para $R=(5.00 \pm 0.05)K\Omega$ se obtuvo $\omega_res = (10.4 \pm 2.5)kHz$, para $R= (500 \pm 2)$  se obtuvo $\omega_res = (11 \pm 1)kHz$; mientras que en el caso de anti-resonancia para $R=(5.00 \pm 0.05)K\Omega$ se obtuvo $\omega_{anti-res} = (10.0 \pm 0.3)kHz$ y para $R=(1.00 \pm 0.01)K\Omega$ se obtuvo $\omega_{anti-res} = (10.07 \pm 0.08)Hz$. Teniendo entonces que los valores obtenidos coinciden en un intervalo, por lo tanto se consideran identicos al valor teorico. 
 
-Por otro lado, para el circuito resonante se pudo comprobar la relación entre fase y frecuencia propuesta por \eqref{des_PBaj}; por lo cual a partir de los correspondientes gráficos se observó que la frecuencia en la que ambas señales se ponen en fase es $\omega = (9978 \pm 90)$ para $R=(5.00 \pm 0.05)K\Omega$, y $\omega = (10036 \pm 220)$ para $R=(500 \pm 2)\Omega$. Y al coincidir cada frecuencia de fase con su correspondiente frecuencia de resonancia, se pudo verificar que en los circuitos resonantes la señal de entrada y salida están en fase para la frecuencia de resonancia. Sin embargo, no fue asi para el circuito anti-resonante, donde no se pudieron realizar los ajuste correspondientes para frecuencias menores a la de resonancia. Esto puede deberse que en el marco teórico se considera despreciable la resistencia que impone la inductancia $L$, resistencia que puede considerarse despreciable para frecuencias altas pero no es así para frecuencias bajas; de modo que cambiaría el valor de la impedancia afectando directamente el valor de la fase. Por otro lado, en la \textbf{Figura \ref{subfig:ARES_D.a}} se puede observar una clara dispersión de los valores obtenidos alrededor del ajuste propuesto lo que indica un posible error de medición, y en la \textbf{Figura \ref{subfig:ARES_D.b}} al tener pocas mediciones no se pudo obtener una tendencia clara por lo que no se pudo realizar un ajuste correcto; entonces estos factores pueden también responder a lo inconcluso de estos resultados
+Por otro lado, para el circuito resonante se pudo comprobar la relación entre fase y frecuencia propuesta por \eqref{des_PBaj}; por lo cual a partir de los correspondientes gráficos se observó que la frecuencia en la que ambas señales se encuentran en fase es $\omega = (10.0 \pm 0.9)kHz$ para $R=(5.00 \pm 0.05)K\Omega$, y $\omega = (10.0 \pm 0.2)kHz$ para $R=(500 \pm 2)\Omega$. Y al coincidir cada frecuencia de fase con su correspondiente frecuencia de resonancia, se pudo verificar que en los circuitos resonantes la señal de entrada y salida están en fase para la frecuencia de resonancia. Sin embargo, no fue asi para el circuito anti-resonante, donde no se pudieron realizar los ajuste correspondientes para frecuencias menores a la de resonancia. Esto puede deberse que en el marco teórico se considera despreciable la resistencia que impone la inductancia $L$, resistencia que puede considerarse despreciable para frecuencias altas pero no es así para frecuencias bajas; de modo que cambiaría el valor de la impedancia afectando directamente el valor de la fase. Por otro lado, en la \textbf{Figura \ref{subfig:ARES_D.a}} se puede observar una clara dispersión de los valores obtenidos alrededor del ajuste propuesto lo que indica un posible error de medición, y en la \textbf{Figura \ref{subfig:ARES_D.b}} al tener pocas mediciones no se pudo obtener una tendencia clara por lo que no se pudo realizar un ajuste correcto; entonces estos factores pueden también responder a lo inconcluso de estos resultados
 
-Del estudio de los filtros pasa-bajos y pasa-altos se obtuvieron, también, resultados satisfactorios. En ambos casos se obtuvieron frecuencias de corte $\omega_C= (20151 \pm 140) Hz$ en el filtro pasa-bajos, y $\omega_C= (20344\pm125)Hz$; las cuales coinciden con la frecuencia de corte teorica $\omega_c = (20000 \pm 250) Hz$, siendo entonces idénticas al coincidir en un intervalo. De la misma manera, los ajustes realizados para los desfasajes fueron los correctos, por lo que se pudieron corroborar las correspondientes relaciones entre fase y frecuencia. Para el caso del filtro pasa-bajos, en la \textbf{Figura \ref{subfig:PB.b}} se puede ver que para frecuencias muchos mayores de la frecuencia de corte la fase tiene a $\frac{\pi}{2}$, teniendo entonces que la señal de entrada y salida están en contra-fase;  y para el filtro pasa-altos en la \textbf{Figura \ref{subfig:PA.b}} se observa que para frecuencias mucho mayores que la frecuencia de corte la fase tiende a cero, por lo que la señal de entrada y salida están en fase.
+Del estudio de los filtros pasa-bajos y pasa-altos se obtuvieron también resultados satisfactorios. En ambos casos se obtuvieron frecuencias de corte $\omega_C= (20.15 \pm 0.14) kHz$ en el filtro pasa-bajos, y $\omega_C= (20.34 \pm 0.13)kHz$; las cuales coinciden con la frecuencia de corte teorica $\omega_c = (20.0 \pm 0.3) kHz$, siendo entonces idénticas al coincidir en un intervalo. De la misma manera, los ajustes realizados para los desfasajes fueron los correctos, por lo que se pudieron corroborar las correspondientes relaciones entre fase y frecuencia. Para el caso del filtro pasa-bajos, en la \textbf{Figura \ref{subfig:PB.b}} se puede ver que para frecuencias muchos mayores de la frecuencia de corte la fase tiende a $\frac{\pi}{2}$, teniendo entonces que la señal de entrada y salida están en contra-fase; y para el filtro pasa-altos en la \textbf{Figura \ref{subfig:PA.b}} se observa que para frecuencias mucho mayores que la frecuencia de corte la fase tiende a cero, por lo que la señal de entrada y salida están en fase.
 
 Por ultimo, a pesar de que el ajuste realizado para el filtro pasa-banda fueron correctos, de las frecuencias de corte obtenidas del mismo solo resultaron identicos los valores $\omega_{C-1} = (4491 \pm 1200)Hz$ con su equivalente teórico $\omega_1 = (4455 \ 250)Hz$, mientras que $\omega_{C-2} = (216870 \pm 1200)Hz$ no coincidió con $\omega_2 = (224455 \pm 250)hz$. Aun asi, el ajuste hecho sobre la \textbf{Figura \ref{subfig:PBAN.b}} fue el correcto, garantizando entonces la relación entre fase y frecuencia para el filtro pasa-banda. Entonces se puede observar, que para frecuencias mucho mas chicas que $\omega_1$ y muchos mas grandes que $\omega_2$ la fase tiene a $\frac{-\pi}{2}$ y $\frac{\pi}{2}$ respectivamente, teniendo entonces que para dichas frecuencias la señal de entrada y salida estan en contra-fase.
 
@@ -484,9 +484,9 @@ Por ultimo, a pesar de que el ajuste realizado para el filtro pasa-banda fueron 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %Ejemplo:
-%\begin{thebibliography}{1}
- %\bibitem{Berkeley} Frank S. Crawford, \textit{Berkeley physics course 3: Ondas}, 1994, Editorial Reverte S.A.
-%\end{thebibliography}
+\begin{thebibliography}{1}
+ \bibitem{Trelles} Felix Rodriguez Trelles, \textit{Temas de Electricidad y Magnetismo}, 1984, Editorial EUDEBA
+\end{thebibliography}
 %Para citar: blablabla \cite{Baird}
  
 \end{document}
