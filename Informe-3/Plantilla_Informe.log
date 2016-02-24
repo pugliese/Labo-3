@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.3)  23 FEB 2016 17:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.3)  24 FEB 2016 02:45
 entering extended mode
-**plantilla_informe.tex
+**plantilla_informe
 (plantilla_informe.tex
 LaTeX2e <2014/05/01>
 Babel <3.9l> and hyphenation patterns for 68 languages loaded.
@@ -1115,7 +1115,11 @@ File: Circuito-RCL-Resonante.jpg Graphic file (type jpg)
 <use Circuito-RCL-Resonante.jpg>
 Package pdftex.def Info: Circuito-RCL-Resonante.jpg used on input line 222.
 (pdftex.def)             Requested size: 133.32216pt x 119.0941pt.
- [3 <./Figura_Intro.jpg>]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3 <./Figura_Intro.jpg>]
 <Circuito-RCL-AntiResonante.jpg, id=27, 201.75375pt x 190.46156pt>
 File: Circuito-RCL-AntiResonante.jpg Graphic file (type jpg)
 
@@ -1204,46 +1208,122 @@ Overfull \hbox (2.1243pt too wide) in paragraph at lines 344--354
 []$[]$ $[]$ 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<RLC_ARES_5000_Tan(fase)vsF.jpg, id=47, 639.8304pt x 528.0528pt>
+[7 <./RLC_RES_5000_Tan(fase)vsF.jpg> <./RLC_RES_500_Tan(fase)vsF.jpg> <./RLC_AR
+ES_5000_VvsF.jpg> <./RLC_ARES_1000_VvsF.jpg>]
+<RLC_ARES_5000_Tan(fase)vsF.jpg, id=50, 639.8304pt x 528.0528pt>
 File: RLC_ARES_5000_Tan(fase)vsF.jpg Graphic file (type jpg)
 
 <use RLC_ARES_5000_Tan(fase)vsF.jpg>
-Package pdftex.def Info: RLC_ARES_5000_Tan(fase)vsF.jpg used on input line 364.
+Package pdftex.def Info: RLC_ARES_5000_Tan(fase)vsF.jpg used on input line 370.
 
-(pdftex.def)             Requested size: 217.53944pt x 179.53557pt.
+(pdftex.def)             Requested size: 204.74991pt x 168.98035pt.
 
-<RLC_ARES_1000_Tan(fase)vsF.jpg, id=48, 641.7576pt x 535.7616pt>
+<RLC_ARES_1000_Tan(fase)vsF.jpg, id=51, 641.7576pt x 535.7616pt>
 File: RLC_ARES_1000_Tan(fase)vsF.jpg Graphic file (type jpg)
 
 <use RLC_ARES_1000_Tan(fase)vsF.jpg>
-Package pdftex.def Info: RLC_ARES_1000_Tan(fase)vsF.jpg used on input line 369.
+Package pdftex.def Info: RLC_ARES_1000_Tan(fase)vsF.jpg used on input line 375.
 
-(pdftex.def)             Requested size: 218.19469pt x 182.15652pt.
+(pdftex.def)             Requested size: 205.36662pt x 171.4472pt.
 
-Overfull \hbox (2.1243pt too wide) in paragraph at lines 363--373
+Overfull \hbox (2.1243pt too wide) in paragraph at lines 369--379
 []$[]$ $[]$ 
  []
 
+[8 <./RLC_ARES_5000_Tan(fase)vsF.jpg> <./RLC_ARES_1000_Tan(fase)vsF.jpg>]
+<PB_TRANSFERENCIA.jpg, id=55, 816.651pt x 573.1011pt>
+File: PB_TRANSFERENCIA.jpg Graphic file (type jpg)
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+<use PB_TRANSFERENCIA.jpg>
+Package pdftex.def Info: PB_TRANSFERENCIA.jpg used on input line 393.
+(pdftex.def)             Requested size: 277.65767pt x 194.85179pt.
 
-[7 <./RLC_RES_5000_Tan(fase)vsF.jpg> <./RLC_RES_500_Tan(fase)vsF.jpg>] [8 <./RL
-C_ARES_5000_VvsF.jpg> <./RLC_ARES_1000_VvsF.jpg> <./RLC_ARES_5000_Tan(fase)vsF.
-jpg> <./RLC_ARES_1000_Tan(fase)vsF.jpg>] (plantilla_informe.aux
+Overfull \hbox (35.80923pt too wide) in paragraph at lines 393--394
+[][] 
+ []
+
+<PB_DESFASAJE.jpg, id=56, 844.8363pt x 597.432pt>
+File: PB_DESFASAJE.jpg Graphic file (type jpg)
+ <use PB_DESFASAJE.jpg>
+Package pdftex.def Info: PB_DESFASAJE.jpg used on input line 398.
+(pdftex.def)             Requested size: 287.24054pt x 203.12419pt.
+
+Overfull \hbox (45.3921pt too wide) in paragraph at lines 398--399
+[][] 
+ []
+
+
+Overfull \hbox (2.1243pt too wide) in paragraph at lines 392--402
+[]$[]$ $[]$ 
+ []
+
+<PA_TRANSFERENCIA.jpg, id=57, 816.651pt x 573.1011pt>
+File: PA_TRANSFERENCIA.jpg Graphic file (type jpg)
+
+<use PA_TRANSFERENCIA.jpg>
+Package pdftex.def Info: PA_TRANSFERENCIA.jpg used on input line 416.
+(pdftex.def)             Requested size: 277.65767pt x 194.85179pt.
+
+Overfull \hbox (35.80923pt too wide) in paragraph at lines 416--417
+[][] 
+ []
+
+<PA_DESFASAJE.jpg, id=58, 816.651pt x 573.1011pt>
+File: PA_DESFASAJE.jpg Graphic file (type jpg)
+ <use PA_DESFASAJE.jpg>
+Package pdftex.def Info: PA_DESFASAJE.jpg used on input line 421.
+(pdftex.def)             Requested size: 277.65767pt x 194.85179pt.
+
+Overfull \hbox (35.80923pt too wide) in paragraph at lines 421--422
+[][] 
+ []
+
+
+Overfull \hbox (2.1243pt too wide) in paragraph at lines 415--425
+[]$[]$ $[]$ 
+ []
+
+[9 <./PB_TRANSFERENCIA.jpg> <./PB_DESFASAJE.jpg> <./PA_TRANSFERENCIA.jpg> <./PA
+_DESFASAJE.jpg>] <PBANDA_TRANSFERENCIA.jpg, id=62, 816.651pt x 573.1011pt>
+File: PBANDA_TRANSFERENCIA.jpg Graphic file (type jpg)
+
+<use PBANDA_TRANSFERENCIA.jpg>
+Package pdftex.def Info: PBANDA_TRANSFERENCIA.jpg used on input line 437.
+(pdftex.def)             Requested size: 277.65767pt x 194.85179pt.
+
+Overfull \hbox (35.80923pt too wide) in paragraph at lines 437--438
+[][] 
+ []
+
+<PBANDA_DESFASAJE.jpg, id=63, 816.651pt x 573.1011pt>
+File: PBANDA_DESFASAJE.jpg Graphic file (type jpg)
+
+<use PBANDA_DESFASAJE.jpg>
+Package pdftex.def Info: PBANDA_DESFASAJE.jpg used on input line 442.
+(pdftex.def)             Requested size: 277.65767pt x 194.85179pt.
+
+Overfull \hbox (35.80923pt too wide) in paragraph at lines 442--443
+[][] 
+ []
+
+
+Overfull \hbox (2.1243pt too wide) in paragraph at lines 436--446
+[]$[]$ $[]$ 
+ []
+
+[10 <./PBANDA_TRANSFERENCIA.jpg> <./PBANDA_DESFASAJE.jpg>] [11]
+(plantilla_informe.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 6413 strings out of 493698
- 88276 string characters out of 3144416
- 151672 words of memory out of 3000000
- 9583 multiletter control sequences out of 15000+200000
- 49318 words of font info for 107 fonts, out of 3000000 for 9000
+ 6460 strings out of 493698
+ 89198 string characters out of 3144416
+ 151814 words of memory out of 3000000
+ 9622 multiletter control sequences out of 15000+200000
+ 50089 words of font info for 109 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 36i,11n,43p,1130b,432s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,11n,43p,1570b,432s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MikTex 2.9/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}{C:/
 Program Files/MikTex 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MikT
 ex 2.9/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Program Files/MikTex 2.9/font
@@ -1255,9 +1335,9 @@ iles/MikTex 2.9/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Program Files/MikTex
 2.9/fonts/type1/public/kpfonts/jkpmsc8a.pfb><C:/Program Files/MikTex 2.9/fonts/
 type1/public/kpfonts/jkpsy.pfb><C:/Program Files/MikTex 2.9/fonts/type1/public/
 kpfonts/jkpsyb.pfb>
-Output written on plantilla_informe.pdf (9 pages, 3669522 bytes).
+Output written on plantilla_informe.pdf (12 pages, 7929474 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
+ 104 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 
