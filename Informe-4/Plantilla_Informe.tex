@@ -196,7 +196,7 @@ A la hora de caracterizar los instrumentos, como se dijo, se relevaron las curva
    \label{fig:simple_feo}
 \end{figure}
 
-Claramente, la curva de la \textbf{Figura \ref{fig:simple_feo}} posee una enorme cantidad de puntos muy cercanos al punto de resultar indistinguibles. Debido a esto, se buscó suavizar la señal con menos puntos con un método simple. Primero, se configuró un parametro de tolerancia $CT$ como error y se promediaron los valores de todas las corrientes $I(V_D)$ cuyos $V_D$ fueran indistinguibles dentro de este error $CT$. Estos $CT$ se tomaron de forma tal que la cantidad de puntos fuera menor que el que permitiría el error relativo del 3\% que dispone el instrumento aplicado sobre el valor máximo voltaje (en módulo) en cada tira de valores $V_D$. De esta forma, multiples puntos con $V_D$ cercanos fueron condensados en un único punto, permitiendo que la curva sea más clara como puede verse en la \textbf{Figura \ref{fig:simple_mejor}}. Un ajuste lineal de $R-Square = 0.97052$ asegura la bondad del ajuste con una pendiente $m_s = (0.02557 \pm 0,0018)\Omega^{-1}$ tal que $\frac{1}{m_s} = (39 \pm 3)\Omega= R_s$ resulta la resistencia del diodo simple.
+Claramente, la curva de la \textbf{Figura \ref{fig:simple_feo}} posee una enorme cantidad de puntos muy cercanos al punto de resultar indistinguibles. Debido a esto, se buscó suavizar la señal con menos puntos con un método simple. Primero, se configuró un parametro de tolerancia $CT$ como error y se promediaron los valores de todas las corrientes $I(V_D)$ cuyos $V_D$ fueran indistinguibles dentro de este error $CT$. Estos $CT$ se tomaron de forma tal que la cantidad de puntos fuera menor que el que permitiría el error relativo del 3\% que dispone el instrumento aplicado sobre el valor máximo voltaje (en módulo) en cada tira de valores $V_D$. De esta forma, multiples puntos con $V_D$ cercanos fueron condensados en un único punto, permitiendo que la curva sea más clara como puede verse en la \textbf{Figura \ref{fig:simple_mejor}}. Un ajuste lineal de $R-Square = 0.97052$ asegura la bondad del ajuste con una pendiente $m_s = (0.02557 \pm 0,0018)\Omega^{-1}$ tal que a través de \eqref{Aprox} resulta $\frac{1}{m_s} = (39 \pm 3)\Omega= R_s$ la resistencia del diodo simple.
 
 \begin{figure}[H]
 \centering
@@ -214,9 +214,9 @@ El proceso anterior debió aplicarse también a los resultados obtenidos para el
    \label{fig:zenek}
 \end{figure}
 
-El ajuste de los primeros puntos referentes al \textit{efecto avalancha} arroja un $R-Square = 0.96697$ que asegura la bondad del ajuste con una pendiente $m_I^{(z)} = (0.0080 \pm 0.0008)\Omega^{-1}$ tal que la resistencia del diodo a resulta $R_I^{(z)} = (125 \pm 13)\Omega$. Para los puntos finales, el ajuste arroja un $R-Square = 0.96297$ con una pendiente $m_D^{(z)} = (0.0142 \pm 0.0016)\Omega^{-1}$ tal que la resistencia para corriente en directa resulta $R_D^{(z)} = (70 \pm 8)\Omega$.
+El ajuste de los primeros puntos referentes al \textit{efecto avalancha} arroja un $R-Square = 0.96697$ que asegura la bondad del ajuste con una pendiente $m_I^{(z)} = (0.0080 \pm 0.0008)\Omega^{-1}$ tal que la resistencia del diodo a resulta $R_I^{(z)} = (125 \pm 13)\Omega$. Para los puntos finales, el ajuste arroja un $R-Square = 0.96297$ con una pendiente $m_D^{(z)} = (0.0142 \pm 0.0016)\Omega^{-1}$ tal que la resistencia para corriente en directa resulta según \eqref{Aprox} $R_D^{(z)} = (70 \pm 8)\Omega$.
 
-Finalmente, para el caso del diodo LED la tolerancia se tomó como $CT = 6.4E-7$, arrojando el gráfico de la \textbf{Figura \ref{fig:LED}}. El ajuste lineal de los ultimos puntos arroja un $R_Square = 0.93178$ con una pendiente $m_L = (0.023 \pm 0.003)$ que resulta en una resistencia para corriente directa $R_L = (43 \pm 6)$
+Finalmente, para el caso del diodo LED la tolerancia se tomó como $CT = 6.4E-7$, arrojando el gráfico de la \textbf{Figura \ref{fig:LED}}. El ajuste lineal de los ultimos puntos arroja un $R_Square = 0.93178$ con una pendiente $m_L = (0.023 \pm 0.003)$ que resulta en una resistencia para corriente directa $R_L = (43 \pm 6)$ siguiendo \eqref{Aprox}.
 
 \begin{figure}[H]
 \centering
@@ -315,7 +315,7 @@ realmente los parámetros para caracterizar los diodos no hubo oportunidad de co
 de puntos ajustados es relativamente pequeña (entre 4 y 7 puntos). Esto puede deberse a que el método utilizado a la hora de analizar los datos en un intento por reducir las fluctuaciones de las curvas iniciales (como puede verse en la 
 \textbf{figura \ref{fig:simple_feo}}) no fue suficiente o correcto, quizás debido al criterio utilizado para fijar los $CT$. En definitiva, aunque el método utilizado fue muy veloz y sencillo a la hora de realizar las mediciones, acarreo
 una gran cantidad de problemas a la hora de analizar los datos. No obstante, pudieron verse y comprobarse con cierta confiabilidad que los diodos evitan el paso de corriente hasta llegar a un voltaje límite, a partir del cual actua en
-forma similar a una resistencia. Para el caso particular del Zenek pudo observarse el efecto avalancha para corriente en inversa.
+forma similar a una resistencia siguiendo \eqref{Aprox}. Para el caso particular del Zenek pudo observarse el efecto avalancha para corriente en inversa.
 
 Respecto a los rectificadores, la comprobación de que los valores arrojados por el osciloscopio y los obtenidos mediante analisis de picos son indistinguibles no es un dato menor, aunque sea esperable. Principalmente esto significa que
 la forma de operar del osciloscopio debe ser igual o mejor que el análisis de picos realizados a pesar de hacerlo en el momento. Concentrandose más en el rectificador en si, se pudo comprobar que la magnitud importante a la hora de
