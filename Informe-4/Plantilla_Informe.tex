@@ -108,7 +108,7 @@ En el circuito de \textbf{figura \ref{subfig:Pol-Dir}}, el diodo permite dicha c
 
 Un diodo consta de dos zonas hechas de materiales semiconductores con caracteristicas opuestas. Una zona tiene un exceso de \textit{huecos}, mientras que la otra dispone de electrones en exceso, pero aun asi, en cada zona la carga total es neutra. En el momento mismo de crear dos zonas de diferente concentración de portadores, entra en juego el mecanismo de la difusión. La distribución de cargas formada en la región de la unión provoca un campo eléctrico desde la zona N a la zona P que se opone al movimiento de portadores y que va creciendo conforme pasan más cargas a la zona opuesta hasta que se llega a un equilibrio. En ese momento está ya formado el diodo de unión PN ilustrado en la \textbf{figura \ref{fig:Dif}}, y como resultado del proceso se ha obtenido una zona P y una zona N, ambas semiconductoras, y una zona de agotamiento (deplección) que es no conductora. En ella actúa un campo eléctrico, o bien entre los extremos actúa una barrera de potencial.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.8]{Difusion}
    \caption{Ilustracion de diodo de unio PN}
@@ -122,6 +122,33 @@ El bloque PN  en principio no permite el establecimiento de una corriente eléct
 \end{equation}
 
  Por el contrario, al aplicar una tensión positiva a la zona N y negativa a la zona P, se retiran portadores mayoritarios próximos a la unión. Estos portadores son atraídos hacia los contactos aumentando la anchura de la zona de agotamiento, lo cual hace que la corriente debido a los portadores mayoritarios sea nula. Ahora bien, en ambas zonas hay portadores minoritarios que son atraídos hacia la unión creando una corriente inversa, aunque muy inferior que la obtenida en polarización directa. Al aumentar la tensión inversa, llega un momento en que se produce la ruptura de la zona de deplección, al igual que sucede en un material aislante: el campo eléctrico puede ser tan elevado que arranque electrones que forman los enlaces covalentes, originando un proceso de rotura por avalancha y generando una corriente que respeta la ecuacion \eqref{Aprox} pero con una resistencia mayor.
+
+
+\subsection{Rectificadores}
+
+En electrónica, un rectificador es el elemento o circuito que permite convertir la corriente alterna en corriente continua.
+
+En un circuito rectificador de media onda, ilustrado en la \textbf{figura \ref{fig:Re-M-O}}, cuando la tensión de entrada es positiva, el diodo se polariza en directo y se puede sustituir por un corto circuito.  Si la tensión de entrada es negativa el diodo se polariza en inverso y se puede remplazar por un circuito abierto. De esta forma el circuito, podria ser reemplazado por un RC  que debido a que en el semiciclo anteriormente se realizo una carga en el capacitor, se genera una corriente generada por la descarga del mismo. De esta forma, para ambos semicilos, se puede medir una corriente que es constante en signo.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{Rectificador-Media-Onda}
+   \caption{Circuito sobre el cual se midio el \textit{ripple} de la corriente de salida para distintas frecuencias, un diodo simple D, una resistencia R y una capacitancia C que no fueron modificados durante el experimento, alimentado por un generador de funciones. }
+   \label{fig:Re-M-O}
+\end{figure}
+
+En un rectificador de onda completa, ilustrado en la \textbf{figura \ref{fig:Rect-O}}, se convierte la totalidad de la señal de entrada en una polaridad constante en la salida, mediante la inversión de los semiciclos negativos (en el ejemplo utilizado resulta de esta manera pero podria configurarse para que pase lo contrario) de la forma de onda de entrada. Para cada semiciclo existe un periodo de carga del capacitor, durante el periodo en el que la señal alcanza un maximo,  y uno de descarga que comienza cuando el potencial otorgado por la fuente se vuelve menor al potencial acumulado en el capacitor ocacionado por la carga del mismo durante el periodo anterior.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{Rectificador-Onda-Completa}
+   \caption{Circuito que consta de una fuente de voltaje triangular, una resistencia R y un diodo D. Conectado a la resistencia y a la fuente se encuentra un osciloscopio}
+   \label{fig:Rect-O}
+\end{figure}
+
+Recordando trabajos anteriores, un circuito RC tiene un tiempo caracteristico $\tau = R.C$, con R el valor de la resistencia y C el de la capacitancia. Por lo cual, para frecuencias mayores a $F_{0} = \frac{1}{\tau}$ la corriente sobre la resistencia nunca es nula, y por consiguiente se obtiene una señal cuya amplitud pico-pico (ripple), es menor a la amplitud de la señal producida por la fuente. Este ripple es inversamente proporcional a la frecuencia del voltaje de entrada, y para valores suficientemente grandes se puede considerar nulo.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 3. DISPOSITIVO EXPERIMENTAL: armado del modelo, como se midio, consideraciones a la hora de medir.
@@ -154,24 +181,10 @@ Una vez terminada la caracterización de los diodos, se procedió a construir re
 \subsubsection{Rectificador de media onda}
 En primer lugar, se construyó un rectificador de media onda utilizando un generador de funciones como fuente sinusoidal, un diodo simple, una resistencia $R = (5.00 \pm 0.05)k\Omega$ y un capacitor $C = (9.81 \pm 0.07)\mu F$ conectado en paralelo a la resistencia como se ilustra en la \textbf{Figura \ref{fig:Re-M-O}}. De manera análoga al método utilizado para caracterizar lo diodos, se conectó un canal del osciloscopio en paralelo a la resistencia, para medir la corriente circulante; y el otro en paralelo a la fuente. Y, ademas, se aseguró la continuidad de los cables y que esta no se viera comprometida con movimientos aleatorios utilizando el multimetro.
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.8]{Rectificador-Media-Onda}
-   \caption{Circuito sobre el cual se midio el \textit{ripple} de la corriente de salida para distintas frecuencias, consta de un diodo simple D, una resistencia R y una capacitancia C que no fueron modificados durante el experimento. }
-   \label{fig:Re-M-O}
-\end{figure}
-
 Para medir el ripple de la corriente de salida, se configuró el osciloscopio para que eliminara la componente continua de la señal y midiera la amplitud pico-pico. Fijada una frecuencia en el generador de funciones, se registraba la amplitud marcada por el osciloscopio y se consideró un error para cada medición lo suficientemente grande como para que contuviera las fluctuaciones de ese valor en pantalla además del error instrumental descrito anteriormente. El proceso se iteró con distintas frecuencias.  Ademas, como método alternativo de medicion, se importaron los datos del osciloscopio a la computadora con y sin la componente continua de la señal por medio de un programa de adquisición de datos para un posterior análisis estadístico.
 
 \subsubsection{Rectificador de onda completa}
 En este caso se intentó diseñar un rectificador de onda completa, para esto se construyó un circuito que constaba de cuatro diodos simples idénticos, una resistencia variable por décadas y una fuente de voltaje sinusoidal dispuestos como se muestra en la \textbf{Figura \ref{fig:Rect-O}}. Previo a la construcción se observó que los cables no tuvieran discontinuidades. Cabe aclarar que durante esta experiencia no se utilizó el generador de funciones como fuente ya que, como los canales de salida del mismo tenían descarga a tierra, al igual que los del osciloscopio, seria necesario conectarlos a una misma terminal, pero como se puede ver en la \textbf{Figura \ref{fig:Rect-O}} eso no era posible, por lo cual se utilizó una fuente flotante. 
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.8]{Rectificador-Onda-Completa}
-   \caption{Circuito que consta de una fuente de voltaje que varia en el tiempo de forma lineal, una resistencia R y un diodo D. Conectado a la resistencia y a la fuente se encuentra un osciloscopio}
-   \label{fig:Rect-O}
-\end{figure}
 
 Al no disponer de una fuente de frecuencia variable, debió variarse la resistencia, la cual es proporcional al tiempo de carga del capacitor. Esto permite reducir la carga que un capacitor adquiere en un período de la señal y, por lo tanto, es equivalente a aumentar la frecuencia. 
 
