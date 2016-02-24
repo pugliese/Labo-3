@@ -81,6 +81,47 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Introducción}\label{sec:intro}
+\subsection{El diodo}
+El diodo ideal es un componente que permite la circulación de corriente entre sus terminales en un determinado sentido, mientras que la bloquea en el sentido contrario. El funcionamiento del diodo ideal es el de un componente que presenta resistencia nula al paso de la corriente en un determinado sentido, y resistencia infinita en el sentido opuesto.
+Mediante el siguiente ejemplo mostrado en la \textbf{figura \ref{fig:Ejemplo}} se pretende mostrar el funcionamiento ideal de un diodo en circuito sencillo.
+
+\begin{figure}[H]
+
+\begin{subfigure}{0.5\textwidth}
+\centering
+\includegraphics[scale=0.8]{Ejemplo-Funcionamiento-Diodo-Ideal-Polarizacion-Directa}
+   \subcaption{Diodo ideal en polarizacion directa.}
+   \label{subfig:Pol-Dir}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\centering
+\includegraphics[scale=0.8]{Ejemplo-Funcionamiento-Diodo-Ideal-Polarizacion-Inversa}
+   \subcaption{Diodo ideal en polarizacion indirecta.}
+   \label{subfig:Pol-Inv}
+\end{subfigure}
+
+  \caption{Ejemplo del funcionamiento de un diodo ideal en un circuito simple. La corriente circula en sentido horario para los dos casos.}
+   \label{fig:Ejemplo}
+\end{figure}
+
+En el circuito de \textbf{figura \ref{subfig:Pol-Dir}}, el diodo permite dicha circulación, ya que la corriente entra por el ánodo, y éste se comporta como un interruptor cerrado. Debido a esto, se produce una caída de tensión en la resistencia, y se obtiene una corriente. En el de la \textbf{figura \ref{subfig:Pol-Inv}}, en cambio, el diodo impide el paso de corriente, comportándose como un interruptor abierto, y la caída de tensión en la resistencia es nula.
+
+Un diodo consta de dos zonas hechas de materiales semiconductores con caracteristicas opuestas. Una zona tiene un exceso de huecos, mientras que la otra dispone de electrones en exceso, pero aun asi, en cada zona la carga total es neutra. En el momento mismo de crear dos zonas de diferente concentración de portadores, entra en juego el mecanismo de la difusión. La distribución de cargas formada en la región de la unión provoca un campo eléctrico desde la zona N a la zona P que se opone al movimiento de portadores y que va creciendo conforme pasan más cargas a la zona opuesta hasta que se llega a un equilibrio. En ese momento está ya formado el diodo de unión PN ilustrado en la \textbf{figura \ref{fig:Dif}}, y como resultado del proceso se ha obtenido una zona P y una zona N, ambas semiconductoras, y una zona de agotamiento (deplección) que es no conductora. En ella actúa un campo eléctrico, o bien entre los extremos actúa una barrera de potencial.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.8]{Difusion}
+   \caption{Ilustracion de diodo de unio PN}
+   \label{fig:Dif}
+\end{figure}
+
+El bloque PN  en principio no permite el establecimiento de una corriente eléctrica entre sus terminales puesto que la zona de deplección no es conductora. Sin embargo, si se aplica una tensión positiva en el ánodo mayor que la de la barrera, desaparecera la zona de deplección y el dispositivo conduce de forma que en una primera aproximacion respeta la siguiente ecuacion:
+
+\begin{equation}{\label{Aprox}}
+\Delta  V_D = I.R_D\\
+\end{equation}
+
+ Por el contrario, al aplicar una tensión positiva a la zona N y negativa a la zona P, se retiran portadores mayoritarios próximos a la unión. Estos portadores son atraídos hacia los contactos aumentando la anchura de la zona de agotamiento, lo cual hace que la corriente debido a los portadores mayoritarios sea nula. Ahora bien, en ambas zonas hay portadores minoritarios que son atraídos hacia la unión creando una corriente inversa, aunque muy inferior que la obtenida en polarización directa. Al aumentar la tensión inversa, llega un momento en que se produce la ruptura de la zona de deplección, al igual que sucede en un material aislante: el campo eléctrico puede ser tan elevado que arranque electrones que forman los enlaces covalentes, originando un proceso de rotura por avalancha y generando una corriente que respeta la ecuacion \eqref{Aprox} pero con una resistencia mayor.
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.4)  23 FEB 2016 13:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.4)  23 FEB 2016 22:15
 entering extended mode
 **"C:/Labo 3/Labo-3/Informe-4/Plantilla_Informe.tex"
 ("C:/Labo 3/Labo-3/Informe-4/Plantilla_Informe.tex"
@@ -1118,40 +1118,71 @@ File: ujkpsyc.fd 2006/08/15 v1.0
 
 {C:/Users/Gonzalo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Logo_DF
 .jpg>])
-<Caracterizar-Diodo.jpg, id=10, 160.34906pt x 154.32657pt>
+<Ejemplo-Funcionamiento-Diodo-Ideal-Polarizacion-Directa.jpg, id=10, 140.77594p
+t x 204.01219pt>
+File: Ejemplo-Funcionamiento-Diodo-Ideal-Polarizacion-Directa.jpg Graphic file 
+(type jpg)
+
+<use Ejemplo-Funcionamiento-Diodo-Ideal-Polarizacion-Directa.jpg>
+Package pdftex.def Info: Ejemplo-Funcionamiento-Diodo-Ideal-Polarizacion-Direct
+a.jpg used on input line 92.
+(pdftex.def)             Requested size: 112.62088pt x 163.20996pt.
+
+<Ejemplo-Funcionamiento-Diodo-Ideal-Polarizacion-Inversa.jpg, id=11, 148.30406p
+t x 201.00093pt>
+File: Ejemplo-Funcionamiento-Diodo-Ideal-Polarizacion-Inversa.jpg Graphic file 
+(type jpg)
+
+<use Ejemplo-Funcionamiento-Diodo-Ideal-Polarizacion-Inversa.jpg>
+Package pdftex.def Info: Ejemplo-Funcionamiento-Diodo-Ideal-Polarizacion-Invers
+a.jpg used on input line 98.
+(pdftex.def)             Requested size: 118.64339pt x 160.80095pt.
+
+Overfull \hbox (2.1243pt too wide) in paragraph at lines 90--102
+[]$[]$ $[]$ 
+ []
+
+<Difusion.jpg, id=12, 137.01187pt x 88.07906pt>
+File: Difusion.jpg Graphic file (type jpg)
+ <use Difusion.jpg>
+Package pdftex.def Info: Difusion.jpg used on input line 113.
+(pdftex.def)             Requested size: 109.60963pt x 70.46332pt.
+ [1 <./Ejemplo-Funcionamiento-Diodo-Ideal-Polarizacion-Directa.jpg> <./Ejemplo-
+Funcionamiento-Diodo-Ideal-Polarizacion-Inversa.jpg> <./Difusion.jpg>]
+<Caracterizar-Diodo.jpg, id=16, 160.34906pt x 154.32657pt>
 File: Caracterizar-Diodo.jpg Graphic file (type jpg)
 
 <use Caracterizar-Diodo.jpg>
-Package pdftex.def Info: Caracterizar-Diodo.jpg used on input line 103.
+Package pdftex.def Info: Caracterizar-Diodo.jpg used on input line 146.
 (pdftex.def)             Requested size: 128.27942pt x 123.4614pt.
- [1 <./Caracterizar-Diodo.jpg>]
-<Rectificador-Media-Onda.jpg, id=17, 210.7875pt x 162.6075pt>
+ [2 <./Caracterizar-Diodo.jpg>]
+<Rectificador-Media-Onda.jpg, id=23, 210.7875pt x 162.6075pt>
 File: Rectificador-Media-Onda.jpg Graphic file (type jpg)
 
 <use Rectificador-Media-Onda.jpg>
-Package pdftex.def Info: Rectificador-Media-Onda.jpg used on input line 118.
+Package pdftex.def Info: Rectificador-Media-Onda.jpg used on input line 161.
 (pdftex.def)             Requested size: 168.63022pt x 130.08617pt.
-
-<Rectificador-Onda-Completa.jpg, id=18, 244.66406pt x 170.13562pt>
+ [3 <./Rectificador-Media-Onda.jpg>]
+<Rectificador-Onda-Completa.jpg, id=27, 244.66406pt x 170.13562pt>
 File: Rectificador-Onda-Completa.jpg Graphic file (type jpg)
 
 <use Rectificador-Onda-Completa.jpg>
-Package pdftex.def Info: Rectificador-Onda-Completa.jpg used on input line 130.
+Package pdftex.def Info: Rectificador-Onda-Completa.jpg used on input line 173.
 
 (pdftex.def)             Requested size: 195.7315pt x 136.10867pt.
- [2 <./Rectificador-Media-Onda.jpg>]
-[3 <./Rectificador-Onda-Completa.jpg>] (Plantilla_Informe.aux
+ [4 <./Rectificador-Onda-Completa.jpg>]
+(Plantilla_Informe.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 6371 strings out of 493634
- 87146 string characters out of 3142929
- 149645 words of memory out of 3000000
- 9610 multiletter control sequences out of 15000+200000
+ 6401 strings out of 493634
+ 88098 string characters out of 3142929
+ 151703 words of memory out of 3000000
+ 9637 multiletter control sequences out of 15000+200000
  41613 words of font info for 86 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 36i,10n,43p,1223b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,11n,43p,1221b,466s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/Program F
 iles (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Program Files (x86
 )/MiKTeX/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Program Files (x86)/MiKTeX/fo
@@ -1160,9 +1191,9 @@ public/kpfonts/jkpmit8a.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/k
 pfonts/jkpmn8a.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/kpfonts/jk
 pmsc8a.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb>
 
-Output written on Plantilla_Informe.pdf (4 pages, 185222 bytes).
+Output written on Plantilla_Informe.pdf (5 pages, 222175 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
+ 54 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
