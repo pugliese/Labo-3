@@ -170,13 +170,106 @@ En este caso la inductancia mutua se puede expresar como $M^2=K^2L_1L_2$ siendo 
 
 \section{Desarrollo experimental}
 
-Durante esta experiencia se utilizó un generador de funciones de generar diferencias de potencial $V(t)$ a frecuencias con un error relativo del $0,01\%$ en un rango entre $1\mu Hz$ y $5MHz$. El voltaje pico-pico tiene un error relativo del $1\%$ para el rango de voltaje utilizado ($2V-20V$). Además, se utilizó una resistencia variable por décadas en el intervalo $1\Omega-11110\Omega$. Usando un multimetro digital se midieron los valores utilizados en esta resistencia junto con su precisión que era de la forma $\pm(1\%+2d)$ en el rango utilizado (mayor a $100\Omega$). El multimetro permitía también medir diferencias de potencial con una precisión de la forma $(1d+0,5\%)$
+Durante esta experiencia se utilizó un generador de funciones de generar diferencias de potencial $V(t)$ a frecuencias con un error relativo del $0,01\%$ en un rango entre $1\mu Hz$ y $5MHz$. El voltaje pico-pico tiene un error relativo del $1\%$ para el rango de voltaje utilizado ($2V-20V$). Además, se utilizó una resistencia variable por décadas en el intervalo $1\Omega-11110\Omega$. Usando un multimetro digital se midieron los valores utilizados en esta resistencia junto con su precisión que era de la forma $\pm(1\%+2d)$ en el rango utilizado (mayor a $100\Omega$). El multimetro permitía también medir diferencias de potencial con una precisión de la forma $(1d+0,5\%)$.
 
-Para generar una diferencia de potencial constante se utilizó una fuente de alimentación programable con una precisión de $\pm (0.5\% + 0.02)V$ en un rango de voltaje de salida de $0 \thicksim 32 V$. Se utilizó además un osciloscopio digital que en sus dos canales de entrada era capaz de medir diferencias de potencial entre sus dos terminales en un rango de 2mV a 5V con un error relativo del $3\%$. A la hora de medir voltaje, fue necesario asegurarse que el cable a tierra del osciloscopio estuvera conectado al cable a tierra el generador de funciones. 
+Para generar una diferencia de potencial constante se utilizó una fuente de alimentación programable con una precisión de $\pm (0.5\% + 0.02)V$ en un rango de voltaje de salida de $0 \thicksim 32 V$. Esta fuente también era capaz de generar corrientes constantes $I$. Se utilizó además un osciloscopio digital que en sus dos canales de entrada era capaz de medir diferencias de potencial entre sus dos terminales en un rango de 2mV a 5V con un error relativo del $3\%$. A la hora de medir voltaje, fue necesario asegurarse que el cable a tierra del osciloscopio estuvera conectado al cable a tierra el generador de funciones. 
 
 Finalmente, se utilizó un sensor Hall capaz de medir el módulo de campos magnéticos $B$ en una dirección particular, expresándolos como una diferencia de potencial $V$. La relación entre $B$ y $V$ está dada por $B = mV+offset$ donde $m$ es una característica del instrumento definida por su ganancia $G$ y su sensibilidad $S$ según $m = S^{-1}$. La ganancia $G$ puede ser x1, x10 o x200 y define una sensibilidad $S_{x1} = (3,06 \pm 0,15)\frac{mV}{G}$,  $S_{x10} = (30,6 \pm 1,2)\frac{mV}{G}$ y $S_{x200} = (612 \pm 24)\frac{mV}{G}$. Por lo tanto, las pendientes resultan $m_{x1} = (327 \pm 5)\frac{G}{V}$, $m_{x10} = (32,7 \pm 1,3)\frac{G}{V}$ y $m_{x200} = (1,63 \pm 0,06)\frac{G}{V}$. La caracterización del $offset$ se cubre a continuación.
 
-\subsection{Caracterización del Sensor Hall}
+\subsection{Caracterización del Sensor Hall y medición del campo magnético terrestre}
+
+Como se dijo más arriba, a la hora de calcuar la intensidad de un campo megnético $B$, es necesario caracterizar el parámetro $offset$. Una forma de obtenerlo es midiendo el campo magnético $B^{+} = m.V^{+}+offset$ en una dirección $\widehat{u}$ y luego medir en la dirección opuesta $-\widehat{u}$el campo $B^{-} = m.V^{-}+offset=-B^{+}$. De esta forma es posible obtener $offset = \frac{m}{2}(V^{+}+V^{-})$. Esto se hizo efectivamente midiendo el campo magnético terrestre en una dirección $\widehat{u}$ aleatoria. Se midió en esa misma dirección con las 3 escalas posibles del sensor hall. Cabe aclarar que la diferencia de potencial generada por el Sensor Hall fue medida a través de un voltímetro en su función de amperímetro.
+
+Una vez caracterizado el $offset$, el sensor fue utilizado para medir la dirección y magnitud del campo magnético terrestre en el laboratorio. Se lo montó sobre un soporte con una nuez y se lo fue rotando en el plano perpendicular al tripode hasta encontrar un máximo. Luego se rotó el sensor en su propio plano hasta encontrar nuevamente un máximo. Este último valor fue el que se asignó como la magnitud del campo y con los dos angulos relativos se caracterizó su dirección (ver \textbf{Figura \ref{fig:terrestre}}).
+
+
+\begin{figure}[h!]
+\centering
+   \includegraphics[width=0.7\textwidth]{Terrestre}
+   \caption{Esquema de la bobina utilizada con sus parámetros definidos: $r = (46,7 \pm 0,1)mm$, $l = (255 \pm 5)mm$ y $d = (33 \pm 5)mm$}  
+   \label{fig:terrestre}
+\end{figure}
+
+\subsection{Caracterización de una bobina}
+
+Posteriormente, se tomó una bobina de radio $r = (46,7 \pm 0,1)mm$ separada en dos secciones idénticas, cada una con un embobinado de $N$ vueltas desconocido (ver \textbf{Figura \ref{fig:bobina}}). La longitud del embobinado fue $l = (255 \pm 5)mm$ mientras que la longitud de la sección superior era $l_1 = (111,2 \pm 0,1)mm = l_2$, por lo que resultaba $d = (33 \pm 5)mm$. Estas magnitudes fueron medidas utilizando un calibre digital y una regla, lo cual puede notarse en la diferencia de errores. 
+
+\begin{figure}[h!]
+\centering
+   \includegraphics[width=0.7\textwidth]{Bobina}
+   \caption{Esquema de la bobina utilizada con sus parámetros definidos: $r = (46,7 \pm 0,1)mm$, $l = (255 \pm 5)mm$ y $d = (33 \pm 5)mm$}  
+   \label{fig:bobina}
+\end{figure}
+
+Con el objetivo de estimar $N$, se probaron diversos métodos. El primero consistió en hacer circular una corriente conocida $I$ a través de los circuitos de la \textbf{Figura \ref{fig:circ_bob}}. Despreciando la inducción de la bobina (en ambos formatos), las corrientes $I$ eran constantes. En ambas configuraciones, se ubicó el Sensor Hall en el extremo superior de la bobina ($z = \frac{l}{2}$) y se lo conectó a un voltímetro para poder medir las diferencias de potencial $V$ y de allí obtener $B$. Cabe aclarar que se buscó que el sensor estuviera ubicado sobre el eje vertical de la bobina, para lo cual se utilizó el calibre. Para complemental, se realizaron estas mediciones nuevamente para la bobina completa, pero con el sensor ubicado en $z = 0$ y aún centrado. 
+
+\begin{figure}[h!]
+   \begin{subfigure}{0.5\textwidth}
+      \centering
+      \includegraphics[width=0.7\textwidth]{Circuito_Bobina_corta}
+      \caption{Circuito utilizando la mitad superior de la bobina, aquí resulta $l_1 = (111,2 \pm 0,1)mm$ y $r = (46,7 \pm 0,1)mm$}  
+      \label{subfig:bob_corta}
+   \end{subfigure}
+   \begin{subfigure}{0.5\textwidth}
+      \centering
+      \includegraphics[width=0.7\textwidth]{Circuito_Bobina_larga}
+      \caption{Circuito utilizando la bobina completa, aquí resulta $r = (46,7 \pm 0,1)mm$, $l = (255 \pm 5)mm$ y $d = (33 \pm 5)mm$ como antes}  
+      \label{subfig:bob_larga}
+   \end{subfigure}
+   \caption{Circuitos sobre los que se hizo circular distintas corrientes constantes $I$ (despreciando la induccción) para obtener distintos campos magnéticos $B$. El sensor magnético es externo y se ubicó en la parte superior de la bobina.}
+   \label{fig:circ_bob}
+\end{figure}
+
+Finalmente, para la configuración que solo utilizaba la parte superior, se ubicó el sensor a la altura $z = \frac{l}{2}$ y se calculó el campo magnético $B$ en función de la distancia $a$ al centro. Cabe aclarar que en todas los calculos de $B$ apareció una componente $B_{T}$ del campo magnético terrestre que no interfirió con las mediciones, dado que la relación \textbf{CAMPO DE BOBINA} solo agregaría una ordenada $B_T$.
+
+Como segundo método, se midió la inductancia de ambas configuraciones (completa y mitad superior) con el objetivo de obtener $N$ a través de la ecuación \textbf{INDUCTANCIA DE BOBINA} y de los parámetros mencionados más arriba. Para esto se utilizó un medidor LCR cuya precisión a la hora de medir inductancias era del $(1,2\%+5d)$ para el rango en que se ubicaron las inductancias ($1999,9\mu H-19,999mH$).
+
+
+\subsection{Caracterización de transformadores}
+
+Para comenzar esta sección, se planteó montar un transformador de acople ideal. Para esto se usaron dos bobinas capaces de encajar una dentro de la otra como puede verse en la \textbf{Figura \ref{fig:transmont}}. Como la superposición no era perfecta dado que los radios eran distintos, se utilizó una barra de hierro en el interior de ambos para aumentar el flujo magnético. La bobina interior tenia una inductancia $L_1 = (78,4 \pm 0,8)\mu H$, una resistencia $R_{L_1}=(1,0 \pm 0,2)\Omega$ y un total de $N_1=235$ vueltas. La bobina externa tenía una inductancia $L_2 = (64,3 \pm 0,7)mH$, una resistencia $R_{L_2}=(79,0 \pm 0,6)\Omega$ y un total de $N_2=2920$ vueltas. Estas inductancias y resistencias fueron medidas con el medidor LCR y el multímetro, respectivamente.
+
+\begin{figure}[h!]
+\centering
+   \includegraphics[width=0.7\textwidth]{Transformadores1}
+   \caption{Montaje del transformador utilizando dos bobinas que encajaban una dentro de la otra. La barra de hierro se utilizó para mejorar el flujo magnético.}  
+   \label{fig:transmont}
+\end{figure}
+
+Una vez montado el transformador, se armaron un par de circuitos que no tenian conexión (dado que las bobinas no estaban en contacto directo) como puede verse en la \textbf{Figura \ref{fig:trans1_circ}}. Para distintos voltajes de entrada $\varepsilon$ se registró la caída de potencial $V_R$ sobre la resistencia $R = (11,11 \pm 0,11)k\Omega$ con el osciloscopio. Conectando el generador al otro canal y usandolo como $trigger$ $externo$ pudo medirse el voltaje de entrada y el desfasaje entre $\varepsilon$ y $V_R$ con el objetivo de asegurarse que este último fuera constante. La frecuencia utilizada fue $f = (200000 \pm 20)Hz$, para asegurarse que se mantuviera la relación $R_1 = R_{L_1}+R_F << 2\pi fL_1$. Cabe destacar que como los circuitos no estaban conectados, no fue necesario conectar la tierra del osciloscopio a la tierra del generador de funciones. 
+
+
+\begin{figure}[h!]
+\centering
+   \includegraphics[width=0.7\textwidth]{Transformadores1_circuito}
+   \caption{Par de circuitos acoplados a través del transformador. Se fue variando la amplitud de entrada $\varepsilon$ y registrando la diferencia de voltaje en la resistencia $R$.}  
+   \label{fig:trans1_circ}
+\end{figure}
+
+Posteriormente, utilizando la misma configuración, se varió la frecuencia $f$ con el objetivo de relevar el desfasaje y la transmisión $\frac{V_R}{\varepsilon}$. Nuevamente, aunque se dejó la amplitud de la fuente constante, se la midió con el osciloscopio para cada frecuencia $f$.
+
+De forma alternativa, se utilizaron dos configuraciones geométricas distintas con otras bobinas como muestra la \textbf{Figura \ref{fig:configs}} y se reemplazaron por el transformador de la \textbf{Figura \ref{fig:trans1_circ}}. La resistencia $R$ fue reemplazada por una nueva resistencia $R = (21,57 \pm 0,11)k\Omega$. Sin embargo, solo se varió la amplitud de entrada $\varepsilon$ y no se registró el desfasaje. Tampoco se varió la frecuencia, que fue fijada en cada configuración. En ambos casos, la bobina de menos vueltas fue la conectada al generador $\varepsilon$ y la de más vueltas a la resistencia $R$.
+
+\begin{figure}[h!]
+   \begin{subfigure}{0.5\textwidth}
+      \centering
+      \includegraphics[width=0.7\textwidth]{configuracion1}
+      \caption{Circuito utilizando la mitad superior de la bobina, aquí resulta $l_1 = (111,2 \pm 0,1)mm$ y $r = (46,7 \pm 0,1)mm$}  
+      \label{subfig:con1}
+   \end{subfigure}
+   \begin{subfigure}{0.5\textwidth}
+      \centering
+      \includegraphics[width=0.7\textwidth]{configuracion2}
+      \caption{Circuito utilizando la bobina completa, aquí resulta $r = (46,7 \pm 0,1)mm$, $l = (255 \pm 5)mm$ y $d = (33 \pm 5)mm$ como antes}  
+      \label{subfig:con2}
+   \end{subfigure}
+   \caption{Distintas configuraciones de transformador cuyo soporte era de hierro. En ambos casos el circuito utilizado fue identico al de la \textbf{Figura \ref{fig:trans1_circ}}, aunque se modificó la resistencia $R$. El proceso de medición fue idéntico.}
+   \label{fig:configs}
+\end{figure}
+
+Para la primer configuración del transformador, correspondiente a la \textbf{Figura \ref{subfig:con1}}, se utilizó como $B_1$ una bobina de 400 vueltas con $L_1 = (110 \pm 8)mH$ y $R_{L_1} = (5,8 \pm 0,2)\Omega$ y como $B_2$ una de 1600 vueltas con $L_2 = (1,54 \pm 0,01)H$ y $R_{L_2} = (194,0 \pm 0,3)\Omega$. Para esta configuración se utilizó una frecuencia $f = (150000 \pm 20)Hz$ para asegurarse de mantener la relación $R_1 = R_{L_1}+R_F << 2\pi fL_1$.
+
+Para el transformador de la \textbf{Figura \ref{subfig:con2}} se utilizó una bobina $B_3$ de 200 vueltas con $L_3 = (10,63 \pm 0,08)mH$ y $R_{L_3} = (1,8 \pm 0,2)\Omega$ y una bobina $B_4$ de 800 vueltas con $L_4 = (169,6 \pm 1,2)mH$ y $R_{L_4} = (10,8 \pm 0,3)\Omega$. Nuevamente,  se utilizó una frecuencia $f = (300000 \pm 30)Hz$ para asegurarse de mantener la relación $R_3 = R_{L_3}+R_F << 2\pi fL_3$.
 
 
 
