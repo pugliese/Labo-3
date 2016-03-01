@@ -82,7 +82,85 @@
 
 \section{Introducción}\label{sec:intro}
 
+\subsection{Campos magnéticos estacionarios}
 
+El primer campo estacionario que se estudiará será el campo magnético terrestre. Debido al núcleo de hierro en el interior del planeta se genera un campo magnético $\vec{B}$ como se ve en la \textbf{Figura \ref{subfig:Campo_B}}.
+
+\begin{figure}[h]
+
+\begin{subfigure}{0.5\textwidth}
+\centering
+\includegraphics[scale=.8]{Campo.png}
+	\subcaption{Campo magnético terrestre}
+	\label{subfig:Campo_B}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\centering
+\includegraphics[scale=.65]{angulos_campo.jpg}
+	\subcaption{Se definen $i$ es la inclinación y $d$ la declinación del campo magnético terrestre.}
+	\label{subfig:Angulos}
+\end{subfigure}
+\caption{Relación angular entra el campo magnético y el eje de rotación.}
+\end{figure}
+
+Siendo que el eje de rotación y del campo magnético están inclinados uno respecto del otro, se pueden definir la \textit{inclinación} $i$ como el ángulo que forma $\vec{B}$ y el vector $\vec{z}$ que va al centro del planeta; y la \textit{declinación} $d$ como el ángulo entre $\vec{B}$ y el vector del norte geográfico $\vec{N_g}$ (ver \textbf{ Figura \ref{subfig:Angulos}}). Es claro que estos ángulos depende de la posición geográfica de donde se lo mida.
+
+\bigskip
+El siguiente campo estacionario es el generado por una bobina. Si se considera una bobina de largo $L$, radio $r$ y con $N$ cantidad de vueltas, como se ve en la \textbf{Figura \ref{fig:bobina_intro}},
+
+\begin{figure}[h]
+
+\centering
+\includegraphics[scale=1]{bobina.png}
+	\caption{Bobina de largo $l$, radio $r$ y con $N$ cantidad de vueltas por el cual circula una corriente $I$.}
+	\label{fig:bobina_intro}
+\end{figure}
+
+al hacer circular una corriente $I$ se genere un campo magnético. Tomando el origen $0$ en el punto medio de la bobina que pasa por el eje de simetría $z$, de modo que ambos extremos se encuentre a distancia $\frac{l}{2}$ de dicho origen; el valor del campo sobre los puntos $z=0$ y $z=\pm \frac{l}{2}$ serán:
+
+\begin{equation}{\label{valores_B}}
+\begin{split}
+B(0,0, \pm \frac{l}{2})= \frac{\mu I N}{2\sqrt{R^2+l^2}}\\
+B(0,0,0)= \frac{\mu I N}{2\sqrt{R^2+(\frac{l}{2})^2}}
+\end{split}
+\end{equation}
+
+Donde $\mu$ es la permeabilidad magnética del medio. Ademas, la inductancia $L$ de la bobina es
+
+\begin{equation}
+L=\frac{2\pi\mu N^2 r}{l}
+\end{equation}
+
+\subsection{Transformadores}
+Un transformador es un sistema en el cual un circuito activo o \textit{primario}, con inductancia $L_1$, transmite energía a un circuito pasivo o \textit{secundario} con inductancia $L_2$. Este fenómeno se debe a la inductancia mutua $M$ entre ambos circuitos armando el sistema como se ve en la \textbf{Figura \ref{fig:transformador}}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=.8]{transformador.jpg}
+\caption{Transformador}
+\label{fig:transformador}	
+\end{figure}
+
+Si la fuente $\varepsilon$ varia en el tiempo de la forma $\varepsilon (t) = E_0 sin (\omega t)$, al resolver el circuito utilizando las leyes de Kirchoff, la transferencia tiene una expresión compleja:
+
+\begin{equation}
+\frac{V_c}{V_e}= \frac{i\omega M R_c}{(R_1 + i\omega L_1)(R_c + i\omega L_2)+ (\omega M)^2}
+\label{transf_1}
+\end{equation}
+
+Bajo la condición $R_1 \ll \omega L_1$, la solución anterior se puede simplificar en:
+
+\begin{equation}
+\frac{V_c}{V_e}=\frac{MR_c}{L_1R_c-i\omega L_1L_2(1-k^2)}
+\label{transf_2}
+\end{equation}
+
+En este caso la inductancia mutua se puede expresar como $M^2=K^2L_1L_2$ siendo $\vert k\vert\leq1$. Solo en el caso ideal $\vert k\vert = 1$, por lo que si entre las bobinas se coloca un núcleo de un material ferromagnético, por ejemplo hierro, se tendrá $\vert k\vert \simeq 1$; de modo que, en la aproximación al caso ideal, la transferencia del transformador es:
+
+\begin{equation}
+\frac{V_c}{V_e}= \sqrt{\frac{L_1}{L_2}}
+\label{trans_3}
+\end{equation}
 
 
 
