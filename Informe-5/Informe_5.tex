@@ -103,10 +103,10 @@ El primer campo estacionario que se estudiará será el campo magnético terrest
 \caption{Relación angular entra el campo magnético y el eje de rotación.}
 \end{figure}
 
-Siendo que el eje de rotación y del campo magnético están inclinados uno respecto del otro, se pueden definir la \textit{inclinación} $i$ como el ángulo que forma $\vec{B}$ y el vector $\vec{z}$ que va al centro del planeta; y la \textit{declinación} $d$ como el ángulo entre $\vec{B}$ y el vector del norte geográfico $\vec{N_g}$ (ver \textbf{ Figura \ref{subfig:Angulos}}). Es claro que estos ángulos depende de la posición geográfica de donde se lo mida.
+Siendo que el eje de rotación y del campo magnético están inclinados uno respecto del otro, se pueden definir en cada punto la \textit{inclinación} $i$ como el ángulo que forma $\vec{B}$ con el vector $\vec{z}$ que va desde este punto al centro del planeta; y la \textit{declinación} $d$ como el ángulo entre $\vec{B}$ y el vector del norte geográfico $\vec{N_g}$ (ver \textbf{ Figura \ref{subfig:Angulos}}). Es claro que estos ángulos dependen de la posición geográfica de donde se lo mida.
 
 \bigskip
-El siguiente campo estacionario es el generado por una bobina. Si se considera una bobina de largo $L$, radio $r$ y con $N$ cantidad de vueltas, como se ve en la \textbf{Figura \ref{fig:bobina_intro}},
+El siguiente campo estacionario es el generado por una bobina. Si se considera una bobina de largo $l$, radio $r$ y con $N$ cantidad de vueltas, como se ve en la \textbf{Figura \ref{fig:bobina_intro}},
 
 \begin{figure}[h]
 
@@ -116,13 +116,14 @@ El siguiente campo estacionario es el generado por una bobina. Si se considera u
 	\label{fig:bobina_intro}
 \end{figure}
 
-al hacer circular una corriente $I$ se genere un campo magnético. Tomando el origen $0$ en el punto medio de la bobina que pasa por el eje de simetría $z$, teniendo que ambos extremos se encuentre a distancia $\frac{l}{2}$ de dicho origen; por la ley de Biot-Savart $d\vec{B}=\frac{\mu}{4\pi}\frac{d\vec{I}x\vec{r}}{\vert\vec{r}\vert^3}$, de modo que al integrarlo sobre el eje z el valor del campo sobre los puntos $z=0$ y $z=\pm \frac{l}{2}$ serán:
+al hacer circular una corriente $I$ se genera un campo magnético. Tomando el origen $0$ en el punto medio de la bobina que pasa por el eje de simetría $z$, teniendo que ambos extremos se encuentran a distancia $\frac{l}{2}$ de dicho origen; por la ley de Biot-Savart $d\vec{B}=\frac{\mu}{4\pi}\frac{d\vec{I}x\vec{r}}{\vert\vec{r}\vert^3}$, de modo que al integrar sobre el eje z el valor del campo sobre los puntos $z=0$ y $z=\pm \frac{l}{2}$ serán:
 
-\begin{equation}{\label{eq:valores_B}}
+\begin{equation}
 \begin{split}
 \vec{B}(0,0, \pm \frac{l}{2})= \frac{\mu I N}{2\sqrt{R^2+l^2}}\hat{z}\\
 \vec{B}(0,0,0)= \frac{\mu I N}{2\sqrt{R^2+(\frac{l}{2})^2}}\hat{z}
 \end{split}
+\label{eq:valores_B}
 \end{equation}
 
 Donde $\mu$ es la permeabilidad magnética del medio. Ademas, la inductancia $L$ de la bobina es
@@ -144,7 +145,7 @@ Un transformador es un sistema en el cual un circuito activo o \textit{primario}
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=.8]{transformador.jpg}
+\includegraphics[scale=1]{transformador.jpg}
 \caption{Transformador}
 \label{fig:transformador}	
 \end{figure}
@@ -159,7 +160,7 @@ Si la fuente $\varepsilon$ varia en el tiempo de la forma $\varepsilon (t) = E_0
 Bajo la condición $R_1 \ll \omega L_1$, la solución anterior se puede simplificar en:
 
 \begin{equation}
-\frac{V_c}{V_e}=\frac{MR_c}{L_1R_c-i\omega L_1L_2(1-k^2)}
+\frac{V_c}{V_e}=\frac{MR_c}{L_1R_c-i\omega L_1L_2(1-K^2)}
 \label{transf_2}
 \end{equation}
 
@@ -178,7 +179,7 @@ En este caso la inductancia mutua se puede expresar como $M^2=K^2L_1L_2$ siendo 
 
 \section{Desarrollo experimental}
 
-Durante esta experiencia se utilizó un generador de funciones de generar diferencias de potencial $V(t)$ a frecuencias con un error relativo del $0,01\%$ en un rango entre $1\mu Hz$ y $5MHz$. El voltaje pico-pico tiene un error relativo del $1\%$ para el rango de voltaje utilizado ($2V-20V$). Además, se utilizó una resistencia variable por décadas en el intervalo $1\Omega-11110\Omega$. Usando un multimetro digital se midieron los valores utilizados en esta resistencia junto con su precisión que era de la forma $\pm(1\%+2d)$ en el rango utilizado (mayor a $100\Omega$). El multimetro permitía también medir diferencias de potencial con una precisión de la forma $(1d+0,5\%)$.
+Durante esta experiencia se utilizó un generador de funciones de generar diferencias de potencial $V(t)$ a frecuencias con un error relativo del $0,01\%$ en un rango entre $1\mu Hz$ y $5MHz$. El voltaje pico-pico tiene un error relativo del $1\%$ para el rango de voltaje utilizado ($2V-20V$). Además, se utilizó una resistencia variable por décadas en el intervalo ($1\Omega-11110\Omega$). Usando un multimetro digital se midieron los valores utilizados en esta resistencia junto con su precisión que era de la forma $\pm(1\%+2d)$ en el rango utilizado (mayor a $100\Omega$). El multimetro permitía también medir diferencias de potencial con una precisión de la forma $(1d+0,5\%)$.
 
 Para generar una diferencia de potencial constante se utilizó una fuente de alimentación programable con una precisión de $\pm (0.5\% + 0.02)V$ en un rango de voltaje de salida de $0 \thicksim 32 V$. Esta fuente también era capaz de generar corrientes constantes $I$. Se utilizó además un osciloscopio digital que en sus dos canales de entrada era capaz de medir diferencias de potencial entre sus dos terminales en un rango de 2mV a 5V con un error relativo del $3\%$. A la hora de medir voltaje, fue necesario asegurarse que el cable a tierra del osciloscopio estuvera conectado al cable a tierra el generador de funciones. 
 
@@ -186,17 +187,19 @@ Finalmente, se utilizó un sensor Hall capaz de medir el módulo de campos magn�
 
 \subsection{Caracterización del Sensor Hall y medición del campo magnético terrestre}
 
-Como se dijo más arriba, a la hora de calcuar la intensidad de un campo megnético $B$, es necesario caracterizar el parámetro $offset$. Una forma de obtenerlo es midiendo el campo magnético $B^{+} = m.V^{+}+offset$ en una dirección $\widehat{u}$ y luego medir en la dirección opuesta $-\widehat{u}$el campo $B^{-} = m.V^{-}+offset=-B^{+}$. De esta forma es posible obtener $offset = \frac{m}{2}(V^{+}+V^{-})$. Esto se hizo efectivamente midiendo el campo magnético terrestre en una dirección $\widehat{u}$ aleatoria. Se midió en esa misma dirección con las 3 escalas posibles del sensor hall. Cabe aclarar que la diferencia de potencial generada por el Sensor Hall fue medida a través de un voltímetro en su función de amperímetro.
+Como se dijo más arriba, a la hora de calcuar la intensidad de un campo megnético $B$, es necesario caracterizar el parámetro $offset$. Una forma de obtenerlo es midiendo el campo magnético $B^{+} = m.V^{+}+offset$ en una dirección arbitraria $\widehat{u}$ y luego medir en la dirección opuesta $-\widehat{u}$ el campo magnético $B^{-} = m.V^{-}+offset=-B^{+}$. De esta forma es posible obtener $offset = \frac{m}{2}(V^{+}+V^{-})$. Esto se hizo efectivamente midiendo el campo magnético terrestre en una dirección $\widehat{u}$ aleatoria. Se midió en esa misma dirección con las 3 escalas posibles del sensor hall. Cabe aclarar que la diferencia de potencial generada por el Sensor Hall fue medida a través de un voltímetro en su función de amperímetro.
 
 Una vez caracterizado el $offset$, el sensor fue utilizado para medir la dirección y magnitud del campo magnético terrestre en el laboratorio. Se lo montó sobre un soporte con una nuez y se lo fue rotando en el plano perpendicular al tripode hasta encontrar un máximo. Luego se rotó el sensor en su propio plano hasta encontrar nuevamente un máximo. Este último valor fue el que se asignó como la magnitud del campo y con los dos angulos relativos se caracterizó su dirección (ver \textbf{Figura \ref{fig:terrestre}}).
 
 
 \begin{figure}[h!]
 \centering
-   \includegraphics[width=0.7\textwidth]{Terrestre}
+   \includegraphics[width=0.4\textwidth]{Terrestre}
    \caption{Esquema de la bobina utilizada con sus parámetros definidos: $r = (46,7 \pm 0,1)mm$, $l = (255 \pm 5)mm$ y $d = (33 \pm 5)mm$}  
    \label{fig:terrestre}
 \end{figure}
+
+\newpage
 
 \subsection{Caracterización de una bobina}
 
@@ -204,7 +207,7 @@ Posteriormente, se tomó una bobina de radio $r = (46,7 \pm 0,1)mm$ separada en 
 
 \begin{figure}[h!]
 \centering
-   \includegraphics[width=0.7\textwidth]{Bobina}
+   \includegraphics[width=0.38\textwidth]{Bobinaa}
    \caption{Esquema de la bobina utilizada con sus parámetros definidos: $r = (46,7 \pm 0,1)mm$, $l = (255 \pm 5)mm$ y $d = (33 \pm 5)mm$}  
    \label{fig:bobina}
 \end{figure}
@@ -214,23 +217,23 @@ Con el objetivo de estimar $N$, se probaron diversos métodos. El primero consis
 \begin{figure}[h!]
    \begin{subfigure}{0.5\textwidth}
       \centering
-      \includegraphics[width=0.7\textwidth]{Circuito_Bobina_corta}
-      \caption{Circuito utilizando la mitad superior de la bobina, aquí resulta $l_1 = (111,2 \pm 0,1)mm$ y $r = (46,7 \pm 0,1)mm$}  
+      \includegraphics[width=0.75\textwidth]{Circuito_Bobina_corta}
+      \caption{Circuito utilizando la mitad superior de la bobina}  
       \label{subfig:bob_corta}
    \end{subfigure}
    \begin{subfigure}{0.5\textwidth}
       \centering
-      \includegraphics[width=0.7\textwidth]{Circuito_Bobina_larga}
-      \caption{Circuito utilizando la bobina completa, aquí resulta $r = (46,7 \pm 0,1)mm$, $l = (255 \pm 5)mm$ y $d = (33 \pm 5)mm$ como antes}  
+      \includegraphics[width=0.75\textwidth]{Circuito_Bobina_larga}
+      \caption{Circuito utilizando la bobina completa}  
       \label{subfig:bob_larga}
    \end{subfigure}
    \caption{Circuitos sobre los que se hizo circular distintas corrientes constantes $I$ (despreciando la induccción) para obtener distintos campos magnéticos $B$. El sensor magnético es externo y se ubicó en la parte superior de la bobina.}
    \label{fig:circ_bob}
 \end{figure}
 
-Finalmente, para la configuración que solo utilizaba la parte superior, se ubicó el sensor a la altura $z = \frac{l}{2}$ y se calculó el campo magnético $B$ en función de la distancia $a$ al centro. Cabe aclarar que en todas los calculos de $B$ apareció una componente $B_{T}$ del campo magnético terrestre que no interfirió con las mediciones, dado que la relación \textbf{CAMPO DE BOBINA} solo agregaría una ordenada $B_T$.
+Finalmente, para la configuración que solo utilizaba la parte superior, se ubicó el sensor a la altura $z = \frac{l}{2}$ y se calculó el campo magnético $B$ en función de la distancia $a$ al centro. Cabe aclarar que en todas los calculos de $B$ apareció una componente $B_{T}$ del campo magnético terrestre que no interfirió con las mediciones, dado que la relación \eqref{eq:valores_B} solo agregaría una ordenada $B_T$.
 
-Como segundo método, se midió la inductancia de ambas configuraciones (completa y mitad superior) con el objetivo de obtener $N$ a través de la ecuación \textbf{INDUCTANCIA DE BOBINA} y de los parámetros mencionados más arriba. Para esto se utilizó un medidor LCR cuya precisión a la hora de medir inductancias era del $(1,2\%+5d)$ para el rango en que se ubicaron las inductancias ($1999,9\mu H-19,999mH$).
+Como segundo método, se midió la inductancia de ambas configuraciones (completa y mitad superior) con el objetivo de obtener $N$ a través de la ecuación \eqref{eq:inductancia} y de los parámetros mencionados más arriba. Para esto se utilizó un medidor LCR cuya precisión a la hora de medir inductancias era del $(1,2\%+5d)$ para el rango en que se ubicaron las inductancias ($1999,9\mu H-19,999mH$).
 
 
 \subsection{Caracterización de transformadores}
@@ -239,7 +242,7 @@ Para comenzar esta sección, se planteó montar un transformador de acople ideal
 
 \begin{figure}[h!]
 \centering
-   \includegraphics[width=0.7\textwidth]{Transformadores1}
+   \includegraphics[width=0.5\textwidth]{Transformadores1}
    \caption{Montaje del transformador utilizando dos bobinas que encajaban una dentro de la otra. La barra de hierro se utilizó para mejorar el flujo magnético.}  
    \label{fig:transmont}
 \end{figure}
@@ -249,26 +252,26 @@ Una vez montado el transformador, se armaron un par de circuitos que no tenian c
 
 \begin{figure}[h!]
 \centering
-   \includegraphics[width=0.7\textwidth]{Transformadores1_circuito}
+   \includegraphics[width=0.5\textwidth]{Transformadores1_circuito}
    \caption{Par de circuitos acoplados a través del transformador. Se fue variando la amplitud de entrada $\varepsilon$ y registrando la diferencia de voltaje en la resistencia $R$.}  
    \label{fig:trans1_circ}
 \end{figure}
 
 Posteriormente, utilizando la misma configuración, se varió la frecuencia $f$ con el objetivo de relevar el desfasaje y la transmisión $\frac{V_R}{\varepsilon}$. Nuevamente, aunque se dejó la amplitud de la fuente constante, se la midió con el osciloscopio para cada frecuencia $f$.
 
-De forma alternativa, se utilizaron dos configuraciones geométricas distintas con otras bobinas como muestra la \textbf{Figura \ref{fig:configs}} y se reemplazaron por el transformador de la \textbf{Figura \ref{fig:trans1_circ}}. La resistencia $R$ fue reemplazada por una nueva resistencia $R = (21,57 \pm 0,11)k\Omega$. Sin embargo, solo se varió la amplitud de entrada $\varepsilon$ y no se registró el desfasaje. Tampoco se varió la frecuencia, que fue fijada en cada configuración. En ambos casos, la bobina de menos vueltas fue la conectada al generador $\varepsilon$ y la de más vueltas a la resistencia $R$.
+De forma alternativa, se utilizaron dos configuraciones geométricas distintas con otras bobinas como muestra la \textbf{Figura \ref{fig:configs}} y se reemplazaron por el transformador de la \textbf{Figura \ref{fig:trans1_circ}}. La resistencia $R$ fue reemplazada por una nueva resistencia $R = (21,57 \pm 0,11)k\Omega$. Sin embargo, solo se varió la amplitud de entrada $\varepsilon$ y no se registró el desfasaje. Tampoco se varió la frecuencia, que fue fijada en cada configuración. En ambos casos, la bobina de menos vueltas fue la conectada al generador $\varepsilon$ y la de más vueltas a la resistencia $R = (21,57 \pm 0,11)k\Omega$.
 
 \begin{figure}[h!]
    \begin{subfigure}{0.5\textwidth}
       \centering
-      \includegraphics[width=0.7\textwidth]{configuracion1}
-      \caption{Circuito utilizando la mitad superior de la bobina, aquí resulta $l_1 = (111,2 \pm 0,1)mm$ y $r = (46,7 \pm 0,1)mm$}  
+      \includegraphics[width=0.5\textwidth]{configuracion1}
+      \caption{Transformador con bobina $B_1$ de 400 vuelvas y $B_2$ de 1600}  
       \label{subfig:con1}
    \end{subfigure}
    \begin{subfigure}{0.5\textwidth}
       \centering
-      \includegraphics[width=0.7\textwidth]{configuracion2}
-      \caption{Circuito utilizando la bobina completa, aquí resulta $r = (46,7 \pm 0,1)mm$, $l = (255 \pm 5)mm$ y $d = (33 \pm 5)mm$ como antes}  
+      \includegraphics[width=0.5\textwidth]{configuracion2}
+      \caption{Transformador con bobina $B_3$ de 200 vuelvas y $B_4$ de 800}  
       \label{subfig:con2}
    \end{subfigure}
    \caption{Distintas configuraciones de transformador cuyo soporte era de hierro. En ambos casos el circuito utilizado fue identico al de la \textbf{Figura \ref{fig:trans1_circ}}, aunque se modificó la resistencia $R$. El proceso de medición fue idéntico.}

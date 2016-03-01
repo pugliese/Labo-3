@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.3)  1 MAR 2016 15:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.3)  1 MAR 2016 17:38
 entering extended mode
 **informe_5
 (informe_5.tex
@@ -1118,100 +1118,88 @@ Package pdftex.def Info: bobina.png used on input line 114.
 <transformador.jpg, id=21, 326.72063pt x 176.91093pt>
 File: transformador.jpg Graphic file (type jpg)
  <use transformador.jpg>
-Package pdftex.def Info: transformador.jpg used on input line 147.
-(pdftex.def)             Requested size: 261.37685pt x 141.52893pt.
+Package pdftex.def Info: transformador.jpg used on input line 148.
+(pdftex.def)             Requested size: 326.71982pt x 176.91049pt.
 
 [2 <./transformador.jpg>] <Terrestre.jpg, id=27, 335.2525pt x 403.5075pt>
 File: Terrestre.jpg Graphic file (type jpg)
 
 <use Terrestre.jpg>
-Package pdftex.def Info: Terrestre.jpg used on input line 196.
-(pdftex.def)             Requested size: 338.58632pt x 407.52089pt.
+Package pdftex.def Info: Terrestre.jpg used on input line 197.
+(pdftex.def)             Requested size: 193.47578pt x 232.86467pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Bobina.png, id=28, 115.18031pt x 188.95593pt>
-File: Bobina.png Graphic file (type png)
- <use Bobina.png>
-Package pdftex.def Info: Bobina.png used on input line 207.
-(pdftex.def)             Requested size: 338.58632pt x 555.57275pt.
+[3] <Bobinaa.jpg, id=33, 362.85562pt x 399.74344pt>
+File: Bobinaa.jpg Graphic file (type jpg)
+ <use Bobinaa.jpg>
+Package pdftex.def Info: Bobinaa.jpg used on input line 210.
+(pdftex.def)             Requested size: 183.80716pt x 202.49403pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Circuito_Bobina_corta.jpg, id=29, 529.98pt x 416.30531pt>
+<Circuito_Bobina_corta.jpg, id=34, 529.98pt x 416.30531pt>
 File: Circuito_Bobina_corta.jpg Graphic file (type jpg)
 
 <use Circuito_Bobina_corta.jpg>
-Package pdftex.def Info: Circuito_Bobina_corta.jpg used on input line 217.
-(pdftex.def)             Requested size: 169.29315pt x 132.97903pt.
+Package pdftex.def Info: Circuito_Bobina_corta.jpg used on input line 220.
+(pdftex.def)             Requested size: 181.38632pt x 142.48207pt.
 
-<Circuito_Bobina_larga.jpg, id=30, 632.3625pt x 471.26062pt>
+<Circuito_Bobina_larga.jpg, id=35, 632.3625pt x 471.26062pt>
 File: Circuito_Bobina_larga.jpg Graphic file (type jpg)
 
 <use Circuito_Bobina_larga.jpg>
-Package pdftex.def Info: Circuito_Bobina_larga.jpg used on input line 223.
-(pdftex.def)             Requested size: 169.29315pt x 126.16344pt.
+Package pdftex.def Info: Circuito_Bobina_larga.jpg used on input line 226.
+(pdftex.def)             Requested size: 181.38632pt x 135.17357pt.
 
-Overfull \hbox (2.1243pt too wide) in paragraph at lines 215--227
+Overfull \hbox (2.1243pt too wide) in paragraph at lines 218--230
 []$[]$ $[]$ 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[3] <Transformadores1.jpg, id=36, 784.43062pt x 637.63219pt>
+[4 <./Terrestre.jpg> <./Bobinaa.jpg>]
+<Transformadores1.jpg, id=39, 784.43062pt x 637.63219pt>
 File: Transformadores1.jpg Graphic file (type jpg)
 
 <use Transformadores1.jpg>
-Package pdftex.def Info: Transformadores1.jpg used on input line 242.
-(pdftex.def)             Requested size: 338.58632pt x 275.22728pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[4 <./Terrestre.jpg>]
-<Transformadores1_circuito.jpg, id=40, 645.16031pt x 797.22844pt>
+Package pdftex.def Info: Transformadores1.jpg used on input line 245.
+(pdftex.def)             Requested size: 241.84843pt x 196.58395pt.
+ [5 <./Circuito_Bobina_corta.jpg> <./Circuito_Bobina_larga.jpg> <./Transformado
+res1.jpg>]
+<Transformadores1_circuito.jpg, id=43, 645.16031pt x 797.22844pt>
 File: Transformadores1_circuito.jpg Graphic file (type jpg)
 
 <use Transformadores1_circuito.jpg>
-Package pdftex.def Info: Transformadores1_circuito.jpg used on input line 252.
-(pdftex.def)             Requested size: 338.58632pt x 418.39307pt.
+Package pdftex.def Info: Transformadores1_circuito.jpg used on input line 255.
+(pdftex.def)             Requested size: 241.84843pt x 298.85045pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[5 <./Bobina.png>] <configuracion1.jpg, id=45, 291.33844pt x 377.91188pt>
+<configuracion1.jpg, id=44, 291.33844pt x 377.91188pt>
 File: configuracion1.jpg Graphic file (type jpg)
 
 <use configuracion1.jpg>
-Package pdftex.def Info: configuracion1.jpg used on input line 264.
-(pdftex.def)             Requested size: 169.29315pt x 219.60422pt.
- <configuracion2.jpg, id=46, 259.7203pt x 374.90062pt>
+Package pdftex.def Info: configuracion1.jpg used on input line 267.
+(pdftex.def)             Requested size: 120.92421pt x 156.85356pt.
+ <configuracion2.jpg, id=45, 259.7203pt x 374.90062pt>
 File: configuracion2.jpg Graphic file (type jpg)
 
 <use configuracion2.jpg>
-Package pdftex.def Info: configuracion2.jpg used on input line 270.
-(pdftex.def)             Requested size: 169.29315pt x 244.36897pt.
+Package pdftex.def Info: configuracion2.jpg used on input line 273.
+(pdftex.def)             Requested size: 120.92421pt x 174.55008pt.
 
-Overfull \hbox (2.1243pt too wide) in paragraph at lines 262--274
+Overfull \hbox (2.1243pt too wide) in paragraph at lines 265--277
 []$[]$ $[]$ 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6 <./Circuito_Bobina_corta.jpg> <./Circuito_Bobina_larga.jpg> <./Transformador
-es1.jpg>] [7 <./Transformadores1_circuito.jpg>] [8 <./configuracion1.jpg> <./co
-nfiguracion2.jpg>] (informe_5.aux
+[6 <./Transformadores1_circuito.jpg>] [7 <./configuracion1.jpg> <./configuracio
+n2.jpg>] (informe_5.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
  6437 strings out of 493698
- 87920 string characters out of 3144416
- 156847 words of memory out of 3000000
+ 87925 string characters out of 3144416
+ 150847 words of memory out of 3000000
  9600 multiletter control sequences out of 15000+200000
  51857 words of font info for 112 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -1228,9 +1216,9 @@ x 2.9/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Program Files/MikTex 2.9/fonts/
 type1/public/kpfonts/jkpmsc8a.pfb><C:/Program Files/MikTex 2.9/fonts/type1/publ
 ic/kpfonts/jkpsy.pfb><C:/Program Files/MikTex 2.9/fonts/type1/public/kpfonts/jk
 psyb.pfb>
-Output written on informe_5.pdf (9 pages, 828001 bytes).
+Output written on informe_5.pdf (8 pages, 906200 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
+ 91 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
