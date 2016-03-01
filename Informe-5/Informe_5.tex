@@ -116,19 +116,27 @@ El siguiente campo estacionario es el generado por una bobina. Si se considera u
 	\label{fig:bobina_intro}
 \end{figure}
 
-al hacer circular una corriente $I$ se genere un campo magnético. Tomando el origen $0$ en el punto medio de la bobina que pasa por el eje de simetría $z$, de modo que ambos extremos se encuentre a distancia $\frac{l}{2}$ de dicho origen; el valor del campo sobre los puntos $z=0$ y $z=\pm \frac{l}{2}$ serán:
+al hacer circular una corriente $I$ se genere un campo magnético. Tomando el origen $0$ en el punto medio de la bobina que pasa por el eje de simetría $z$, teniendo que ambos extremos se encuentre a distancia $\frac{l}{2}$ de dicho origen; por la ley de Biot-Savart $d\vec{B}=\frac{\mu}{4\pi}\frac{d\vec{I}x\vec{r}}{\vert\vec{r}\vert^3}$, de modo que al integrarlo sobre el eje z el valor del campo sobre los puntos $z=0$ y $z=\pm \frac{l}{2}$ serán:
 
-\begin{equation}{\label{valores_B}}
+\begin{equation}{\label{eq:valores_B}}
 \begin{split}
-B(0,0, \pm \frac{l}{2})= \frac{\mu I N}{2\sqrt{R^2+l^2}}\\
-B(0,0,0)= \frac{\mu I N}{2\sqrt{R^2+(\frac{l}{2})^2}}
+\vec{B}(0,0, \pm \frac{l}{2})= \frac{\mu I N}{2\sqrt{R^2+l^2}}\hat{z}\\
+\vec{B}(0,0,0)= \frac{\mu I N}{2\sqrt{R^2+(\frac{l}{2})^2}}\hat{z}
 \end{split}
 \end{equation}
 
 Donde $\mu$ es la permeabilidad magnética del medio. Ademas, la inductancia $L$ de la bobina es
 
 \begin{equation}
-L=\frac{2\pi\mu N^2 r}{l}
+L=\frac{\pi\mu N^2 r^2}{l}
+\label{eq:inductancia}
+\end{equation}
+
+Si ahora, en el plano $z=\frac{l}{2}$, se toma como $x$ la distancia entre un punto y el eje z; nuevamente por la ley de Biot-Savart, el campo en la dirección $\vec{z}$ será:
+
+\begin{equation}
+\vec{B}(x,\frac{l}{2}) = \frac{-\mu rNI}{2l} \int_{-l/2}^{l/2}\frac{r^2+rxsin(\frac{2\pi N}{L}t)}{\sqrt{r^2+x^2-2rxsin(\frac{2\pi N}{L}t)+(\frac{l}{2}-t)^2}^3} dt \hat{z}
+\label{eq:Bvsr}
 \end{equation}
 
 \subsection{Transformadores}
