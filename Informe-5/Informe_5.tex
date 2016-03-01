@@ -1,5 +1,10 @@
 \documentclass[11pt,a4paper]{article}
 
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{tabularx,ragged2e,booktabs,caption}
+\newcolumntype{C}[1]{>{\Centering}m{#1}}
+\renewcommand\tabularxcolumn[1]{C{#1}}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{amsmath}
@@ -290,6 +295,75 @@ Para el transformador de la \textbf{Figura \ref{subfig:con2}} se utilizó una bo
 
 \section{Resultados}
 \label{sec:discusion}
+
+\subsection{Caracterización del Sensor Hall y medición del campo magnético terrestre}
+
+Los valores obtenidos del offset de la sonda para cada ganancia, utilizando el metodo descripto en la subseccion del mismo nombre del desarrollo experimental se muestran en el \textbf{cuadro \ref{tab:offset}}
+
+
+\bigskip
+\begin{minipage}{\linewidth}
+\captionof{table} {}
+\centering
+\begin{tabular}{||c|c||}
+\hline 
+\label{tab:offset}
+\textbf{Ganancia} & \textbf{Offset)} \\ \hline 
+$x1$ & $-853 \pm 7$  \\ \hline 
+$x10$ & $-85,0 \pm 0,7$  \\ \hline 
+$x200$ & $-4,03 \pm 0,03$  \\ \hline 
+
+\end{tabular}\\[0.3cm]
+
+Offset obtenido para cada valor de ganancia de la sonda hall utilizada
+\end{minipage}
+\bigskip
+
+
+Utilizando la ganancia $x200$, se encontró que la posición donde la medición era máxima, correspondía a un ángulo de inclinación $i = (45 \pm 2)º$ y uno de declinación $d=(15+-3)$. Luego, utilizando el valor de offset correspondiente a la sensibilidad elegida, se obtuvo un valor del campo magnético terreste $B_{G} = (26 \pm 6)\mu T$. Realizada esa medición, se comparó con la obtenida por el \textit{NOAA's National Geophysical Data Center}, la cual resultó en un valor $B = (22,883 \pm 152)\mu T$ con el cual es indistingible.
+
+\subsection{Caracterización de una bobina}
+
+Para determinar la cantidad de vueltas del mismo, se utilizó la inductancia medida con el multímetro, que fué de $L=(4.266 \mp 0.09)mH$. Utilizandose la ecuacion \eqref{eq:inductancia}, se ubtuvo un valor de $N = (237 \pm 3)$. Luego para asegurar que, para parametros fijos, el voltaje de salida mantenia una relación lineal con la corriente, se construyó un gráfico como se ilustra en la \textbf{figura \ref{fig:VeVs}} que relaciona el campo magnético medido con la corriente utilizada. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{campo_vs_Corriente_BC}
+\label{fig:VeVs}
+\caption{Gráfico del voltaje medido por el sensor \textit{Hall} sobre la parte superior de una bobina en función de la corriente del circuito RL }
+\end{figure}
+
+Realizando un ajuste lineal, se puede ver que el resultado es el esperado, ya que nos arroja un $R-cuadrado= 0.99986$ muy cercano a 1 que confirma la bondad del ajuste. A partir del mismo, se obtiene una pendiente de $m = 8,28 \pm 0,04$ que, según la ecuación  \eqref{valores_B}, puede utlizarse para despejar la cantidad de vueltas en el  bobinado. En este caso dió un valor $N= (146 \pm 1)$ que no resulta para nada indistingible con el obtenido anteriormente.
+
+Luego, para el solenoide completo, se obtuvieron los graficos de la \textbf{figura \ref{subfig:CC-Arriba}}, con un $R-cuadrado= 0.99992$, y \textbf{figura \ref{subfig:CC-Centro}}, $R-cuadrado= 0.99805$,  donde se puede que los ajustes son buenos. Pero al despejar el valor de N de ambas pendientes  nos da un valor $N_{A} = (359 \pm 1)$ para la medición en la parte superior y un $N_{C}=(379 \pm 1)$ para la medición en el centro, los cuales deberian ser iguales ya que corresponden al mismo solenoide, pero no lo son.
+
+\begin{figure}[H]
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[scale=0.35]{Campo_vs_Corriente_BL_Arriba}
+		\label{subfig:CC-Arriba}
+		\subcaption{Medicion realizada en la tapa superior}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[scale=0.35]{Campo_vs_Corriente_BL_Centro}
+		\label{subfig:CC-Centro}
+		\subcaption{Medicion realizada en el centro}
+	\end{subfigure}
+\caption{Grafico del voltaje medido por el sensor hall sobre dos lugares del mismo solenoide en funcion de la corriente del circuito RL }
+\end{figure}
+
+
+Finalmente, para la primer configuración se realizaron mediciones variando la distancia del sensor al eje, y se contruyó un gráfico como se ve en la \textbf{figura \ref{fig:b-vs-R}}. Se establecieron como constantes para el ajuste $l= 100.63 $ el largo del bobinado, y $N = (237 \pm 3)$ el numero de vuelta. Cabe destacar que se eligió ese valor de N por que el metodo utilizado para obtener la cantidad de vueltas en el bobinado a partir de la medicion del campo resultó bastate impreciso.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{Campo-vs-Radio}
+	\label{fig:B-vs-R}
+	\caption{Gráfico de la intensidad de la componente paralela al eje del campo magnetico de un solenoide, en funcion de la distancia al eje de la sonda hall a una altura constante }
+\end{figure}
+
+Se puede ver que el ajuste realizado con la ecuación \eqref{Bvsr} arroja un $R-Cuadrado = 0,98136$ cercano a 1 que garantiza la bonda del ajuste. A pesar de eso, los valores $r=(0.04 \pm 0,002)m$ y $z = 0,5566$, correspondientes al radio del solenoide y a la altura del sensor con respecto al centro del mismo respectivamente, no coinciden con los medidos directamente. 
 
 
 
