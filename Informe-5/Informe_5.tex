@@ -363,6 +363,59 @@ Finalmente, para la primer configuración se realizaron mediciones variando la d
 
 Se puede ver que el ajuste realizado con la ecuación \eqref{eq:Bvsr} arroja un $R-Cuadrado = 0,98136$ cercano a 1 que garantiza la bonda del ajuste. A pesar de eso, los valores $r=(0.04 \pm 0,002)m$ y $z = 0,5566$, correspondientes al radio del solenoide y a la altura del sensor con respecto al centro del mismo respectivamente, no coinciden con los medidos directamente. 
 
+\subsection{Caracterizacion de un transformador}
+
+En primer lugar se aseguró que la relación entre el voltaje de entrada y el de salida del transformador, sea lineal para parametros fijos. Para esto se construyó un gráfico como se ilustra en la \textbf{figura \ref{fig:Tr1-Recta}}, a partir del cual se obtiene un $R-Cuadrado = 0.99391$ muy cercano a uno, lo que certifica la bondad del ajuste.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{Transformador1_Vent_vs_Vsal}
+	\caption{Gráfico del voltaje de salida en función del voltaje de entrada de un transformador con las caracteristicas ilustradas en la \textbf{figura \ref{fig:trans1_circ}} }
+	\label{fig:Tr1-Recta}
+\end{figure}
+
+Este ajuste, además, nos arroja una pendiente $m= 0.135 \mp 0.003$, a partir de la cual, utilizando la ecuacion \eqref{transf_2} se puede despejar M obteniendo dos posibles valores, $M-{1} = 0.0654405 h$ y $M_{2} = 0.0000777585$, obteniendo un valor de $K = 0.03463254095$, si se descarta el valor que es mayor que 1.
+
+Luego se construyó un gráfico de la transmisión de intensidad en función de la frecuencia utilizada como se muestra en la \textbf{figura \ref{fig:Tr1-Hip}}, y se intentó realizar un ajuste utilizando la ecuación \ref{transf_2}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{Transmision_vs_Frecuencia_choto}
+	\caption{Gráfico del voltaje de salida  para distintas frecuencias en el mismo transformador de la figura anterior.}
+	\label{fig:Tr1-Hip}
+\end{figure}
+
+Aunque se obtiene un $R-Cuadrado = 0,9704$ muy cercano a 1, se puede ver que el valor de $a= (-0.29 \pm 0.09)$ correspondiente a $(L_{1}.R_{c})^2$, donde $L_{1}$ es la inductancia de entrada y $R_{c}$ la resistencia de carga, seria necesario que alguno de ellos fuera imaginario.
+
+Tambien se construyó un gráfico que relaciona el desfasaje de la corriente con la frecuencia utilizada, esperando que la relación sea lineal, y se obtuvo el gráfico de la \textbf{figura \ref{fig:Tr1-Des}}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{Desfasaje_vs_frecuencia}
+	\caption{Gráfico del desfasaje en la corriente ocasionado por un trasformador con las caracteristicas ilustradas en la \textbf{figura \ref{fig:trans1_circ}}. Se esperaba que la dependencia fuera lineal.}
+	\label{fig:Tr1-Des}
+\end{figure}
+
+Posteriormente se construyeron gráficos con las mediciones realizadas sobre los transformadores representados en la \textbf{figura \ref{fig:configs}}.
+Para ambos gráficos se realizó un ajuste lineal y ,para la \textbf{figura \ref{subfig:1600_400}}, se obtuvo un $R-Cuadrado = 0.99763$, mientras que para la \textbf{figura \ref{subfig:800_200}}, un $R-Cuadrado = 0.99918$; certificando la bondad de ambos ajustes.
+
+\begin{figure}[H]
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[scale=0.4]{Bobina_1600_400}
+		\subcaption{Transformador correspondiente a la \textbf{figura \ref{subfig:con1}}}
+		\label{subfig:1600_400}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[scale=0.4]{Bobina_1600_400}
+		\subcaption{Transformador correspondiente a la \textbf{figura \ref{subfig:con2}}}
+		\label{subfig:800_200}
+	\end{subfigure}
+	\caption{Graficos del voltaje de salida en funcion del voltaje de entrada para dos transformadores distintos}
+\end{figure}
+
+De manera análoga a lo realizado anteriormente, se obtuvo, para el transformador de la \textbf{figura \ref{subfig:con1}}, un $k=0.10490428717$ y, para el de la \textbf{figura \ref{subfig:con2}}, un $k=0.08918526972$.
 
 
 
