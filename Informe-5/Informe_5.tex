@@ -150,7 +150,7 @@ Un transformador es un sistema en el cual un circuito activo o \textit{primario}
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=1]{transformador.jpg}
+\includegraphics[scale=0.7]{transformador.jpg}
 \caption{Transformador}
 \label{fig:transformador}	
 \end{figure}
@@ -169,14 +169,19 @@ Bajo la condición $R_1 \ll \omega L_1$, la solución anterior se puede simplifi
 \label{transf_2}
 \end{equation}
 
-En este caso la inductancia mutua se puede expresar como $M^2=K^2L_1L_2$ siendo $\vert k\vert\leq1$. Solo en el caso ideal $\vert k\vert = 1$, por lo que si entre las bobinas se coloca un núcleo de un material ferromagnético, por ejemplo hierro, se tendrá $\vert k\vert \simeq 1$; de modo que, en la aproximación al caso ideal, la transferencia del transformador es:
+En este caso la inductancia mutua se puede expresar como $M^2=K^2L_1L_2$ siendo $\vert k\vert\leq1$ el acoplamiento magnético. Solo en el caso ideal $\vert k\vert = 1$, por lo que si entre las bobinas se coloca un núcleo de un material ferromagnético, por ejemplo hierro, se tendrá $\vert k\vert \simeq 1$; de modo que, en la aproximación al caso ideal, la transferencia del transformador es:
 
 \begin{equation}
 \frac{V_c}{V_e}= \sqrt{\frac{L_1}{L_2}}
 \label{trans_3}
 \end{equation}
 
+Y la diferencia fase entre la señal de entrada se obtiene por:
 
+\begin{equation}
+\tan(\phi) = \frac{L_2 (1-K^2)\omega}{R_c}
+\label{eq:fase_trans}
+\end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 3. DISPOSITIVO EXPERIMENTAL: armado del modelo, como se midio, consideraciones a la hora de medir.
@@ -184,23 +189,22 @@ En este caso la inductancia mutua se puede expresar como $M^2=K^2L_1L_2$ siendo 
 
 \section{Desarrollo experimental}
 
-Durante esta experiencia se utilizó un generador de funciones de generar diferencias de potencial $V(t)$ a frecuencias con un error relativo del $0,01\%$ en un rango entre $1\mu Hz$ y $5MHz$. El voltaje pico-pico tiene un error relativo del $1\%$ para el rango de voltaje utilizado ($2V-20V$). Además, se utilizó una resistencia variable por décadas en el intervalo ($1\Omega-11110\Omega$). Usando un multimetro digital se midieron los valores utilizados en esta resistencia junto con su precisión que era de la forma $\pm(1\%+2d)$ en el rango utilizado (mayor a $100\Omega$). El multimetro permitía también medir diferencias de potencial con una precisión de la forma $(1d+0,5\%)$.
+Durante esta experiencia se utilizó un generador de funciones capaz de generar diferencias de potencial $V(t)$ a frecuencias con un error relativo del $0,01\%$ en un rango entre $1\mu Hz$ y $5MHz$. El voltaje pico-pico tiene un error relativo del $1\%$ para el rango de voltaje utilizado ($2V-20V$). Además, se utilizó una resistencia variable por décadas en el intervalo ($1\Omega-11110\Omega$). Usando un multimetro digital se midieron los valores utilizados en esta resistencia junto con su precisión que era de la forma $\pm(1\%+2d)$ en el rango utilizado (mayor a $100\Omega$). El multimetro permitía también medir diferencias de potencial con una precisión de la forma $(1d+0,5\%)$.
 
-Para generar una diferencia de potencial constante se utilizó una fuente de alimentación programable con una precisión de $\pm (0.5\% + 0.02)V$ en un rango de voltaje de salida de $0 \thicksim 32 V$. Esta fuente también era capaz de generar corrientes constantes $I$. Se utilizó además un osciloscopio digital que en sus dos canales de entrada era capaz de medir diferencias de potencial entre sus dos terminales en un rango de 2mV a 5V con un error relativo del $3\%$. A la hora de medir voltaje, fue necesario asegurarse que el cable a tierra del osciloscopio estuvera conectado al cable a tierra el generador de funciones. 
+Para generar una diferencia de potencial constante se utilizó una fuente de alimentación programable con una precisión de $\pm (0.5\% + 0.02)V$ en un rango de voltaje de salida de $0 \thicksim 32 V$. Esta fuente también era capaz de generar corrientes constantes $I$. Se utilizó además un osciloscopio digital con dos canales de entrada capaces de medir diferencias de potencial entre sus dos terminales en un rango de 2mV a 5V con un error relativo del $3\%$. A la hora de medir voltaje, fue necesario asegurarse que el cable a tierra del osciloscopio estuvera conectado al cable a tierra el generador de funciones. 
 
-Finalmente, se utilizó un sensor Hall capaz de medir el módulo de campos magnéticos $B$ en una dirección particular, expresándolos como una diferencia de potencial $V$. La relación entre $B$ y $V$ está dada por $B = mV+offset$ donde $m$ es una característica del instrumento definida por su ganancia $G$ y su sensibilidad $S$ según $m = S^{-1}$. La ganancia $G$ puede ser x1, x10 o x200 y define una sensibilidad $S_{x1} = (3,06 \pm 0,15)\frac{mV}{G}$,  $S_{x10} = (30,6 \pm 1,2)\frac{mV}{G}$ y $S_{x200} = (612 \pm 24)\frac{mV}{G}$. Por lo tanto, las pendientes resultan $m_{x1} = (327 \pm 5)\frac{G}{V}$, $m_{x10} = (32,7 \pm 1,3)\frac{G}{V}$ y $m_{x200} = (1,63 \pm 0,06)\frac{G}{V}$. La caracterización del $offset$ se cubre a continuación.
+Finalmente, se utilizó una sonda Hall capaz de medir el módulo de campos magnéticos $B$ en una dirección particular, expresándolos como una diferencia de potencial $V$. La relación entre $B$ y $V$ está dada por $B = mV+offset$ donde $m$ es una característica del instrumento definida por su ganancia $G$ y su sensibilidad $S$ según $m = S^{-1}$. La ganancia $G$ puede ser x1, x10 o x200 y define una sensibilidad $S_{x1} = (3,06 \pm 0,15)\frac{mV}{G}$,  $S_{x10} = (30,6 \pm 1,2)\frac{mV}{G}$ y $S_{x200} = (612 \pm 24)\frac{mV}{G}$. Por lo tanto, las pendientes resultan $m_{x1} = (327 \pm 5)\frac{G}{V}$, $m_{x10} = (32,7 \pm 1,3)\frac{G}{V}$ y $m_{x200} = (1,63 \pm 0,06)\frac{G}{V}$. La caracterización del $offset$ se cubre a continuación.
 
 \subsection{Caracterización del Sensor Hall y medición del campo magnético terrestre}
 
-Como se dijo más arriba, a la hora de calcuar la intensidad de un campo megnético $B$, es necesario caracterizar el parámetro $offset$. Una forma de obtenerlo es midiendo el campo magnético $B^{+} = m.V^{+}+offset$ en una dirección arbitraria $\widehat{u}$ y luego medir en la dirección opuesta $-\widehat{u}$ el campo magnético $B^{-} = m.V^{-}+offset=-B^{+}$. De esta forma es posible obtener $offset = \frac{m}{2}(V^{+}+V^{-})$. Esto se hizo efectivamente midiendo el campo magnético terrestre en una dirección $\widehat{u}$ aleatoria. Se midió en esa misma dirección con las 3 escalas posibles del sensor hall. Cabe aclarar que la diferencia de potencial generada por el Sensor Hall fue medida a través de un voltímetro en su función de amperímetro.
+Como se dijo más arriba, a la hora de calcular la intensidad de un campo magnético $B$, es necesario caracterizar el parámetro $offset$. Una forma de obtenerlo es midiendo el campo magnético $B^{+} = m.V^{+}+offset$ en una dirección arbitraria $\widehat{u}$ y luego medir en la dirección opuesta $-\widehat{u}$ el campo magnético $B^{-} = m.V^{-}+offset=-B^{+}$. De esta forma es posible obtener $offset = \frac{m}{2}(V^{+}+V^{-})$. Esto se hizo efectivamente midiendo el campo magnético terrestre en una dirección $\widehat{u}$ aleatoria. Se midió en esa misma dirección con las 3 escalas posibles del sensor hall. Cabe aclarar que la diferencia de potencial generada por el Sensor Hall fue medida a través de un multímetro en su función de amperímetro.
 
-Una vez caracterizado el $offset$, el sensor fue utilizado para medir la dirección y magnitud del campo magnético terrestre en el laboratorio. Se lo montó sobre un soporte con una nuez y se lo fue rotando en el plano perpendicular al tripode hasta encontrar un máximo. Luego se rotó el sensor en su propio plano hasta encontrar nuevamente un máximo. Este último valor fue el que se asignó como la magnitud del campo y con los dos angulos relativos se caracterizó su dirección (ver \textbf{Figura \ref{fig:terrestre}}).
-
+Una vez caracterizado el $offset$, la sonda fue utilizado para medir la dirección y magnitud del campo magnético terrestre en el laboratorio. Se lo montó sobre un soporte con una nuez y se lo fue rotando alrededor del eje de la nuez hasta encontrar un máximo para determinar el ángulo $\alpha$. Luego se rotó el sensor sobre su propio eje hasta encontrar nuevamente un máximo y determinar el ángulo $\beta$. Este último valor fue el que se asignó como la magnitud del campo y con los dos ángulos relativos se caracterizó su dirección (ver \textbf{Figura \ref{fig:terrestre}}).
 
 \begin{figure}[h!]
 \centering
-   \includegraphics[width=0.4\textwidth]{Terrestre}
-   \caption{Esquema de la bobina utilizada con sus parámetros definidos: $r = (46,7 \pm 0,1)mm$, $l = (255 \pm 5)mm$ y $d = (33 \pm 5)mm$}  
+   \includegraphics[width=0.275\textwidth]{Terrestre}
+   \caption{Esquema del sistema utilizado para medir el campo magnético terrestre donde la sonda hall tiene ángulos relativos $\alpha$ y $\beta$.}  
    \label{fig:terrestre}
 \end{figure}
 
@@ -252,7 +256,7 @@ Para comenzar esta sección, se planteó montar un transformador de acople ideal
    \label{fig:transmont}
 \end{figure}
 
-Una vez montado el transformador, se armaron un par de circuitos que no tenian conexión (dado que las bobinas no estaban en contacto directo) como puede verse en la \textbf{Figura \ref{fig:trans1_circ}}. Para distintos voltajes de entrada $\varepsilon$ se registró la caída de potencial $V_R$ sobre la resistencia $R = (11,11 \pm 0,11)k\Omega$ con el osciloscopio. Conectando el generador al otro canal y usandolo como $trigger$ $externo$ pudo medirse el voltaje de entrada y el desfasaje entre $\varepsilon$ y $V_R$ con el objetivo de asegurarse que este último fuera constante. La frecuencia utilizada fue $f = (200000 \pm 20)Hz$, para asegurarse que se mantuviera la relación $R_1 = R_{L_1}+R_F << 2\pi fL_1$. Cabe destacar que como los circuitos no estaban conectados, no fue necesario conectar la tierra del osciloscopio a la tierra del generador de funciones. 
+Una vez montado el transformador, se armaron un par de circuitos que no tenian conexión (dado que las bobinas no estaban en contacto directo) como puede verse en la \textbf{Figura \ref{fig:trans1_circ}}. Para distintos voltajes de entrada $\varepsilon$ se registró la caída de potencial $V_R$ sobre la resistencia $R = (11,11 \pm 0,11)k\Omega$ con el osciloscopio. Conectando el generador al otro canal se lo pudo usar como $trigger$ $externo$. La frecuencia utilizada fue $f = (200000 \pm 20)Hz$, para asegurarse que se mantuviera la relación $R_1 = R_{L_1}+R_F << 2\pi fL_1$. Cabe destacar que como los circuitos no estaban conectados, no fue necesario conectar la tierra del osciloscopio a la tierra del generador de funciones. 
 
 
 \begin{figure}[h!]
@@ -262,6 +266,7 @@ Una vez montado el transformador, se armaron un par de circuitos que no tenian c
    \label{fig:trans1_circ}
 \end{figure}
 
+\newpage
 Posteriormente, utilizando la misma configuración, se varió la frecuencia $f$ con el objetivo de relevar el desfasaje y la transmisión $\frac{V_R}{\varepsilon}$. Nuevamente, aunque se dejó la amplitud de la fuente constante, se la midió con el osciloscopio para cada frecuencia $f$.
 
 De forma alternativa, se utilizaron dos configuraciones geométricas distintas con otras bobinas como muestra la \textbf{Figura \ref{fig:configs}} y se reemplazaron por el transformador de la \textbf{Figura \ref{fig:trans1_circ}}. La resistencia $R$ fue reemplazada por una nueva resistencia $R = (21,57 \pm 0,11)k\Omega$. Sin embargo, solo se varió la amplitud de entrada $\varepsilon$ y no se registró el desfasaje. Tampoco se varió la frecuencia, que fue fijada en cada configuración. En ambos casos, la bobina de menos vueltas fue la conectada al generador $\varepsilon$ y la de más vueltas a la resistencia $R = (21,57 \pm 0,11)k\Omega$.
@@ -298,7 +303,7 @@ Para el transformador de la \textbf{Figura \ref{subfig:con2}} se utilizó una bo
 
 \subsection{Caracterización del Sensor Hall y medición del campo magnético terrestre}
 
-Los valores obtenidos del offset de la sonda para cada ganancia, utilizando el metodo descripto en la subseccion del mismo nombre del desarrollo experimental se muestran en el \textbf{Cuadro 1}
+Los valores obtenidos del offset de la sonda para cada ganancia, utilizando el metodo descripto en la subseccion del mismo nombre del desarrollo experimental se muestran en el \textbf{Tabla 1}
 
 
 \bigskip
@@ -313,12 +318,12 @@ $x10$ & $-85,0 \pm 0,7$  \\ \hline
 $x200$ & $-4,03 \pm 0,03$  \\ \hline 
 \end{tabular}\\[0.3cm]
 
-\textit{Cuadro 1: Offset obtenido para cada valor de ganancia de la sonda hall utilizada}
+\textit{Tabla 1: Offset obtenido para cada valor de ganancia de la sonda hall utilizada}
 \end{minipage}
 \bigskip
 
 
-Utilizando la ganancia $x200$, se encontró que la posición donde la medición era máxima, correspondía a un ángulo de inclinación $i = (45 \pm 2)º$ y uno de declinación $d=(15+-3)º$. Luego, utilizando el valor de offset correspondiente a la sensibilidad elegida, se obtuvo un valor del campo magnético terreste $B_{G} = (26 \pm 6)\mu T$. Realizada esa medición, se comparó con la obtenida por el \textit{NOAA's National Geophysical Data Center}, la cual resultó en un valor $B = (22,883 \pm 0,152)\mu T$ con el cual es indistingible.
+Utilizando la ganancia $x200$, se encontró que la posición donde la medición era máxima, y al aplicar relaciones trigonométricas se obtuvo a un ángulo de inclinación $i= \alpha = (45 \pm 2)º$ y uno de declinación $d= \beta=(15\pm 3)º$. Luego, utilizando el valor de offset correspondiente a la sensibilidad elegida, se obtuvo un valor del campo magnético terreste $B_{G} = (26 \pm 6)\mu T$. Realizada esa medición, se comparó con la obtenida por el \textit{NOAA's National Geophysical Data Center}, la cual resultó en un valor $B = (22,883 \pm 0,152)\mu T$ con lo que al coincidir en un intervalo se los considera idénticos.
 
 \subsection{Caracterización de una bobina}
 
@@ -326,14 +331,14 @@ Para determinar la cantidad de vueltas $N$ de la parte superior del solenoide, s
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.45]{campo_vs_Corriente_BC}
-\caption{Gráfico del voltaje medido por el sensor \textit{Hall} sobre la parte superior de una bobina en función de la corriente del circuito RL }
+\includegraphics[scale=0.35]{campo_vs_Corriente_BC}
+\caption{Gráfico del voltaje medido por el sensor \textit{Hall} sobre la parte superior de una bobina en función de la corriente del circuito RL}
 \label{fig:VeVs}
 \end{figure}
 
-Realizando un ajuste lineal, se puede ver que el resultado es el esperado, ya que arroja un $R-cuadrado= 0.99986$ que confirma la bondad del ajuste. A partir del mismo, se obtiene una pendiente de $m = (8,28 \pm 0,04)\frac{G}{A}$ que, según la ecuación \eqref{eq:valores_B}, puede utlizarse para despejar la cantidad de vueltas $N$ del bobinado. En este caso dió un valor $N= (146 \pm 1)$ que no resulta indistingible con el obtenido anteriormente.
+Realizando un ajuste lineal, se puede ver que el resultado es el esperado, ya que arroja un $R-square= 0.99986$ que confirma la bondad del ajuste. A partir del mismo, se obtiene una pendiente de $m = (8,28 \pm 0,04)\frac{G}{A}$ que, según la ecuación \eqref{eq:valores_B}, puede utilizarse para despejar la cantidad de vueltas $N$ del bobinado. En este caso dio un valor $N= (146 \pm 1)$ que resulta distinto al obtenido anteriormente.
 
-Luego, para el solenoide completo, se obtuvieron los graficos de la \textbf{Figura \ref{subfig:CC-Arriba}}, con un $R-cuadrado= 0.99992$, y \textbf{Figura \ref{subfig:CC-Centro}}, $R-cuadrado= 0.99805$,  donde verse que los ajustes son buenos. Pero al despejar el valor de $N$ de ambas pendientes se obtiene un valor $N_{A} = (359 \pm 1)$ para la medición en la parte superior y un $N_{C}=(379 \pm 1)$ para la medición en el centro, los cuales son distintos a pesar de corresponder al mismo solenoide.
+Luego, para el solenoide completo, se obtuvieron los gráficos de la \textbf{Figura \ref{subfig:CC-Arriba}}, con un $R-square= 0.99992$, y \textbf{Figura \ref{subfig:CC-Centro}}, $R-square= 0.99805$,  donde puede verse que los ajustes son buenos. Pero al despejar el valor de $N$ de ambas pendientes se obtiene un valor $N_{A} = (359 \pm 1)$ para la medición en la parte superior y un $N_{C}=(379 \pm 1)$ para la medición en el centro, los cuales son distintos a pesar de corresponder al mismo solenoide.
 
 \begin{figure}[H]
 	\begin{subfigure}{0.5\textwidth}
@@ -354,50 +359,50 @@ Luego, para el solenoide completo, se obtuvieron los graficos de la \textbf{Figu
 
 Finalmente, para la primer configuración se realizaron mediciones variando la distancia del sensor al eje, y se contruyó un gráfico como se ve en la \textbf{Figura \ref{fig:B-vs-R}}. Se establecieron como constantes para el ajuste $l= 100.63 $ el largo del bobinado, y $N = (237 \pm 3)$ el número de vueltas. Cabe destacar que se eligió ese valor de $N$ por que el método utilizado para obtener la cantidad de vueltas en el bobinado a partir de la medición del campo resultó impreciso.
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.45]{Campo-vs-Radio}
+	\includegraphics[scale=0.35]{Campo-vs-Radio}
 	\caption{Gráfico de la intensidad de la componente paralela al eje del campo magnetico de un solenoide, en funcion de la distancia al eje de la sonda hall a una altura constante }
    \label{fig:B-vs-R}
 \end{figure}
 
-Se puede ver que el ajuste realizado con la ecuación \eqref{eq:Bvsr} arroja un $R-Cuadrado = 0,98136$ cercano a 1 que garantiza la bonda del ajuste. A pesar de eso, los valores $r=(0.04 \pm 0,002)m$ y $z = 0,5566$, correspondientes al radio del solenoide y a la altura del sensor con respecto al centro del mismo respectivamente, no coinciden con los medidos directamente. 
+Se puede ver que el ajuste realizado con la ecuación \eqref{eq:Bvsr} arroja un $R-square = 0,98136$ cercano a 1 que garantiza la bonda del ajuste. A pesar de eso, el valor de $r=(0.040 \pm 0,003)m$  no coincide con el valor medido $r_m=(0.467 \pm 0.001)$; mientras que $z = (0,557\pm 0.001)cm$ coincide con el valor medido $z_m = (55.5 \pm 0.05) cm$.
 
 \subsection{Caracterizacion de un transformador}
 
-En primer lugar se aseguró que la relación entre el voltaje de entrada y el de salida del transformador, sea lineal para parametros fijos. Para esto se construyó un gráfico como se ilustra en la \textbf{figura \ref{fig:Tr1-Recta}}, a partir del cual se obtiene un $R-Cuadrado = 0.99391$ muy cercano a uno, lo que certifica la bondad del ajuste.
+En primer lugar se aseguró que la relación entre el voltaje de entrada y el de salida del transformador sea lineal para parametros fijos. Para esto se construyó un gráfico como se ilustra en la \textbf{figura \ref{fig:Tr1-Recta}}, a partir del cual se obtiene un $R-square = 0.99391$ muy cercano a uno, lo que certifica la bondad del ajuste.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.4]{Transformador1_Vent_vs_Vsal}
+	\includegraphics[scale=0.35]{Transformador1_Vent_vs_Vsal}
 	\caption{Gráfico del voltaje de salida en función del voltaje de entrada de un transformador con las caracteristicas ilustradas en la \textbf{figura \ref{fig:trans1_circ}} }
 	\label{fig:Tr1-Recta}
 \end{figure}
 
-Este ajuste, además, nos arroja una pendiente $m= 0.135 \mp 0.003$, a partir de la cual, utilizando la ecuacion \eqref{transf_2} se puede despejar M obteniendo dos posibles valores, $M-{1} = 0.0654405 h$ y $M_{2} = 0.0000777585$, obteniendo un valor de $K = 0.03463254095$, si se descarta el valor que es mayor que 1.
+Este ajuste, además, nos arroja una pendiente $m= (0.135 \pm 0.003)$, a partir de la cual, utilizando la ecuacion \eqref{transf_2} se puede despejar la inductancia mutua $M$ obteniendo dos posibles valores, $M_{1} = (0.06545\pm 0.00005)H^2 $ y $M_{2} = (0.000077\pm 0.000006)H^2$, obteniendo un acoplamiento $K = (0.034\pm 0.003)$, si se descarta el valor que es mayor que 1.
 
-Luego se construyó un gráfico de la transmisión de intensidad en función de la frecuencia utilizada como se muestra en la \textbf{figura \ref{fig:Tr1-Hip}}, y se intentó realizar un ajuste utilizando la ecuación \ref{transf_2}
+Luego se construyó un gráfico de la transmisión de intensidad en función de la frecuencia utilizada como se muestra en la \textbf{figura \ref{fig:Tr1-Hip}}, y se intentó realizar un ajuste utilizando la ecuación \eqref{transf_2}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.4]{Transmision_vs_Frecuencia_choto}
+	\includegraphics[scale=0.35]{Transmision_vs_Frecuencia_choto}
 	\caption{Gráfico del voltaje de salida  para distintas frecuencias en el mismo transformador de la figura anterior.}
 	\label{fig:Tr1-Hip}
 \end{figure}
 
-Aunque se obtiene un $R-Cuadrado = 0,9704$ muy cercano a 1, se puede ver que el valor de $a= (-0.29 \pm 0.09)$ correspondiente a $(L_{1}.R_{c})^2$, donde $L_{1}$ es la inductancia de entrada y $R_{c}$ la resistencia de carga, seria necesario que alguno de ellos fuera imaginario.
+Aunque se obtiene un $R-square = 0,9704$ muy cercano a 1, se puede ver que el valor de $a= (-0.29 \pm 0.09)$ correspondiente a $(L_{1}.R_{c})^2$, donde $L_{1}$ es la inductancia de entrada y $R_{c}$ la resistencia de carga, seria necesario que alguno de ellos fuera imaginario.
 
-Tambien se construyó un gráfico que relaciona el desfasaje de la corriente con la frecuencia utilizada, esperando que la relación sea lineal, y se obtuvo el gráfico de la \textbf{figura \ref{fig:Tr1-Des}}
+Tambien se construyó un gráfico que relaciona el desfasaje de la corriente con la frecuencia utilizada, esperando que la relación sea lineal $tan(\phi)$ $vs$ $\omega$ como muestra \eqref{eq:fase_trans} , y se obtuvo el gráfico de la \textbf{figura \ref{fig:Tr1-Des}}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.4]{Desfasaje_vs_frecuencia}
+	\includegraphics[scale=0.35]{Desfasaje_vs_frecuencia}
 	\caption{Gráfico del desfasaje en la corriente ocasionado por un trasformador con las caracteristicas ilustradas en la \textbf{figura \ref{fig:trans1_circ}}. Se esperaba que la dependencia fuera lineal.}
 	\label{fig:Tr1-Des}
 \end{figure}
 
 Posteriormente se construyeron gráficos con las mediciones realizadas sobre los transformadores representados en la \textbf{figura \ref{fig:configs}}.
-Para ambos gráficos se realizó un ajuste lineal y ,para la \textbf{figura \ref{subfig:1600_400}}, se obtuvo un $R-Cuadrado = 0.99763$, mientras que para la \textbf{figura \ref{subfig:800_200}}, un $R-Cuadrado = 0.99918$; certificando la bondad de ambos ajustes.
+Para ambos gráficos se realizó un ajuste lineal y ,para la \textbf{figura \ref{subfig:1600_400}}, se obtuvo un $R-square = 0.99763$, mientras que para la \textbf{figura \ref{subfig:800_200}}, un $R-square = 0.99918$; asegurando la bondad de ambos ajustes.
 
 \begin{figure}[H]
 	\begin{subfigure}{0.5\textwidth}
@@ -415,9 +420,7 @@ Para ambos gráficos se realizó un ajuste lineal y ,para la \textbf{figura \ref
 	\caption{Graficos del voltaje de salida en funcion del voltaje de entrada para dos transformadores distintos}
 \end{figure}
 
-De manera análoga a lo realizado anteriormente, se obtuvo, para el transformador de la \textbf{figura \ref{subfig:con1}}, un $k=0.10490428717$ y, para el de la \textbf{figura \ref{subfig:con2}}, un $k=0.08918526972$.
-
-
+De manera análoga a lo realizado anteriormente, se obtuvo un acoplamiento, para el transformador de la \textbf{figura \ref{subfig:con1}}, un $K=(0.1045\pm 0.0007)$ y, para el de la \textbf{figura \ref{subfig:con2}}, un $K=(0.0892 \pm 0.0007)$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
