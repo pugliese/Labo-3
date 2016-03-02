@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.4)  1 MAR 2016 22:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.4)  2 MAR 2016 01:24
 entering extended mode
 **"C:/Labo 3/Labo-3/Informe-5/Informe_5.tex"
 ("C:/Labo 3/Labo-3/Informe-5/Informe_5.tex"
@@ -1197,129 +1197,120 @@ Package pdftex.def Info: bobina.png used on input line 119.
 File: transformador.jpg Graphic file (type jpg)
  <use transformador.jpg>
 Package pdftex.def Info: transformador.jpg used on input line 153.
-(pdftex.def)             Requested size: 326.71982pt x 176.91049pt.
+(pdftex.def)             Requested size: 228.70287pt x 123.83679pt.
 
-[2 <./transformador.jpg>] <Terrestre.jpg, id=27, 335.2525pt x 403.5075pt>
+[2 <./transformador.jpg>] <Terrestre.jpg, id=27, 245.41687pt x 289.83281pt>
 File: Terrestre.jpg Graphic file (type jpg)
 
 <use Terrestre.jpg>
-Package pdftex.def Info: Terrestre.jpg used on input line 202.
-(pdftex.def)             Requested size: 193.47578pt x 232.86467pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[3] <Bobinaa.jpg, id=33, 362.85562pt x 399.74344pt>
+Package pdftex.def Info: Terrestre.jpg used on input line 206.
+(pdftex.def)             Requested size: 133.01367pt x 157.09114pt.
+ [3 <./Terrestre.jpg>]
+<Bobinaa.jpg, id=33, 362.85562pt x 399.74344pt>
 File: Bobinaa.jpg Graphic file (type jpg)
  <use Bobinaa.jpg>
-Package pdftex.def Info: Bobinaa.jpg used on input line 215.
+Package pdftex.def Info: Bobinaa.jpg used on input line 219.
 (pdftex.def)             Requested size: 183.80716pt x 202.49403pt.
 
 <Circuito_Bobina_corta.jpg, id=34, 529.98pt x 416.30531pt>
 File: Circuito_Bobina_corta.jpg Graphic file (type jpg)
 
 <use Circuito_Bobina_corta.jpg>
-Package pdftex.def Info: Circuito_Bobina_corta.jpg used on input line 225.
+Package pdftex.def Info: Circuito_Bobina_corta.jpg used on input line 229.
 (pdftex.def)             Requested size: 181.38632pt x 142.48207pt.
 
 <Circuito_Bobina_larga.jpg, id=35, 632.3625pt x 471.26062pt>
 File: Circuito_Bobina_larga.jpg Graphic file (type jpg)
 
 <use Circuito_Bobina_larga.jpg>
-Package pdftex.def Info: Circuito_Bobina_larga.jpg used on input line 231.
+Package pdftex.def Info: Circuito_Bobina_larga.jpg used on input line 235.
 (pdftex.def)             Requested size: 181.38632pt x 135.17357pt.
 
-Overfull \hbox (2.1243pt too wide) in paragraph at lines 223--235
+Overfull \hbox (2.1243pt too wide) in paragraph at lines 227--239
 []$[]$ $[]$ 
  []
 
-[4 <./Terrestre.jpg> <./Bobinaa.jpg>]
+[4 <./Bobinaa.jpg> <./Circuito_Bobina_corta.jpg> <./Circuito_Bobina_larga.jpg>]
 <Transformadores1.jpg, id=39, 784.43062pt x 637.63219pt>
 File: Transformadores1.jpg Graphic file (type jpg)
 
 <use Transformadores1.jpg>
-Package pdftex.def Info: Transformadores1.jpg used on input line 250.
+Package pdftex.def Info: Transformadores1.jpg used on input line 254.
 (pdftex.def)             Requested size: 241.84843pt x 196.58395pt.
- [5 <./Circuito_Bobina_corta.jpg> <./Circuito_Bobina_larga.jpg> <./Transformado
-res1.jpg>]
-<Transformadores1_circuito.jpg, id=43, 645.16031pt x 797.22844pt>
+
+<Transformadores1_circuito.jpg, id=40, 645.16031pt x 797.22844pt>
 File: Transformadores1_circuito.jpg Graphic file (type jpg)
 
 <use Transformadores1_circuito.jpg>
-Package pdftex.def Info: Transformadores1_circuito.jpg used on input line 260.
+Package pdftex.def Info: Transformadores1_circuito.jpg used on input line 264.
 (pdftex.def)             Requested size: 241.84843pt x 298.85045pt.
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5 <./Transformadores1.jpg>]
 <configuracion1.jpg, id=44, 291.33844pt x 377.91188pt>
 File: configuracion1.jpg Graphic file (type jpg)
 
 <use configuracion1.jpg>
-Package pdftex.def Info: configuracion1.jpg used on input line 272.
+Package pdftex.def Info: configuracion1.jpg used on input line 277.
 (pdftex.def)             Requested size: 120.92421pt x 156.85356pt.
  <configuracion2.jpg, id=45, 259.7203pt x 374.90062pt>
 File: configuracion2.jpg Graphic file (type jpg)
 
 <use configuracion2.jpg>
-Package pdftex.def Info: configuracion2.jpg used on input line 278.
+Package pdftex.def Info: configuracion2.jpg used on input line 283.
 (pdftex.def)             Requested size: 120.92421pt x 174.55008pt.
 
-Overfull \hbox (2.1243pt too wide) in paragraph at lines 270--282
+Overfull \hbox (2.1243pt too wide) in paragraph at lines 275--287
 []$[]$ $[]$ 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[6 <./Transformadores1_circuito.jpg>]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 305--319
+[6 <./Transformadores1_circuito.jpg> <./configuracion1.jpg> <./configuracion2.j
+pg>]
+Overfull \hbox (17.0pt too wide) in paragraph at lines 310--324
 []$[]$
  []
 
 
-LaTeX Warning: Command \textordmasculine invalid in math mode on input line 321
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 326
 .
 
-LaTeX Font Info:    Try loading font information for TS1+jkp on input line 321.
+LaTeX Font Info:    Try loading font information for TS1+jkp on input line 326.
 
 ("C:\Program Files (x86)\MiKTeX\tex\latex\kpfonts\ts1jkp.fd"
 File: ts1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for TS1/jkp.
 )
 
-LaTeX Warning: Command \textordmasculine invalid in math mode on input line 321
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 326
 .
 
 Missing character: There is no º in font jkpmn7t!
 
-LaTeX Warning: Command \textordmasculine invalid in math mode on input line 321
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 326
 .
 
 
-LaTeX Warning: Command \textordmasculine invalid in math mode on input line 321
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 326
 .
 
 Missing character: There is no º in font jkpmn7t!
-<campo_vs_Corriente_BC.jpg, id=50, 794.97pt x 614.295pt>
+<campo_vs_Corriente_BC.jpg, id=51, 653.3208pt x 545.3976pt>
 File: campo_vs_Corriente_BC.jpg Graphic file (type jpg)
 
 <use campo_vs_Corriente_BC.jpg>
-Package pdftex.def Info: campo_vs_Corriente_BC.jpg used on input line 329.
-(pdftex.def)             Requested size: 357.7332pt x 276.43019pt.
- [7 <./configuracion1.jpg> <./configuracion2.jpg>]
-Overfull \hbox (9.0403pt too wide) in paragraph at lines 336--337
-[]\T1/jkp/m/n/10.95 Luego, pa-ra el so-le-noi-de com-ple-to, se ob-tu-vie-ron l
-os gra-fi-cos de la \T1/jkp/b/n/10.95 Fi-gu-ra 11a[]\T1/jkp/m/n/10.95 , con un 
-$\OML/jkp/m/it/10.95 R \OMS/jkp/m/n/10.95   \OML/jkp/m/it/10.95 cuadrado \OT1/j
-kp/m/n/10.95 =$
- []
-
+Package pdftex.def Info: campo_vs_Corriente_BC.jpg used on input line 334.
+(pdftex.def)             Requested size: 228.6657pt x 190.89201pt.
+ [7 <./campo_vs_Corriente_BC.jpg>]
 <Campo_vs_Corriente_BL_Arriba.jpg, id=57, 794.97pt x 614.295pt>
 File: Campo_vs_Corriente_BL_Arriba.jpg Graphic file (type jpg)
 
 <use Campo_vs_Corriente_BL_Arriba.jpg>
 Package pdftex.def Info: Campo_vs_Corriente_BL_Arriba.jpg used on input line 34
-1.
+6.
 (pdftex.def)             Requested size: 278.24367pt x 215.00647pt.
 
-Overfull \hbox (36.39523pt too wide) in paragraph at lines 341--342
+Overfull \hbox (36.39523pt too wide) in paragraph at lines 346--347
  [][] 
  []
 
@@ -1327,88 +1318,88 @@ Overfull \hbox (36.39523pt too wide) in paragraph at lines 341--342
 File: Campo_vs_Corriente_BL_Centro.jpg Graphic file (type jpg)
 
 <use Campo_vs_Corriente_BL_Centro.jpg>
-Package pdftex.def Info: Campo_vs_Corriente_BL_Centro.jpg used on input line 34
-7.
+Package pdftex.def Info: Campo_vs_Corriente_BL_Centro.jpg used on input line 35
+2.
 (pdftex.def)             Requested size: 295.69713pt x 209.10432pt.
 
-Overfull \hbox (53.8487pt too wide) in paragraph at lines 347--348
+Overfull \hbox (53.8487pt too wide) in paragraph at lines 352--353
  [][] 
  []
 
 
-Overfull \hbox (2.1243pt too wide) in paragraph at lines 339--351
+Overfull \hbox (2.1243pt too wide) in paragraph at lines 344--356
 []$[]$ $[]$ 
  []
 
-[8 <./campo_vs_Corriente_BC.jpg>]
-<Campo-vs-Radio.jpg, id=62, 794.97pt x 614.295pt>
+<Campo-vs-Radio.jpg, id=59, 705.3552pt x 555.0336pt>
 File: Campo-vs-Radio.jpg Graphic file (type jpg)
  <use Campo-vs-Radio.jpg>
-Package pdftex.def Info: Campo-vs-Radio.jpg used on input line 359.
-(pdftex.def)             Requested size: 357.7332pt x 276.43019pt.
+Package pdftex.def Info: Campo-vs-Radio.jpg used on input line 364.
+(pdftex.def)             Requested size: 246.878pt x 194.26466pt.
 
-[9 <./Campo_vs_Corriente_BL_Arriba.jpg> <./Campo_vs_Corriente_BL_Centro.jpg> <.
+[8 <./Campo_vs_Corriente_BL_Arriba.jpg> <./Campo_vs_Corriente_BL_Centro.jpg> <.
 /Campo-vs-Radio.jpg>]
-<Transformador1_Vent_vs_Vsal.jpg, id=66, 816.651pt x 573.1011pt>
+<Transformador1_Vent_vs_Vsal.jpg, id=63, 816.651pt x 573.1011pt>
 File: Transformador1_Vent_vs_Vsal.jpg Graphic file (type jpg)
 
 <use Transformador1_Vent_vs_Vsal.jpg>
-Package pdftex.def Info: Transformador1_Vent_vs_Vsal.jpg used on input line 372
+Package pdftex.def Info: Transformador1_Vent_vs_Vsal.jpg used on input line 377
 .
-(pdftex.def)             Requested size: 326.6546pt x 229.23637pt.
+(pdftex.def)             Requested size: 285.83212pt x 200.58838pt.
 
-<Transmision_vs_Frecuencia_choto.jpg, id=67, 794.97pt x 614.295pt>
+<Transmision_vs_Frecuencia_choto.jpg, id=64, 622.4856pt x 522.2712pt>
 File: Transmision_vs_Frecuencia_choto.jpg Graphic file (type jpg)
 
 <use Transmision_vs_Frecuencia_choto.jpg>
 Package pdftex.def Info: Transmision_vs_Frecuencia_choto.jpg used on input line
- 383.
-(pdftex.def)             Requested size: 317.98236pt x 245.71364pt.
- [10 <./Transformador1_Vent_vs_Vsal.jpg>] <Desfasaje_vs_frecuencia.jpg, id=71, 
-794.97pt x 614.295pt>
+ 388.
+(pdftex.def)             Requested size: 217.87321pt x 182.79765pt.
+ [9 <./Transformador1_Vent_vs_Vsal.jpg> <./Transmision_vs_Frecuencia_choto.jpg>
+]
+<Desfasaje_vs_frecuencia.jpg, id=68, 794.97pt x 614.295pt>
 File: Desfasaje_vs_frecuencia.jpg Graphic file (type jpg)
 
 <use Desfasaje_vs_frecuencia.jpg>
-Package pdftex.def Info: Desfasaje_vs_frecuencia.jpg used on input line 394.
-(pdftex.def)             Requested size: 317.98236pt x 245.71364pt.
+Package pdftex.def Info: Desfasaje_vs_frecuencia.jpg used on input line 399.
+(pdftex.def)             Requested size: 278.24367pt x 215.00647pt.
 
-<Bobina_1600_400.jpg, id=72, 816.651pt x 573.1011pt>
+<Bobina_1600_400.jpg, id=69, 816.651pt x 573.1011pt>
 File: Bobina_1600_400.jpg Graphic file (type jpg)
  <use Bobina_1600_400.jpg>
-Package pdftex.def Info: Bobina_1600_400.jpg used on input line 405.
+Package pdftex.def Info: Bobina_1600_400.jpg used on input line 410.
 (pdftex.def)             Requested size: 326.6546pt x 229.23637pt.
 
-Overfull \hbox (84.80617pt too wide) in paragraph at lines 405--406
+Overfull \hbox (84.80617pt too wide) in paragraph at lines 410--411
  [][] 
  []
 
 File: Bobina_1600_400.jpg Graphic file (type jpg)
 <use Bobina_1600_400.jpg>
-Package pdftex.def Info: Bobina_1600_400.jpg used on input line 411.
+Package pdftex.def Info: Bobina_1600_400.jpg used on input line 416.
 (pdftex.def)             Requested size: 326.6546pt x 229.23637pt.
 
-Overfull \hbox (84.80617pt too wide) in paragraph at lines 411--412
+Overfull \hbox (84.80617pt too wide) in paragraph at lines 416--417
  [][] 
  []
 
 
-Overfull \hbox (2.1243pt too wide) in paragraph at lines 403--415
+Overfull \hbox (2.1243pt too wide) in paragraph at lines 408--420
 []$[]$ $[]$ 
  []
 
-[11 <./Transmision_vs_Frecuencia_choto.jpg> <./Desfasaje_vs_frecuencia.jpg>]
-[12 <./Bobina_1600_400.jpg>] (Informe_5.aux
+[10 <./Desfasaje_vs_frecuencia.jpg> <./Bobina_1600_400.jpg>] [11]
+(Informe_5.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 6974 strings out of 493634
- 95524 string characters out of 3142929
- 150197 words of memory out of 3000000
- 10160 multiletter control sequences out of 15000+200000
+ 6975 strings out of 493634
+ 95539 string characters out of 3142929
+ 157203 words of memory out of 3000000
+ 10161 multiletter control sequences out of 15000+200000
  130146 words of font info for 116 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 36i,17n,43p,933b,507s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,17n,43p,1726b,507s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}{C
 :/Program Files (x86)/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files 
 (x86)/MiKTeX/fonts/type1/public/kpfonts/jkpbit8a.pfb><C:/Program Files (x86)/Mi
@@ -1423,9 +1414,9 @@ MiKTeX/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Program Files (x86)/MiKTeX/fon
 ts/type1/public/kpfonts/jkpmsc8a.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1
 /public/kpfonts/jkpsy.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/kpf
 onts/jkpsyb.pfb>
-Output written on Informe_5.pdf (13 pages, 8043842 bytes).
+Output written on Informe_5.pdf (12 pages, 6124720 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
+ 119 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  106 words of extra memory for PDF output out of 10000 (max. 10000000)
 
