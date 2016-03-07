@@ -103,7 +103,7 @@ b_n = \frac{1}{\tau}\int_{-\tau}^{\tau}f(t).sin(\frac{n\pi}{\tau}t)dt\\
 
 Entonces resulta posible considerar a toda señal $S(t)$ como una suma de infinitas señales sinusoidales y gracias a la linealidad de los componentes $R$, $C$ y $L$, el comportamiento será igual al comportamiento de la suma. Es más, considerando que vale $a_n \rightarrow 0$ y $b_n \rightarrow 0$ para $n \rightarrow \infty$, cada término de la sumatoria tendrá menos peso que los anteriores. Por lo tanto, es posible estimar el comportamiento aproximado del circuito como si la señal fuera una suma finita de sinusoides. Para una función $f(t)\in C^k$, cuanto mayor suave sea $k$, más rápido será este decaimiento y menos términos de la serie se necesitarán para aproximar el comportamiento. Bajo esta idea, si fuera posible filtrar una única frecuencia $\omega_n = \frac{n\pi}{\tau}$, se obtendría una señal de salida sinusoidal cuya amplitud sería $\alpha_n$. 
 
-Este filtro puede ser un circuito RLC resonante, el cual consiste en una fuente $V(t) = V_o.cos(\omega t)$, un capacitor $C$, una inductancia $L$ (de resistencia interna $R_L$) y una resistencia $R$ conectados en serie. Si se mide la amplitud de la caida de potencial sobre la resistencia $R$ resulta de la forma $V_R = V_o\frac{R)}{|Z|}$ donde $Z = (R+R_L)+i(\omega.L-\frac{1}{\omega C})$. Definiendo la \textit{transmisión} $T(\omega) = \frac{V_R}{V_o}$ resulta $T(\omega) = \frac{R}{|Z|}$ cuyo máximo se encuentra en $\omega_o = \frac{1}{\sqrt{LC}}$ tal que $T_{max} = T(\omega_o) = \frac{R}{R+R_L}$. Por último, definiendo una \textit{banda de resonancia} $[\omega_1;\omega_2]$ tal que $\frac{T_{max}}{\sqrt{2}} \leq T(\omega) \leq V_{0}$ para todo $\omega \in [\omega_1;\omega_2]$ y el \textit{ancho de banda} $\Delta\omega = \omega_2 - \omega_1$ resulta $\Delta\omega = \frac{R_L+R}{L}$. En resumen,
+Este filtro puede ser un circuito RLC resonante, el cual consiste en una fuente $V(t) = V_o.cos(\omega t)$, un capacitor $C$, una inductancia $L$ (de resistencia interna $R_L$) y una resistencia $R$ conectados en serie. Si se mide la amplitud de la caida de potencial sobre la resistencia $R$ resulta de la forma $V_R = V_o\frac{R)}{|Z|}$ donde $Z = (R+R_L)+i(\omega.L-\frac{1}{\omega C})$. Definiendo la \textit{transmisión} $T(\omega) = \frac{V_R}{V_o}$ resulta $T(\omega) = \frac{R}{|Z|}$ cuyo máximo se encuentra en $\omega_o = \frac{1}{\sqrt{LC}}$ tal que $T_{max} = T(\omega_o) = \frac{R}{R+R_L}$. Por último, definiendo una \textit{banda de resonancia} $[\omega_1;\omega_2]$ tal que $\frac{T_{max}}{\sqrt{2}} \leq T(\omega) \leq T_{max}$ para todo $\omega \in [\omega_1;\omega_2]$ y el \textit{ancho de banda} $\Delta\omega = \omega_2 - \omega_1$ resulta $\Delta\omega = \frac{R_L+R}{L}$. En resumen,
 
 \begin{equation}
 \begin{split}
@@ -136,6 +136,35 @@ Similarmente, para el caso de una señal \textit{parabolica} de la forma $P(t)=V
 \label{eq:coef_parab}
 \end{equation}
 
+Siguiendo la idea anterior, es posible considerar el \textit{espectro de potencia} de una señal en un intervalo de tiempo $[t_0;t_1]$ como una función $\alpha^2(\omega) = |\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).e^{i\omega t}dt|^2= |\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).cos(\omega t)dt - frac{i}{t_1-t_0}\int_{t_0}^{t_1} f(t).sin(\omega t)dt|^2 = (\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).cos(\omega t)dt)^2+(\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).sin(\omega t)dt)^2$. En esta definición puede verse que si $t_1-t_0=\tau$, $\alpha(n\frac{\pi}{\tau} = \alpha_n$ para una funcion $f(t)$ de período $2\tau$. Por lo tanto, 
+
+Ahora, si se supone una señal de la forma $V(t) = A.cos(\omega_1t) + A.cos(\omega_2t)$ que resulta de la suma de dos señales sinusoidales, ocurre un efecto denominado \textit{batido}. Esto se da gracias a que, mediante identidades trigonometricas, se obtiene $V(t) = 2A.cos(\frac{\omega_1-\omega_2}{2}t)sin(\frac{\omega_2+\omega_1}{2}t)$ donde el primer término se llama \textit{modulador} y el segundo \textit{portador}. Por lo tanto, si se suman dos señales de entrada 
+$V_1(t) = V_o.cos(\omega_1t)$ y $V_2(t) = V_o.cos(\omega_2t)$, la señal de salida $V(t)$ tendrá una forma queno será sinusoidal a primera vista. 
+
+Para lograr esta suma, puede montarse un circuito como el de la \textbf{Figura \ref{fig:Sumador}}, donde se configuran las resistencias según $r_1 = r_2 \equiv r$ y $R>>r$. Resolviendo el circuito, se obtiene $V_s(t) = \frac{V_1(t)+V_2(t)}{\frac{r}{R}+2} = \frac{V_1(t)+V_2(t)}{2}$ dado que $R>>r$.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.7]{Sumador}
+\caption{Sumador}
+\label{fig:Sumador}
+\end{figure}
+
+Por otro lado, teniendo una señal de entrada con batido $V(t)$, sería válido querer recuperar una de las dos señales $V_1(t)$ o $V_2(t)$ que la componen, eliminando la otra. Aunque podría nuevamente utilizarse el circuito RCL descripto más arriba, un circuito RCL antiresonante (donde la capacitancia $C$ y la inductancia $L$ estan en paralelo) puede resultar más adecuado. Esto es debido a que muchas veces, una señal no sinusoidal $S(t)$ de período $2\tau$ se \textit{modula} utilizando una señal sinusoidal $V_m(t) = A.cos(\omega t)$ (llamada moduladora), generando una nueva señal $S'(t) = S(t)+A.cos(\omega t)$. En este caso, $S(t)$ es una suma de infinitas sinusoides como se explicó más arriba y un RLC resonante solo permitiría que una de estas señales atraviese el filtro.
+
+Un circuito RLC antiresonante, sin embargo, elimina las señales sinusoidales cuya frecuencia sea $\omega_o = \frac{1}{\sqrt{LC}}$. El \textit{ancho de banda} resulta para este caso $\Delta\omega = \frac{1}{(R_L+R)C}$. En resumen,
+
+\begin{equation}
+\begin{split}
+\omega_o = \frac{1}{sqrt{LC}}\\
+\Delta\omega = \frac{1}{(R_L+R)C}
+\end{split}
+\label{eq:antiresonante}
+\end{equation}
+
+Por lo tanto, si se conoce la frecuencia $\omega$ de la moduladora y se cumple que $|\omega-\frac{pi}{\tau}n|>> \Delta\omega$ $\forall n$, resulta posible recuperar la señal $S(t)$ a la salida del filtro. Para el caso de dos sinusoides, se busca que $|\omega_1-\omega_2|>> \Delta\omega$.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 3. DISPOSITIVO EXPERIMENTAL: armado del modelo, como se midio, consideraciones a la hora de medir.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -166,7 +195,7 @@ De esta manera, el parámetro $\omega_0$ podía variar únicamente variando la c
 
 Sabiendo esto, se determinaban los valores de $C$ para que $\omega_0$ coincidiese con los armónicos de $f_0$. Y así, para cada armónico, poder medir la caída de potencial sobre la resistencia utilizando el osciloscopio. 
 
-Para garantizar que la frecuencia fuera la de resonancia, se hizo un barrido de mediciones en el intervalo de frecuencias  $[440,560] Hz$, con el fin de encontrar un máximo de transmisión.
+Para garantizar que la frecuencia fuera la de resonancia, se hizo un barrido de mediciones en el intervalo de frecuencias $[440,560] Hz$, con el fin de encontrar un máximo de transmisión.
 
 
 \subsection{Modulación y filtración}
@@ -175,17 +204,12 @@ Para garantizar que la frecuencia fuera la de resonancia, se hizo un barrido de 
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.7]{Sumador}
-\caption{Sumador}
-\label{fig:Sumador}
-\end{figure}
-
-\begin{figure}[h]
-\centering
 \includegraphics[scale=0.8]{filtro}
 \caption{filtro}
 \label{fig:filtro}
 \end{figure}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 4.DISCUSIÓN Y RESULTADOS: todo lo que se obtuvo y explicación. Graficos, tablas.
