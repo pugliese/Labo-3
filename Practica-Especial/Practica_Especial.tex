@@ -81,32 +81,70 @@
 
 \section{Introducción}\label{sec:intro}
 
-\textbf{CUADRADA} $P(t)=
+Este trabajo se centra alrededor del analisis de \textit{señales}. Una \textit{señal} es una diferencia de potencial $S(t)$ que se genera en alguna sección del circuito. En su forma más general, se puede definir una señal $S(t) = V_o.f(t)$ donde $V_o$ es un voltaje constante que representa la \textit{amplitud} y $f(t)$ es una función del tiempo que define el \textit{tipo de señal} y es la que define el comportamiento del circuito. Para un circuito compuesto por resistencias $R$, capacitancias $C$ e inductancias $L$, este comportamiento puede ser muy complicado de predecir teóricamente. Sin embargo, para una señal del tipo $V(t) = V_o.cos(\omega t)$ el comportamiento está ampliamente estudiado y resulta sencillo de predecir. 
+
+Es aquí donde entra en juego la \textit{Serie de Fourier}, que consiste en escribir una función períodica $f(t)$ como una serie de senos y cosenos pesados por coeficientes $a_n$ y $b_n$ según. Funciones que no sean períodicas pero que estén definidas en un intervalo finito $[-\tau;\tau]$ también puede expandirse de forma períodica. Si $2\tau$ es el período (o la longitud del intervalo) de la funcion $f(t)$, se tiene que
+
+\begin{equation}
+f(t) = \frac{a_o}{2} + \Sigma_{n=1}^{\infty} a_n.cos(\frac{\pi}{\tau}nt) + b_n.sin(\frac{\pi}{\tau}nt) = \frac{a_o}{2} + \Sigma_{n=1}^{\infty} \alpha_n.cos(\frac{\pi}{\tau}nt+\phi_n)
+\label{eq:fourier}
+\end{equation}
+
+donde 
+
+\begin{equation}
+\begin{split}
+a_n = \frac{1}{\tau}\int_{-\tau}^{\tau}f(t).cos(n\frac{\pi}{\tau}t)dt\\
+b_n = \frac{1}{\tau}\int_{-\tau}^{\tau}f(t).sin(n\frac{\pi}{\tau}t)dt\\
+\alpha_n = \sqrt{a_n^2+b_n^2}\\
+\phi_n = -arctan(\frac{b_n}{a_n})
+\end{split}
+\label{eq:coefs}
+\end{equation}
+
+Entonces resulta posible considerar a toda señal $S(t)$ como una suma de infinitas señales sinusoidales y gracias a la linealidad de los componentes $R$, $C$ y $L$, el comportamiento será igual al comportamiento de la suma. Es más, considerando que vale $a_n \rightarrow 0$ y $b_n \rightarrow 0$ para $n \rightarrow \infty$, cada término de la sumatoria tendrá menos peso que los anteriores. Por lo tanto, es posible estimar el comportamiento aproximado del circuito como si la señal fuera una suma finita de sinusoides. Para una función $f(t)\in C^k$, cuanto mayor suave sea $k$, más rápido será este decaimiento y menos términos de la serie se necesitarán para aproximar el comportamiento. Bajo esta idea, si fuera posible filtrar una única frecuencia $\omega_n = n.\frac{\pi}{\tau}$, se obtendría una señal de salida sinusoidal cuya amplitud sería $\alpha_n$. 
+
+Este filtro puede ser un circuito RLC resonante, el cual consiste en una fuente $V(t) = V_o.cos(\omega t)$, un capacitor $C$, una inductancia $L$ (de resistencia interna $R_L$) y una resistencia $R$ conectados en serie. Si se mide la amplitud de la caida de potencial sobre la resistencia $R$ resulta de la forma $V_R = V_o\frac{R)}{|Z|}$ donde $Z = (R+R_L)+i(\omega.L-\frac{1}{\omega C})$. Definiendo la \textit{transmisión} $T(\omega) = \frac{V_R}{V_o}$ resulta $T(\omega) = \frac{R}{|Z|}$ cuyo máximo se encuentra en $\omega_o = \frac{1}{sqrt{LC}}$ tal que $T_{max} = T(\omega_o) = \frac{R}{R+R_L}$. Por último, definiendo una \textit{banda de resonancia} $[\omega_1;\omega_2]$ tal que $\frac{T_{max}}{\sqrt{2}} \leq T(\omega) \leq E_{0}$ $\forall$ $\omega \in [\omega_1;\omega_2]$ y el \textit{ancho de banda} $\Delta\omega = \omega_2 - \omega_1$ resulta $\Delta\omega = \frac{R_L+R}{L}$. En resumen,
+
+\begin{equation}
+\begin{split}
+\omega_o = \frac{1}{sqrt{LC}}\\
+\Delta\omega = \frac{R_L+R}{L}
+\end{split}
+\label{eq:resonante}
+\end{equation}
+
+Bajo esta idea, es posible tomar una señal cualquiera $S(t)$ y, mediante un circuito RCL resonante, filtrar una única frecuencia $\omega_n = n.\frac{\pi}{\tau}$ fijando la frecuencia natural del circuito $\omega_o = \omega_n$. Si la campana es lo suficientemente fina, lo que implica un $\Delta \omega << \frac{\pi}{\tau}$, es posible obtener una transmisión máxima para cada $\omega_o$ $T_{max}(\omega_n) = \alpha_n$.
+
+Por lo tanto, si se envía una señal cuadrada de la forma $C(t)=
 \left\{\begin{matrix}
--1 \\ 1
+-V_o \\ V_o
 \end{matrix}\right.$
 $\begin{matrix}
 t\in[-\tau,0)\\ t\in[0,\tau)
 \end{matrix}$
-
-
-\begin{equation}
-C(t) = \Sigma_{k=1}^{\infty} \frac{4}{(2k+1)\pi}sin(\frac{\pi}{\tau}(2k+1)t)
-\end{equation}
-
-\textbf{PARABOLICA} $P(t)=(\frac{t}{\tau})^2$ definida en $t\in[-\tau,\tau)$
+su serie de Fourier resulta $C(t) = V_o.\Sigma_{k=1}^{\infty} \frac{4}{(2k+1)\pi}sin(\frac{\pi}{\tau}(2k+1)t)$ de forma tal que los coeficientes $\alpha_n$ resultan
 
 \begin{equation}
-P(t) = \frac{1}{3} + \Sigma_{n=1}^{\infty} \frac{4(-1)^n}{(n\pi)^2}cos(\frac{\pi}{\tau}nt)
+\alpha_n(C) = \frac{2V_o(1-(-1)^n)}{n\pi}
+\label{eq:coef_cuad}
 \end{equation}
 
+Similarmente, para el caso de una señal \textit{parabolica} de la forma $P(t)=V_o.(\frac{t}{\tau})^2$ definida en $t\in[-\tau,\tau)$ se obtiene a serie de Fourier $P(t) = \frac{V_o}{3} + V_o.\Sigma_{n=1}^{\infty} \frac{4(-1)^n}{(n\pi)^2}cos(\frac{\pi}{\tau}nt)$ cuyos coeficientes resultan
+
+\begin{equation}
+\alpha_n(P) = \frac{4V_o(-1)^n}{(n\pi)^2}
+\label{eq:coef_parab}
+\end{equation}
+
+%% Siguiendo la idea anterior, es posible considerar el \textit{espectro de potencia} de una señal como una función $\alpha^2(\omega) = |\frac{1}{\tau}\int_{-\tau}^{\tau} f(t).e^{i\omega t}dt|^2= |\frac{1}{\tau}\int_{-\tau}^{\tau} f(t).cos(\omega t)dt - frac{i}{\tau}\int_{-\tau}^{\tau} f(t).sin(\omega t)dt|^2 = \s(\frac{1}{\tau}\int_{-\tau}^{\tau} f(t).cos(\omega t)dt)^2+(frac{1}{\tau}\int_{-\tau}^{\tau} f(t).sin(\omega t)dt)^2$, donde claramente puede verse que $\alpha(n\frac{\pi}{\tau} = \alpha_n$ para una funcion $f(t)$ de período $2\tau$. Por lo tanto, 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 3. DISPOSITIVO EXPERIMENTAL: armado del modelo, como se midio, consideraciones a la hora de medir.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Desarrollo experimental}
-Durante esta experiencia se utilizó un generador de funciones de dos canales capaz de generar diferencias de potencial $V(t)$ a frecuencias con un error relativo del $0,01\%$ en un rango entre $1\mu Hz$ y $5MHz$. El voltaje pico-pico tiene un error relativo del $1\%$ para el rango de voltaje utilizado ($2V-20V$). Además, se utilizó una resistencia variable por décadas en el intervalo ($1\Omega-11110\Omega$), una capacitancia variable por décadas en el intervalo($1nF-1110\nF$) y una inductancia variable por décadas en el intervalo ($1mH-1110mH$). Usando un multimetro digital se midieron los valores utilizados en todos estos elementos junto con su precisión que era de la forma $\pm(1\%+2d)$ para la resistencia, $\pm(0.7\%+5d)$ para la capacitancia y ($0.7\% +5d$).
+Durante esta experiencia se utilizó un generador de funciones de dos canales capaz de generar diferencias de potencial $V(t)$ a frecuencias con un error relativo del $0,01\%$ en un rango entre $1\mu Hz$ y $5MHz$. El voltaje pico-pico tiene un error relativo del $1\%$ para el rango de voltaje utilizado ($2V-20V$). Además, se utilizó una resistencia variable por décadas en el intervalo ($1\Omega-11110\Omega$), una capacitancia variable por décadas en el intervalo ($1nF-1110nF$) y una inductancia variable por décadas en el intervalo ($1mH-1110mH$). Usando un multimetro digital se midieron los valores utilizados en todos estos elementos junto con su precisión que era de la forma $\pm(1\%+2d)$ para la resistencia, $\pm(0.7\%+5d)$ para la capacitancia y ($0.7\% +5d$).
 
 Se utilizó además un osciloscopio digital que en sus dos canales de entrada era capaz de medir diferencias de potencial entre sus dos terminales en un rango de 2mV a 5V con un error relativo del $3\%$ del valor $pico-pico$. A la hora de medir voltaje, fue necesario asegurarse que el cable a tierra del osciloscopio estuvera conectado al cable a tierra el generador de funciones. Cuando se utilizaron ambos canales, se hicieron coincidir las 3 tierras.
 
