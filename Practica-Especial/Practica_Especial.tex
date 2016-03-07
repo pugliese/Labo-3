@@ -89,7 +89,7 @@ f(t) = \frac{a_o}{2} + \Sigma_{n=1}^{\infty} a_n.cos(\frac{n\pi}{\tau}t) + b_n.s
 \label{eq:fourier}
 \end{equation}
 
-donde 
+donde $f_n = \frac{n}{2\tau}$ es la frecuencia del $n$-esimo \textit{armónico} y 
 
 \begin{equation}
 \begin{split}
@@ -146,7 +146,7 @@ Para lograr esta suma, puede montarse un circuito como el de la \textbf{Figura \
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.7]{Sumador}
-\caption{Sumador}
+\caption{Circuito sumador con $R>>r_1,r_2$, los valores de $r_1$ y $r_2$ permiten pesar en que proporcion se suma cada coeficiente. En la experiencia se utilizó $r_1 = r_2 \equiv r$ y dos fuentes sinusoidales.}
 \label{fig:Sumador}
 \end{figure}
 
@@ -220,6 +220,48 @@ Para garantizar que la frecuencia fuera la de resonancia, se hizo un barrido de 
 
 \subsection{Analisis de espectro}
 
+Como se dijo, la señal de entrada era una cuadrada, cuyos coeficientes de Fourier vienen dado por \eqref{eq:coef_cuad}. Sin embargo, para cada valor de $C$, se medían las transmisiones para distintas frecuencias de entrada. Los resultados que se obtuvieron para cada uno de estos barridos se ejemplifican en el gráfico de la \textbf{Figura \ref{fig:armonico1cuad}}, que representa el caso del primer armónico. Aquí puede verse claramente que el máximo se alcanza para $f_s = (500,00 \pm 0,05)Hz$.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{Trans_vs_Frec_Cuad1}
+\caption{Grafico de transmisión en función de frecuencia para $f_o = (500 \pm 11)Hz$ correspondiente al primer armónico}
+\label{fig:armonico1cuad}
+\end{figure}
+
+Como puede verse en \eqref{eq:coef_cuad}, para los armónicos pares la frecuencia $f_s = (500,00 \pm 0,05)$ debe resultar un máximo mientras que para los impares debe resultar, por lo menos, un mínimo. En todos los casos, el máximo o mínimo (dependiendo del armónico) se halló para $f_s = (500,00 \pm 0,05)$, con excepción del segundo armónico, cuyo mínimo se halló en $f = (490 \pm 10)Hz$ dado que el mismo valor mínimo se halló en $f_s = (480,00 \pm 0,05)Hz$ y en $f_s = (500,00 \pm 0,05)Hz$. El gráfico de la \textbf{Figura \ref{fig:transcuad}} muestra los valores de transmisión para cada armónico impar con su ajuste que arroja un $R_Square = 0,96953$ y un $\chi^2 = 54,38873$ que indican una gran subestimación de errores. Del ajuste se obtiene un $A = (0,91 \pm 0,09)$ que corresponde al valor $T_{max}.\frac{4}{\pi} = (0,962 \pm 0,004)$, cuya diferencia es despreciable frente a los valores manejados, al igual que la ordenada $b =(-0,05 \pm 0,02)$.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{Trans_vs_Arm_Cuad}
+\caption{Transmisión en función del armónico analizado, cuyo ajuste arroja los parametros esperados}
+\label{fig:transcuad}
+\end{figure}
+
+Para el caso de la señal parabólica, la ecuación \eqref{eq:coef_parab} pone a todos los coeficientes en pie de igualdad, por lo que para los distintos valores de $f_o$ se esperaría que $f_s = (500,00 \pm 0,05)Hz$ fuera un máximo de transmisión en el intervalo barrido. Esto se hizo de forma idéntica al análisis de la onda cuadrada, con la diferencia de que no todos los máximos se hallaron en $f_s = (500,00 \pm 0,05)Hz$ como muestra la \textbf{Tabla 2}.
+
+\begin{center}
+\begin{tabular}{||c|c||}
+\hline 
+\textbf{Armónico} & \textbf{Frecuencia de máxima transmisión (Hz)} \\ \hline 
+ 1 & $500,00 \pm 0,05$ \\ \hline 
+ 2 & $500,00 \pm 0,05$ \\ \hline 
+ 3 & $480,00 \pm 0,05$ \\ \hline 
+ 4 & $480,00 \pm 0,05$ \\ \hline 
+ 5 & $500,00 \pm 0,05$ \\ \hline 
+ 6 & $480,00 \pm 0,05$ \\ \hline 
+\end{tabular}\\[0.3cm]
+\textit{Tabla 2: Frecuencia de máxima transmisión para cada armónico analizado de una señal parabólica. En este caso, no todas las frecuencias son identicas.}
+\end{center}
+
+El gráfico de transmisión en función de armónico puede verse en la \textbf{Figura \ref{fig:transparab}}, donde se utilizan los valores de máxima transmisión de cada barrido. Ajustando según \eqref{eq:coef_parab}, arroja un $R_Square = 0,89488$ y un $\chi^2 = 59,20285$, lo cual indica un ajuste medianamente confiable. El parámetro $A = (0,44 \pm 0,07)$ corresponde al parámetro $T_{max}.\frac{4}{\pi^2} = (0,3060 \pm 0,0012)$, donde la diferencia ya no resulta despreciable, aun frente a los errores. Nuevamente, la ordenada $b = (0,011 \pm 0,005)$ resulta despreciable frente a las magnitudes manejadas. Cabe aclarar que el término $(-1)^n$ que aparece en \eqref{eq:coef_parab} se ve absorbido por la fase $\phi_n$ de \eqref{eq:coefs} dado que la prioridad era analizar la amplitud en módulo. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{Trans_vs_Arm_Parab}
+\caption{Transmisión en función del armónico analizado, donde se utilizaron los valores de transmisión máximos de cada barrido}
+\label{fig:transparab}
+\end{figure}
 
 
 \subsection{Modulación y filtración}

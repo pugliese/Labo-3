@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.3)  7 MAR 2016 15:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.3)  7 MAR 2016 20:47
 entering extended mode
-**practica_especial.tex
+**practica_especial
 (practica_especial.tex
 LaTeX2e <2014/05/01>
 Babel <3.9l> and hyphenation patterns for 68 languages loaded.
@@ -1086,68 +1086,90 @@ File: ujkpsyc.fd 2006/08/15 v1.0
 
 {C:/Users/Kufa/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Logo_DF.jp
 g>]) [1]
-
-LaTeX Warning: Reference `fig:Sumador' on page 2 undefined on input line 144.
-
 <Sumador.jpg, id=17, 271.76532pt x 248.42813pt>
 File: Sumador.jpg Graphic file (type jpg)
  <use Sumador.jpg>
 Package pdftex.def Info: Sumador.jpg used on input line 148.
 (pdftex.def)             Requested size: 190.23442pt x 173.8985pt.
- [2 <./Sumador.jpg>]
-
-LaTeX Warning: Reference `fig:RLC-espectro' on page 3 undefined on input line 1
-79.
-
-<RLC-espectro.jpg, id=21, 271.76532pt x 235.63031pt>
+ [2 <./Sumador.jpg>] <RLC-espectro.jpg, id=21, 271.76532pt x 235.63031pt>
 File: RLC-espectro.jpg Graphic file (type jpg)
- <use RLC-espectro.jpg>
+
+<use RLC-espectro.jpg>
 Package pdftex.def Info: RLC-espectro.jpg used on input line 183.
 (pdftex.def)             Requested size: 190.23442pt x 164.94008pt.
-
-
-LaTeX Warning: Reference `eq:coef_cuad' on page 3 undefined on input line 188.
-
-
-LaTeX Warning: Reference `eq:coef_parab' on page 3 undefined on input line 188.
-
-
-[3 <./RLC-espectro.jpg>] <filtro.jpg, id=25, 292.09125pt x 185.94469pt>
+ [3 <./RLC-espectro.jpg>]
+<filtro.jpg, id=25, 292.09125pt x 185.94469pt>
 File: filtro.jpg Graphic file (type jpg)
-
-<use filtro.jpg>
+ <use filtro.jpg>
 Package pdftex.def Info: filtro.jpg used on input line 207.
 (pdftex.def)             Requested size: 233.6733pt x 148.75594pt.
- [4 <./filtro.jpg>] (practica_especial.aux
+
+<Trans_vs_Frec_Cuad1.jpg, id=26, 844.8363pt x 597.432pt>
+File: Trans_vs_Frec_Cuad1.jpg Graphic file (type jpg)
+
+<use Trans_vs_Frec_Cuad1.jpg>
+Package pdftex.def Info: Trans_vs_Frec_Cuad1.jpg used on input line 227.
+(pdftex.def)             Requested size: 506.9057pt x 358.46196pt.
+
+Overfull \hbox (23.20883pt too wide) in paragraph at lines 227--228
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Trans_vs_Arm_Cuad.jpg, id=27, 844.8363pt x 597.432pt>
+File: Trans_vs_Arm_Cuad.jpg Graphic file (type jpg)
+
+<use Trans_vs_Arm_Cuad.jpg>
+Package pdftex.def Info: Trans_vs_Arm_Cuad.jpg used on input line 236.
+(pdftex.def)             Requested size: 506.9057pt x 358.46196pt.
+
+Overfull \hbox (23.20883pt too wide) in paragraph at lines 236--237
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <./filtro.jpg>] <Trans_vs_Arm_Parab.jpg, id=31, 844.8363pt x 597.432pt>
+File: Trans_vs_Arm_Parab.jpg Graphic file (type jpg)
+
+<use Trans_vs_Arm_Parab.jpg>
+Package pdftex.def Info: Trans_vs_Arm_Parab.jpg used on input line 261.
+(pdftex.def)             Requested size: 506.9057pt x 358.46196pt.
+
+Overfull \hbox (23.20883pt too wide) in paragraph at lines 261--262
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5 <./Trans_vs_Frec_Cuad1.jpg>] [6 <./Trans_vs_Arm_Cuad.jpg>] [7 <./Trans_vs_Ar
+m_Parab.jpg>] (practica_especial.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
-)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+) ) 
 Here is how much of TeX's memory you used:
- 6305 strings out of 493698
- 85716 string characters out of 3144416
- 152329 words of memory out of 3000000
- 9488 multiletter control sequences out of 15000+200000
- 42384 words of font info for 88 fonts, out of 3000000 for 9000
+ 6345 strings out of 493698
+ 86459 string characters out of 3144416
+ 153421 words of memory out of 3000000
+ 9521 multiletter control sequences out of 15000+200000
+ 50089 words of font info for 109 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 36i,16n,43p,955b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MikTex 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
-s/MikTex 2.9/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Program Files/MikTex 2.
-9/fonts/type1/public/kpfonts/jkpex.pfb><C:/Program Files/MikTex 2.9/fonts/type1
-/public/kpfonts/jkpmi.pfb><C:/Program Files/MikTex 2.9/fonts/type1/public/kpfon
-ts/jkpmia.pfb><C:/Program Files/MikTex 2.9/fonts/type1/public/kpfonts/jkpmit8a.
-pfb><C:/Program Files/MikTex 2.9/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Pro
-gram Files/MikTex 2.9/fonts/type1/public/kpfonts/jkpmsc8a.pfb><C:/Program Files
-/MikTex 2.9/fonts/type1/public/kpfonts/jkpsy.pfb>
-Output written on practica_especial.pdf (5 pages, 205783 bytes).
+ 36i,16n,43p,1014b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MikTex 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Fil
+es/MikTex 2.9/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Program Files/MikTex 2
+.9/fonts/type1/public/kpfonts/jkpex.pfb><C:/Program Files/MikTex 2.9/fonts/type
+1/public/kpfonts/jkpmi.pfb><C:/Program Files/MikTex 2.9/fonts/type1/public/kpfo
+nts/jkpmia.pfb><C:/Program Files/MikTex 2.9/fonts/type1/public/kpfonts/jkpmit8a
+.pfb><C:/Program Files/MikTex 2.9/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Pr
+ogram Files/MikTex 2.9/fonts/type1/public/kpfonts/jkpmsc8a.pfb><C:/Program File
+s/MikTex 2.9/fonts/type1/public/kpfonts/jkpsy.pfb>
+Output written on practica_especial.pdf (8 pages, 2394452 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
+ 69 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
