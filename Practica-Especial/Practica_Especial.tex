@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{amsmath}
+\usepackage{float}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{makeidx}
@@ -226,14 +227,13 @@ Para obtener el fenómeno de batido entre señales se utilizaron los dos canales
 
 Antes de realizar las mediciones en las que se utilizó el \textit{sumador} fue necesario determinar el rango dinámico del mismo. Para ellos, se programaron ambos generadores con una señal triangular con frecuencia $(500 \pm 0.05) Hz$ y una amplitud $(3.00 \pm 0.03)V$.
 
-El objetivo era ver que la amplitud de salida era proporcional al promedio de las amplitudes de entrada; o en caso de no serlo, determinar el rango de voltaje de entrada en el cual la respuesta era lineal. Para ello, al adquirir los datos de la señal de salida, primero se comprobó que tuviera una forma triangular; y luego se calculó la transmisión observando el intervalo donde esta se puede ajustar por una función lineal. Así mismo se determinó si el sumador modificaba la frecuencia de salida, tomando un promedio entre los máximos consecutivos de la señal triangular de salida. 
+El objetivo era ver que la amplitud de salida era proporcional al promedio de las amplitudes de entrada; o en caso de no serlo, determinar el rango de voltaje de entrada en el cual la respuesta era lineal. Para ello, al adquirir los datos de la señal de salida, primero se comprobó que tuviera una forma triangular; y luego se calculó la transmisión observando el intervalo donde esta se puede ajustar por una función lineal. Así mismo se determinó si el sumador modificaba la frecuencia de salida, tomando un promedio entre los máximos consecutivos de la señal triangular de salida; y por otro lado, al comparar los tiempos entre máximos de la señal de entrada y salida se pudo ver si había desfasaje entre ellas. 
 
+\newpage
+\subsection{Modulación y filtrado}
 Una ves hecho esto, se cambiaron las formas de las señales de entrada por una sinusoidal en ambos canales para obtener una señal de salida modulada.
 
 Para filtrar una de las señales de entrada se utilizó un circuito RLC anti-resonante como el que muestra la \textbf{Figura \ref{fig:filtro}}. 
-
-
-\newpage
 
 \begin{figure}[h]
 \centering
@@ -308,13 +308,13 @@ Para caracterizar el sumador, en primer lugar se procedió a chequear que el vol
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.35]{Salida_vs_Entrada}
-\caption{Grafico que muestra la relacion entre el voltaje de salida y el de entrada para un circuito con las caracteristicas ilustradas en la figura \ref{fig:Sumador}}
+\caption{Gráfico que muestra la relación entre el voltaje de salida y el de entrada para un circuito con las características ilustradas en la \textbf{Figura \ref{fig:Sumador}}}
 \label{fig:S_vs_E}
 \end{figure}
 
-Se puede ver que la relación es lineal. Además, el ajuste realizado confirma esa suposición, ya que arroja un $R-Square=0.999999$. Ademas, la pendiente que arroja el ajuste es el factor de proporción del sumador, que resulto de $(0.9741 \pm 0.0005)$. 
+Se puede ver que la relación es lineal. Además, el ajuste realizado confirma esa suposición, ya que arroja un $R-Square=0.999999$. Teniendo entonces que la pendiente obtenida del ajuste es el factor de proporción del sumador, que resulto de $(0.9741 \pm 0.0005)$. 
 
-Posteriormente se construyó un gráfico de la señal de salida como se muestra en la \textbf{figura \ref{fig:Vol_Sal}}, y se relevaron los extremos a fin de poder encontrar la frecuencia con la que estos se repetian.
+Posteriormente se construyó un gráfico de la señal de salida como se muestra en la \textbf{Figura \ref{fig:Vol_Sal}}, y se relevaron los extremos a fin de poder encontrar la frecuencia con la que estos se repetían.
 
 \begin{figure}[h]
 \centering
@@ -323,12 +323,12 @@ Posteriormente se construyó un gráfico de la señal de salida como se muestra 
 \label{fig:Vol_Sal}
 \end{figure}
 
-Con los datos obtenidos de los maximos, y luego de los mínimos, se calculó la diferencia entre cada par de valores consecutivos para obtener su periodo, para luego hacer un promedio y obtener la frecuencia $f= (500 \pm 1)hz$ que, como se esperaba, coincide con la utilizada.
+Con los datos obtenidos de los máximos, y luego de los mínimos, se calculó la diferencia entre cada par de valores consecutivos para obtener su periodo, para luego hacer un promedio y obtener la frecuencia $f= (500 \pm 1)hz$ que, como se esperaba, coincide con la utilizada.
 
-Finalmente, se verificó que el sumador no provocara ningun desfasaje en la señal de salida. Para esto realizó un grafico de la señal de entrada en funcion del tiempo, que resulto identico al del voltaje de salida, y se relevó la posición de los extremos del mismo. Luego se los comparó, con las posiciones encontradas anteriormente, y la diferencia obtenida $D= (2 \pm4)\mu s$ es el desfasaje provocado por el sumador. El cual resultó tres ordenes de magnitud menor que el periodo $\tau = (2 \pm 0.004)ms$ utilizado, por lo cual se lo consideró despreciable.
+Finalmente, se verificó que el sumador no provocara ningún desfasaje en la señal de salida. Para esto realizó un gráfico de la señal de entrada en función del tiempo, que resulto idéntico al del voltaje de salida, y se relevó la posición de los extremos del mismo. Luego se los comparó, con las posiciones encontradas anteriormente, y la diferencia obtenida $D= (2 \pm4)\mu s$ es el desfasaje provocado por el sumador. El cual resultó tres ordenes de magnitud menor que el periodo $\tau = (2 \pm 0.004)ms$ utilizado, por lo cual se lo consideró despreciable.
 
 
-\subsection{Modulación y filtración}
+\subsection{Modulación y filtrado}
 
 
 
