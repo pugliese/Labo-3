@@ -3,7 +3,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{amsmath}
-\usepackage{float}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{makeidx}
@@ -108,7 +107,7 @@ Este filtro puede ser un circuito RLC resonante, el cual consiste en una fuente 
 
 \begin{equation}
 \begin{split}
-\omega_o = \frac{1}{sqrt{LC}}\\
+\omega_o = \frac{1}{\sqrt{LC}}\\
 \Delta\omega = \frac{R_L+R}{L}
 \end{split}
 \label{eq:resonante}
@@ -137,10 +136,10 @@ Similarmente, para el caso de una señal \textit{parabolica} de la forma $P(t)=V
 \label{eq:coef_parab}
 \end{equation}
 
-Siguiendo la idea anterior, es posible considerar el \textit{espectro de potencia} de una señal en un intervalo de tiempo $[t_0;t_1]$ como una función $\alpha^2(\omega) = |\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).e^{i\omega t}dt|^2= |\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).cos(\omega t)dt - frac{i}{t_1-t_0}\int_{t_0}^{t_1} f(t).sin(\omega t)dt|^2 = (\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).cos(\omega t)dt)^2+(\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).sin(\omega t)dt)^2$. En esta definición puede verse que si $t_1-t_0=\tau$, $\alpha(n\frac{\pi}{\tau} = \alpha_n$ para una funcion $f(t)$ de período $2\tau$. Por lo tanto, 
+Siguiendo la idea anterior, es posible considerar el \textit{espectro de potencia} de una señal en un intervalo de tiempo $[t_0;t_1]$ como una función $\alpha^2(\omega) = |\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).e^{i\omega t}dt|^2= |\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).cos(\omega t)dt - \frac{i}{t_1-t_0}\int_{t_0}^{t_1} f(t).sin(\omega t)dt|^2 = (\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).cos(\omega t)dt)^2+(\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).sin(\omega t)dt)^2$. En esta definición puede verse que si $t_1-t_0=\tau$, $\alpha(n\frac{\pi}{\tau} = \alpha_n$ para una función $f(t)$ de período $2\tau$. Por lo tanto, 
 
-Ahora, si se supone una señal de la forma $V(t) = A.cos(\omega_1t) + A.cos(\omega_2t)$ que resulta de la suma de dos señales sinusoidales, ocurre un efecto denominado \textit{batido}. Esto se da gracias a que, mediante identidades trigonometricas, se obtiene $V(t) = 2A.cos(\frac{\omega_1-\omega_2}{2}t)sin(\frac{\omega_2+\omega_1}{2}t)$ donde el primer término se llama \textit{modulador} y el segundo \textit{portador}. Por lo tanto, si se suman dos señales de entrada 
-$V_1(t) = V_o.cos(\omega_1t)$ y $V_2(t) = V_o.cos(\omega_2t)$, la señal de salida $V(t)$ tendrá una forma queno será sinusoidal a primera vista. 
+Ahora, si se supone una señal de la forma $V(t) = A.cos(\omega_1t) + A.cos(\omega_2t)$ que resulta de la suma de dos señales sinusoidales, ocurre un efecto denominado \textit{batido}. Esto se da gracias a que, mediante identidades trigonométricas, se obtiene $V(t) = 2A.cos(\frac{\omega_1-\omega_2}{2}t)sin(\frac{\omega_2+\omega_1}{2}t)$ donde el primer término se llama \textit{modulador} y el segundo \textit{portador}. Por lo tanto, si se suman dos señales de entrada 
+$V_1(t) = V_o.cos(\omega_1t)$ y $V_2(t) = V_o.cos(\omega_2t)$, la señal de salida $V(t)$ tendrá una forma que no será sinusoidal a primera vista. 
 
 Para lograr esta suma, puede montarse un circuito como el de la \textbf{Figura \ref{fig:Sumador}}, donde se configuran las resistencias según $r_1 = r_2 \equiv r$ y $R>>r$. Resolviendo el circuito, se obtiene $V_s(t) = \frac{V_1(t)+V_2(t)}{\frac{r}{R}+2} = \frac{V_1(t)+V_2(t)}{2}$ dado que $R>>r$.
 
@@ -157,7 +156,7 @@ Un circuito RLC antiresonante, sin embargo, elimina las señales sinusoidales cu
 
 \begin{equation}
 \begin{split}
-\omega_o = \frac{1}{sqrt{LC}}\\
+\omega_o = \frac{1}{\sqrt{LC}}\\
 \Delta\omega = \frac{1}{(R_L+R)C}
 \end{split}
 \label{eq:antiresonante}
@@ -173,11 +172,13 @@ Por lo tanto, si se conoce la frecuencia $\omega$ de la moduladora y se cumple q
 \section{Desarrollo experimental}
 Durante esta experiencia se utilizó un generador de funciones de dos canales capaz de generar diferencias de potencial $V(t)$ a frecuencias con un error relativo del $0,01\%$ en un rango entre $1\mu Hz$ y $5MHz$. El voltaje \textit{pico-pico} tiene un error relativo del $1\%$ para el rango de voltaje utilizado ($2V-20V$). Además, se utilizó una resistencia variable por décadas en el intervalo ($1\Omega-11110\Omega$), una capacitancia variable por décadas en el intervalo($1nF-1110\,nF$) y una inductancia variable por décadas en el intervalo ($1mH-1110mH$). Usando un multimetro digital se midieron los valores utilizados en todos estos elementos junto con su precisión que era de la forma $\pm(1\%+2d)$ para la resistencia, $\pm(0.7\%+5d)$ para la capacitancia y ($0.7\% +5d$) para la inductancia; ademas de comprobar la continuidad de los cables utilizados.
 
-Se utilizó además un osciloscopio digital con dos canales de entrada capaces de medir diferencias de potencial entre sus dos terminales en un rango de 2mV a 5V con un error relativo del $3\%$ del valor \textit{pico-pico}. A la hora de medir voltaje, fue necesario asegurarse que el cable a tierra del osciloscopio estuviera conectado al cable a tierra el generador de funciones. Cuando se utilizaron ambos canales, se hicieron coincidir las 3 tierras.
+Se utilizó además un osciloscopio digital con dos canales de entrada capaces de medir diferencias de potencial entre sus dos terminales en un rango de 2mV a 5V con un error relativo del $3\%$ del valor \textit{pico-pico}. El osciloscopio también contaba con un programa de adquisición de datos el cual permitía importar en una computadora las mediciones en su pantalla para luego ser analizadas. 
+
+A la hora de medir voltaje, fue necesario asegurarse que el cable a tierra del osciloscopio estuviera conectado al cable a tierra el generador de funciones. Cuando se utilizaron ambos canales, se hicieron coincidir las 3 tierras.
 
 \subsection{Análisis de espectro}
 
-Como ya se explicó, para poder realizar el análisis del espectro de una señal es necesario filtrar la frecuencia $\omega_n = \frac{n \pi}{\tau}$. Para ello se utilizó un circuito RLC resonante como el que muestra la \textbf{Figura \ref{fig:RLC-espectro}}.
+Como ya se explicó, para realizar el análisis del espectro de una señal es necesario separar la frecuencia $\omega_n = \frac{n \pi}{\tau}$ y filtrar el resto. Para ello se utilizó un circuito RLC resonante como el que muestra la \textbf{Figura \ref{fig:RLC-espectro}}.
 
 \begin{figure}[h]
 \centering
@@ -188,27 +189,64 @@ Como ya se explicó, para poder realizar el análisis del espectro de una señal
 
 El análisis se realizó para señales $f(t)$  de forma cuadrada y parabólica, las cuales tenían una amplitud$(3.90 \pm 0.02)V$ y $(10.0 \pm 0.2)V$ respectivamente. El objetivo fue poder calcular la trasmisión y obtener los coeficientes dados por \eqref{eq:coef_cuad} y \eqref{eq:coef_parab} en cada caso.
 
-Para ello, al tener en cuanta la importancia del ancho de banda del circuito a la hora de filtrar señales, se usó una resistencia $R=(750 \pm 7)\Omega$ y una inductancia $L=(1003 \pm 5)mH$ la cual aportaba una resistencia $R_L = (243 \pm 2)\Omega$; por lo que de \eqref{eq:resonante} se obtiene $\Delta \omega = (994 \pm 14)Hz$.
+Para ello, al tener en cuenta la importancia del ancho de banda del circuito a la hora de filtrar señales, se usó una resistencia $R=(750 \pm 7)\Omega$ y una inductancia $L=(1003 \pm 5)mH$ la cual aportaba una resistencia $R_L = (243 \pm 2)\Omega$; por lo que de \eqref{eq:resonante} se obtiene $ \Delta f = \frac{\Delta \omega}{2\pi} = (158 \pm 3)Hz$ y una transmisión máxima $T_{max}=(0.75 \pm 0.01)$.
 
-Ademas, es claro que las frecuencias que se desean filtrar son múltiplos de la frecuencia $f_0 = \frac{1}{2\tau}$ por lo que no dependen de la forma de la señal. Debido a esto, se impusieron a las dos señales una frecuencia $f_0 = (500 \pm 0.05) Hz$ para garantizar la relación $\Delta\omega << \frac{\pi}{\tau}$.
+Ademas, es claro que las frecuencias que se desean filtrar son múltiplos de la frecuencia $f_s = \frac{1}{2\tau}$ por lo que no dependen de la forma de la señal. Debido a esto, se impusieron a las dos señales una frecuencia $f_s = (500 \pm 0.05) Hz$ para garantizar la relación $(994\pm 14)Hz=\Delta\omega << \frac{\pi}{\tau} = (3150.0 \pm 0.3)Hz$.
 
-De esta manera, el parámetro $\omega_0$ podía variar únicamente variando la capacitancia $C$.
+De esta manera, el parámetro $\omega_0$ podía variar únicamente variando la capacitancia $C$, teniendo la frecuencia de resonancia $f_0= \frac{\omega_0}{2\pi}$.
 
-Sabiendo esto, se determinaban los valores de $C$ para que $\omega_0$ coincidiese con los armónicos de $f_0$. Y así, para cada armónico, poder medir la caída de potencial sobre la resistencia utilizando el osciloscopio. 
+Sabiendo esto, se determinaron los valores de $C$ para que $\omega_0$ coincidiese con los armónicos de $f_s$, como muestra la \textbf{Tabla 1}.
 
-Para garantizar que la frecuencia fuera la de resonancia, se hizo un barrido de mediciones en el intervalo de frecuencias $[440,560] Hz$, con el fin de encontrar un máximo de transmisión.
+\begin{center}
+
+\begin{tabular}{||c|c|c||}
+\hline 
+\textbf{Armónico Buscado} & \textbf{Capacitancia $C$ Utilizada (nF)} & \textbf{Frecuencia de resonancia $f_o$ (Hz)} \\ \hline 
+ 1 & $101 \pm 4$ & $500 \pm 11$ \\ \hline 
+ 2 & $25,0 \pm 1,3$ & $1005 \pm 29$ \\ \hline 
+ 3 & $10,7 \pm 0,7$ & $1536 \pm 54$ \\ \hline 
+ 4 & $6,00 \pm 0,3$ & $2046 \pm 56$ \\ \hline 
+ 5 & $4,02 \pm 0,19$ & $2506 \pm 65$ \\ \hline 
+ 6 & $2,98 \pm 0,14$ & $2911 \pm 76$ \\ \hline 
+ 7 & $1,99 \pm 0,14$ & $3562 \pm 107$ \\ \hline
+\end{tabular}
+
+\textit{Tabla 1: Capacitancias utilizadas para que $\omega_0$ sea idéntica a los armónicos de $f_s = (500 \pm 0.05) Hz$}
+
+\end{center}
+
+ Y así, para cada uno de ellos, se midió la caída de potencial sobre la resistencia utilizando el osciloscopio. 
+
+Para garantizar que la frecuencia fuera la de resonancia, se hizo un barrido de mediciones en el intervalo de frecuencias $[440,560] Hz$, con el fin de encontrar un máximo de transmisión, para cada $f_0$.
 
 
-\subsection{Modulación y filtración}
+\subsection{Caracterización del sumador}
+
+Para obtener el fenómeno de batido entre señales se utilizaron los dos canales del generador de funciones para armar un circuito \textit{sumador} como el que mostró la \textbf{Figura \ref{fig:Sumador}}, con valores de resistencias $r=(10.5 \pm 0.4)\Omega$ y $R=(200 \pm 3)\Omega$.
+
+Antes de realizar las mediciones en las que se utilizó el \textit{sumador} fue necesario determinar el rango dinámico del mismo. Para ellos, se programaron ambos generadores con una señal triangular con frecuencia $(500 \pm 0.05) Hz$ y una amplitud $(3.00 \pm 0.03)V$.
+
+El objetivo era ver que la amplitud de salida era proporcional al promedio de las amplitudes de entrada; o en caso de no serlo, determinar el rango de voltaje de entrada en el cual la respuesta era lineal. Para ello, al adquirir los datos de la señal de salida, primero se comprobó que tuviera una forma triangular; y luego se calculó la transmisión observando el intervalo donde esta se puede ajustar por una función lineal. Así mismo se determinó si el sumador modificaba la frecuencia de salida, tomando un promedio entre los máximos consecutivos de la señal triangular de salida. 
+
+Una ves hecho esto, se cambiaron las formas de las señales de entrada por una sinusoidal en ambos canales para obtener una señal de salida modulada.
+
+Para filtrar una de las señales de entrada se utilizó un circuito RLC anti-resonante como el que muestra la \textbf{Figura \ref{fig:filtro}}. 
 
 
+\newpage
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.8]{filtro}
+\includegraphics[scale=0.65]{filtro}
 \caption{filtro}
 \label{fig:filtro}
 \end{figure}
+
+Donde el elemento \textbf{S} es el sumador y la diferencia de potencia que entrega es la que sale de sus terminales libres; la resistencia $R=(750 \pm 7)\Omega$, inductancia $L=(10.0 \pm 0.3)mH$ con resistencia $R_L =(5.8 \pm 0.1)\Omega$, y una capacitancia $C=(101,2 \pm 0.8)nF$.
+
+Al quedar fijos estos parámetros, a partir de \eqref{eq:antiresonante} se obtiene una frecuencia de anti-resonancia $f_0 = (5003 \pm 95)Hz$ y un ancho de banda $\Delta f = (2080 \pm 36)Hz$.
+
+Entonces se utilizó una frecuencia $f_1=(10844 \pm 1)Hz$ para un canal, y $f_2=(5003\pm 0.5)Hz$ para el otro, y ambas fuentes con una amplitud $V_0=(3.00 \pm 0.03)V$.
 
 
 
@@ -220,21 +258,20 @@ Para garantizar que la frecuencia fuera la de resonancia, se hizo un barrido de 
 \label{sec:discusion}
 
 \subsection{Analisis de espectro}
-
 Como se dijo, la señal de entrada era una cuadrada, cuyos coeficientes de Fourier vienen dado por \eqref{eq:coef_cuad}. Sin embargo, para cada valor de $C$, se medían las transmisiones para distintas frecuencias de entrada. Los resultados que se obtuvieron para cada uno de estos barridos se ejemplifican en el gráfico de la \textbf{Figura \ref{fig:armonico1cuad}}, que representa el caso del primer armónico. Aquí puede verse claramente que el máximo se alcanza para $f_s = (500,00 \pm 0,05)Hz$.
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.6]{Trans_vs_Frec_Cuad1}
-\caption{Grafico de transmisión en función de frecuencia para $f_o = (500 \pm 11)Hz$ correspondiente al primer armónico}
+\includegraphics[scale=0.4]{Trans_vs_Frec_Cuad1}
+\caption{Grafico de transmisión en función de frecuencia para $f_0 = (500 \pm 11)Hz$ correspondiente al primer armónico}
 \label{fig:armonico1cuad}
 \end{figure}
 
-Como puede verse en \eqref{eq:coef_cuad}, para los armónicos pares la frecuencia $f_s = (500,00 \pm 0,05)$ debe resultar un máximo mientras que para los impares debe resultar, por lo menos, un mínimo. En todos los casos, el máximo o mínimo (dependiendo del armónico) se halló para $f_s = (500,00 \pm 0,05)$, con excepción del segundo armónico, cuyo mínimo se halló en $f = (490 \pm 10)Hz$ dado que el mismo valor mínimo se halló en $f_s = (480,00 \pm 0,05)Hz$ y en $f_s = (500,00 \pm 0,05)Hz$. El gráfico de la \textbf{Figura \ref{fig:transcuad}} muestra los valores de transmisión para cada armónico impar con su ajuste que arroja un $R_Square = 0,96953$ y un $\chi^2 = 54,38873$ que indican una gran subestimación de errores. Del ajuste se obtiene un $A = (0,91 \pm 0,09)$ que corresponde al valor $T_{max}.\frac{4}{\pi} = (0,962 \pm 0,004)$, cuya diferencia es despreciable frente a los valores manejados, al igual que la ordenada $b =(-0,05 \pm 0,02)$.
+Como puede verse en \eqref{eq:coef_cuad}, para los armónicos pares la frecuencia $f_s = (500,00 \pm 0,05)$ debe resultar un máximo mientras que para los impares debe resultar, por lo menos, un mínimo. En todos los casos, el máximo o mínimo (dependiendo del armónico) se halló para $f_s = (500,00 \pm 0,05)$, con excepción del segundo armónico, cuyo mínimo se halló en $f = (490 \pm 10)Hz$ dado que el mismo valor mínimo se halló en $f_s = (480,00 \pm 0,05)Hz$ y en $f_s = (500,00 \pm 0,05)Hz$. El gráfico de la \textbf{Figura \ref{fig:transcuad}} muestra los valores de transmisión para cada armónico impar con su ajuste que arroja un $R-Square = 0,96953$ y un $\chi^2 = 54,38873$ que indican una gran subestimación de errores. Del ajuste se obtiene un $A = (0,91 \pm 0,09)$ que corresponde al valor $T_{max}.\frac{4}{\pi} = (0,962 \pm 0,004)$, cuya diferencia es despreciable frente a los valores manejados, al igual que la ordenada $b =(-0,05 \pm 0,02)$.
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.6]{Trans_vs_Arm_Cuad}
+\includegraphics[scale=0.35]{Trans_vs_Arm_Cuad}
 \caption{Transmisión en función del armónico analizado, cuyo ajuste arroja los parametros esperados}
 \label{fig:transcuad}
 \end{figure}
@@ -255,40 +292,40 @@ Para el caso de la señal parabólica, la ecuación \eqref{eq:coef_parab} pone a
 \textit{Tabla 2: Frecuencia de máxima transmisión para cada armónico analizado de una señal parabólica. En este caso, no todas las frecuencias son identicas.}
 \end{center}
 
-El gráfico de transmisión en función de armónico puede verse en la \textbf{Figura \ref{fig:transparab}}, donde se utilizan los valores de máxima transmisión de cada barrido. Ajustando según \eqref{eq:coef_parab}, arroja un $R_Square = 0,89488$ y un $\chi^2 = 59,20285$, lo cual indica un ajuste medianamente confiable. El parámetro $A = (0,44 \pm 0,07)$ corresponde al parámetro $T_{max}.\frac{4}{\pi^2} = (0,3060 \pm 0,0012)$, donde la diferencia ya no resulta despreciable, aun frente a los errores. Nuevamente, la ordenada $b = (0,011 \pm 0,005)$ resulta despreciable frente a las magnitudes manejadas. Cabe aclarar que el término $(-1)^n$ que aparece en \eqref{eq:coef_parab} se ve absorbido por la fase $\phi_n$ de \eqref{eq:coefs} dado que la prioridad era analizar la amplitud en módulo. 
+El gráfico de transmisión en función de armónico puede verse en la \textbf{Figura \ref{fig:transparab}}, donde se utilizan los valores de máxima transmisión de cada barrido. Ajustando según \eqref{eq:coef_parab}, arroja un $R-Square = 0,89488$ y un $\chi^2 = 59,20285$, lo cual indica un ajuste medianamente confiable. El parámetro $A = (0,44 \pm 0,07)$ corresponde al parámetro $T_{max}.\frac{4}{\pi^2} = (0,3060 \pm 0,0012)$, donde la diferencia ya no resulta despreciable, aun frente a los errores. Nuevamente, la ordenada $b = (0,011 \pm 0,005)$ resulta despreciable frente a las magnitudes manejadas. Cabe aclarar que el término $(-1)^n$ que aparece en \eqref{eq:coef_parab} se ve absorbido por la fase $\phi_n$ de \eqref{eq:coefs} dado que la prioridad era analizar la amplitud en módulo. 
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.6]{Trans_vs_Arm_Parab}
+\includegraphics[scale=0.35]{Trans_vs_Arm_Parab}
 \caption{Transmisión en función del armónico analizado, donde se utilizaron los valores de transmisión máximos de cada barrido}
 \label{fig:transparab}
 \end{figure}
 
 \subsection{Caracterización del sumador}
 
-Para caracterizar el sumador, en primer lugar se procedió a chequear que el voltaje de salida, sea proporcional a la suma de los voltajes generados por las fuentes. Para esto, se realizó un gráfico que relacionara el voltaje de salida con el voltaje de entrada, como se ve en la \textbf{figura \ref{S_vs_E}}
+Para caracterizar el sumador, en primer lugar se procedió a chequear que el voltaje de salida, sea proporcional a la suma de los voltajes generados por las fuentes. Para esto, se realizó un gráfico que relacionara el voltaje de salida con el voltaje de entrada, como se ve en la \textbf{Figura \ref{fig:S_vs_E}}
 
-\begin{figure}[H]
+\begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{Salida_vs_Entrada}
-\caption{Grafico que muestra la relacion entre el voltaje de salida y el de entrada para un circuito con las caracteristicas ilustradas en la figura \ref{fig:sumador}}
+\includegraphics[scale=0.35]{Salida_vs_Entrada}
+\caption{Grafico que muestra la relacion entre el voltaje de salida y el de entrada para un circuito con las caracteristicas ilustradas en la figura \ref{fig:Sumador}}
 \label{fig:S_vs_E}
 \end{figure}
 
-Se puede ver que la relacion es lineal. además, el ajuste realizado confirma esa suposicion, ya que arroja un $R-Square=0.999999$. Ademas, la pendiente que arroja el ajuste es el factor de proporcion del sumador, que resulto de $(0.9741 \pm 0.0005)$
+Se puede ver que la relación es lineal. Además, el ajuste realizado confirma esa suposición, ya que arroja un $R-Square=0.999999$. Ademas, la pendiente que arroja el ajuste es el factor de proporción del sumador, que resulto de $(0.9741 \pm 0.0005)$. 
 
-Posteriormente se construyó un gráfico de la señal de salida como se muestra en la \textbf{figura \ref{Vol_Sal}}, y se relevaron los extremos a fin de poder encontrar la frecuencia con la que estos se repetian.
+Posteriormente se construyó un gráfico de la señal de salida como se muestra en la \textbf{figura \ref{fig:Vol_Sal}}, y se relevaron los extremos a fin de poder encontrar la frecuencia con la que estos se repetian.
 
-\begin{figure}[H]
+\begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{Voltaje_de_Salida}
-\caption{Gráfico que muestra el voltaje de salida en funcion del tiempo. Los puntos de mayor tamaño marca la posicion de los extremos de intensidad.}
+\includegraphics[scale=0.35]{Voltaje_de_Salida}
+\caption{Gráfico que muestra el voltaje de salida en funcion del tiempo. Los puntos de mayor tamaño marca la posicion de los extremos.}
 \label{fig:Vol_Sal}
 \end{figure}
 
-Lo que se hizo con los datos obtenidos de los maximos, y luego de los mínimos, fue sacar la diferencia entre cada par de valores consecutivos para obtener el periodo. Una vez termiando eso se obtuvo una frecuencia $f= (500 \pm 1)hz$ que, como se esperaba, coincide con la utilizada.
+Con los datos obtenidos de los maximos, y luego de los mínimos, se calculó la diferencia entre cada par de valores consecutivos para obtener su periodo, para luego hacer un promedio y obtener la frecuencia $f= (500 \pm 1)hz$ que, como se esperaba, coincide con la utilizada.
 
-Finalmente, se verificó que el sumador no provocara ningun desfasaje. Para esto realizó un grafico de la señal de entrada en funcion del tiempo, que resulto identico al del voltaje de salida, y se relevó la posición de los extremos de intensidad del mismo. Luego se los comparó, con la posicion de los encontrados anteriormente, y la diferencia obtenida $D= (2 \pm4)\mu s$ es el desfasaje provocado por el sumador. El cual resultó tres ordenes de magnitud menor que el periodo $\tau = (2 \pm 0.004)ms$ utilizado, por lo cual se lo consideró despreciable.
+Finalmente, se verificó que el sumador no provocara ningun desfasaje en la señal de salida. Para esto realizó un grafico de la señal de entrada en funcion del tiempo, que resulto identico al del voltaje de salida, y se relevó la posición de los extremos del mismo. Luego se los comparó, con las posiciones encontradas anteriormente, y la diferencia obtenida $D= (2 \pm4)\mu s$ es el desfasaje provocado por el sumador. El cual resultó tres ordenes de magnitud menor que el periodo $\tau = (2 \pm 0.004)ms$ utilizado, por lo cual se lo consideró despreciable.
 
 
 \subsection{Modulación y filtración}
