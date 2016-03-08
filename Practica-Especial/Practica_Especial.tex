@@ -231,7 +231,7 @@ El objetivo era ver que la amplitud de salida era proporcional al promedio de la
 
 \newpage
 \subsection{Modulación y filtrado}
-Una ves hecho esto se cambiaron las formas de las señales de entrada por una sinusoidal, con frecuencias distintas, en ambos canales para obtener una señal de salida modulada.
+Una vez hecho esto se cambiaron las formas de las señales de entrada por una sinusoidal, con frecuencias distintas, en ambos canales para obtener una señal de salida modulada.
 
 Para filtrar una de las señales de entrada se utilizó un circuito RLC anti-resonante como el que muestra la \textbf{Figura \ref{fig:filtro}}. 
 
@@ -273,7 +273,7 @@ Como puede verse en \eqref{eq:coef_cuad}, para los armónicos pares la frecuenci
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.35]{Trans_vs_Arm_Cuad}
+\includegraphics[scale=0.4]{Trans_vs_Arm_Cuad}
 \caption{Transmisión en función del armónico analizado, cuyo ajuste arroja los parametros esperados}
 \label{fig:transcuad}
 \end{figure}
@@ -298,7 +298,7 @@ El gráfico de transmisión en función de armónico puede verse en la \textbf{F
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.35]{Trans_vs_Arm_Parab}
+\includegraphics[scale=0.4]{Trans_vs_Arm_Parab}
 \caption{Transmisión en función del armónico analizado, donde se utilizaron los valores de transmisión máximos de cada barrido}
 \label{fig:transparab}
 \end{figure}
@@ -309,7 +309,7 @@ Para caracterizar el sumador, en primer lugar se procedió a chequear que el vol
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.35]{Salida_vs_Entrada}
+\includegraphics[scale=0.4]{Salida_vs_Entrada}
 \caption{Gráfico que muestra la relación entre el voltaje de salida y el de entrada para un circuito con las características ilustradas en la \textbf{Figura \ref{fig:Sumador}}}
 \label{fig:S_vs_E}
 \end{figure}
@@ -320,12 +320,12 @@ Posteriormente se construyó un gráfico de la señal de salida como se muestra 
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.35]{Voltaje_de_Salida}
+\includegraphics[scale=0.4]{Voltaje_de_Salida}
 \caption{Gráfico que muestra el voltaje de salida en funcion del tiempo. Los puntos de mayor tamaño marca la posicion de los extremos.}
 \label{fig:Vol_Sal}
 \end{figure}
 
-Con los datos obtenidos de los máximos, y luego de los mínimos, se calculó la diferencia entre cada par de valores consecutivos para obtener su periodo, para luego hacer un promedio y obtener la frecuencia $f= (500 \pm 1)hz$ que, como se esperaba, coincide con la utilizada.
+Con los datos obtenidos de los máximos, y luego de los mínimos, se calculó la diferencia entre cada par de valores consecutivos para obtener su periodo, para luego hacer un promedio y obtener la frecuencia $f= (500 \pm 1)Hz$ que, como se esperaba, coincide con la utilizada.
 
 Finalmente, se verificó que el sumador no provocara ningún desfasaje en la señal de salida. Para esto realizó un gráfico de la señal de entrada en función del tiempo, que resulto idéntico al del voltaje de salida, y se relevó la posición de los extremos del mismo. Luego se los comparó, con las posiciones encontradas anteriormente, y la diferencia obtenida $D= (2 \pm4)\mu s$ es el desfasaje provocado por el sumador. El cual resultó tres ordenes de magnitud menor que el periodo $\tau = (2 \pm 0.004)ms$ utilizado, por lo cual se lo consideró despreciable.
 
@@ -336,70 +336,68 @@ Para esta parte de la experiencia se realizaron batidos entre distintas señales
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{5600hz.jpg}
+\includegraphics[scale=0.4]{5600hz.jpg}
 \caption{Gráfico que muestra el resultado de enviar dos señales sinusoidales distintas con el dispositivo ilustrado en la \textbf{Figura \ref{fig:Sumador}}.}
 \label{fig:5_6}
 \end{figure}
 
-Sobre el gráfico se realizó un ajuste utilizando una suma de senos para verificar que efectivamente sea lo que se esperaba. Tanto el coeficiente de $R-Square = 0.99906$ muy cercano a uno, como los valores para la frecuencia alta $b = (10894.03 \pm 0.09)Hz$ y baja $c = (5600.89 \pm 0.08)Hz$ que coinciden con las utilizadas, garantizan que se obtuvo la señal que se buscaba.
+Sobre el gráfico se realizó un ajuste utilizando una suma de senos para verificar que efectivamente fuera el batido esperado. Tanto el coeficiente de $R-Square = 0.99906$ muy cercano a uno, como los valores para la frecuencia alta $b = (10894.03 \pm 0.09)Hz$ y baja $c = (5600.89 \pm 0.08)Hz$ que coinciden con las utilizadas, garantizan que se obtuvo la señal buscada.
 
-Esta señal se envió a través del circuito ilustrado en la \textbf{Figura \ref{fig:filtro}}, y se midió a la salida lo que se muestra en la \textbf{Figura \ref{fig:5_6_Filt}}. Como se puede ver en la figura antes mencionada, no se puede apreciar alguna diferencia importante entre los dos graficos. Esto era de esperarse ya que la frecuencia de corte del circuito anti-resonante era de $f= (5003 \pm 95)hz$ y no coincide con ninguna de las dos.
+Esta señal se envió a través del circuito ilustrado en la \textbf{Figura \ref{fig:filtro}}, y se midió a la salida lo que se muestra en la \textbf{Figura \ref{fig:5_6_Filt}}. En esta figura, no se puede apreciar alguna diferencia importante entre los dos graficos. Esto era de esperarse ya que la frecuencia de antiresonancia del circuito era $f_0= (5003 \pm 95)Hz$ y no coincide con ninguna de las dos.
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{5600hz_Filtrado}
+\includegraphics[scale=0.4]{5600hz_Filtrado}
 \caption{Gráfico que muestra el resultado de enviar la señal de la \textbf{Figura \ref{fig:5_6}} a travez de un circuito RCL anti-resonante utilizado como filtro.}
 \label{fig:5_6_Filt}
 \end{figure}
 
-Para una frecuencia baja más cercana a la frecuencia de corte $f= (5005.5 \pm 0.1)hz$ se obtuvieron los graficos de la \textbf{figura \ref{fig:5k}}
+Para una frecuencia baja más cercana a la frecuencia de antiresonancia $f= (5005.5 \pm 0.1)Hz$ se obtuvieron los graficos de la \textbf{Figura \ref{fig:5k}}
 
 \begin{figure}[H]
 	\begin{subfigure}{0.5\textwidth}
-		\includegraphics[scale=0.3]{5Khz}
+		\includegraphics[scale=0.35]{5Khz}
 		\subcaption{Señal de entrada del filtro.}
 		\label{subfig:5k_NFilt}
 	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
-		\includegraphics[scale=0.3]{5Khz_Filtrado}
+		\includegraphics[scale=0.35]{5Khz_Filtrado}
 		\subcaption{Señal de salida del filtro.}
 		\label{subfig:5k_Filt}
 	\end{subfigure}
-	\caption{Gráficos que muestran la suma de dos señales sinusoidales, de las cuales una es cercana a la frecuencia de corte del circuito anti-resonante utilizado 
-como filtro.}
+	\caption{Gráficos que muestran la suma de dos señales sinusoidales, de las cuales una es cercana a la frecuencia de antiresonancia del circuito utilizado como filtro.}
 	\label{fig:5k}
 \end{figure}
 
-A diferencia del par anterior, existe una diferencia apreciable entre los gráficos, que es consistente con el hecho de que una de las señales deberia haberse visto afectada por el filtro. Para poder observar mejor eso, se realizo un FFT mediante el programa de procesamiento de datos, OriginLab. La \textbf{Figura \ref{fig:FFT}} muestra los resultados de realizar la \textit{trasformada de Fourier} a cada uno de los graficos anteriores.
+A diferencia del par anterior, existe una diferencia apreciable entre los gráficos, que es consistente con el hecho de que una de las señales deberia haberse visto atenuada por el filtro. Para poder observar mejor esta atenuación, se realizo un FFT mediante el programa de procesamiento de datos OriginLab. La \textbf{Figura \ref{fig:FFT}} muestra los resultados de realizar la \textit{trasformada de Fourier} a cada uno de los graficos anteriores.
 
 \begin{figure}[H]
 	\begin{subfigure}{0.5\textwidth}
 		\includegraphics[scale=0.3]{FFT_5005hz}
-		\subcaption{Gráfico que corresponde a la transformada de Fourier del grafico de la \textbf{figura \ref{subfig:5k_NFilt}}.}
+		\subcaption{Transformada de Fourier del grafico de la \textbf{Figura \ref{subfig:5k_NFilt}}.}
 		\label{subfig:FFT_NFilt}
 	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
 		\includegraphics[scale=0.3]{FFT_5005hz_Filtrado}
-		\subcaption{Gráfico que correspondiente a la transformada de Fourier del grafico de la \textbf{figura \ref{subfig:5k_NFilt}}.}
+		\subcaption{Transformada de Fourier del grafico de la \textbf{Figura \ref{subfig:5k_Filt}}.}
 		\label{subfig:FFT_Filt}
 	\end{subfigure}
-	\caption{no se me ocurre un epigrafe para esto.}
+	\caption{Análisis espectral que permite apreciar el la amplitud de cada sinusoide por separado}
 	\label{fig:FFT}
 \end{figure}
 
-En el gráfico de la \textbf{Figura \ref{subfig:FFT_Filt}} se puede ver como cayo la amplitud de la corriente de frecuencia $f_{baja}= (5005.5 \pm 0.1)hz$ respecto del gráfico de la \textbf{Figura \ref{subfig:FFT_NFilt}}, mientras que la correspondiente a la de frecuencia alta, $f_{alta} = (10844 \pm 1)hz$, se mantiene sin cambios apreciables.
+En el gráfico de la \textbf{Figura \ref{subfig:FFT_Filt}} se puede apreciar un decaimiento de la amplitud de la señal de frecuencia $f_{baja}= (5005.5 \pm 0.1)Hz$ respecto del gráfico de la \textbf{Figura \ref{subfig:FFT_NFilt}}, mientras que la correspondiente a la de frecuencia alta, $f_{alta} = (10844 \pm 1)Hz$, se mantiene sin cambios apreciables.
 
-Finalmente se procedio a utilizar el FFT realizado por el osciloscopio para cada medición, y a partir de esos datos se construyó un gráfico que compara la transferencia de las dos señales utilizadas en el \textit{sumador}, variando solo la de frecuencia baja. Los resultados se muestran en la \textbf{figura \ref{fig:Comp}}
+Finalmente se procedio a utilizar el FFT realizado por el osciloscopio para cada medición, y a partir de esos datos se construyó un gráfico que compara la transferencia de las dos señales utilizadas en el \textit{sumador}, variando solo la de frecuencia baja. Los resultados se muestran en la \textbf{Figura \ref{fig:Comp}}
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{Comparacion}
-\caption{Gráfico que compara la transferencia de un circuito RCL anti-resonante para una señal fija, alejada de su campana de anti-resonancia, y para una señal que 
-variaba. }
+\includegraphics[scale=0.4]{Comparacion}
+\caption{Comparación de la transferencia de un circuito RCL anti-resonante para una señal fija, alejada de su campana de anti-resonancia, y para una señal variable.}
 \label{fig:Comp}
 \end{figure}
 
-Puede verse en el gráfico \ref{fig:Comp} que la amplitud de la corriente de frecuencia baja aumenta a medida que esta se aleja de la frecuencia de corte, mientras que la señal con frecuencia alta se mantiene sin cambios apreciables.
+Puede verse en el gráfico de la \textbf{Figura \ref{fig:Comp}} que la amplitud de la corriente de frecuencia baja aumenta a medida que esta se aleja de la frecuencia de antiresonancia, mientras que la señal con frecuencia alta se mantiene sin cambios apreciables.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
