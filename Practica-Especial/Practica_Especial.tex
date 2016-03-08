@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{amsmath}
+\usepackage{float}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{makeidx}
@@ -262,6 +263,32 @@ El gráfico de transmisión en función de armónico puede verse en la \textbf{F
 \caption{Transmisión en función del armónico analizado, donde se utilizaron los valores de transmisión máximos de cada barrido}
 \label{fig:transparab}
 \end{figure}
+
+\subsection{Caracterización del sumador}
+
+Para caracterizar el sumador, en primer lugar se procedió a chequear que el voltaje de salida, sea proporcional a la suma de los voltajes generados por las fuentes. Para esto, se realizó un gráfico que relacionara el voltaje de salida con el voltaje de entrada, como se ve en la \textbf{figura \ref{S_vs_E}}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{Salida_vs_Entrada}
+\caption{Grafico que muestra la relacion entre el voltaje de salida y el de entrada para un circuito con las caracteristicas ilustradas en la figura \ref{fig:sumador}}
+\label{fig:S_vs_E}
+\end{figure}
+
+Se puede ver que la relacion es lineal. además, el ajuste realizado confirma esa suposicion, ya que arroja un $R-Square=0.999999$. Ademas, la pendiente que arroja el ajuste es el factor de proporcion del sumador, que resulto de $(0.9741 \pm 0.0005)$
+
+Posteriormente se construyó un gráfico de la señal de salida como se muestra en la \textbf{figura \ref{Vol_Sal}}, y se relevaron los extremos a fin de poder encontrar la frecuencia con la que estos se repetian.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{Voltaje_de_Salida}
+\caption{Gráfico que muestra el voltaje de salida en funcion del tiempo. Los puntos de mayor tamaño marca la posicion de los extremos de intensidad.}
+\label{fig:Vol_Sal}
+\end{figure}
+
+Lo que se hizo con los datos obtenidos de los maximos, y luego de los mínimos, fue sacar la diferencia entre cada par de valores consecutivos para obtener el periodo. Una vez termiando eso se obtuvo una frecuencia $f= (500 \pm 1)hz$ que, como se esperaba, coincide con la utilizada.
+
+Finalmente, se verificó que el sumador no provocara ningun desfasaje. Para esto realizó un grafico de la señal de entrada en funcion del tiempo, que resulto identico al del voltaje de salida, y se relevó la posición de los extremos de intensidad del mismo. Luego se los comparó, con la posicion de los encontrados anteriormente, y la diferencia obtenida $D= (2 \pm4)\mu s$ es el desfasaje provocado por el sumador. El cual resultó tres ordenes de magnitud menor que el periodo $\tau = (2 \pm 0.004)ms$ utilizado, por lo cual se lo consideró despreciable.
 
 
 \subsection{Modulación y filtración}
