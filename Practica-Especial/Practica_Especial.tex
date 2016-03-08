@@ -312,7 +312,7 @@ Para caracterizar el sumador, en primer lugar se procedió a chequear que el vol
 \label{fig:S_vs_E}
 \end{figure}
 
-Se puede ver que la relación es lineal. Además, el ajuste realizado confirma esa suposición, ya que arroja un $R-Square=0.999999$. Teniendo entonces que la pendiente obtenida del ajuste es el factor de proporción del sumador, que resulto de $(0.9741 \pm 0.0005)$. 
+Se puede ver que la relación es lineal. Además, el ajuste realizado confirma esa suposición, ya que arroja un $R-Square=0.99939$. Teniendo entonces que la pendiente obtenida del ajuste es el factor de proporción del sumador, que resulto de $(0.9741 \pm 0.0005)$. 
 
 Posteriormente se construyó un gráfico de la señal de salida como se muestra en la \textbf{Figura \ref{fig:Vol_Sal}}, y se relevaron los extremos a fin de poder encontrar la frecuencia con la que estos se repetían.
 
@@ -330,6 +330,74 @@ Finalmente, se verificó que el sumador no provocara ningún desfasaje en la se�
 
 \subsection{Modulación y filtrado}
 
+Para esta parte de la experiencia se realizaron batidos entre distintas señales. La \textbf{Figura \ref{fig:5_6}} muestra el resultado de enviar dos señales sinusoidales distintas con el \textit{sumador}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{5600hz.jpg}
+\caption{Gráfico que muestra el resultado de enviar dos señales sinusoidales distintas con el dispositivo ilustrado en la \textbf{Figura \ref{fig:Sumador}}.}
+\label{fig:5_6}
+\end{figure}
+
+Sobre el gráfico se realizó un ajuste utilizando una suma de senos para verificar que efectivamente sea lo que se esperaba. Tanto el coeficiente de $R-Square = 0.99906$ muy cercano a uno, como los valores para la frecuencia alta $b = (10894.03 \pm 0.09)hz$ y baja $c = (5600.89 pm 0.08)hz$ que coinciden con las utilizadas, certifican que se obtuvo la señal que se buscaba.
+
+Esta señal se envió a través del circuito ilustrado en la \textbf{Figura \ref{fig:filtro}}, y se midió a la salida lo que se muestra en la \textbf{Figura \ref{fig:5_6_Filt}}. Como se puede ver en la figura antes mencionada, no se puede apreciar alguna diferencia importante entre los dos graficos. Esto era de esperarse ya que la frecuencia de corte del circuito anti-resonante era de $f= (5003 \pm 95)hz$ y no coincide con ninguna de las dos.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{5600hz_Filtrado}
+\caption{Gráfico que muestra el resultado de enviar la señal de la \textbf{Figura \ref{fig:5_6}} a travez de un circuito RCL anti-resonante utilizado como filtro.}
+\label{fig:5_6_Filt}
+\end{figure}
+
+Para una frecuencia baja más cercana a la frecuencia de corte $f= (5005.5 \pm 0.1)hz$ se obtuvieron los graficos de la \textbf{figura \ref{fig:5k}}
+
+\begin{figure}[H]
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.3]{5Khz}
+		\subcaption{Señal de entrada del filtro.}
+		\label{subfig:5k_NFilt}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.3]{5Khz_Filtrado}
+		\subcaption{Señal de salida del filtro.}
+		\label{subfig:5k_Filt}
+	\end{subfigure}
+	\caption{Gráficos que muestran la suma de dos señales sinusoidales, de las cuales una es cercana a la frecuencia de corte del circuito anti-resonante utilizado 
+como filtro.}
+	\label{fig:5k}
+\end{figure}
+
+A diferencia del par anterior, existe una diferencia apreciable entre los gráficos, que es consistente con el hecho de que una de las señales deberia haberse visto afectada por el filtro. Para poder observar mejor eso, se realizo un FFT mediante el programa de procesamiento de datos, OriginLab. La \textbf{Figura \ref{fig:FFT}} muestra los resultados de realizar la \textit{trasformada de Fourier} a cada uno de los graficos anteriores.
+
+\begin{figure}[H]
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.3]{FFT_5005hz}
+		\subcaption{Gráfico que corresponde a la transformada de Fourier del grafico de la \textbf{figura \ref{subfig:5k_NFilt}}.}
+		\label{subfig:FFT_NFilt}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.3]{FFT_5005hz_Filtrado}
+		\subcaption{Gráfico que correspondiente a la transformada de Fourier del grafico de la \textbf{figura \ref{subfig:5k_NFilt}}.}
+		\label{subfig:FFT_Filt}
+	\end{subfigure}
+	\caption{no se me ocurre un epigrafe para esto.}
+	\label{fig:FFT}
+\end{figure}
+
+En el gráfico de la \textbf{Figura \ref{subfig:FFT_Filt}} se puede ver como cayo la amplitud de la corriente de frecuencia $f_{baja}= (5005.5 \pm 0.1)hz$ respecto del gráfico de la \textbf{Figura \ref{subfig:FFT_NFilt}}, mientras que la correspondiente a la de frecuencia alta, $f_{alta} = (10844 \pm 1)hz$, se mantiene sin cambios apreciables.
+
+Finalmente se procedio a utilizar el FFT realizado por el osciloscopio para cada medición, y a partir de esos datos se construyó un gráfico que compara la transferencia de las dos señales utilizadas en el \textit{sumador}, variando solo la de frecuencia baja. Los resultados se muestran en la \textbf{figura \ref{fig:Comp}}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{Comparacion}
+\caption{Gráfico que compara la transferencia de un circuito RCL anti-resonante para una señal fija, alejada de su campana de anti-resonancia, y para una señal que 
+variaba. }
+\label{fig:Comp}
+\end{figure}
+
+Puede verse en el gráfico \ref{fig:Comp} que la amplitud de la corriente de frecuencia baja aumenta a medida que esta se aleja de la frecuencia de corte, mientras que la señal con frecuencia alta se mantiene sin cambios apreciables.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
