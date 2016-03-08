@@ -173,7 +173,7 @@ Por lo tanto, si se conoce la frecuencia $\omega$ de la moduladora y se cumple q
 \section{Desarrollo experimental}
 Durante esta experiencia se utilizó un generador de funciones de dos canales capaz de generar diferencias de potencial $V(t)$ a frecuencias con un error relativo del $0,01\%$ en un rango entre $1\mu Hz$ y $5MHz$. El voltaje \textit{pico-pico} tiene un error relativo del $1\%$ para el rango de voltaje utilizado ($2V-20V$). Además, se utilizó una resistencia variable por décadas en el intervalo ($1\Omega-11110\Omega$), una capacitancia variable por décadas en el intervalo($1nF-1110\,nF$) y una inductancia variable por décadas en el intervalo ($1mH-1110mH$). Usando un multimetro digital se midieron los valores utilizados en todos estos elementos junto con su precisión que era de la forma $\pm(1\%+2d)$ para la resistencia, $\pm(0.7\%+5d)$ para la capacitancia y ($0.7\% +5d$) para la inductancia; ademas de comprobar la continuidad de los cables utilizados.
 
-Se utilizó además un osciloscopio digital con dos canales de entrada capaces de medir diferencias de potencial entre sus dos terminales en un rango de 2mV a 5V con un error relativo del $3\%$ del valor \textit{pico-pico}. El osciloscopio también contaba con un programa de adquisición de datos el cual permitía importar en una computadora las mediciones en su pantalla para luego ser analizadas. 
+Se utilizó además un osciloscopio digital con dos canales de entrada capaces de medir diferencias de potencial entre sus dos terminales en un rango de 2mV a 5V con un error relativo del $3\%$ del valor \textit{pico-pico}, y una función \textit{FFT} capas mostrar su espectro de frecuencias. El osciloscopio también contaba con un programa de adquisición de datos el cual permitía importar en una computadora las mediciones en su pantalla para luego ser analizadas. 
 
 A la hora de medir voltaje, fue necesario asegurarse que el cable a tierra del osciloscopio estuviera conectado al cable a tierra el generador de funciones. Cuando se utilizaron ambos canales, se hicieron coincidir las 3 tierras.
 
@@ -231,7 +231,7 @@ El objetivo era ver que la amplitud de salida era proporcional al promedio de la
 
 \newpage
 \subsection{Modulación y filtrado}
-Una ves hecho esto, se cambiaron las formas de las señales de entrada por una sinusoidal en ambos canales para obtener una señal de salida modulada.
+Una ves hecho esto se cambiaron las formas de las señales de entrada por una sinusoidal, con frecuencias distintas, en ambos canales para obtener una señal de salida modulada.
 
 Para filtrar una de las señales de entrada se utilizó un circuito RLC anti-resonante como el que muestra la \textbf{Figura \ref{fig:filtro}}. 
 
@@ -248,7 +248,9 @@ Al quedar fijos estos parámetros, a partir de \eqref{eq:antiresonante} se obtie
 
 Entonces se utilizó una frecuencia $f_1=(10844 \pm 1)Hz$ para un canal, y $f_2=(5003\pm 0.5)Hz$ para el otro, y ambas fuentes con una amplitud $V_0=(3.00 \pm 0.03)V$.
 
+El objetivo fue observar el filtrado de la señal con frecuencia $f_2=(5003\pm 0.5)Hz$, dado que coincidía con la frecuencia de anti-resonancia $f_0 = (5003 \pm 95)Hz$. Para ello se midió la respuesta del circuito RLC para distintas frecuencias $f_2$ cercanas a $f_0$ y se calculó su espectro de frecuencias, para compararlas con la señal de entrada.
 
+En paralelo, se utilizó la función \textit{FFT} del osciloscopio para realizar la misma comparación entre señales.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 4.DISCUSIÓN Y RESULTADOS: todo lo que se obtuvo y explicación. Graficos, tablas.
@@ -339,7 +341,7 @@ Para esta parte de la experiencia se realizaron batidos entre distintas señales
 \label{fig:5_6}
 \end{figure}
 
-Sobre el gráfico se realizó un ajuste utilizando una suma de senos para verificar que efectivamente sea lo que se esperaba. Tanto el coeficiente de $R-Square = 0.99906$ muy cercano a uno, como los valores para la frecuencia alta $b = (10894.03 \pm 0.09)hz$ y baja $c = (5600.89 pm 0.08)hz$ que coinciden con las utilizadas, certifican que se obtuvo la señal que se buscaba.
+Sobre el gráfico se realizó un ajuste utilizando una suma de senos para verificar que efectivamente sea lo que se esperaba. Tanto el coeficiente de $R-Square = 0.99906$ muy cercano a uno, como los valores para la frecuencia alta $b = (10894.03 \pm 0.09)Hz$ y baja $c = (5600.89 \pm 0.08)Hz$ que coinciden con las utilizadas, garantizan que se obtuvo la señal que se buscaba.
 
 Esta señal se envió a través del circuito ilustrado en la \textbf{Figura \ref{fig:filtro}}, y se midió a la salida lo que se muestra en la \textbf{Figura \ref{fig:5_6_Filt}}. Como se puede ver en la figura antes mencionada, no se puede apreciar alguna diferencia importante entre los dos graficos. Esto era de esperarse ya que la frecuencia de corte del circuito anti-resonante era de $f= (5003 \pm 95)hz$ y no coincide con ninguna de las dos.
 
