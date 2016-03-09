@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.3)  8 MAR 2016 13:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.3)  8 MAR 2016 21:06
 entering extended mode
 **practica_especial
 (practica_especial.tex
@@ -1098,49 +1098,50 @@ g>]) [1]
 <Sumador.jpg, id=17, 271.76532pt x 248.42813pt>
 File: Sumador.jpg Graphic file (type jpg)
  <use Sumador.jpg>
-Package pdftex.def Info: Sumador.jpg used on input line 149.
+Package pdftex.def Info: Sumador.jpg used on input line 150.
 (pdftex.def)             Requested size: 190.23442pt x 173.8985pt.
  [2 <./Sumador.jpg>] <RLC-espectro.jpg, id=21, 271.76532pt x 235.63031pt>
 File: RLC-espectro.jpg Graphic file (type jpg)
 
 <use RLC-espectro.jpg>
-Package pdftex.def Info: RLC-espectro.jpg used on input line 186.
+Package pdftex.def Info: RLC-espectro.jpg used on input line 187.
 (pdftex.def)             Requested size: 190.23442pt x 164.94008pt.
- [3 <./RLC-espectro.jpg>] [4]
-<filtro.jpg, id=28, 323.70938pt x 169.38281pt>
+ [3 <./RLC-espectro.jpg>]
+<filtro.jpg, id=25, 323.70938pt x 169.38281pt>
 File: filtro.jpg Graphic file (type jpg)
  <use filtro.jpg>
 Package pdftex.def Info: filtro.jpg used on input line 240.
 (pdftex.def)             Requested size: 210.4086pt x 110.0975pt.
 
-<Trans_vs_Frec_Cuad1.jpg, id=29, 718.8456pt x 558.888pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4] <Trans_vs_Frec_Cuad1.jpg, id=29, 718.8456pt x 558.888pt>
 File: Trans_vs_Frec_Cuad1.jpg Graphic file (type jpg)
 
 <use Trans_vs_Frec_Cuad1.jpg>
 Package pdftex.def Info: Trans_vs_Frec_Cuad1.jpg used on input line 267.
 (pdftex.def)             Requested size: 287.53314pt x 223.55124pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 <Trans_vs_Arm_Cuad.jpg, id=30, 661.0296pt x 529.98pt>
 File: Trans_vs_Arm_Cuad.jpg Graphic file (type jpg)
 
 <use Trans_vs_Arm_Cuad.jpg>
-Package pdftex.def Info: Trans_vs_Arm_Cuad.jpg used on input line 276.
+Package pdftex.def Info: Trans_vs_Arm_Cuad.jpg used on input line 275.
 (pdftex.def)             Requested size: 264.40715pt x 211.98824pt.
+ [5 <./filtro.jpg> <./Trans_vs_Frec_Cuad1.jpg>]
+<Trans_vs_Arm_Parab.jpg, id=35, 674.52pt x 522.2712pt>
+File: Trans_vs_Arm_Parab.jpg Graphic file (type jpg)
+
+<use Trans_vs_Arm_Parab.jpg>
+Package pdftex.def Info: Trans_vs_Arm_Parab.jpg used on input line 300.
+(pdftex.def)             Requested size: 269.80322pt x 208.90477pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5 <./filtro.jpg>] <Trans_vs_Arm_Parab.jpg, id=35, 674.52pt x 522.2712pt>
-File: Trans_vs_Arm_Parab.jpg Graphic file (type jpg)
-
-<use Trans_vs_Arm_Parab.jpg>
-Package pdftex.def Info: Trans_vs_Arm_Parab.jpg used on input line 301.
-(pdftex.def)             Requested size: 269.80322pt x 208.90477pt.
- [6 <./Trans_vs_Frec_Cuad1.jpg> <./Trans_vs_Arm_Cuad.jpg>] <Salida_vs_Entrada.j
-pg, id=40, 668.7384pt x 551.1792pt>
+[6 <./Trans_vs_Arm_Cuad.jpg>]
+<Salida_vs_Entrada.jpg, id=40, 668.7384pt x 551.1792pt>
 File: Salida_vs_Entrada.jpg Graphic file (type jpg)
 
 <use Salida_vs_Entrada.jpg>
@@ -1197,11 +1198,11 @@ Overfull \hbox (2.1243pt too wide) in paragraph at lines 358--368
  []
 
 [9 <./5600hz_Filtrado.jpg> <./5Khz.jpg> <./5Khz_Filtrado.jpg>]
-<FFT_5005hz.jpg, id=55, 794.97pt x 614.295pt>
+<FFT_5005hz.jpg, id=55, 794.0064pt x 587.796pt>
 File: FFT_5005hz.jpg Graphic file (type jpg)
  <use FFT_5005hz.jpg>
 Package pdftex.def Info: FFT_5005hz.jpg used on input line 376.
-(pdftex.def)             Requested size: 238.49284pt x 184.28992pt.
+(pdftex.def)             Requested size: 238.20375pt x 176.34015pt.
 
 <FFT_5005hz_Filtrado.jpg, id=56, 755.4624pt x 580.0872pt>
 File: FFT_5005hz_Filtrado.jpg Graphic file (type jpg)
@@ -1225,13 +1226,13 @@ LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 6462 strings out of 493698
- 88383 string characters out of 3144416
- 154868 words of memory out of 3000000
- 9622 multiletter control sequences out of 15000+200000
+ 6461 strings out of 493698
+ 88373 string characters out of 3144416
+ 153864 words of memory out of 3000000
+ 9621 multiletter control sequences out of 15000+200000
  51857 words of font info for 112 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 36i,16n,43p,1014b,441s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,16n,43p,1420b,441s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MikTex 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Fil
 es/MikTex 2.9/fonts/type1/public/kpfonts/jkpbit8a.pfb><C:/Program Files/MikTex 
 2.9/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Program Files/MikTex 2.9/fonts/t
@@ -1241,7 +1242,7 @@ pfonts/jkpmi.pfb><C:/Program Files/MikTex 2.9/fonts/type1/public/kpfonts/jkpmia
 rogram Files/MikTex 2.9/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Program File
 s/MikTex 2.9/fonts/type1/public/kpfonts/jkpmsc8a.pfb><C:/Program Files/MikTex 2
 .9/fonts/type1/public/kpfonts/jkpsy.pfb>
-Output written on practica_especial.pdf (12 pages, 11207109 bytes).
+Output written on practica_especial.pdf (12 pages, 10921231 bytes).
 PDF statistics:
  94 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

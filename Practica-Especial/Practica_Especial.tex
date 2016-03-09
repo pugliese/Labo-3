@@ -137,7 +137,8 @@ Similarmente, para el caso de una señal \textit{parabolica} de la forma $P(t)=V
 \label{eq:coef_parab}
 \end{equation}
 
-Siguiendo la idea anterior, es posible considerar el \textit{espectro de potencia} de una señal en un intervalo de tiempo $[t_0;t_1]$ como una función $\alpha^2(\omega) = |\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).e^{i\omega t}dt|^2= |\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).cos(\omega t)dt - \frac{i}{t_1-t_0}\int_{t_0}^{t_1} f(t).sin(\omega t)dt|^2 = (\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).cos(\omega t)dt)^2+(\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).sin(\omega t)dt)^2$. En esta definición puede verse que si $t_1-t_0=\tau$, $\alpha(n\frac{\pi}{\tau} = \alpha_n$ para una función $f(t)$ de período $2\tau$. Por lo tanto, 
+Siguiendo la idea anterior, es posible considerar el \textit{espectro de potencia} de una señal en un intervalo de tiempo $[t_0;t_1]$ como una función $\alpha^2(\omega) = |\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).e^{i\omega t}dt|^2= |\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).cos(\omega t)dt - \frac{i}{t_1-t_0}\int_{t_0}^{t_1} f(t).sin(\omega t)dt|^2 = (\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).cos(\omega t)dt)^2+(\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).sin(\omega t)dt)^2$. En esta definición puede verse que si $t_1-t_0=2\tau$, $\alpha(n\frac{\pi}{\tau} = \alpha_n$ para una función $f(t)$ de período $2\tau$. La operación $FFT$ o \textit{Fast Fourier Transformation} toma una función definida en este intervalo $[t_0;t_1]$ y grafica su respectivo espectro de potencia $\alpha^2(\omega)$. Por lo tanto, al analizar los coeficientes de Fourier se está analizando la potencia espectral de una señal para un conjunto de frecuencias determinado, que en el caso de una cuadrada son sus máximos y, por ende, los que más peso tienen. 
+
 
 Ahora, si se supone una señal de la forma $V(t) = A.cos(\omega_1t) + A.cos(\omega_2t)$ que resulta de la suma de dos señales sinusoidales, ocurre un efecto denominado \textit{batido}. Esto se da gracias a que, mediante identidades trigonométricas, se obtiene $V(t) = 2A.cos(\frac{\omega_1-\omega_2}{2}t)sin(\frac{\omega_2+\omega_1}{2}t)$ donde el primer término se llama \textit{modulador} y el segundo \textit{portador}. Por lo tanto, si se suman dos señales de entrada 
 $V_1(t) = V_o.cos(\omega_1t)$ y $V_2(t) = V_o.cos(\omega_2t)$, la señal de salida $V(t)$ tendrá una forma que no será sinusoidal a primera vista. 
@@ -229,7 +230,6 @@ Antes de realizar las mediciones en las que se utilizó el \textit{sumador} fue 
 
 El objetivo era ver que la amplitud de salida era proporcional al promedio de las amplitudes de entrada; o en caso de no serlo, determinar el rango de voltaje de entrada en el cual la respuesta era lineal. Para ello, al adquirir los datos de la señal de salida, primero se comprobó que tuviera una forma triangular; y luego se calculó la transmisión observando el intervalo donde esta se puede ajustar por una función lineal. Así mismo se determinó si el sumador modificaba la frecuencia de salida, tomando un promedio entre los máximos consecutivos de la señal triangular de salida; y por otro lado, al comparar los tiempos entre máximos de la señal de entrada y salida se pudo ver si había desfasaje entre ellas. 
 
-\newpage
 \subsection{Modulación y filtrado}
 Una vez hecho esto se cambiaron las formas de las señales de entrada por una sinusoidal, con frecuencias distintas, en ambos canales para obtener una señal de salida modulada.
 
@@ -242,9 +242,9 @@ Para filtrar una de las señales de entrada se utilizó un circuito RLC anti-res
 \label{fig:filtro}
 \end{figure}
 
-Donde el elemento \textbf{S} es el sumador y la diferencia de potencia que entrega es la que sale de sus terminales libres; la resistencia $R=(750 \pm 7)\Omega$, inductancia $L=(10.0 \pm 0.3)mH$ con resistencia $R_L =(5.8 \pm 0.1)\Omega$, y una capacitancia $C=(101,2 \pm 0.8)nF$.
+Donde el elemento \textbf{S} es el sumador y la diferencia de potencia que entrega es la que sale de sus terminales libres; la resistencia $R=(7500 \pm 70)\Omega$, inductancia $L=(10.0 \pm 0.3)mH$ con resistencia $R_L =(5.8 \pm 0.1)\Omega$, y una capacitancia $C=(101,2 \pm 0.8)nF$.
 
-Al quedar fijos estos parámetros, a partir de \eqref{eq:antiresonante} se obtiene una frecuencia de anti-resonancia $f_0 = (5003 \pm 95)Hz$ y un ancho de banda $\Delta f = (2080 \pm 36)Hz$.
+Al quedar fijos estos parámetros, a partir de \eqref{eq:antiresonante} se obtiene una frecuencia de anti-resonancia $f_0 = (5003 \pm 95)Hz$ y un ancho de banda $\Delta f = (210 \pm 4)Hz$.
 
 Entonces se utilizó una frecuencia $f_1=(10844 \pm 1)Hz$ para un canal, y $f_2=(5003\pm 0.5)Hz$ para el otro, y ambas fuentes con una amplitud $V_0=(3.00 \pm 0.03)V$.
 
@@ -260,7 +260,7 @@ En paralelo, se utilizó la función \textit{FFT} del osciloscopio para realizar
 \label{sec:discusion}
 
 \subsection{Analisis de espectro}
-Como se dijo, la señal de entrada era una cuadrada, cuyos coeficientes de Fourier vienen dado por \eqref{eq:coef_cuad}. Sin embargo, para cada valor de $C$, se medían las transmisiones para distintas frecuencias de entrada. Los resultados que se obtuvieron para cada uno de estos barridos se ejemplifican en el gráfico de la \textbf{Figura \ref{fig:armonico1cuad}}, que representa el caso del primer armónico. Aquí puede verse claramente que el máximo se alcanza para $f_s = (500,00 \pm 0,05)Hz$.
+Como se dijo, la señal de entrada era una cuadrada, cuyos coeficientes de Fourier vienen dados por \eqref{eq:coef_cuad}. Sin embargo, para cada valor de $C$, se medían las transmisiones para distintas frecuencias de entrada. Los resultados que se obtuvieron para cada uno de estos barridos se ejemplifican en el gráfico de la \textbf{Figura \ref{fig:armonico1cuad}}, que representa el caso del primer armónico. Aquí puede verse claramente que el máximo se alcanza para $f_s = (500,00 \pm 0,05)Hz$.
 
 \begin{figure}[h]
 \centering
@@ -269,8 +269,7 @@ Como se dijo, la señal de entrada era una cuadrada, cuyos coeficientes de Fouri
 \label{fig:armonico1cuad}
 \end{figure}
 
-Como puede verse en \eqref{eq:coef_cuad}, para los armónicos pares la frecuencia $f_s = (500,00 \pm 0,05)$ debe resultar un máximo mientras que para los impares debe resultar, por lo menos, un mínimo. En todos los casos, el máximo o mínimo (dependiendo del armónico) se halló para $f_s = (500,00 \pm 0,05)$, con excepción del segundo armónico, cuyo mínimo se halló en $f = (490 \pm 10)Hz$ dado que el mismo valor mínimo se halló en $f_s = (480,00 \pm 0,05)Hz$ y en $f_s = (500,00 \pm 0,05)Hz$. El gráfico de la \textbf{Figura \ref{fig:transcuad}} muestra los valores de transmisión para cada armónico impar con su ajuste que arroja un $R-Square = 0,96953$ y un $\chi^2 = 54,38873$ que indican una gran subestimación de errores. Del ajuste se obtiene un $A = (0,91 \pm 0,09)$ que corresponde al valor $T_{max}.\frac{4}{\pi} = (0,962 \pm 0,004)$, cuya diferencia es despreciable frente a los valores manejados, al igual que la ordenada $b =(-0,05 \pm 0,02)$.
-
+Como puede verse en \eqref{eq:coef_cuad}, para los armónicos pares la frecuencia $f_s = (500,00 \pm 0,05)$ debe resultar un máximo mientras que para los impares debe resultar, por lo menos, un mínimo. En todos los casos, el máximo o mínimo (dependiendo del armónico) se halló para $f_s = (500,00 \pm 0,05)$, con excepción del segundo armónico, cuyo mínimo se halló en $f = (490 \pm 10)Hz$ dado que el mismo valor mínimo se halló en $f_s = (480,00 \pm 0,05)Hz$ y en $f_s = (500,00 \pm 0,05)Hz$. El gráfico de la \textbf{Figura \ref{fig:transcuad}} muestra los valores de transmisión para cada armónico impar con su ajuste que arroja un $R-Square = 0,96953$ y un $\chi^2 = 54,38873$ que indican una gran subestimación de errores. Del ajuste se obtiene un $A = (0,91 \pm 0,09)$ que corresponde al valor $T_{max}.\frac{4}{\pi} = (0,962 \pm 0,004)$, que resulta indistinguible dentro del error mientras que la ordenada $b =(-0,05 \pm 0,02)$ resulta despreciable frente a las magnitudes manejadas. Es importante destacar que los mínimos de transmisión al analizar los armónicos pares nunca llegaron a ser menores a $0,1$, claramente mayores a cero a pesar de ser mínimos. 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.4]{Trans_vs_Arm_Cuad}
@@ -294,7 +293,7 @@ Para el caso de la señal parabólica, la ecuación \eqref{eq:coef_parab} pone a
 \textit{Tabla 2: Frecuencia de máxima transmisión para cada armónico analizado de una señal parabólica. En este caso, no todas las frecuencias son identicas.}
 \end{center}
 
-El gráfico de transmisión en función de armónico puede verse en la \textbf{Figura \ref{fig:transparab}}, donde se utilizan los valores de máxima transmisión de cada barrido. Ajustando según \eqref{eq:coef_parab}, arroja un $R-Square = 0,89488$ y un $\chi^2 = 59,20285$, lo cual indica un ajuste medianamente confiable. El parámetro $A = (0,44 \pm 0,07)$ corresponde al parámetro $T_{max}.\frac{4}{\pi^2} = (0,3060 \pm 0,0012)$, donde la diferencia ya no resulta despreciable, aun frente a los errores. Nuevamente, la ordenada $b = (0,011 \pm 0,005)$ resulta despreciable frente a las magnitudes manejadas. Cabe aclarar que el término $(-1)^n$ que aparece en \eqref{eq:coef_parab} se ve absorbido por la fase $\phi_n$ de \eqref{eq:coefs} dado que la prioridad era analizar la amplitud en módulo. 
+El gráfico de transmisión en función de armónico puede verse en la \textbf{Figura \ref{fig:transparab}}, donde se utilizan los valores de máxima transmisión de cada barrido. Ajustando según \eqref{eq:coef_parab}, arroja un $R-Square = 0,89488$ y un $\chi^2 = 59,20285$, lo cual indica un ajuste medianamente confiable. El parámetro $A = (0,44 \pm 0,07)$ corresponde al parámetro $T_{max}.\frac{4}{\pi^2} = (0,3060 \pm 0,0012)$, donde la diferencia no resulta despreciable, aun frente a los errores. Nuevamente, la ordenada $b = (0,011 \pm 0,005)$ resulta despreciable frente a las magnitudes manejadas. Cabe aclarar que el término $(-1)^n$ que aparece en \eqref{eq:coef_parab} se ve absorbido por la fase $\phi_n$ de \eqref{eq:coefs} dado que la prioridad era analizar el módulo de la amplitud.
 
 \begin{figure}[h]
 \centering
@@ -303,6 +302,7 @@ El gráfico de transmisión en función de armónico puede verse en la \textbf{F
 \label{fig:transparab}
 \end{figure}
 
+\newpage
 \subsection{Caracterización del sumador}
 
 Para caracterizar el sumador, en primer lugar se procedió a chequear que el voltaje de salida sea proporcional a la suma de los voltajes generados por las fuentes. Para esto, se realizó un gráfico que relacionara el voltaje de salida con el voltaje de entrada, como se ve en la \textbf{Figura \ref{fig:S_vs_E}}
@@ -397,7 +397,7 @@ Finalmente se procedio a utilizar el FFT realizado por el osciloscopio para cada
 \label{fig:Comp}
 \end{figure}
 
-Puede verse en el gráfico de la \textbf{Figura \ref{fig:Comp}} que la amplitud de la corriente de frecuencia baja aumenta a medida que esta se aleja de la frecuencia de antiresonancia, mientras que la señal con frecuencia alta se mantiene sin cambios apreciables.
+Puede verse en el gráfico de la \textbf{Figura \ref{fig:Comp}} que la amplitud de la señal de frecuencia baja aumenta a medida que esta se aleja de la frecuencia de antiresonancia, mientras que la señal con frecuencia alta se mantiene sin cambios apreciables.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -407,6 +407,16 @@ Puede verse en el gráfico de la \textbf{Figura \ref{fig:Comp}} que la amplitud 
 \section{Conclusiones}
 \label{sec:conclusiones}
 
+Comenzando con el análisis de espectro, los resultados se amoldan bastante bien a lo esperado. Para el caso de la señal cuadrada, los extremos se hallaron en todos los casos en $f_s = (500,00 \pm 0,05)Hz$ según lo esperado, con la excepción del segundo armónico cuyo máximo se halló en $f = (490 \pm 10)Hz$, lo cual no contradice la teoría dado que la frecuencia $f_0^{(2)} = (1005 \pm 29)Hz$ del segundo armónico resulta indistinguible de $2f = (980 \pm 20)Hz$. Por lo tanto puede decirse que la frecuencia del segundo armónico de $f_s$ era $f_o^{(2)}$. En el caso de la señal parabólica, puede verse en la \textbf{Tabla 2} que las frecuencias de maxima transmisión del tercer, cuarto y sexto armónico resultaron $f = (480,00 \pm 0,05)Hz$. Nuevamente, las frecuencias de los armónicos $f_0^{(3)} = (1536 \pm 54)Hz$, $f_0^{(4)} = (2046 \pm 56)Hz$ y $f_0^{(6)} = (2911 \pm 76)Hz$ tienen diferencias despreciables frente a las magnitudes manejadas con $3f = (1440,0 \pm 0,2)Hz$, $4f = (1920,0 \pm 0,2)Hz$ y $6f = (2880,0 \pm 0,3)Hz$, respectivamente. 
+
+Respecto al grafico de la \textbf{Figura \ref{fig:transcuad}}, el ajuste resulta bondadoso con un $R-Square = 0,96953$ mientras que el coeficiente $A = (0,91 \pm 0,09)$ resulta identico al valor $T_{max}.\frac{4}{\pi} = (0,962 \pm 0,004)$, confirmando lo previsto por \eqref{eq:coef_cuad}. Sin embargo, el ajuste de la \textbf{Figura \ref{fig:transparab}} posee un $R-Square = 0,89488$ y un $A = (0,44 \pm 0,07)$ distinto a $T_{max}.\frac{4}{\pi^2} = (0,3060 \pm 0,0012)$, lo cual dificulta asegurar la validez de \eqref{eq:coef_cuad}. 
+
+Claramente, puede verse que los resultados obtenidos con la señal cuadrada son mucho más similares a lo esperado que los obtenidos para la parabólica, lo cual puede deberse a que el ancho de campana $\Delta f = (158 \pm 3)Hz$ no era lo suficientemente menor a $f_0 = (500 \pm 11)Hz$, por lo que a la hora de analizar el $n$-esimo armónico, parte de los armónicos $(n-1)$-esimo y $(n+1)$-esimo atravesaba el filtro y afectaba la medición. En el caso de la cuadrada, esto no es un problema dado que a la hora de medir el $2k$-esimo armónico, los armónicos $(2k-1)$-esimo y $(2k+1)$-esimo debían tener teóricamente amplitud nula. Esto también permite comprender porque en los armónicos pares la amplitud nunca decaía a cero, pues parte de la amplitud de los armónicos pares contiguos no se absorbía. Sin embargo, en la parábola, ningún armónico tenía amplitud nula y cada armónico se veía afectado por el anterior y el siguiente. 
+
+Durante la caracterización del \textit{sumador} se encontró que el factor de proporcion en la transferencia del promedio de las señales resultó ser de $m = (0.9741 \pm 0.0004)$, que aunque no resulta indistingible del valor ideal $1$, se diferencia de este en menos de un 3\%. Tambien se logró verificar que no se realizaban cambios en las frecuencias de las señales utilizadas. Esto se verificó para un caso sencillo en donde las dos señales de entrada eran iguales $f_{entrada}= (500 \pm 0.05)hz$ y se obtuvo una frecuencia en la salida $f_{salida} = (500 \pm 1)hz$ indistingible con las utilizadas, y posteriormente cuando se realizaron modulaciones entre distintas señales, en todos los casos se pudo encontrar que las frecuencias de las señales de salida eran indistingibles con las necesarias para formar idealmente la señal de salida. Además, se encontró que el desfasaje provocado por el circuito $D= (2\pm 4) \mu s$ es indistingible con el 0, por lo cual puede asumirse que no propovocaba desfasaje alguno entre la señal de salida y la de entrada; lo cual es consistente con el hecho de que todas las impedancias son reales. Dicho todo esto, puede asumirse que el comportamiento del $sumador$ es completamente lineal en el rango trabajado, por lo cual puede afirmarse que el objetivo de la construcción de un sumador de señales alcanzó las espectativas.
+
+Respecto al funcionamiento del filtro, aunque los resultados tuvieron un comportamiento al esperado, no resultan numericamente compatibles. Claramente, en los gráficos de la \textbf{Figura \ref{fig:FFT}} puede verse una atenuación de más del 
+$50\%$ de la señal de frecuencia $f_{baja} = (5005,5 \pm 0,1)Hz$ entre el gráfico de la \textbf{Figura \ref{subfig:FFT_NFilt}} y la \textbf{Figura \ref{subfig:FFT_Filt}}. Esto se ve confirmado por el hecho de que el gráfico de transmisión de la \textbf{Figura \ref{fig:Comp}} tiene un mínimo alrededor de esa frecuencia. Como se dijo, esto es el comportamiento esperado. Sin embargo, este mínimo de transmisión está lejos de ser $0$, por lo que el filtrado de la moduladora no fue total. Esto puede deberse a alguna inductancia parásita generada en serie al capacitor, lo cual causaría que el mínimo de transmisión fuera mayor a cero. Simultaneamente, pudo haber ocurrido que el ancho de campana $\Delta f = (210 \pm 4)Hz$ fuera tanto más pequeño que $|f_2-f_1|$ que mínimo resultó demasiado puntual y dificil de ubicar con precisión.
 
 
 
@@ -421,9 +431,9 @@ Puede verse en el gráfico de la \textbf{Figura \ref{fig:Comp}} que la amplitud 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %Ejemplo:
-\begin{thebibliography}{1}
- \bibitem{Berkeley} Frank S. Crawford, \textit{Berkeley physics course 3: Ondas}, 1994, Editorial Reverte S.A.
-\end{thebibliography}
+%\begin{thebibliography}{1}
+ %\bibitem{Berkeley} Frank S. Crawford, \textit{Berkeley physics course 3: Ondas}, 1994, Editorial Reverte S.A.
+%\end{thebibliography}
 %Para citar: blablabla \cite{Baird}
  
 \end{document}
