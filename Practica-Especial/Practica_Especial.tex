@@ -102,7 +102,7 @@ b_n = \frac{1}{\tau}\int_{-\tau}^{\tau}f(t).sin(\frac{n\pi}{\tau}t)dt\\
 \label{eq:coefs}
 \end{equation}
 
-Entonces resulta posible considerar a toda señal $S(t)$ como una suma de infinitas señales sinusoidales y gracias a la linealidad de los componentes $R$, $C$ y $L$, el comportamiento será igual al comportamiento de la suma. Es más, considerando que vale $a_n \rightarrow 0$ y $b_n \rightarrow 0$ para $n \rightarrow \infty$, cada término de la sumatoria tendrá menos peso que los anteriores. Por lo tanto, es posible estimar el comportamiento aproximado del circuito como si la señal fuera una suma finita de sinusoides. Para una función $f(t)\in C^k$, cuanto mayor suave sea $k$, más rápido será este decaimiento y menos términos de la serie se necesitarán para aproximar el comportamiento. Bajo esta idea, si fuera posible filtrar una única frecuencia $\omega_n = \frac{n\pi}{\tau}$, se obtendría una señal de salida sinusoidal cuya amplitud sería $\alpha_n$. 
+Entonces resulta posible considerar a toda señal $S(t)$ como una suma de infinitas señales sinusoidales y gracias a la linealidad de los componentes $R$, $C$ y $L$, el comportamiento será igual al comportamiento de la suma. Es más, considerando que vale $a_n \rightarrow 0$ y $b_n \rightarrow 0$ para $n \rightarrow \infty$, cada término de la sumatoria tendrá menos peso que los anteriores. Por lo tanto, es posible estimar el comportamiento aproximado del circuito como si la señal fuera una suma finita de sinusoides. Para una función $f(t)\in C^k$, cuanto mayor sea $k$, más rápido será este decaimiento y menos términos de la serie se necesitarán para aproximar el comportamiento. Bajo esta idea, si fuera posible filtrar una única frecuencia $\omega_n = \frac{n\pi}{\tau}$, se obtendría una señal de salida sinusoidal cuya amplitud sería $\alpha_n$. 
 
 Este filtro puede ser un circuito RLC resonante, el cual consiste en una fuente $V(t) = V_o.cos(\omega t)$, un capacitor $C$, una inductancia $L$ (de resistencia interna $R_L$) y una resistencia $R$ conectados en serie. Si se mide la amplitud de la caida de potencial sobre la resistencia $R$ resulta de la forma $V_R = V_o\frac{R)}{|Z|}$ donde $Z = (R+R_L)+i(\omega.L-\frac{1}{\omega C})$. Definiendo la \textit{transmisión} $T(\omega) = \frac{V_R}{V_o}$ resulta $T(\omega) = \frac{R}{|Z|}$ cuyo máximo se encuentra en $\omega_o = \frac{1}{\sqrt{LC}}$ tal que $T_{max} = T(\omega_o) = \frac{R}{R+R_L}$. Por último, definiendo una \textit{banda de resonancia} $[\omega_1;\omega_2]$ tal que $\frac{T_{max}}{\sqrt{2}} \leq T(\omega) \leq T_{max}$ para todo $\omega \in [\omega_1;\omega_2]$ y el \textit{ancho de banda} $\Delta\omega = \omega_2 - \omega_1$ resulta $\Delta\omega = \frac{R_L+R}{L}$. En resumen,
 
@@ -114,7 +114,7 @@ Este filtro puede ser un circuito RLC resonante, el cual consiste en una fuente 
 \label{eq:resonante}
 \end{equation}
 
-Bajo esta idea, es posible tomar una señal cualquiera $S(t)$ y, mediante un circuito RCL resonante, filtrar una única frecuencia $\omega_n = \frac{n\pi}{\tau}$ fijando la frecuencia natural del circuito $\omega_o = \omega_n$. Si la campana es lo suficientemente fina, lo que implica un $\Delta \omega << \frac{\pi}{\tau}$, es posible obtener una transmisión máxima para cada $\omega_o$ $T_{max}(\omega_n) = \alpha_n$.
+Bajo esta idea, es posible tomar una señal cualquiera $S(t)$ y, mediante un circuito RCL resonante, filtrar una única frecuencia $\omega_n = \frac{n\pi}{\tau}$ fijando la frecuencia natural del circuito $\omega_o = \omega_n$. Si la campana es lo suficientemente fina, lo que implica un $\Delta \omega << \frac{\pi}{\tau}$, es posible obtener una transmisión máxima $T_{max}(\omega_n) = T_{max}\frac{\alpha_n}{V_0}$ para cada $\omega_o$.
 
 Por lo tanto, si se envía una señal cuadrada de la forma $C(t)=
 \left\{\begin{matrix}
@@ -137,7 +137,7 @@ Similarmente, para el caso de una señal \textit{parabolica} de la forma $P(t)=V
 \label{eq:coef_parab}
 \end{equation}
 
-Siguiendo la idea anterior, es posible considerar el \textit{espectro de potencia} de una señal en un intervalo de tiempo $[t_0;t_1]$ como una función $\alpha^2(\omega) = |\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).e^{i\omega t}dt|^2= |\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).cos(\omega t)dt - \frac{i}{t_1-t_0}\int_{t_0}^{t_1} f(t).sin(\omega t)dt|^2 = (\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).cos(\omega t)dt)^2+(\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).sin(\omega t)dt)^2$. En esta definición puede verse que si $t_1-t_0=2\tau$, $\alpha(n\frac{\pi}{\tau} = \alpha_n$ para una función $f(t)$ de período $2\tau$. La operación $FFT$ o \textit{Fast Fourier Transformation} toma una función definida en este intervalo $[t_0;t_1]$ y grafica su respectivo espectro de potencia $\alpha^2(\omega)$. Por lo tanto, al analizar los coeficientes de Fourier se está analizando la potencia espectral de una señal para un conjunto de frecuencias determinado, que en el caso de una cuadrada son sus máximos y, por ende, los que más peso tienen. 
+Siguiendo la idea anterior, es posible considerar el \textit{espectro de potencia} de una señal en un intervalo de tiempo $[t_0;t_1]$ como una función $\alpha^2(\omega) = |\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).e^{i\omega t}dt|^2= |\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).cos(\omega t)dt - \frac{i}{t_1-t_0}\int_{t_0}^{t_1} f(t).sin(\omega t)dt|^2 = (\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).cos(\omega t)dt)^2+(\frac{1}{t_1-t_0}\int_{t_0}^{t_1} f(t).sin(\omega t)dt)^2$. En esta definición puede verse que si $t_1-t_0=2\tau$, $\alpha(n\frac{\pi}{\tau} )= \alpha_n$ para una función $f(t)$ de período $2\tau$. La operación $FFT$ o \textit{Fast Fourier Transformation} toma una función definida en este intervalo $[t_0;t_1]$ y grafica su respectivo espectro de potencia $\alpha^2(\omega)$. Por lo tanto, al analizar los coeficientes de Fourier se está analizando la potencia espectral de una señal para un conjunto de frecuencias determinado, que en el caso de una cuadrada son sus máximos y, por ende, los que más peso tienen. 
 
 
 Ahora, si se supone una señal de la forma $V(t) = A.cos(\omega_1t) + A.cos(\omega_2t)$ que resulta de la suma de dos señales sinusoidales, ocurre un efecto denominado \textit{batido}. Esto se da gracias a que, mediante identidades trigonométricas, se obtiene $V(t) = 2A.cos(\frac{\omega_1-\omega_2}{2}t)sin(\frac{\omega_2+\omega_1}{2}t)$ donde el primer término se llama \textit{modulador} y el segundo \textit{portador}. Por lo tanto, si se suman dos señales de entrada 
@@ -174,7 +174,7 @@ Por lo tanto, si se conoce la frecuencia $\omega$ de la moduladora y se cumple q
 \section{Desarrollo experimental}
 Durante esta experiencia se utilizó un generador de funciones de dos canales capaz de generar diferencias de potencial $V(t)$ a frecuencias con un error relativo del $0,01\%$ en un rango entre $1\mu Hz$ y $5MHz$. El voltaje \textit{pico-pico} tiene un error relativo del $1\%$ para el rango de voltaje utilizado ($2V-20V$). Además, se utilizó una resistencia variable por décadas en el intervalo ($1\Omega-11110\Omega$), una capacitancia variable por décadas en el intervalo($1nF-1110\,nF$) y una inductancia variable por décadas en el intervalo ($1mH-1110mH$). Usando un multimetro digital se midieron los valores utilizados en todos estos elementos junto con su precisión que era de la forma $\pm(1\%+2d)$ para la resistencia, $\pm(0.7\%+5d)$ para la capacitancia y ($0.7\% +5d$) para la inductancia; ademas de comprobar la continuidad de los cables utilizados.
 
-Se utilizó además un osciloscopio digital con dos canales de entrada capaces de medir diferencias de potencial entre sus dos terminales en un rango de 2mV a 5V con un error relativo del $3\%$ del valor \textit{pico-pico}, y una función \textit{FFT} capas mostrar su espectro de frecuencias. El osciloscopio también contaba con un programa de adquisición de datos el cual permitía importar en una computadora las mediciones en su pantalla para luego ser analizadas. 
+Se utilizó además un osciloscopio digital con dos canales de entrada capaces de medir diferencias de potencial entre sus dos terminales en un rango de 2mV a 5V con un error relativo del $3\%$ del valor \textit{pico-pico}, y una función \textit{FFT} capaz mostrar su espectro de frecuencias. El osciloscopio también contaba con un programa de adquisición de datos el cual permitía importar en una computadora las mediciones en su pantalla para luego ser analizadas. 
 
 A la hora de medir voltaje, fue necesario asegurarse que el cable a tierra del osciloscopio estuviera conectado al cable a tierra el generador de funciones. Cuando se utilizaron ambos canales, se hicieron coincidir las 3 tierras.
 
@@ -219,16 +219,16 @@ Sabiendo esto, se determinaron los valores de $C$ para que $\omega_0$ coincidies
 
  Y así, para cada uno de ellos, se midió la caída de potencial sobre la resistencia utilizando el osciloscopio. 
 
-Para garantizar que la frecuencia fuera la de resonancia, se hizo un barrido de mediciones en el intervalo de frecuencias $[440,560] Hz$, con el fin de encontrar un máximo de transmisión, para cada $f_0$.
+Para garantizar que la frecuencia $f_0$ fuera la de resonancia, se hizo un barrido de mediciones en el intervalo de frecuencias $[440,560] Hz$, con el fin de encontrar un máximo de transmisión para cada $f_0$.
 
 
 \subsection{Caracterización del sumador}
 
 Para obtener el fenómeno de batido entre señales se utilizaron los dos canales del generador de funciones para armar un circuito \textit{sumador} como el que mostró la \textbf{Figura \ref{fig:Sumador}}, con valores de resistencias $r=(10.5 \pm 0.4)\Omega$ y $R=(200 \pm 3)\Omega$.
 
-Antes de realizar las mediciones en las que se utilizó el \textit{sumador} fue necesario determinar el rango dinámico del mismo. Para ellos, se programaron ambos generadores con una señal triangular con frecuencia $(500 \pm 0.05) Hz$ y una amplitud $(3.00 \pm 0.03)V$.
+Antes de realizar las mediciones en las que se utilizó el \textit{sumador} fue necesario determinar el rango dinámico del mismo. Para ello, se programó ambos canales con una señal triangular con frecuencia $(500 \pm 0.05) Hz$ y una amplitud $(3.00 \pm 0.03)V$.
 
-El objetivo era ver que la amplitud de salida era proporcional al promedio de las amplitudes de entrada; o en caso de no serlo, determinar el rango de voltaje de entrada en el cual la respuesta era lineal. Para ello, al adquirir los datos de la señal de salida, primero se comprobó que tuviera una forma triangular; y luego se calculó la transmisión observando el intervalo donde esta se puede ajustar por una función lineal. Así mismo se determinó si el sumador modificaba la frecuencia de salida, tomando un promedio entre los máximos consecutivos de la señal triangular de salida; y por otro lado, al comparar los tiempos entre máximos de la señal de entrada y salida se pudo ver si había desfasaje entre ellas. 
+El objetivo era ver que la amplitud de salida era proporcional al promedio de las amplitudes de entrada; o en caso de no serlo, determinar el rango de voltaje de entrada en el cual la respuesta era lineal. Para ello, al adquirir los datos de la señal de salida, primero se comprobó que tuviera una forma triangular; y luego se calculó la transmisión observando el intervalo donde esta se puede ajustar por una función lineal. Así mismo se determinó si el sumador modificaba la frecuencia de salida, tomando un promedio entre la diferencia de máximos consecutivos de la señal triangular de salida; y por otro lado, al comparar los tiempos entre máximos de la señal de entrada y salida se pudo ver si había desfasaje entre ellas. 
 
 \subsection{Modulación y filtrado}
 Una vez hecho esto se cambiaron las formas de las señales de entrada por una sinusoidal, con frecuencias distintas, en ambos canales para obtener una señal de salida modulada.
@@ -242,7 +242,7 @@ Para filtrar una de las señales de entrada se utilizó un circuito RLC anti-res
 \label{fig:filtro}
 \end{figure}
 
-Donde el elemento \textbf{S} es el sumador y la diferencia de potencia que entrega es la que sale de sus terminales libres; la resistencia $R=(7500 \pm 70)\Omega$, inductancia $L=(10.0 \pm 0.3)mH$ con resistencia $R_L =(5.8 \pm 0.1)\Omega$, y una capacitancia $C=(101,2 \pm 0.8)nF$.
+Donde el elemento \textbf{S} es el sumador y la diferencia de potencia que entrega es la que sale de las terminales libres como se ve en la \textbf{Figura \ref{fig:Sumador}}; la resistencia $R=(7500 \pm 70)\Omega$, inductancia $L=(10.0 \pm 0.3)mH$ con resistencia $R_L =(5.8 \pm 0.1)\Omega$, y una capacitancia $C=(101,2 \pm 0.8)nF$.
 
 Al quedar fijos estos parámetros, a partir de \eqref{eq:antiresonante} se obtiene una frecuencia de anti-resonancia $f_0 = (5003 \pm 95)Hz$ y un ancho de banda $\Delta f = (210 \pm 4)Hz$.
 
@@ -314,7 +314,7 @@ Para caracterizar el sumador, en primer lugar se procedió a chequear que el vol
 \label{fig:S_vs_E}
 \end{figure}
 
-Se puede ver que la relación es lineal. Además, el ajuste realizado confirma esa suposición, ya que arroja un $R-Square=0.99939$. Teniendo entonces que la pendiente obtenida del ajuste es el factor de proporción del sumador, que resulto de $(0.9741 \pm 0.0005)$. 
+Se puede ver que la relación es lineal. Además, el ajuste realizado confirma esa suposición, ya que arroja un $R-Square=0.99939$. Ademas la pendiente $(0.9741 \pm 0.0005)$, obtenida del ajuste, es el factor de proporción del sumador. 
 
 Posteriormente se construyó un gráfico de la señal de salida como se muestra en la \textbf{Figura \ref{fig:Vol_Sal}}, y se relevaron los extremos a fin de poder encontrar la frecuencia con la que estos se repetían.
 
@@ -332,7 +332,7 @@ Finalmente, se verificó que el sumador no provocara ningún desfasaje en la se�
 
 \subsection{Modulación y filtrado}
 
-Para esta parte de la experiencia se realizaron batidos entre distintas señales. La \textbf{Figura \ref{fig:5_6}} muestra el resultado de enviar dos señales sinusoidales distintas con el \textit{sumador}.
+Para esta parte de la experiencia se realizaron batidos entre dos señales sinusoidales. La \textbf{Figura \ref{fig:5_6}} muestra el resultado de enviar dos señales con frecuencias $f_1=(10844 \pm 1)Hz$ y $f_2=(5600.5 \pm 0.5)Hz$ con el \textit{sumador}.
 
 \begin{figure}[H]
 \centering
@@ -341,7 +341,7 @@ Para esta parte de la experiencia se realizaron batidos entre distintas señales
 \label{fig:5_6}
 \end{figure}
 
-Sobre el gráfico se realizó un ajuste utilizando una suma de senos para verificar que efectivamente fuera el batido esperado. Tanto el coeficiente de $R-Square = 0.99906$ muy cercano a uno, como los valores para la frecuencia alta $b = (10894.03 \pm 0.09)Hz$ y baja $c = (5600.89 \pm 0.08)Hz$ que coinciden con las utilizadas, garantizan que se obtuvo la señal buscada.
+Sobre el gráfico se realizó un ajuste utilizando una suma de senos para verificar que efectivamente fuera el batido esperado. Tanto el coeficiente de $R-Square = 0.99906$ muy cercano a uno, como los valores para la frecuencia alta $f_1=b = (10894.03 \pm 0.09)Hz$ y baja $f_2=c = (5600.89 \pm 0.08)Hz$ que coinciden con las utilizadas, garantizan que se obtuvo la señal buscada.
 
 Esta señal se envió a través del circuito ilustrado en la \textbf{Figura \ref{fig:filtro}}, y se midió a la salida lo que se muestra en la \textbf{Figura \ref{fig:5_6_Filt}}. En esta figura, no se puede apreciar alguna diferencia importante entre los dos graficos. Esto era de esperarse ya que la frecuencia de antiresonancia del circuito era $f_0= (5003 \pm 95)Hz$ y no coincide con ninguna de las dos.
 
@@ -352,7 +352,7 @@ Esta señal se envió a través del circuito ilustrado en la \textbf{Figura \ref
 \label{fig:5_6_Filt}
 \end{figure}
 
-Para una frecuencia baja más cercana a la frecuencia de antiresonancia $f= (5005.5 \pm 0.1)Hz$ se obtuvieron los graficos de la \textbf{Figura \ref{fig:5k}}
+Para una frecuencia baja $f= (5005.5 \pm 0.1)Hz$ más cercana a la frecuencia de anti-resonancia $f_0$ se obtuvieron los gráficos de la \textbf{Figura \ref{fig:5k}}
 
 \begin{figure}[H]
 	\begin{subfigure}{0.5\textwidth}
@@ -386,7 +386,7 @@ A diferencia del par anterior, existe una diferencia apreciable entre los gráfi
 	\label{fig:FFT}
 \end{figure}
 
-En el gráfico de la \textbf{Figura \ref{subfig:FFT_Filt}} se puede apreciar un decaimiento de la amplitud de la señal de frecuencia $f_{baja}= (5005.5 \pm 0.1)Hz$ respecto del gráfico de la \textbf{Figura \ref{subfig:FFT_NFilt}}, mientras que la correspondiente a la de frecuencia alta, $f_{alta} = (10844 \pm 1)Hz$, se mantiene sin cambios apreciables.
+En el gráfico de la \textbf{Figura \ref{subfig:FFT_Filt}} se puede apreciar un decaimiento de la amplitud de la señal de frecuencia baja $f_{2}= (5005.5 \pm 0.1)Hz$ respecto del gráfico de la \textbf{Figura \ref{subfig:FFT_NFilt}}, mientras que la correspondiente a la de frecuencia alta, $f_{alta} = (10844 \pm 1)Hz$, se mantiene sin cambios apreciables.
 
 Finalmente se procedio a utilizar el FFT realizado por el osciloscopio para cada medición, y a partir de esos datos se construyó un gráfico que compara la transferencia de las dos señales utilizadas en el \textit{sumador}, variando solo la de frecuencia baja. Los resultados se muestran en la \textbf{Figura \ref{fig:Comp}}
 
